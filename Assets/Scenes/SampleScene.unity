@@ -216,6 +216,7 @@ GameObject:
   - component: {fileID: 772039020}
   - component: {fileID: 772039019}
   - component: {fileID: 772039018}
+  - component: {fileID: 772039021}
   m_Layer: 5
   m_Name: Take2HpButton
   m_TagString: Untagged
@@ -322,6 +323,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 772039016}
   m_CullTransparentMesh: 0
+--- !u!114 &772039021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772039016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e73660aa57f434597f85f3d679681e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &826704784
 GameObject:
   m_ObjectHideFlags: 0
@@ -411,6 +424,7 @@ GameObject:
   - component: {fileID: 867883158}
   - component: {fileID: 867883157}
   - component: {fileID: 867883156}
+  - component: {fileID: 867883159}
   m_Layer: 5
   m_Name: Take1HpButton
   m_TagString: Untagged
@@ -517,6 +531,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 867883154}
   m_CullTransparentMesh: 0
+--- !u!114 &867883159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867883154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e73660aa57f434597f85f3d679681e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1099614639
 GameObject:
   m_ObjectHideFlags: 0

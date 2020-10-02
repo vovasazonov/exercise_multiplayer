@@ -13,6 +13,12 @@
               <e p="IHealthPointTextView.cs" t="Include" />
             </e>
           </e>
+          <e p="Players" t="Include">
+            <e p="Views" t="Include">
+              <e p="AttackButtonView.cs" t="Include" />
+              <e p="IAttackButtonView.cs" t="Include" />
+            </e>
+          </e>
         </e>
       </e>
       <e p="exercise_multiplayer.sln" t="IncludeFlat" />
