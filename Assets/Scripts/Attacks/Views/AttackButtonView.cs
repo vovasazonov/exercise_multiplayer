@@ -1,12 +1,19 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
-namespace HealthPoints.Views
+namespace Attacks.Views
 {
-    public class TakeHealthPointButtonView : MonoBehaviour, ITakeHealthPointButtonView, IPointerClickHandler
+    public class AttackButtonView : MonoBehaviour, IAttackButtonView, IPointerClickHandler
     {
+        [SerializeField] private protected Text _damageText;
         public event Action Attack;
+
+        public string Damage
+        {
+            set => _damageText.text = value;
+        }
 
         private void OnAttack()
         {

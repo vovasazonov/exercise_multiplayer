@@ -2,6 +2,6 @@
 {
     public interface IHealthPointTextView
     {
-        int Points { set; }
+        string Points { set; }
     }
 }

@@ -20,14 +20,58 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08fac7fd-c778-4934-80c3-7faf153ae413" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Attacks.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Attacks/Presenters.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Attacks/Presenters/AttackPresenter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Attacks/Presenters/AttackPresenter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Attacks/Presenters/AttacksPresenter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Attacks/Presenters/AttacksPresenter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Attacks/Views.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Client.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Client/CustomHttpClient.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Client/CustomHttpClient.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Client/IClient.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Client/IClient.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Descriptions.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Descriptions/Database.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Descriptions/Database.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Descriptions/DescriptionWeapon.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Descriptions/DescriptionWeapon.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Descriptions/DescriptionsWeapon.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Descriptions/DescriptionsWeapon.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyModel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/IEnemyModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/IEnemyModel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/HealthPoints/Models.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/HealthPoints/Models/HealthPointModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/HealthPoints/Models/HealthPointModel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/HealthPoints/Models/IHealthPointModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/HealthPoints/Models/IHealthPointModel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/HealthPoints/Presenters.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/HealthPoints/Presenters/HealthPointTextPresenter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/HealthPoints/Presenters/HealthPointTextPresenter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ModelManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ModelManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PresenterManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PresenterManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/Models.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/Models/IWeaponModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/Models/IWeaponModel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/Models/WeaponModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/Models/WeaponModel.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.exercise_multiplayer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.exercise_multiplayer/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.exercise_multiplayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.exercise_multiplayer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Players.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Players/Views.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Players/Views/AttackButtonView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HealthPoints/Views/TakeHealthPointButtonView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Players/Views/AttackButtonView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HealthPoints/Views/TakeHealthPointButtonView.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Players/Views/IAttackButtonView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HealthPoints/Views/ITakeHealthPointButtonView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Players/Views/IAttackButtonView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HealthPoints/Views/ITakeHealthPointButtonView.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HealthPoints/Views/HealthPointTextView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HealthPoints/Views/HealthPointTextView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HealthPoints/Views/IHealthPointTextView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HealthPoints/Views/IHealthPointTextView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HealthPoints/Views/ITakeHealthPointButtonView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Attacks/Views/IAttackButtonView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HealthPoints/Views/ITakeHealthPointButtonView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Attacks/Views/IAttackButtonView.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HealthPoints/Views/TakeHealthPointButtonView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Attacks/Views/AttackButtonView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HealthPoints/Views/TakeHealthPointButtonView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Attacks/Views/AttackButtonView.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ViewContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ViewContainer.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,14 +89,47 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/HealthPoints/Views/IHealthPointTextView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/HealthPoints/Views/HealthPointTextView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Players/Views/IAttackButtonView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HealthPoints/Views/IAttackButtonView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HealthPoints/Views/AttackButtonView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HealthPoints/Views/ITakeHealthPointButtonView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HealthPoints/Models/IHealthPointModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/IWeapon.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/IWeaponModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Models/SpellModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Models/BowModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Characters/IPlayerModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Characters/IEnemyModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Models/IWeaponModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Characters/ICharacterModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Characters/CharacterModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Client/IClient.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/CharacterModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/IEnemyModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Models/WeaponModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HealthPoints/Views/HealthPointTextView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HealthPoints/Views/IHealthPointTextView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HealthPoints/Presenters/HealthPointTextPresenter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Presenters/AttackPresenter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Attacks/Views/ITakeHealthPointButtonView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Attacks/Views/TakeHealthPointButtonView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Descriptions/WeaponDescription.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Descriptions/DatabaseWeaponDescription.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Descriptions/WeaponDescriptionDatabase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ModelManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Attacks/Views/IAttackButtonView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Attacks/Views/AttackButtonView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Attacks/Presenters/AttackPresenter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Attacks/Presenters/AttacksPresenter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ViewContainer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PresenterManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Descriptions/DescriptionsWeapon.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Descriptions/Database.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Descriptions/DescriptionWeapon.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Client/CustomHttpClient.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HealthPoints/Models/HealthPointModel.cs" />
       </list>
     </option>
   </component>
@@ -68,6 +145,7 @@
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -99,7 +177,7 @@
       <option name="presentableId" value="Default" />
       <updated>1601624494475</updated>
       <workItem from="1601624523561" duration="1287000" />
-      <workItem from="1601629416217" duration="1440000" />
+      <workItem from="1601629416217" duration="13327000" />
     </task>
     <servers />
   </component>
@@ -124,6 +202,18 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="511" y="42" key="RiderGenerateDialog" timestamp="1601634750912">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="511" y="42" key="RiderGenerateDialog/0.0.1366.738@0.0.1366.738" timestamp="1601634750912" />
+    <state x="184" y="13" key="SettingsEditor" timestamp="1601633794804">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="184" y="13" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1601633794804" />
+    <state x="92" y="92" width="1182" height="554" key="VCS.FileHistoryDialog" timestamp="1601635847815">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="92" y="92" width="1182" height="554" key="VCS.FileHistoryDialog/0.0.1366.738@0.0.1366.738" timestamp="1601635847815" />
     <state x="339" y="165" key="run.anything.popup" timestamp="1601629700238">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

@@ -150,9 +150,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be5ddd2dda5f4e439668fcbe705d07b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthPointTextView: {fileID: 1914070569}
-  Hp1AttackButtonView: {fileID: 867883159}
-  Hp2AttackButtonView: {fileID: 772039021}
+  EnemyHealthPointTextView: {fileID: 1914070569}
+  AttackButtonViewList:
+  - {fileID: 867883159}
+  - {fileID: 772039021}
 --- !u!4 &132731925
 Transform:
   m_ObjectHideFlags: 0
@@ -294,6 +295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _viewContainer: {fileID: 132731924}
+  _database: {fileID: 11400000, guid: 850490ebc3f9a7b48b81f3ebd9c16655, type: 2}
 --- !u!1 &772039016
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,7 +310,7 @@ GameObject:
   - component: {fileID: 772039018}
   - component: {fileID: 772039021}
   m_Layer: 5
-  m_Name: Take2HpButton
+  m_Name: AttackButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -425,6 +427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e73660aa57f434597f85f3d679681e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damageText: {fileID: 826704786}
 --- !u!1 &826704784
 GameObject:
   m_ObjectHideFlags: 0
@@ -493,7 +496,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u041D\u0430\u043D\u0435\u0441\u0442\u0438 2 \u0443\u0440\u043E\u043D\u0430"
+  m_Text: 
 --- !u!222 &826704787
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -516,7 +519,7 @@ GameObject:
   - component: {fileID: 867883156}
   - component: {fileID: 867883159}
   m_Layer: 5
-  m_Name: Take1HpButton
+  m_Name: AttackButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -633,6 +636,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e73660aa57f434597f85f3d679681e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damageText: {fileID: 1099614641}
 --- !u!1 &1099614639
 GameObject:
   m_ObjectHideFlags: 0
@@ -701,7 +705,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u041D\u0430\u043D\u0435\u0441\u0442\u0438 1 \u0443\u0440\u043E\u043D"
+  m_Text: 
 --- !u!222 &1099614642
 CanvasRenderer:
   m_ObjectHideFlags: 0
