@@ -2,9 +2,9 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace Players.Views
+namespace HealthPoints.Views
 {
-    public class AttackButtonView : MonoBehaviour, IAttackButtonView, IPointerClickHandler
+    public class TakeHealthPointButtonView : MonoBehaviour, ITakeHealthPointButtonView, IPointerClickHandler
     {
         public event Action Attack;
 

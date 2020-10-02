@@ -20,10 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08fac7fd-c778-4934-80c3-7faf153ae413" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ViewContainer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ViewContainer.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.exercise_multiplayer/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.exercise_multiplayer/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.exercise_multiplayer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.exercise_multiplayer/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.exercise_multiplayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.exercise_multiplayer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Players.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Players/Views.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Players/Views/AttackButtonView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HealthPoints/Views/TakeHealthPointButtonView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Players/Views/AttackButtonView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HealthPoints/Views/TakeHealthPointButtonView.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Players/Views/IAttackButtonView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HealthPoints/Views/ITakeHealthPointButtonView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Players/Views/IAttackButtonView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HealthPoints/Views/ITakeHealthPointButtonView.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ViewContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ViewContainer.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,8 +48,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/HealthPoints/Views/IHealthPointTextView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HealthPoints/Views/HealthPointTextView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Players/Views/IAttackButtonView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ViewContainer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HealthPoints/Views/IAttackButtonView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HealthPoints/Views/AttackButtonView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HealthPoints/Views/ITakeHealthPointButtonView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ViewContainer.cs" />
       </list>
     </option>
   </component>
@@ -91,7 +99,7 @@
       <option name="presentableId" value="Default" />
       <updated>1601624494475</updated>
       <workItem from="1601624523561" duration="1287000" />
-      <workItem from="1601629416217" duration="297000" />
+      <workItem from="1601629416217" duration="1440000" />
     </task>
     <servers />
   </component>
@@ -114,5 +122,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="339" y="165" key="run.anything.popup" timestamp="1601629700238">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="339" y="165" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1601629700238" />
   </component>
 </project>
