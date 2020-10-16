@@ -1,4 +1,4 @@
-﻿namespace ServerHP
+﻿namespace Server
 {
     class Program
     {
