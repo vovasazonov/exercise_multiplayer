@@ -130,7 +130,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 132731925}
-  - component: {fileID: 132731924}
   m_Layer: 0
   m_Name: ViewContainer
   m_TagString: Untagged
@@ -138,22 +137,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &132731924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 132731923}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be5ddd2dda5f4e439668fcbe705d07b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EnemyHealthPointTextView: {fileID: 1914070569}
-  AttackButtonViewList:
-  - {fileID: 867883159}
-  - {fileID: 772039021}
 --- !u!4 &132731925
 Transform:
   m_ObjectHideFlags: 0
@@ -260,7 +243,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 652823732}
-  - component: {fileID: 652823733}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -282,20 +264,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &652823733
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 652823731}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64e8c2ff61004aa48a1ac0ea5519dceb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _viewContainer: {fileID: 132731924}
-  _database: {fileID: 11400000, guid: 850490ebc3f9a7b48b81f3ebd9c16655, type: 2}
 --- !u!1 &772039016
 GameObject:
   m_ObjectHideFlags: 0
