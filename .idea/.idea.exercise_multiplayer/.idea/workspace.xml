@@ -24,7 +24,7 @@
   <component name="ChangeListManager">
     <list default="true" id="08fac7fd-c778-4934-80c3-7faf153ae413" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.exercise_multiplayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.exercise_multiplayer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CommonClientServerCode/Serialization/BinaryFormatterSerializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CommonClientServerCode/Serialization/BinaryFormatterSerializer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/NetworkManagerClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/NetworkManagerClient.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/.idea/.idea.Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/.idea/.idea.Server/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,11 +90,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/Clients/IClient.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CommonClientServerCode/System/Collections/Generic/QueueExtensions.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Network/NetworkManagerClient.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CommonClientServerCode/Serialization/ISerializer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/Clients/CustomHttpClient.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CommonClientServerCode/Serialization/CustomizedBinder.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CommonClientServerCode/Serialization/BinaryFormatterSerializer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Network/NetworkManagerClient.cs" />
       </list>
     </option>
   </component>
@@ -150,7 +150,7 @@
       <workItem from="1602758045270" duration="1002000" />
       <workItem from="1602830266935" duration="1977000" />
       <workItem from="1602914387348" duration="19162000" />
-      <workItem from="1602997927514" duration="21880000" />
+      <workItem from="1602997927514" duration="22703000" />
     </task>
     <servers />
   </component>

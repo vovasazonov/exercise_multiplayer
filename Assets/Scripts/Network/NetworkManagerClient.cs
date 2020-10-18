@@ -9,6 +9,7 @@ namespace Network
 {
     public class NetworkManagerClient : IDisposable
     {
+        private readonly int _millisecondsBetweenSendPacket = 500;
         private readonly IClient _client;
         private readonly ISerializer _serializer = new BinaryFormatterSerializer();
         private NetworkClientState _networkState = NetworkClientState.SayingHello;
@@ -83,7 +84,7 @@ namespace Network
                     outgoingPacket.Clear();
                 }
                 
-                await Task.Delay(5000);
+                await Task.Delay(_millisecondsBetweenSendPacket);
             }
         }
 
