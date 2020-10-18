@@ -7,51 +7,31 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
-          <e p="Attacks" t="Include">
-            <e p="Presenters" t="Include">
-              <e p="AttackPresenter.cs" t="Include" />
-              <e p="AttacksPresenter.cs" t="Include" />
+          <e p="CommonClientServerCode" t="Include">
+            <e p="Network" t="Include">
+              <e p="NetworkPacketType.cs" t="Include" />
             </e>
-            <e p="Views" t="Include">
-              <e p="AttackButtonView.cs" t="Include" />
-              <e p="IAttackButtonView.cs" t="Include" />
+            <e p="Serialization" t="Include">
+              <e p="BinaryFormatterSerializer.cs" t="Include" />
+              <e p="CustomizedBinder.cs" t="Include" />
+              <e p="ISerializer.cs" t="Include" />
             </e>
-          </e>
-          <e p="Client" t="Include">
-            <e p="CustomHttpClient.cs" t="Include" />
-            <e p="IClient.cs" t="Include" />
-          </e>
-          <e p="Descriptions" t="Include">
-            <e p="Database.cs" t="Include" />
-            <e p="DescriptionsWeapon.cs" t="Include" />
-            <e p="DescriptionWeapon.cs" t="Include" />
-          </e>
-          <e p="Enemies" t="Include">
-            <e p="EnemyModel.cs" t="Include" />
-            <e p="IEnemyModel.cs" t="Include" />
+            <e p="System" t="Include">
+              <e p="Collections" t="Include">
+                <e p="Generic" t="Include">
+                  <e p="QueueExtensions.cs" t="Include" />
+                </e>
+              </e>
+            </e>
           </e>
           <e p="GameManager.cs" t="Include" />
-          <e p="HealthPoints" t="Include">
-            <e p="Models" t="Include">
-              <e p="HealthPointModel.cs" t="Include" />
-              <e p="IHealthPointModel.cs" t="Include" />
+          <e p="Network" t="Include">
+            <e p="Clients" t="Include">
+              <e p="CustomHttpClient.cs" t="Include" />
+              <e p="IClient.cs" t="Include" />
             </e>
-            <e p="Presenters" t="Include">
-              <e p="HealthPointTextPresenter.cs" t="Include" />
-            </e>
-            <e p="Views" t="Include">
-              <e p="HealthPointTextView.cs" t="Include" />
-              <e p="IHealthPointTextView.cs" t="Include" />
-            </e>
-          </e>
-          <e p="ModelManager.cs" t="Include" />
-          <e p="PresenterManager.cs" t="Include" />
-          <e p="ViewContainer.cs" t="Include" />
-          <e p="Weapons" t="Include">
-            <e p="Models" t="Include">
-              <e p="IWeaponModel.cs" t="Include" />
-              <e p="WeaponModel.cs" t="Include" />
-            </e>
+            <e p="NetworkClientState.cs" t="Include" />
+            <e p="NetworkManagerClient.cs" t="Include" />
           </e>
         </e>
       </e>

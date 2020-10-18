@@ -3,17 +3,33 @@
   <component name="ContentModelStore">
     <e p="C:\Users\vovas\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
     <e p="C:\Users\vovas\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_Server.965042186.00" t="ExcludeRecursive" />
+    <e p="C:\Users\vovas\source\repos\Unity\exercise_multiplayer\Assets\Scripts\CommonClientServerCode" t="Include">
+      <e p="Network" t="Include">
+        <e p="NetworkPacketType.cs" t="Include" />
+      </e>
+      <e p="Serialization" t="Include">
+        <e p="BinaryFormatterSerializer.cs" t="Include" />
+        <e p="CustomizedBinder.cs" t="Include" />
+        <e p="ISerializer.cs" t="Include" />
+      </e>
+      <e p="System" t="Include">
+        <e p="Collections" t="Include">
+          <e p="Generic" t="Include">
+            <e p="QueueExtensions.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+    </e>
     <e p="C:\Users\vovas\source\repos\Unity\exercise_multiplayer\Server" t="IncludeFlat">
       <e p="packages" t="ExcludeRecursive" />
       <e p="Server" t="IncludeRecursive">
-        <e p=".gitattributes" t="Include" />
-        <e p=".gitignore" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Game.cs" t="Include" />
-        <e p="HealthPoint.cs" t="Include" />
-        <e p="HttpServer.cs" t="Include" />
-        <e p="IHealthPoint.cs" t="Include" />
-        <e p="IServer.cs" t="Include" />
+        <e p="Network" t="Include">
+          <e p="ClientProxy.cs" t="Include" />
+          <e p="HttpServer.cs" t="Include" />
+          <e p="IServer.cs" t="Include" />
+          <e p="NetworkManagerServer.cs" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
