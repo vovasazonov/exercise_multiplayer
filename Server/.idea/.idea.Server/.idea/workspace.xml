@@ -23,45 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="703e222c-aafd-409f-982b-87c7e7f6ce68" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/CommonClientServerCode.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/CommonClientServerCode/Network.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/CommonClientServerCode/Network/NetworkPacketType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/CommonClientServerCode/Network/NetworkPacketType.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/CommonClientServerCode/Serialization.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/CommonClientServerCode/Serialization/BinaryFormatterSerializer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/CommonClientServerCode/Serialization/BinaryFormatterSerializer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/CommonClientServerCode/Serialization/CustomizedBinder.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/CommonClientServerCode/Serialization/CustomizedBinder.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/CommonClientServerCode/Serialization/ISerializer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/CommonClientServerCode/Serialization/ISerializer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/CommonClientServerCode/System.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/CommonClientServerCode/System/Collections.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/CommonClientServerCode/System/Collections/Generic.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/CommonClientServerCode/System/Collections/Generic/QueueExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/CommonClientServerCode/System/Collections/Generic/QueueExtensions.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/GameManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/Network/Clients.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/Network/Clients/CustomHttpClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/Network/Clients/CustomHttpClient.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/Network/Clients/IClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/Network/Clients/IClient.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/Network/NetworkClientState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/Network/NetworkClientState.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/Network/NetworkManagerClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/Network/NetworkManagerClient.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/Network/ClientProxy.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/Network/HttpServer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/Network/IServer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/Network/NetworkManagerServer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/.idea.exercise_multiplayer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.idea.exercise_multiplayer/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/.idea.exercise_multiplayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.idea.exercise_multiplayer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assembly-CSharp.csproj.DotSettings" beforeDir="false" afterPath="$PROJECT_DIR$/../Assembly-CSharp.csproj.DotSettings" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Server/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Server/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/CommonClientServerCode/Serialization/BinaryFormatterSerializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scripts/CommonClientServerCode/Serialization/BinaryFormatterSerializer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Server/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Server/riderModule.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,6 +65,7 @@
         <option value="$PROJECT_DIR$/../Assets/Scripts/CommonClientServerCode/System/Collections/Generic/QueueExtensions.cs" />
         <option value="$PROJECT_DIR$/../Assets/Scripts/CommonClientServerCode/Serialization/ISerializer.cs" />
         <option value="$PROJECT_DIR$/../Assets/Scripts/CommonClientServerCode/Serialization/BinaryFormatterSerializer.cs" />
+        <option value="$PROJECT_DIR$/../Assets/Scripts/CommonClientServerCode/Serialization/CustomizedBinder.cs" />
       </list>
     </option>
   </component>
@@ -149,6 +114,7 @@
       <workItem from="1602914515388" duration="10838000" />
       <workItem from="1603000195524" duration="6930000" />
       <workItem from="1603014049311" duration="8682000" />
+      <workItem from="1603025091994" duration="1197000" />
     </task>
     <servers />
   </component>
@@ -177,121 +143,89 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="455" height="446" key="DebuggerActiveHint/0.0.1366.738@0.0.1366.738" timestamp="1603021345598" />
-    <state width="1323" height="164" key="GridCell.Tab.0.bottom" timestamp="1603025022729">
+    <state width="1323" height="164" key="GridCell.Tab.0.bottom" timestamp="1603027014694">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="164" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1603025022729" />
-    <state width="1323" height="164" key="GridCell.Tab.0.center" timestamp="1603025022724">
+    <state width="1323" height="164" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1603027014694" />
+    <state width="1323" height="164" key="GridCell.Tab.0.center" timestamp="1603027014694">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="164" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1603025022724" />
-    <state width="1323" height="164" key="GridCell.Tab.0.left" timestamp="1603025022724">
+    <state width="1323" height="164" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1603027014694" />
+    <state width="1323" height="164" key="GridCell.Tab.0.left" timestamp="1603027014694">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="164" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1603025022724" />
-    <state width="1323" height="164" key="GridCell.Tab.0.right" timestamp="1603025022724">
+    <state width="1323" height="164" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1603027014694" />
+    <state width="1323" height="164" key="GridCell.Tab.0.right" timestamp="1603027014694">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="164" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1603025022724" />
-    <state width="1323" height="164" key="GridCell.Tab.1.bottom" timestamp="1603025022729">
+    <state width="1323" height="164" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1603027014694" />
+    <state width="1323" height="164" key="GridCell.Tab.1.bottom" timestamp="1603027014694">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="164" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1603025022729" />
-    <state width="1323" height="164" key="GridCell.Tab.1.center" timestamp="1603025022729">
+    <state width="1323" height="164" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1603027014694" />
+    <state width="1323" height="164" key="GridCell.Tab.1.center" timestamp="1603027014694">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="164" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1603025022729" />
-    <state width="1323" height="164" key="GridCell.Tab.1.left" timestamp="1603025022729">
+    <state width="1323" height="164" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1603027014694" />
+    <state width="1323" height="164" key="GridCell.Tab.1.left" timestamp="1603027014694">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="164" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1603025022729" />
-    <state width="1323" height="164" key="GridCell.Tab.1.right" timestamp="1603025022729">
+    <state width="1323" height="164" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1603027014694" />
+    <state width="1323" height="164" key="GridCell.Tab.1.right" timestamp="1603027014694">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="164" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1603025022729" />
-    <state width="1323" height="164" key="GridCell.Tab.2.bottom" timestamp="1603025022729">
+    <state width="1323" height="164" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1603027014694" />
+    <state width="1323" height="164" key="GridCell.Tab.2.bottom" timestamp="1603027014694">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="164" key="GridCell.Tab.2.bottom/0.0.1366.738@0.0.1366.738" timestamp="1603025022729" />
-    <state width="1323" height="164" key="GridCell.Tab.2.center" timestamp="1603025022729">
+    <state width="1323" height="164" key="GridCell.Tab.2.bottom/0.0.1366.738@0.0.1366.738" timestamp="1603027014694" />
+    <state width="1323" height="164" key="GridCell.Tab.2.center" timestamp="1603027014694">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="164" key="GridCell.Tab.2.center/0.0.1366.738@0.0.1366.738" timestamp="1603025022729" />
-    <state width="1323" height="164" key="GridCell.Tab.2.left" timestamp="1603025022729">
+    <state width="1323" height="164" key="GridCell.Tab.2.center/0.0.1366.738@0.0.1366.738" timestamp="1603027014694" />
+    <state width="1323" height="164" key="GridCell.Tab.2.left" timestamp="1603027014694">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="164" key="GridCell.Tab.2.left/0.0.1366.738@0.0.1366.738" timestamp="1603025022729" />
-    <state width="1323" height="164" key="GridCell.Tab.2.right" timestamp="1603025022729">
+    <state width="1323" height="164" key="GridCell.Tab.2.left/0.0.1366.738@0.0.1366.738" timestamp="1603027014694" />
+    <state width="1323" height="164" key="GridCell.Tab.2.right" timestamp="1603027014694">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="164" key="GridCell.Tab.2.right/0.0.1366.738@0.0.1366.738" timestamp="1603025022729" />
-    <state width="1323" height="164" key="GridCell.Tab.3.bottom" timestamp="1603025022729">
+    <state width="1323" height="164" key="GridCell.Tab.2.right/0.0.1366.738@0.0.1366.738" timestamp="1603027014694" />
+    <state width="1323" height="164" key="GridCell.Tab.3.bottom" timestamp="1603027014704">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="164" key="GridCell.Tab.3.bottom/0.0.1366.738@0.0.1366.738" timestamp="1603025022729" />
-    <state width="1323" height="164" key="GridCell.Tab.3.center" timestamp="1603025022729">
+    <state width="1323" height="164" key="GridCell.Tab.3.bottom/0.0.1366.738@0.0.1366.738" timestamp="1603027014704" />
+    <state width="1323" height="164" key="GridCell.Tab.3.center" timestamp="1603027014704">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="164" key="GridCell.Tab.3.center/0.0.1366.738@0.0.1366.738" timestamp="1603025022729" />
-    <state width="1323" height="164" key="GridCell.Tab.3.left" timestamp="1603025022729">
+    <state width="1323" height="164" key="GridCell.Tab.3.center/0.0.1366.738@0.0.1366.738" timestamp="1603027014704" />
+    <state width="1323" height="164" key="GridCell.Tab.3.left" timestamp="1603027014694">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="164" key="GridCell.Tab.3.left/0.0.1366.738@0.0.1366.738" timestamp="1603025022729" />
-    <state width="1323" height="164" key="GridCell.Tab.3.right" timestamp="1603025022729">
+    <state width="1323" height="164" key="GridCell.Tab.3.left/0.0.1366.738@0.0.1366.738" timestamp="1603027014694" />
+    <state width="1323" height="164" key="GridCell.Tab.3.right" timestamp="1603027014704">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="164" key="GridCell.Tab.3.right/0.0.1366.738@0.0.1366.738" timestamp="1603025022729" />
-    <state width="1323" height="164" key="GridCell.Tab.4.bottom" timestamp="1603025022729">
+    <state width="1323" height="164" key="GridCell.Tab.3.right/0.0.1366.738@0.0.1366.738" timestamp="1603027014704" />
+    <state width="1323" height="164" key="GridCell.Tab.4.bottom" timestamp="1603027014704">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="164" key="GridCell.Tab.4.bottom/0.0.1366.738@0.0.1366.738" timestamp="1603025022729" />
-    <state width="1323" height="164" key="GridCell.Tab.4.center" timestamp="1603025022729">
+    <state width="1323" height="164" key="GridCell.Tab.4.bottom/0.0.1366.738@0.0.1366.738" timestamp="1603027014704" />
+    <state width="1323" height="164" key="GridCell.Tab.4.center" timestamp="1603027014704">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="164" key="GridCell.Tab.4.center/0.0.1366.738@0.0.1366.738" timestamp="1603025022729" />
-    <state width="1323" height="164" key="GridCell.Tab.4.left" timestamp="1603025022729">
+    <state width="1323" height="164" key="GridCell.Tab.4.center/0.0.1366.738@0.0.1366.738" timestamp="1603027014704" />
+    <state width="1323" height="164" key="GridCell.Tab.4.left" timestamp="1603027014704">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="164" key="GridCell.Tab.4.left/0.0.1366.738@0.0.1366.738" timestamp="1603025022729" />
-    <state width="1323" height="164" key="GridCell.Tab.4.right" timestamp="1603025022729">
+    <state width="1323" height="164" key="GridCell.Tab.4.left/0.0.1366.738@0.0.1366.738" timestamp="1603027014704" />
+    <state width="1323" height="164" key="GridCell.Tab.4.right" timestamp="1603027014704">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="164" key="GridCell.Tab.4.right/0.0.1366.738@0.0.1366.738" timestamp="1603025022729" />
+    <state width="1323" height="164" key="GridCell.Tab.4.right/0.0.1366.738@0.0.1366.738" timestamp="1603027014704" />
     <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1603013006324">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1603013006324" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Server/Network/NetworkManagerServer.cs</url>
-          <line>39</line>
-          <properties documentPath="C:\Users\vovas\source\repos\Unity\exercise_multiplayer\Server\Server\Network\NetworkManagerServer.cs" initialLine="39">
-            <startOffsets>
-              <option value="1139" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1232" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/../Assets/Scripts/CommonClientServerCode/Serialization/BinaryFormatterSerializer.cs</url>
-          <line>52</line>
-          <properties documentPath="C:\Users\vovas\source\repos\Unity\exercise_multiplayer\Assets\Scripts\CommonClientServerCode\Serialization\BinaryFormatterSerializer.cs" initialLine="50">
-            <startOffsets>
-              <option value="2056" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2108" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

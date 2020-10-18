@@ -23,45 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08fac7fd-c778-4934-80c3-7faf153ae413" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonClientServerCode.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonClientServerCode/Network.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonClientServerCode/Network/NetworkPacketType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonClientServerCode/Network/NetworkPacketType.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonClientServerCode/Serialization.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonClientServerCode/Serialization/BinaryFormatterSerializer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonClientServerCode/Serialization/BinaryFormatterSerializer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonClientServerCode/Serialization/CustomizedBinder.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonClientServerCode/Serialization/CustomizedBinder.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonClientServerCode/Serialization/ISerializer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonClientServerCode/Serialization/ISerializer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonClientServerCode/System.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonClientServerCode/System/Collections.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonClientServerCode/System/Collections/Generic.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonClientServerCode/System/Collections/Generic/QueueExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonClientServerCode/System/Collections/Generic/QueueExtensions.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Network/Clients.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Network/Clients/CustomHttpClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Network/Clients/CustomHttpClient.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Network/Clients/IClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Network/Clients/IClient.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Network/NetworkClientState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Network/NetworkClientState.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Network/NetworkManagerClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Network/NetworkManagerClient.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/Server/Network/ClientProxy.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/Server/Network/HttpServer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/Server/Network/IServer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/Server/Network/NetworkManagerServer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.exercise_multiplayer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.exercise_multiplayer/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.exercise_multiplayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.exercise_multiplayer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj.DotSettings" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj.DotSettings" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/.idea/.idea.Server/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/.idea/.idea.Server/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CommonClientServerCode/Serialization/BinaryFormatterSerializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CommonClientServerCode/Serialization/BinaryFormatterSerializer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/.idea/.idea.Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/.idea/.idea.Server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/.idea/.idea.Server/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/.idea/.idea.Server/riderModule.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/Server/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Server/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +150,7 @@
       <workItem from="1602758045270" duration="1002000" />
       <workItem from="1602830266935" duration="1977000" />
       <workItem from="1602914387348" duration="19162000" />
-      <workItem from="1602997927514" duration="20847000" />
+      <workItem from="1602997927514" duration="21880000" />
     </task>
     <servers />
   </component>

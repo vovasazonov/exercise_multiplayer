@@ -20,8 +20,8 @@ namespace Serialization
                 {
                     throw new NotSupportedException("Not supported serialization bigger than ushort.Maxvalue bytes.");
                 }
-                byte[] amountSerializeInBytes = BitConverter.GetBytes(Convert.ToUInt16(memoryStream.Length));
-                bytes.Enqueue(amountSerializeInBytes);
+                // byte[] amountSerializeInBytes = BitConverter.GetBytes(Convert.ToUInt16(memoryStream.Length));
+                // bytes.Enqueue(amountSerializeInBytes);
                 bytes.Enqueue(memoryStream.ToArray());
             }
 
@@ -39,19 +39,19 @@ namespace Serialization
             
             using (MemoryStream memoryStream = new MemoryStream(bytes.ToArray()))
             {
-                byte[] amountSerializeInBytes = new byte[2];
-                memoryStream.Read(amountSerializeInBytes, 0, 2);
-                ushort amountSerializeBytes = BitConverter.ToUInt16(amountSerializeInBytes, 0);
+                // byte[] amountSerializeInBytes = new byte[2];
+                // memoryStream.Read(amountSerializeInBytes, 0, 2);
+                // ushort amountSerializeBytes = BitConverter.ToUInt16(amountSerializeInBytes, 0);
 
-                byte[] objectInBytes = new byte[amountSerializeBytes];
-                memoryStream.Read(objectInBytes, 0, amountSerializeBytes);
+                // byte[] objectInBytes = new byte[amountSerializeBytes];
+                // memoryStream.Read(objectInBytes, 0, amountSerializeBytes);
 
-                using (MemoryStream memoryStream2 = new MemoryStream(objectInBytes))
+                using (MemoryStream memoryStream2 = new MemoryStream(bytes.ToArray()/*objectInBytes*/))
                 {
                     BinaryFormatter binaryFormatter = new BinaryFormatter();
                     binaryFormatter.Binder = new CustomizedBinder();
                     obj = (T)binaryFormatter.Deserialize(memoryStream2);
-                    bytes.Dequeue(amountSerializeBytes + sizeof(ushort));
+                    bytes.Dequeue(memoryStream2.Position);
                 }
             }
             
