@@ -7,7 +7,38 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
-          <e p="CommonClientServerCode" t="Include">
+          <e p="ClientCode" t="Include">
+            <e p="Game" t="Include">
+              <e p="HealthPoints" t="Include">
+                <e p="Views" t="Include">
+                  <e p="HealthPointTextView.cs" t="Include" />
+                  <e p="IHealthPointTextView.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="GameManager.cs" t="Include" />
+            <e p="Network" t="Include">
+              <e p="Clients" t="Include">
+                <e p="CustomHttpClient.cs" t="Include" />
+                <e p="IClient.cs" t="Include" />
+              </e>
+              <e p="NetworkClientState.cs" t="Include" />
+              <e p="NetworkManagerClient.cs" t="Include" />
+            </e>
+          </e>
+          <e p="SharedCode" t="Include">
+            <e p="Game" t="Include">
+              <e p="Enemies" t="Include">
+                <e p="EnemyData.cs" t="Include" />
+                <e p="IEnemyData.cs" t="Include" />
+                <e p="IEnemyModel.cs" t="Include" />
+              </e>
+              <e p="Worlds" t="Include">
+                <e p="IWorldData.cs" t="Include" />
+                <e p="IWorldModel.cs" t="Include" />
+                <e p="WorldData.cs" t="Include" />
+              </e>
+            </e>
             <e p="Network" t="Include">
               <e p="NetworkPacketType.cs" t="Include" />
             </e>
@@ -23,15 +54,6 @@
                 </e>
               </e>
             </e>
-          </e>
-          <e p="GameManager.cs" t="Include" />
-          <e p="Network" t="Include">
-            <e p="Clients" t="Include">
-              <e p="CustomHttpClient.cs" t="Include" />
-              <e p="IClient.cs" t="Include" />
-            </e>
-            <e p="NetworkClientState.cs" t="Include" />
-            <e p="NetworkManagerClient.cs" t="Include" />
           </e>
         </e>
       </e>
