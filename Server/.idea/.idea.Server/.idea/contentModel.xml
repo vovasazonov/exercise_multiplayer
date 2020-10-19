@@ -5,23 +5,7 @@
     <e p="C:\Users\vovas\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_Server.965042186.00" t="ExcludeRecursive" />
     <e p="C:\Users\vovas\source\repos\Unity\exercise_multiplayer\Assets\Scripts\SharedCode" t="Include">
       <e p="Game" t="Include">
-        <e p="Enemies" t="Include">
-          <e p="EnemyData.cs" t="Include" />
-          <e p="EnemyData.cs.meta" t="Include" />
-          <e p="IEnemyData.cs" t="Include" />
-          <e p="IEnemyData.cs.meta" t="Include" />
-          <e p="IEnemyModel.cs" t="Include" />
-          <e p="IEnemyModel.cs.meta" t="Include" />
-        </e>
         <e p="Enemies.meta" t="Include" />
-        <e p="Worlds" t="Include">
-          <e p="IWorldData.cs" t="Include" />
-          <e p="IWorldData.cs.meta" t="Include" />
-          <e p="IWorldModel.cs" t="Include" />
-          <e p="IWorldModel.cs.meta" t="Include" />
-          <e p="WorldData.cs" t="Include" />
-          <e p="WorldData.cs.meta" t="Include" />
-        </e>
         <e p="Worlds.meta" t="Include" />
       </e>
       <e p="Game.meta" t="Include" />
@@ -67,6 +51,13 @@
         <e p="ServerCode" t="Include">
           <e p="Network" t="Include">
             <e p="ClientProxy.cs" t="Include" />
+            <e p="HandlePackets" t="Include">
+              <e p="ErrorHandleClientPacket.cs" t="Include" />
+              <e p="HelloHandleClientPacket.cs" t="Include" />
+              <e p="IHandleClientPacket.cs" t="Include" />
+              <e p="InputHandleClientPacket.cs" t="Include" />
+              <e p="UpdateHandleClientPacket.cs" t="Include" />
+            </e>
             <e p="HttpServer.cs" t="Include" />
             <e p="IServer.cs" t="Include" />
             <e p="NetworkManagerServer.cs" t="Include" />

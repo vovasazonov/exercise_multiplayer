@@ -1,22 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using Network;
 using Serialization;
+using Server.Network.HandlePackets;
 
 namespace Server.Network
 {
-    public class NetworkManagerServer
+    public class NetworkManagerServer : IDisposable
     {
         private readonly IServer _server;
-        private int _lastSetId = Int32.MaxValue;
         private readonly Dictionary<int, ClientProxy> _clients = new Dictionary<int, ClientProxy>();
         private readonly ISerializer _serializer = new BinaryFormatterSerializer();
 
         public NetworkManagerServer(IServer server)
         {
             _server = server;
-            
+
             AddServerListener();
         }
 
@@ -38,42 +37,30 @@ namespace Server.Network
         private void ResponseClientPacket(Queue<byte> packetCame, Queue<byte> packetResponse)
         {
             NetworkPacketType networkPacketType = _serializer.Deserialize<NetworkPacketType>(packetCame);
+            IHandleClientPacket handleClientPacket;
             
             switch (networkPacketType)
             {
                 case NetworkPacketType.Hello:
-                    packetResponse.Enqueue(ResponsePacketFromNewClient());
+                    handleClientPacket = new HelloHandleClientPacket(_clients,_serializer);
+                    break;
+                case NetworkPacketType.Update:
+                    handleClientPacket = new UpdateHandleClientPacket();
+                    break;
+                case NetworkPacketType.Input:
+                    handleClientPacket = new InputHandleClientPacket();
+                    break;
+                default:
+                    handleClientPacket = new ErrorHandleClientPacket(_serializer);
                     break;
             }
-        }
-
-        private byte[] ResponsePacketFromNewClient()
-        {
-            Queue<byte> responsePacket = new Queue<byte>();
-            bool newClientSet = false;
-            int fuse = _lastSetId;
             
-            while (!newClientSet && ++_lastSetId != fuse)
-            {
-                if (!_clients.Keys.Contains(_lastSetId))
-                {
-                    var clientProxy = new ClientProxy(_lastSetId);
-                    _clients[_lastSetId] = clientProxy;
-                    responsePacket = PrepareWelcomePacket(clientProxy);
-                    newClientSet = true;
-                }
-            }
-
-            return responsePacket.ToArray();
+            packetResponse.Enqueue(handleClientPacket.Response(packetCame));
         }
 
-        private Queue<byte> PrepareWelcomePacket(ClientProxy clientProxy)
+        public void Dispose()
         {
-            Queue<byte> responsePacket = new Queue<byte>();
-            responsePacket.Enqueue(_serializer.Serialize(NetworkPacketType.Welcome));
-            responsePacket.Enqueue(_serializer.Serialize(clientProxy.IdClient));
-
-            return responsePacket;
+            RemoveServerListener();
         }
     }
 }

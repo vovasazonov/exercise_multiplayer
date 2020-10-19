@@ -4,6 +4,8 @@
     {
         Hello,
         Welcome,
-        Command
+        Input,
+        Update,
+        ErrorPacket
     }
 }

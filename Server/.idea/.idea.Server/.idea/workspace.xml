@@ -23,48 +23,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="703e222c-aafd-409f-982b-87c7e7f6ce68" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Managers.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Managers/ModelsManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Managers/ModelsManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Enemies/Data.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Enemies/Data/IEnemyData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Enemies/Data/SerializableEnemyData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Enemies/Data/SerializableEnemyData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Enemies/Models.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Enemies/Models/IEnemyModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Enemies/Models/IEnemyModel.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/HealthPoints.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/HealthPoints/Data.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/HealthPoints/Data/IHealthPointData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/HealthPoints/Data/IHealthPointData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/HealthPoints/Data/SerializableHealthPointData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/HealthPoints/Data/SerializableHealthPointData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/HealthPoints/Models.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/HealthPoints/Models/IHealthPointModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/HealthPoints/Models/IHealthPointModel.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Worlds/Data.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Worlds/Data/IWorldData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Worlds/Data/SerializableWorldData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Worlds/Data/SerializableWorldData.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/.idea.exercise_multiplayer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.idea.exercise_multiplayer/.idea/contentModel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/ServerCode/Network/HandlePackets/ErrorHandleClientPacket.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/ServerCode/Network/HandlePackets/HelloHandleClientPacket.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/ServerCode/Network/HandlePackets/IHandleClientPacket.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/ServerCode/Network/HandlePackets/InputHandleClientPacket.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/ServerCode/Network/HandlePackets/UpdateHandleClientPacket.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.idea.exercise_multiplayer/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.idea.exercise_multiplayer/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/.idea.exercise_multiplayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.idea.exercise_multiplayer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Managers/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/GameManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Managers/GameManager.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Enemies/EnemyData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Enemies/EnemyData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Enemies/IEnemyData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Enemies/IEnemyData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Enemies/Data/IEnemyData.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Enemies/IEnemyModel.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Enemies/IEnemyModel.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Worlds/IWorldData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Worlds/IWorldData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Worlds/Data/IWorldData.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Worlds/IWorldModel.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Worlds/IWorldModel.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Worlds/WorldData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Worlds/WorldData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Enemies.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Enemies/Data.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Enemies/Data/IEnemyData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Enemies/Data/IEnemyData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Enemies/Data/SerializableEnemyData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Enemies/Data/SerializableEnemyData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Enemies/Models.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Enemies/Models/IEnemyModel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Enemies/Models/IEnemyModel.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/HealthPoints.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/HealthPoints/Data.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/HealthPoints/Data/IHealthPointData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/HealthPoints/Data/IHealthPointData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/HealthPoints/Data/SerializableHealthPointData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/HealthPoints/Data/SerializableHealthPointData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/HealthPoints/Models.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/HealthPoints/Models/IHealthPointModel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/HealthPoints/Models/IHealthPointModel.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Worlds.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Worlds/Data.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Worlds/Data/IWorldData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Worlds/Data/IWorldData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Worlds/Data/SerializableWorldData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Worlds/Data/SerializableWorldData.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Network/NetworkPacketType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Network/NetworkPacketType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Serialization/BinaryFormatterSerializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Serialization/BinaryFormatterSerializer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Server/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Server/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Server/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/ServerCode/Network/NetworkManagerServer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/ServerCode/Network/NetworkManagerServer.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,6 +99,18 @@
         <option value="$PROJECT_DIR$/../Assets/Scripts/CommonClientServerCode/Serialization/ISerializer.cs" />
         <option value="$PROJECT_DIR$/../Assets/Scripts/CommonClientServerCode/Serialization/BinaryFormatterSerializer.cs" />
         <option value="$PROJECT_DIR$/../Assets/Scripts/CommonClientServerCode/Serialization/CustomizedBinder.cs" />
+        <option value="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Serialization/BinaryFormatterSerializer.cs" />
+        <option value="$PROJECT_DIR$/Server/ServerCode/Network/IPacket.cs" />
+        <option value="$PROJECT_DIR$/Server/ServerCode/Network/IHandlePacket.cs" />
+        <option value="$PROJECT_DIR$/Server/ServerCode/Network/HelloClientPacket.cs" />
+        <option value="$PROJECT_DIR$/Server/ServerCode/Network/HelloClientClientPacket.cs" />
+        <option value="$PROJECT_DIR$/Server/ServerCode/Network/ManagerHandleClientPacket.cs" />
+        <option value="$PROJECT_DIR$/Server/ServerCode/Network/HelloHandleClientPacket.cs" />
+        <option value="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Network/NetworkPacketType.cs" />
+        <option value="$PROJECT_DIR$/Server/ServerCode/Network/ErrorHandleClientPacket.cs" />
+        <option value="$PROJECT_DIR$/Server/ServerCode/Network/InputHandleClientPacket.cs" />
+        <option value="$PROJECT_DIR$/Server/ServerCode/Network/UpdateHandleClientPacket.cs" />
+        <option value="$PROJECT_DIR$/Server/ServerCode/Network/NetworkManagerServer.cs" />
       </list>
     </option>
   </component>
@@ -156,6 +161,7 @@
       <workItem from="1603014049311" duration="8682000" />
       <workItem from="1603025091994" duration="3772000" />
       <workItem from="1603089871139" duration="3088000" />
+      <workItem from="1603112140002" duration="6037000" />
     </task>
     <servers />
   </component>
@@ -184,22 +190,22 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="455" height="446" key="DebuggerActiveHint/0.0.1366.738@0.0.1366.738" timestamp="1603021345598" />
-    <state width="1323" height="182" key="GridCell.Tab.0.bottom" timestamp="1603033883164">
+    <state width="1323" height="182" key="GridCell.Tab.0.bottom" timestamp="1603112263576">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1603033883164" />
-    <state width="1323" height="182" key="GridCell.Tab.0.center" timestamp="1603033883164">
+    <state width="1323" height="182" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1603112263576" />
+    <state width="1323" height="182" key="GridCell.Tab.0.center" timestamp="1603112263576">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1603033883164" />
-    <state width="1323" height="182" key="GridCell.Tab.0.left" timestamp="1603033883164">
+    <state width="1323" height="182" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1603112263576" />
+    <state width="1323" height="182" key="GridCell.Tab.0.left" timestamp="1603112263575">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1603033883164" />
-    <state width="1323" height="182" key="GridCell.Tab.0.right" timestamp="1603033883164">
+    <state width="1323" height="182" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1603112263575" />
+    <state width="1323" height="182" key="GridCell.Tab.0.right" timestamp="1603112263576">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1603033883164" />
+    <state width="1323" height="182" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1603112263576" />
     <state width="1323" height="164" key="GridCell.Tab.1.bottom" timestamp="1603033883117">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -264,6 +270,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1323" height="164" key="GridCell.Tab.4.right/0.0.1366.738@0.0.1366.738" timestamp="1603033883133" />
+    <state x="555" y="67" key="RiderGenerateDialog" timestamp="1603118170031">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="555" y="67" key="RiderGenerateDialog/0.0.1366.738@0.0.1366.738" timestamp="1603118170031" />
     <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1603013006324">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
