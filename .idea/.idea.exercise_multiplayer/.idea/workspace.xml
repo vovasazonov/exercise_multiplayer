@@ -23,45 +23,56 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08fac7fd-c778-4934-80c3-7faf153ae413" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Enemies/EnemyData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Enemies/EnemyData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Enemies/IEnemyData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Enemies/IEnemyData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Enemies/IEnemyModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Enemies/IEnemyModel.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Worlds.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Worlds/IWorldData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Worlds/IWorldData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Worlds/IWorldModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Worlds/IWorldModel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/Enemies.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/Enemies/Models.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/Worlds.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/Worlds/Models.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/Worlds/Models/IWorldModelClient.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/Worlds/Models/IWorldModelClient.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/Worlds/Models/WorldModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/Worlds/Models/WorldModel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Managers.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Managers/ModelManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Managers/ModelManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Enemies/Data.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Enemies/Data/IEnemyData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Enemies/Data/SerializableEnemyData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Enemies/Data/SerializableEnemyData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Enemies/Models.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Enemies/Models/IEnemyModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Enemies/Models/IEnemyModel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/HealthPoints.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/HealthPoints/Data.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/HealthPoints/Data/IHealthPointData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/HealthPoints/Data/IHealthPointData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/HealthPoints/Data/SerializableHealthPointData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/HealthPoints/Data/SerializableHealthPointData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/HealthPoints/Models.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/HealthPoints/Models/IHealthPointModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/HealthPoints/Models/IHealthPointModel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Worlds/Data.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Worlds/Data/IWorldData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Worlds/Data/SerializableWorldData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Worlds/Data/SerializableWorldData.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.exercise_multiplayer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.exercise_multiplayer/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.exercise_multiplayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.exercise_multiplayer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj.DotSettings" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj.DotSettings" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CommonClientServerCode.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CommonClientServerCode/Network.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Network.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CommonClientServerCode/Network/NetworkPacketType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Network/NetworkPacketType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CommonClientServerCode/Network/NetworkPacketType.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Network/NetworkPacketType.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CommonClientServerCode/Serialization.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Serialization.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CommonClientServerCode/Serialization/BinaryFormatterSerializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Serialization/BinaryFormatterSerializer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CommonClientServerCode/Serialization/BinaryFormatterSerializer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Serialization/BinaryFormatterSerializer.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CommonClientServerCode/Serialization/CustomizedBinder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Serialization/CustomizedBinder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CommonClientServerCode/Serialization/CustomizedBinder.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Serialization/CustomizedBinder.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CommonClientServerCode/Serialization/ISerializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Serialization/ISerializer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CommonClientServerCode/Serialization/ISerializer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Serialization/ISerializer.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CommonClientServerCode/System.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/System.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CommonClientServerCode/System/Collections.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/System/Collections.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CommonClientServerCode/System/Collections/Generic.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/System/Collections/Generic.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CommonClientServerCode/System/Collections/Generic/QueueExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/System/Collections/Generic/QueueExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CommonClientServerCode/System/Collections/Generic/QueueExtensions.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/System/Collections/Generic/QueueExtensions.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/.idea/.idea.Server/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/.idea/.idea.Server/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClientCode/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Managers/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClientCode/GameManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Managers/GameManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Enemies/EnemyData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Enemies/EnemyData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Enemies/IEnemyData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Enemies/IEnemyData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Enemies/Data/IEnemyData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Enemies/IEnemyModel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Enemies/IEnemyModel.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Worlds/IWorldData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Worlds/IWorldData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Worlds/Data/IWorldData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Worlds/IWorldModel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Worlds/IWorldModel.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Worlds/WorldData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Worlds/WorldData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Network/NetworkPacketType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Network/NetworkPacketType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Serialization/BinaryFormatterSerializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Serialization/BinaryFormatterSerializer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/.idea/.idea.Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/.idea/.idea.Server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/.idea/.idea.Server/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/.idea/.idea.Server/riderModule.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/Server/Network/ClientProxy.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/Server/Network/HttpServer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/Server/Network/IServer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/Server/Network/NetworkManagerServer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/Server/Program.cs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,44 +86,12 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/94C5F4C3-8CDC-42D2-B006-F8BADEF04394/9a/8c36f3ed/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/437BA245-D840-4784-B9FB-AB9B439AC908/51/58fa12d2/AsyncVoidMethodBuilder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7EBF3529-BA0E-4558-A5FA-1BC982AA8605/1a/4cfdd4b3/HttpClient.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/HealthPoints/Views/IHealthPointTextView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/HealthPoints/Views/IHealthPointTextView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/437BA245-D840-4784-B9FB-AB9B439AC908/6b/d46c6c29/AsyncMethodBuilderCore.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Networks/ISerializeDeserialize.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Networks/BinaryFormatterSerializeDeserialize.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Serialization/BinaryFormatterSerializeDeserialize.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Serialization/ISerializeDeserialize.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Networks/Serialization/ISerializeDeserialize.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Networks/Serialization/BinaryFormatterSerializeDeserialize.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Networks/Serialization/ISerializer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Networks/Serialization/BinaryFormatterSerializer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Networks/CustomHttpClient.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Networks/Clients/IClient.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Networks/Clients/CustomHttpClient.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Networks/QueueExtensions.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/Collections/Generic/QueueExtensions.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Networks/NetworkManagerClient.cs" />
-        <option value="$PROJECT_DIR$/Assets/СommonClientServerCode/System/Collections/Generic/QueueExtensions.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/СommonClientServerCode/System/Collections/Generic/QueueExtensions.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Network/NetworkClientState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/СommonClientServerCode/Network/NetworkPacketType.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/СommonClientServerCode/Serialization/BinaryFormatterSerializer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Network/Clients/TempClassNetworkManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Network/TempClassNetworkManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Network/Clients/IPacket.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Network/IOutgoingPacket.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/СommonClientServerCode/Serialization/ISerializer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Network/Clients/IClient.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CommonClientServerCode/System/Collections/Generic/QueueExtensions.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CommonClientServerCode/Serialization/ISerializer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Network/Clients/CustomHttpClient.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CommonClientServerCode/Serialization/CustomizedBinder.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CommonClientServerCode/Serialization/BinaryFormatterSerializer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Network/NetworkManagerClient.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/HealthPoints/Views/IHealthPointTextView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/HealthPoints/Views/HealthPointTextView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/HealthPoints/Models/IHealthPointModel.cs" />
@@ -132,6 +111,38 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/CommonClientServerCode/Game/Enemies/WorldData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CommonClientServerCode/Game/Enemies/EnemyData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CommonClientServerCode/Game/Enemies/EnemyModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Network/ClientCommand.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/HealthPoints/Views/HealthPointTextView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/HealthPoints/IHealthPointData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/HealthPoints/Data/IHealthPointData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Enemies/IEnemyData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Enemies/EnemyData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Worlds/IWorldData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/HealthPoints/Data/HealthPointData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Worlds/Data/WorldData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Enemies/Data/EnemyData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Network/NetworkPacketType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Network/TypeCommand.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Network/CommandType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Network/AttackCommand.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Network/ICommand.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Serialization/BinaryFormatterSerializer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Enemies/Data/IEnemyData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Worlds/Data/IWorldData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/HealthPoints/Data/SerializableHealthPointData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Enemies/Data/SerializableEnemyData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Worlds/Data/SerializableWorldData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/HealthPoints/IHealthPoint.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/HealthPoints/IHealthPointModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/HealthPoints/Models/IHealthPointModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Enemies/Models/IEnemyModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Worlds/Models/IWorldModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Managers/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Managers/ModelsManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Managers/ModelManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/Worlds/Models/IWorldModelClient.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/Worlds/Models/WorldModel.cs" />
       </list>
     </option>
   </component>
@@ -188,7 +199,7 @@
       <workItem from="1602830266935" duration="1977000" />
       <workItem from="1602914387348" duration="19162000" />
       <workItem from="1602997927514" duration="25562000" />
-      <workItem from="1603089339401" duration="2301000" />
+      <workItem from="1603089339401" duration="12059000" />
     </task>
     <servers />
   </component>
@@ -285,10 +296,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="275" y="100" key="Rider.ProjectTemplateDialog.Size/0.0.1366.738@0.0.1366.738" timestamp="1602950831435" />
-    <state x="511" y="42" key="RiderGenerateDialog" timestamp="1603007897916">
+    <state x="511" y="42" key="RiderGenerateDialog" timestamp="1603104988146">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="511" y="42" key="RiderGenerateDialog/0.0.1366.738@0.0.1366.738" timestamp="1603007897916" />
+    <state x="511" y="42" key="RiderGenerateDialog/0.0.1366.738@0.0.1366.738" timestamp="1603104988146" />
     <state x="184" y="13" key="SettingsEditor" timestamp="1602914741732">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -301,5 +312,9 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="339" y="165" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1601629700238" />
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1603097823871">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1603097823871" />
   </component>
 </project>

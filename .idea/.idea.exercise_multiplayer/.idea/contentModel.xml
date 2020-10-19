@@ -15,8 +15,17 @@
                   <e p="IHealthPointTextView.cs" t="Include" />
                 </e>
               </e>
+              <e p="Worlds" t="Include">
+                <e p="Models" t="Include">
+                  <e p="IWorldModelClient.cs" t="Include" />
+                  <e p="WorldModel.cs" t="Include" />
+                </e>
+              </e>
             </e>
-            <e p="GameManager.cs" t="Include" />
+            <e p="Managers" t="Include">
+              <e p="GameManager.cs" t="Include" />
+              <e p="ModelManager.cs" t="Include" />
+            </e>
             <e p="Network" t="Include">
               <e p="Clients" t="Include">
                 <e p="CustomHttpClient.cs" t="Include" />
@@ -29,14 +38,28 @@
           <e p="SharedCode" t="Include">
             <e p="Game" t="Include">
               <e p="Enemies" t="Include">
-                <e p="EnemyData.cs" t="Include" />
-                <e p="IEnemyData.cs" t="Include" />
-                <e p="IEnemyModel.cs" t="Include" />
+                <e p="Data" t="Include">
+                  <e p="IEnemyData.cs" t="Include" />
+                  <e p="SerializableEnemyData.cs" t="Include" />
+                </e>
+                <e p="Models" t="Include">
+                  <e p="IEnemyModel.cs" t="Include" />
+                </e>
+              </e>
+              <e p="HealthPoints" t="Include">
+                <e p="Data" t="Include">
+                  <e p="IHealthPointData.cs" t="Include" />
+                  <e p="SerializableHealthPointData.cs" t="Include" />
+                </e>
+                <e p="Models" t="Include">
+                  <e p="IHealthPointModel.cs" t="Include" />
+                </e>
               </e>
               <e p="Worlds" t="Include">
-                <e p="IWorldData.cs" t="Include" />
-                <e p="IWorldModel.cs" t="Include" />
-                <e p="WorldData.cs" t="Include" />
+                <e p="Data" t="Include">
+                  <e p="IWorldData.cs" t="Include" />
+                  <e p="SerializableWorldData.cs" t="Include" />
+                </e>
               </e>
             </e>
             <e p="Network" t="Include">

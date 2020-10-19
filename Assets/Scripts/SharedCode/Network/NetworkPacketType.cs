@@ -4,7 +4,6 @@
     {
         Hello,
         Welcome,
-        Input,
-        Update
+        Command
     }
 }
