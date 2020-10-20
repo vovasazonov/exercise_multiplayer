@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Game;
 using Network;
 using Serialization;
 
@@ -13,14 +14,16 @@ namespace Server.Network.HandlePackets
         private int _lastSetId;
         private readonly Queue<byte> _packetCame;
         private readonly Queue<byte> _responsePacket;
+        private readonly ModelManager _modelManager;
 
-        public HelloHandleClientPacket(Dictionary<int, ClientProxy> clients, ISerializer serializer, Queue<byte> packetCame, Queue<byte> responsePacket)
+        public HelloHandleClientPacket(Dictionary<int, ClientProxy> clients, ISerializer serializer, Queue<byte> packetCame, Queue<byte> responsePacket, ModelManager modelManager)
         {
             _clients = clients;
             _serializer = serializer;
             _packetCame = packetCame;
             _lastSetId = Int32.MaxValue + _clients.Count;
             _responsePacket = responsePacket;
+            _modelManager = modelManager;
         }
 
         public void HandlePacket()
@@ -34,6 +37,7 @@ namespace Server.Network.HandlePackets
                 {
                     var clientProxy = new ClientProxy(_lastSetId);
                     _clients[_lastSetId] = clientProxy;
+                    MoveServerDataToClient(clientProxy);
                     PrepareResponsePacket(clientProxy);
                     newClientSet = true;
                 }
@@ -44,6 +48,13 @@ namespace Server.Network.HandlePackets
         {
             _responsePacket.Enqueue(_serializer.Serialize(NetworkPacketType.Welcome));
             _responsePacket.Enqueue(_serializer.Serialize(clientProxy.IdClient));
+        }
+
+        private void MoveServerDataToClient(ClientProxy clientProxy)
+        {
+            clientProxy.NotSentCommand.Enqueue(_serializer.Serialize(GameCommandType.CharacterHpChanged));
+            clientProxy.NotSentCommand.Enqueue(_serializer.Serialize(_modelManager.EnemyModel.Id));
+            clientProxy.NotSentCommand.Enqueue(_serializer.Serialize(_modelManager.EnemyModel.HealthPoint.Points));
         }
     }
 }

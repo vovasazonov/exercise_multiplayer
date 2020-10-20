@@ -5,13 +5,13 @@ using Serialization;
 
 namespace Network.HandlePackets
 {
-    public readonly struct CommandHandleServerPacket : IHandleServerPacket
+    public readonly struct UpdateHandleServerPacket : IHandleServerPacket
     {
         private readonly Queue<byte> _packetCame;
         private readonly ModelManagerClient _modelManagerClient;
         private readonly ISerializer _serializer;
 
-        public CommandHandleServerPacket(Queue<byte> packetCame, ModelManagerClient modelManagerClient, ISerializer serializer)
+        public UpdateHandleServerPacket(Queue<byte> packetCame, ModelManagerClient modelManagerClient, ISerializer serializer)
         {
             _packetCame = packetCame;
             _modelManagerClient = modelManagerClient;

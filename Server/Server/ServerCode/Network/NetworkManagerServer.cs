@@ -10,6 +10,7 @@ namespace Server.Network
     public class NetworkManagerServer : IDisposable
     {
         private readonly IServer _server;
+        private readonly ModelManager _modelManager;
         private readonly Dictionary<int, ClientProxy> _clientProxyDic = new Dictionary<int, ClientProxy>();
         private readonly ISerializer _serializer = new BinaryFormatterSerializer();
         
@@ -18,6 +19,7 @@ namespace Server.Network
         public NetworkManagerServer(IServer server, ModelManager modelManager)
         {
             _server = server;
+            _modelManager = modelManager;
             _gameProcessor = new GameProcessor(modelManager, _clientProxyDic, _serializer);
 
             AddServerListener();
@@ -46,7 +48,7 @@ namespace Server.Network
             switch (networkPacketType)
             {
                 case NetworkPacketType.Hello:
-                    handleClientPacket = new HelloHandleClientPacket(_clientProxyDic, _serializer, packetCame, packetResponse);
+                    handleClientPacket = new HelloHandleClientPacket(_clientProxyDic, _serializer, packetCame, packetResponse, _modelManager);
                     break;
                 case NetworkPacketType.Command:
                     handleClientPacket = new CommandHandleClientPacket(_clientProxyDic, _serializer, packetCame);

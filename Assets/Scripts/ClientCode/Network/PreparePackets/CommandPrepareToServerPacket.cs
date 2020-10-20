@@ -21,6 +21,8 @@ namespace Network.PreparePackets
             bytes.Enqueue(_serializer.Serialize(_clientNetworkInfo.Id));
             bytes.Enqueue(_clientNetworkInfo.NotSentCommandsToServer.ToArray());
 
+            _clientNetworkInfo.NotSentCommandsToServer.Clear();
+            
             return bytes.ToArray();
         }
     }

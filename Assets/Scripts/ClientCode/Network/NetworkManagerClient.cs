@@ -11,12 +11,13 @@ namespace Network
 {
     public class NetworkManagerClient : IDisposable
     {
-        private readonly int _millisecondsBetweenSendPacket = 500;
+        private readonly int _millisecondsBetweenSendPacket = 1000;
         private readonly IClient _client;
         private readonly ISerializer _serializer;
         private readonly ModelManagerClient _modelManagerClient;
         private NetworkClientState _networkState = NetworkClientState.SayingHello;
         private readonly ClientNetworkInfo _clientNetworkInfo;
+        private bool _isNetWorkingWork = true;
 
         public NetworkManagerClient(IClient client, ClientNetworkInfo clientNetworkInfo, ISerializer serializer, ModelManagerClient modelManagerClient)
         {
@@ -56,7 +57,7 @@ namespace Network
                     _networkState = NetworkClientState.Welcomed;
                     break;
                 case NetworkPacketType.Update:
-                    handleServerPacket = new CommandHandleServerPacket(packet,_modelManagerClient,_serializer);
+                    handleServerPacket = new UpdateHandleServerPacket(packet,_modelManagerClient,_serializer);
                     break;
                 default:
                     handleServerPacket = new ErrorHandleServerPacket();
@@ -70,13 +71,20 @@ namespace Network
         {
             Queue<byte> outgoingPacket = new Queue<byte>();
 
-            while (true)
+            while (_isNetWorkingWork)
             {
                 IPrepareToServerPacket prepareToServerPacket;
                 switch (_networkState)
                 {
                     case NetworkClientState.Welcomed:
-                        prepareToServerPacket = new CommandPrepareToServerPacket(_serializer,_clientNetworkInfo);
+                        if (_clientNetworkInfo.NotSentCommandsToServer.Count > 0)
+                        {
+                            prepareToServerPacket = new CommandPrepareToServerPacket(_serializer,_clientNetworkInfo);
+                        }
+                        else
+                        {
+                            prepareToServerPacket = new UpdatePrepareToServerPacket(_serializer, _clientNetworkInfo.Id);
+                        }
                         break;
                     case NetworkClientState.SayingHello:
                         prepareToServerPacket = new HelloPrepareToServerPacket(_serializer);
@@ -99,6 +107,7 @@ namespace Network
 
         public void Dispose()
         {
+            _isNetWorkingWork = false;
             RemoveClientListener();
         }
     }

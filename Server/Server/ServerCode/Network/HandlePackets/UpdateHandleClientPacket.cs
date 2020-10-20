@@ -22,10 +22,13 @@ namespace Server.Network.HandlePackets
         public void HandlePacket()
         {
             int idClient = _serializer.Deserialize<int>(_packetCame);
-            
-            _packetResponse.Enqueue(_serializer.Serialize(NetworkPacketType.Update));
-            _packetResponse.Enqueue(_clients[idClient].NotSentCommand.ToArray());
-            _clients[idClient].NotSentCommand.Clear();
+
+            if (_clients.ContainsKey(idClient))
+            {
+                _packetResponse.Enqueue(_serializer.Serialize(NetworkPacketType.Update));
+                _packetResponse.Enqueue(_clients[idClient].NotSentCommand.ToArray());
+                _clients[idClient].NotSentCommand.Clear();
+            }
         }
     }
 }

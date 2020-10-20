@@ -32,6 +32,7 @@ namespace Game.Characters.Models
         private void PrepareCommandToServer(IWeaponModel weapon)
         {
             var packet = _clientNetworkInfo.NotSentCommandsToServer;
+            packet.Enqueue(_serializer.Serialize(GameCommandType.HitCharacter));
             packet.Enqueue(_serializer.Serialize(Id));
             packet.Enqueue(_serializer.Serialize(weapon.Id));
         }

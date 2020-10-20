@@ -51,7 +51,7 @@
               <e p="HandleServerPackets" t="Include">
                 <e p="Commands" t="Include">
                   <e p="CharacterHpChangedCommandHandleServerPacket.cs" t="Include" />
-                  <e p="CommandHandleServerPacket.cs" t="Include" />
+                  <e p="UpdateHandleServerPacket.cs" t="Include" />
                 </e>
                 <e p="ErrorHandleServerPacket.cs" t="Include" />
                 <e p="IHandleServerPacket.cs" t="Include" />
@@ -63,6 +63,7 @@
                 <e p="CommandPrepareToServerPacket.cs" t="Include" />
                 <e p="HelloPrepareToServerPacket.cs" t="Include" />
                 <e p="IPrepareToServerPacket.cs" t="Include" />
+                <e p="UpdatePrepareToServerPacket.cs" t="Include" />
               </e>
             </e>
           </e>

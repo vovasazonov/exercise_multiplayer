@@ -83,6 +83,10 @@
         <e p="ServerCode" t="Include">
           <e p="Network" t="Include">
             <e p="ClientProxy.cs" t="Include" />
+            <e p="Commands" t="Include">
+              <e p="HitCharacterHandleCommand.cs" t="Include" />
+              <e p="IHandleCommand.cs" t="Include" />
+            </e>
             <e p="GameProcessor.cs" t="Include" />
             <e p="HandlePackets" t="Include">
               <e p="CommandHandleClientPacket.cs" t="Include" />
