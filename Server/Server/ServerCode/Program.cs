@@ -1,4 +1,5 @@
 ﻿using System;
+using Game;
 using Server.Network;
 
 namespace Server
@@ -8,10 +9,11 @@ namespace Server
         private static void Main(string[] args)
         {
             IServer server = new HttpServer();
-            NetworkManagerServer networkManagerServer = new NetworkManagerServer(server);
+            ModelManager modelManager = new ModelManager();
+            NetworkManagerServer networkManagerServer = new NetworkManagerServer(server, modelManager);
 
             server.Start();
-            
+
             Console.WriteLine("Press enter to shut down server...");
             Console.ReadLine();
             server.Stop();

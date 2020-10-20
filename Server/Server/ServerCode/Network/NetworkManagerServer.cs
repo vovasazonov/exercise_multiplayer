@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Game;
 using Network;
 using Serialization;
 using Server.Network.HandlePackets;
@@ -9,12 +10,15 @@ namespace Server.Network
     public class NetworkManagerServer : IDisposable
     {
         private readonly IServer _server;
-        private readonly Dictionary<int, ClientProxy> _clients = new Dictionary<int, ClientProxy>();
+        private readonly Dictionary<int, ClientProxy> _clientProxyDic = new Dictionary<int, ClientProxy>();
         private readonly ISerializer _serializer = new BinaryFormatterSerializer();
+        
+        private readonly GameProcessor _gameProcessor;
 
-        public NetworkManagerServer(IServer server)
+        public NetworkManagerServer(IServer server, ModelManager modelManager)
         {
             _server = server;
+            _gameProcessor = new GameProcessor(modelManager, _clientProxyDic, _serializer);
 
             AddServerListener();
         }
@@ -38,24 +42,24 @@ namespace Server.Network
         {
             NetworkPacketType networkPacketType = _serializer.Deserialize<NetworkPacketType>(packetCame);
             IHandleClientPacket handleClientPacket;
-            
+
             switch (networkPacketType)
             {
                 case NetworkPacketType.Hello:
-                    handleClientPacket = new HelloHandleClientPacket(_clients,_serializer);
+                    handleClientPacket = new HelloHandleClientPacket(_clientProxyDic, _serializer, packetCame, packetResponse);
+                    break;
+                case NetworkPacketType.Command:
+                    handleClientPacket = new CommandHandleClientPacket(_clientProxyDic, _serializer, packetCame);
                     break;
                 case NetworkPacketType.Update:
-                    handleClientPacket = new UpdateHandleClientPacket();
-                    break;
-                case NetworkPacketType.Input:
-                    handleClientPacket = new InputHandleClientPacket();
+                    handleClientPacket = new UpdateHandleClientPacket(_clientProxyDic, _serializer, packetCame, packetResponse);
                     break;
                 default:
-                    handleClientPacket = new ErrorHandleClientPacket(_serializer);
+                    handleClientPacket = new ErrorHandleClientPacket();
                     break;
             }
-            
-            packetResponse.Enqueue(handleClientPacket.Response(packetCame));
+
+            handleClientPacket.HandlePacket();
         }
 
         public void Dispose()

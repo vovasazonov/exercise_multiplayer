@@ -1,21 +1,10 @@
-﻿using System.Collections.Generic;
-using Network;
-using Serialization;
-
-namespace Server.Network.HandlePackets
+﻿namespace Server.Network.HandlePackets
 {
     public readonly struct ErrorHandleClientPacket : IHandleClientPacket
     {
-        private readonly ISerializer _serializer;
-
-        public ErrorHandleClientPacket(ISerializer serializer)
+        public void HandlePacket()
         {
-            _serializer = serializer;
-        }
-
-        public byte[] Response(Queue<byte> packetCame)
-        {
-            return _serializer.Serialize(NetworkPacketType.ErrorPacket);
+            throw new System.NotImplementedException();
         }
     }
 }

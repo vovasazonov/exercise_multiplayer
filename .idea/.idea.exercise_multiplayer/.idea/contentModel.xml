@@ -9,60 +9,87 @@
         <e p="Scripts" t="Include">
           <e p="ClientCode" t="Include">
             <e p="Game" t="Include">
-              <e p="HealthPoints" t="Include">
-                <e p="Views" t="Include">
-                  <e p="HealthPointTextView.cs" t="Include" />
-                  <e p="IHealthPointTextView.cs" t="Include" />
-                </e>
-              </e>
-              <e p="Worlds" t="Include">
+              <e p="Characters" t="Include">
                 <e p="Models" t="Include">
-                  <e p="IWorldModelClient.cs" t="Include" />
-                  <e p="WorldModel.cs" t="Include" />
+                  <e p="CharacterModelClient.cs" t="Include" />
                 </e>
               </e>
-            </e>
-            <e p="Managers" t="Include">
               <e p="GameManager.cs" t="Include" />
-              <e p="ModelManager.cs" t="Include" />
+              <e p="HealthPoints" t="Include">
+                <e p="Presenters" t="Include">
+                  <e p="HealthPointPresenter.cs" t="Include" />
+                </e>
+              </e>
+              <e p="IPresenter.cs" t="Include" />
+              <e p="ModelManagerClient.cs" t="Include" />
+              <e p="PresenterManager.cs" t="Include" />
+              <e p="ViewManager.cs" t="Include" />
+              <e p="Views" t="Include">
+                <e p="ITextUiView.cs" t="Include" />
+                <e p="TextUiView.cs" t="Include" />
+              </e>
+              <e p="Weapons" t="Include">
+                <e p="Presenters" t="Include">
+                  <e p="WeaponAttackPresenter.cs" t="Include" />
+                  <e p="WeaponAttackPresenterManager.cs" t="Include" />
+                </e>
+                <e p="Views" t="Include">
+                  <e p="IWeaponButtonView.cs" t="Include" />
+                  <e p="WeaponButtonView.cs" t="Include" />
+                </e>
+              </e>
             </e>
             <e p="Network" t="Include">
+              <e p="ClientNetworkInfo.cs" t="Include" />
               <e p="Clients" t="Include">
                 <e p="CustomHttpClient.cs" t="Include" />
                 <e p="IClient.cs" t="Include" />
               </e>
+              <e p="CommandHandle" t="Include">
+                <e p="ICommandHandle.cs" t="Include" />
+              </e>
+              <e p="HandleServerPackets" t="Include">
+                <e p="Commands" t="Include">
+                  <e p="CharacterHpChangedCommandHandleServerPacket.cs" t="Include" />
+                  <e p="CommandHandleServerPacket.cs" t="Include" />
+                </e>
+                <e p="ErrorHandleServerPacket.cs" t="Include" />
+                <e p="IHandleServerPacket.cs" t="Include" />
+                <e p="WelcomeHandleServerPacket.cs" t="Include" />
+              </e>
               <e p="NetworkClientState.cs" t="Include" />
               <e p="NetworkManagerClient.cs" t="Include" />
+              <e p="PreparePackets" t="Include">
+                <e p="CommandPrepareToServerPacket.cs" t="Include" />
+                <e p="HelloPrepareToServerPacket.cs" t="Include" />
+                <e p="IPrepareToServerPacket.cs" t="Include" />
+              </e>
             </e>
           </e>
           <e p="SharedCode" t="Include">
             <e p="Game" t="Include">
-              <e p="Enemies" t="Include">
-                <e p="Data" t="Include">
-                  <e p="IEnemyData.cs" t="Include" />
-                  <e p="SerializableEnemyData.cs" t="Include" />
-                </e>
+              <e p="Characters" t="Include">
                 <e p="Models" t="Include">
-                  <e p="IEnemyModel.cs" t="Include" />
+                  <e p="CharacterModel.cs" t="Include" />
+                  <e p="ICharacterModel.cs" t="Include" />
                 </e>
               </e>
               <e p="HealthPoints" t="Include">
-                <e p="Data" t="Include">
-                  <e p="IHealthPointData.cs" t="Include" />
-                  <e p="SerializableHealthPointData.cs" t="Include" />
-                </e>
                 <e p="Models" t="Include">
+                  <e p="HealthPointModel.cs" t="Include" />
                   <e p="IHealthPointModel.cs" t="Include" />
                 </e>
               </e>
-              <e p="Worlds" t="Include">
-                <e p="Data" t="Include">
-                  <e p="IWorldData.cs" t="Include" />
-                  <e p="SerializableWorldData.cs" t="Include" />
+              <e p="ModelManager.cs" t="Include" />
+              <e p="Weapons" t="Include">
+                <e p="Models" t="Include">
+                  <e p="IWeaponModel.cs" t="Include" />
+                  <e p="WeaponModel.cs" t="Include" />
                 </e>
               </e>
             </e>
             <e p="Network" t="Include">
+              <e p="GameCommandType.cs" t="Include" />
               <e p="NetworkPacketType.cs" t="Include" />
             </e>
             <e p="Serialization" t="Include">

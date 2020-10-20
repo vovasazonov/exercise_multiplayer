@@ -38,9 +38,9 @@ namespace Server.Network
         private async Task MainLoop()
         {
             _httpListener.Start();
+            Console.WriteLine("Listening...");
             while (_keepGoing)
             {
-                Console.WriteLine("Listening...");
                 var context = await _httpListener.GetContextAsync();
 
                 lock (_httpListener)

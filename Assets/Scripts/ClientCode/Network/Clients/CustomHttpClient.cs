@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Net.Http;
-using UnityEngine;
 
 namespace Network.Clients
 {
@@ -15,10 +14,8 @@ namespace Network.Clients
         {
             using (var client = new HttpClient())
             {
-                Debug.Log("1");
                 var byteContent = new ByteArrayContent(packet.ToArray());
                 var response = await client.PostAsync(_url, byteContent);
-                Debug.Log("2");
 
                 var packetCame = new Queue<byte>(response.Content.ReadAsByteArrayAsync().Result);
 

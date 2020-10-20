@@ -1,13 +1,31 @@
 ﻿using System.Collections.Generic;
+using Network;
+using Serialization;
 
 namespace Server.Network.HandlePackets
 {
-    public struct UpdateHandleClientPacket : IHandleClientPacket
+    public readonly struct UpdateHandleClientPacket : IHandleClientPacket
     {
-        public byte[] Response(Queue<byte> packetCame)
+        private readonly Dictionary<int, ClientProxy> _clients;
+        private readonly ISerializer _serializer;
+        private readonly Queue<byte> _packetCame;
+        private readonly Queue<byte> _packetResponse;
+
+        public UpdateHandleClientPacket(Dictionary<int, ClientProxy> clients, ISerializer serializer, Queue<byte> packetCame, Queue<byte> packetResponse)
         {
-            // TODO: if server tick was send the data.
-            throw new System.NotImplementedException();
+            _clients = clients;
+            _serializer = serializer;
+            _packetCame = packetCame;
+            _packetResponse = packetResponse;
+        }
+
+        public void HandlePacket()
+        {
+            int idClient = _serializer.Deserialize<int>(_packetCame);
+            
+            _packetResponse.Enqueue(_serializer.Serialize(NetworkPacketType.Update));
+            _packetResponse.Enqueue(_clients[idClient].NotSentCommand.ToArray());
+            _clients[idClient].NotSentCommand.Clear();
         }
     }
 }
