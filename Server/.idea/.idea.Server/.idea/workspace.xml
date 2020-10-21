@@ -23,12 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="703e222c-aafd-409f-982b-87c7e7f6ce68" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Server/ServerCode/Network/HandlePackets/MainHandleClientPacket.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/.idea.exercise_multiplayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.idea.exercise_multiplayer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/ServerCode/Network/ClientCommandsProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/ServerCode/Network/ClientCommandsProcessor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/ServerCode/Network/HandleCommands/HitCharacterCommandHandlePacket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/ServerCode/Network/HandleCommands/HitCharacterCommandHandlePacket.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/ServerCode/Network/NetworkManagerServer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/ServerCode/Network/NetworkManagerServer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/CommandHandle.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/CommandHandle/ICommandHandle.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/CommandHandle/ICommandHandle.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,9 +50,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Server/Program.cs" />
-        <option value="$PROJECT_DIR$/../Assets/Scripts/Serialization/BinaryFormatterSerializeDeserialize.cs" />
-        <option value="$PROJECT_DIR$/../Assets/Scripts/Networks/Serialization/BinaryFormatterSerializeDeserialize.cs" />
         <option value="$PROJECT_DIR$/../Assets/Scripts/Networks/Serialization/BinaryFormatterSerializer.cs" />
         <option value="$PROJECT_DIR$/Server/Networks/NetworkManagerServer.cs" />
         <option value="$PROJECT_DIR$/../Assets/СommonClientServerCode/System/Collections/Generic/QueueExtensions.cs" />
@@ -104,6 +98,9 @@
         <option value="$PROJECT_DIR$/Server/ServerCode/Network/ClientCommandsProcessor.cs" />
         <option value="$PROJECT_DIR$/Server/ServerCode/Network/HandleCommands/HitCharacterCommandHandlePacket.cs" />
         <option value="$PROJECT_DIR$/Server/ServerCode/Network/NetworkManagerServer.cs" />
+        <option value="$PROJECT_DIR$/Server/ServerCode/Network/PacketClientHandlers/CommandClientPacketHandler.cs" />
+        <option value="$PROJECT_DIR$/Server/ServerCode/Network/CommandHandlers/ICommandHandler.cs" />
+        <option value="$PROJECT_DIR$/Server/ServerCode/Network/CommandHandlers/HitCharacterCommandHandler.cs" />
       </list>
     </option>
   </component>
@@ -294,14 +291,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Server/ServerCode/Network/HandlePackets/UpdateHandleClientPacket.cs</url>
+          <url>file://$PROJECT_DIR$/Server/ServerCode/Network/PacketClientHandlers/UpdateClientPacketHandler.cs</url>
           <line>27</line>
           <properties documentPath="C:\Users\vovas\source\repos\Unity\exercise_multiplayer\Server\Server\ServerCode\Network\HandlePackets\UpdateHandleClientPacket.cs" initialLine="25">
             <startOffsets>
-              <option value="938" />
+              <option value="948" />
             </startOffsets>
             <endOffsets>
-              <option value="1011" />
+              <option value="1021" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="48" />

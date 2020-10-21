@@ -45,9 +45,6 @@
                 <e p="CustomHttpClient.cs" t="Include" />
                 <e p="IClient.cs" t="Include" />
               </e>
-              <e p="CommandHandle" t="Include">
-                <e p="ICommandHandle.cs" t="Include" />
-              </e>
               <e p="HandleServerPackets" t="Include">
                 <e p="Commands" t="Include">
                   <e p="CharacterHpChangedCommandHandleServerPacket.cs" t="Include" />
