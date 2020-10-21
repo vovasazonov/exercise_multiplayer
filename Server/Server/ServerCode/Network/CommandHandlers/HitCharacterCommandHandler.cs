@@ -4,16 +4,16 @@ using Game;
 using Network;
 using Serialization;
 
-namespace Server.Network.HandleCommands
+namespace Server.Network.CommandHandlers
 {
-    public readonly struct HitCharacterCommandHandlePacket : IHandleCommand
+    public readonly struct HitCharacterCommandHandler : ICommandHandler
     {
         private readonly Queue<byte> _packetWithCommands;
         private readonly ModelManager _modelManager;
         private readonly IDictionary<int, IClientProxy> _clientProxyDic;
         private readonly ISerializer _serializer;
 
-        public HitCharacterCommandHandlePacket(Queue<byte> packetWithCommands, ModelManager modelManager, IDictionary<int, IClientProxy> clientProxyDic, ISerializer serializer)
+        public HitCharacterCommandHandler(Queue<byte> packetWithCommands, ModelManager modelManager, IDictionary<int, IClientProxy> clientProxyDic, ISerializer serializer)
         {
             _packetWithCommands = packetWithCommands;
             _modelManager = modelManager;

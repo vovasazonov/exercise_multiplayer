@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Game;
 using Network;
 using Serialization;
-using Server.Network.HandleCommands;
+using Server.Network.CommandHandlers;
 
 namespace Server.Network
 {
@@ -50,18 +50,18 @@ namespace Server.Network
         private void HandleCommand(Queue<byte> unprocessedPacketWithCommands)
         {
             GameCommandType commandType = _serializer.Deserialize<GameCommandType>(unprocessedPacketWithCommands);
-            IHandleCommand handleCommand;
+            ICommandHandler commandHandler;
 
             switch (commandType)
             {
                 case GameCommandType.HitCharacter:
-                    handleCommand = new HitCharacterCommandHandlePacket(unprocessedPacketWithCommands, _modelManager, _clientProxyDic, _serializer);
+                    commandHandler = new HitCharacterCommandHandler(unprocessedPacketWithCommands, _modelManager, _clientProxyDic, _serializer);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
             }
 
-            handleCommand.HandleCommand();
+            commandHandler.HandleCommand();
         }
     }
 }

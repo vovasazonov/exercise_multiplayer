@@ -87,9 +87,9 @@
           <e p="Network" t="Include">
             <e p="ClientCommandsProcessor.cs" t="Include" />
             <e p="ClientProxy.cs" t="Include" />
-            <e p="HandleCommands" t="Include">
-              <e p="HitCharacterCommandHandlePacket.cs" t="Include" />
-              <e p="IHandleCommand.cs" t="Include" />
+            <e p="CommandHandlers" t="Include">
+              <e p="HitCharacterCommandHandler.cs" t="Include" />
+              <e p="ICommandHandler.cs" t="Include" />
             </e>
             <e p="HttpServer.cs" t="Include" />
             <e p="IClientCommandsProcessor.cs" t="Include" />
