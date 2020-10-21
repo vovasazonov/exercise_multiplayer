@@ -1,6 +1,6 @@
 ﻿namespace Server.Network
 {
-    public interface IClientCommandsProcessor
+    public interface IServerGameProcessor
     {
         void Start();
         void Stop();

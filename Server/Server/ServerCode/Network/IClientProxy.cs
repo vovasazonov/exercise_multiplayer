@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Server.Network
 {
@@ -7,5 +8,6 @@ namespace Server.Network
         int IdClient { get; }
         Queue<byte> UnprocessedCommands { get; }
         Queue<byte> NotSentPacketCommands { get; }
+        public DateTime LastTimeRequest { get; set; }
     }
 }

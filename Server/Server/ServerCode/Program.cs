@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Game;
 using Server.Network;
 
@@ -8,9 +9,10 @@ namespace Server
     {
         private static void Main(string[] args)
         {
-            IServer server = new HttpServer();
+            IDictionary<int, IClientProxy> clientProxyDic = new Dictionary<int, IClientProxy>();
+            IServer server = new HttpServer(clientProxyDic);
             IModelManager modelManager = new ModelManager();
-            using NetworkManagerServer networkManagerServer = new NetworkManagerServer(server, modelManager);
+            using NetworkManagerServer networkManagerServer = new NetworkManagerServer(server, modelManager, clientProxyDic);
 
             server.Start();
 

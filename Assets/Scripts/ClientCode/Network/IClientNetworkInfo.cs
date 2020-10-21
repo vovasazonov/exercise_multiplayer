@@ -4,8 +4,8 @@ namespace Network
 {
     public interface IClientNetworkInfo
     {
-        public ClientNetworkState ClientNetworkState { get; set; }
-        public Queue<byte> NotSentCommandsToServer { get; }
-        public int Id { get; set; }
+        ClientNetworkState ClientNetworkState { get; set; }
+        Queue<byte> NotSentCommandsToServer { get; }
+        int Id { get; set; }
     }
 }

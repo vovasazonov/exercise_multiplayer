@@ -87,16 +87,15 @@
         <e p="Server.csproj.DotSettings" t="Include" />
         <e p="ServerCode" t="Include">
           <e p="Network" t="Include">
-            <e p="ClientCommandsProcessor.cs" t="Include" />
             <e p="ClientProxy.cs" t="Include" />
             <e p="CommandHandlers" t="Include">
               <e p="HitCharacterCommandHandler.cs" t="Include" />
               <e p="ICommandHandler.cs" t="Include" />
             </e>
             <e p="HttpServer.cs" t="Include" />
-            <e p="IClientCommandsProcessor.cs" t="Include" />
             <e p="IClientProxy.cs" t="Include" />
             <e p="IServer.cs" t="Include" />
+            <e p="IServerGameProcessor.cs" t="Include" />
             <e p="NetworkManagerServer.cs" t="Include" />
             <e p="PacketClientHandlers" t="Include">
               <e p="CommandClientPacketHandler.cs" t="Include" />
@@ -106,6 +105,7 @@
               <e p="MainClientPacketHandler.cs" t="Include" />
               <e p="UpdateClientPacketHandler.cs" t="Include" />
             </e>
+            <e p="ServerGameProcessor.cs" t="Include" />
           </e>
           <e p="Program.cs" t="Include" />
         </e>

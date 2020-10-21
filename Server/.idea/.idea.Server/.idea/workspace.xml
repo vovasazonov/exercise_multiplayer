@@ -23,6 +23,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="703e222c-aafd-409f-982b-87c7e7f6ce68" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/.idea.exercise_multiplayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.idea.exercise_multiplayer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Server/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Server/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Server/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/ServerCode/Network/ClientCommandsProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/ServerCode/Network/ServerGameProcessor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/ServerCode/Network/ClientProxy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/ServerCode/Network/ClientProxy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/ServerCode/Network/HttpServer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/ServerCode/Network/HttpServer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/ServerCode/Network/IClientCommandsProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/ServerCode/Network/IServerGameProcessor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/ServerCode/Network/IClientProxy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/ServerCode/Network/IClientProxy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/ServerCode/Network/NetworkManagerServer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/ServerCode/Network/NetworkManagerServer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/ServerCode/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/ServerCode/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,8 +57,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../Assets/Scripts/СommonClientServerCode/System/Collections/Generic/QueueExtensions.cs" />
-        <option value="$PROJECT_DIR$/Server/Network/ClientProxy.cs" />
         <option value="$PROJECT_DIR$/../Assets/Scripts/СommonClientServerCode/Serialization/ISerializer.cs" />
         <option value="$PROJECT_DIR$/Server/Network/IServer.cs" />
         <option value="$PROJECT_DIR$/Server/Network/HttpServer.cs" />
@@ -81,8 +88,6 @@
         <option value="$PROJECT_DIR$/Server/ServerCode/Network/HandleCommands/IHandleCommand.cs" />
         <option value="$PROJECT_DIR$/Server/ServerCode/Network/GameProcessor.cs" />
         <option value="$PROJECT_DIR$/Server/ServerCode/Network/IClientCommandsProcessor.cs" />
-        <option value="$PROJECT_DIR$/Server/ServerCode/Network/IClientProxy.cs" />
-        <option value="$PROJECT_DIR$/Server/ServerCode/Network/ClientProxy.cs" />
         <option value="$PROJECT_DIR$/Server/ServerCode/Network/HandlePackets/UpdateHandleClientPacket.cs" />
         <option value="$PROJECT_DIR$/Server/ServerCode/Network/HandlePackets/CommandHandleClientPacket.cs" />
         <option value="$PROJECT_DIR$/Server/ServerCode/Network/HandlePackets/HelloHandleClientPacket.cs" />
@@ -91,13 +96,17 @@
         <option value="$PROJECT_DIR$/Server/ServerCode/Network/HandleCommands/HitCharacterCommandHandlePacket.cs" />
         <option value="$PROJECT_DIR$/Server/ServerCode/Network/PacketClientHandlers/CommandClientPacketHandler.cs" />
         <option value="$PROJECT_DIR$/Server/ServerCode/Network/CommandHandlers/ICommandHandler.cs" />
-        <option value="$PROJECT_DIR$/Server/ServerCode/Network/NetworkManagerServer.cs" />
         <option value="$PROJECT_DIR$/Server/ServerCode/Network/ClientCommandsProcessor.cs" />
         <option value="$PROJECT_DIR$/Server/ServerCode/Network/CommandHandlers/HitCharacterCommandHandler.cs" />
         <option value="$PROJECT_DIR$/Server/ServerCode/Network/PacketClientHandlers/MainClientPacketHandler.cs" />
         <option value="$PROJECT_DIR$/Server/ServerCode/Network/PacketClientHandlers/HelloClientPacketHandler.cs" />
         <option value="$PROJECT_DIR$/Server/ServerCode/Network/IServer.cs" />
+        <option value="$PROJECT_DIR$/Server/ServerCode/Network/IServerGameProcessor.cs" />
+        <option value="$PROJECT_DIR$/Server/ServerCode/Network/IClientProxy.cs" />
+        <option value="$PROJECT_DIR$/Server/ServerCode/Network/ClientProxy.cs" />
+        <option value="$PROJECT_DIR$/Server/ServerCode/Network/ServerGameProcessor.cs" />
         <option value="$PROJECT_DIR$/Server/ServerCode/Network/HttpServer.cs" />
+        <option value="$PROJECT_DIR$/Server/ServerCode/Network/NetworkManagerServer.cs" />
         <option value="$PROJECT_DIR$/Server/ServerCode/Program.cs" />
       </list>
     </option>
@@ -180,22 +189,22 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="556" height="446" key="DebuggerActiveHint/0.0.1366.738@0.0.1366.738" timestamp="1603212353782" />
-    <state width="1323" height="182" key="GridCell.Tab.0.bottom" timestamp="1603284819264">
+    <state width="1323" height="182" key="GridCell.Tab.0.bottom" timestamp="1603290649976">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1603284819264" />
-    <state width="1323" height="182" key="GridCell.Tab.0.center" timestamp="1603284819264">
+    <state width="1323" height="182" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1603290649976" />
+    <state width="1323" height="182" key="GridCell.Tab.0.center" timestamp="1603290649972">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1603284819264" />
-    <state width="1323" height="182" key="GridCell.Tab.0.left" timestamp="1603284819261">
+    <state width="1323" height="182" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1603290649972" />
+    <state width="1323" height="182" key="GridCell.Tab.0.left" timestamp="1603290649966">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1603284819261" />
-    <state width="1323" height="182" key="GridCell.Tab.0.right" timestamp="1603284819264">
+    <state width="1323" height="182" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1603290649966" />
+    <state width="1323" height="182" key="GridCell.Tab.0.right" timestamp="1603290649975">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1603284819264" />
+    <state width="1323" height="182" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1603290649975" />
     <state width="1323" height="186" key="GridCell.Tab.1.bottom" timestamp="1603212942444">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

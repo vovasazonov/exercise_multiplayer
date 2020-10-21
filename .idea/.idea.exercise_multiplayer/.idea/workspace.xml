@@ -23,6 +23,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08fac7fd-c778-4934-80c3-7faf153ae413" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.exercise_multiplayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.exercise_multiplayer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/.idea/.idea.Server/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/.idea/.idea.Server/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/.idea/.idea.Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/.idea/.idea.Server/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/Server/ServerCode/Network/ClientCommandsProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Server/ServerCode/Network/ServerGameProcessor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/Server/ServerCode/Network/ClientProxy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Server/ServerCode/Network/ClientProxy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/Server/ServerCode/Network/HttpServer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Server/ServerCode/Network/HttpServer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/Server/ServerCode/Network/IClientCommandsProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Server/ServerCode/Network/IServerGameProcessor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/Server/ServerCode/Network/IClientProxy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Server/ServerCode/Network/IClientProxy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/Server/ServerCode/Network/NetworkManagerServer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Server/ServerCode/Network/NetworkManagerServer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/Server/ServerCode/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Server/ServerCode/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
