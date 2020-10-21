@@ -3,12 +3,12 @@ using Serialization;
 
 namespace Network.ServerPacketPreparers
 {
-    public readonly struct MainPacketToServerPreparer : IPacketToServerPreparer
+    public readonly struct MainServerPacketPreparer : IServerPacketPreparer
     {
         private readonly ClientNetworkInfo _clientNetworkInfo;
         private readonly ISerializer _serializer;
 
-        public MainPacketToServerPreparer(ClientNetworkInfo clientNetworkInfo, ISerializer serializer)
+        public MainServerPacketPreparer(ClientNetworkInfo clientNetworkInfo, ISerializer serializer)
         {
             _clientNetworkInfo = clientNetworkInfo;
             _serializer = serializer;
@@ -16,27 +16,27 @@ namespace Network.ServerPacketPreparers
 
         public byte[] GetPacket()
         {
-            IPacketToServerPreparer packetToServerPreparer;
+            IServerPacketPreparer serverPacketPreparer;
             switch (_clientNetworkInfo.ClientNetworkState)
             {
                 case ClientNetworkState.Welcomed:
                     if (_clientNetworkInfo.NotSentCommandsToServer.Count > 0)
                     {
-                        packetToServerPreparer = new CommandPacketToServerPreparer(_serializer,_clientNetworkInfo);
+                        serverPacketPreparer = new CommandServerPacketPreparer(_serializer,_clientNetworkInfo);
                     }
                     else
                     {
-                        packetToServerPreparer = new UpdatePacketToServerPreparer(_serializer, _clientNetworkInfo.Id);
+                        serverPacketPreparer = new UpdateServerPacketPreparer(_serializer, _clientNetworkInfo.Id);
                     }
                     break;
                 case ClientNetworkState.SayingHello:
-                    packetToServerPreparer = new HelloPacketToServerPreparer(_serializer);
+                    serverPacketPreparer = new HelloServerPacketPreparer(_serializer);
                     break;
                 default:
                     throw new ArgumentException();
             }
 
-            return packetToServerPreparer.GetPacket();
+            return serverPacketPreparer.GetPacket();
         }
     }
 }

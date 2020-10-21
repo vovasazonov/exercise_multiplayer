@@ -3,12 +3,12 @@ using Serialization;
 
 namespace Network.ServerPacketPreparers
 {
-    public readonly struct UpdatePacketToServerPreparer : IPacketToServerPreparer
+    public readonly struct UpdateServerPacketPreparer : IServerPacketPreparer
     {
         private readonly ISerializer _serializer;
         private readonly int _clientId;
 
-        public UpdatePacketToServerPreparer(ISerializer serializer, int clientId)
+        public UpdateServerPacketPreparer(ISerializer serializer, int clientId)
         {
             _serializer = serializer;
             _clientId = clientId;

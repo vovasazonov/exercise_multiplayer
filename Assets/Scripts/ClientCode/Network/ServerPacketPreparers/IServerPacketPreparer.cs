@@ -1,6 +1,6 @@
 ﻿namespace Network.ServerPacketPreparers
 {
-    public interface IPacketToServerPreparer
+    public interface IServerPacketPreparer
     {
         byte[] GetPacket();
     }

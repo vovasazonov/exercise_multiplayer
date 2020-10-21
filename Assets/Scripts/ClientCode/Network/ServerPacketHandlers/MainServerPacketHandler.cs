@@ -30,7 +30,7 @@ namespace Network.ServerPacketHandlers
             {
                 case NetworkPacketType.Welcome:
                     serverPacketHandler = new WelcomeServerPacketHandler(_packet, _clientNetworkInfo, _serializer);
-                    _clientNetworkInfo.NetworkState = NetworkClientState.Welcomed;
+                    _clientNetworkInfo.ClientNetworkState = ClientNetworkState.Welcomed;
                     break;
                 case NetworkPacketType.Update:
                     serverPacketHandler = new UpdateServerPacketHandler(_packet, _modelManager, _serializer);
