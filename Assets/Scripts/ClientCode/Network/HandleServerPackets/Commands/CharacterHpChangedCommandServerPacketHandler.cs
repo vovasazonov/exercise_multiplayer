@@ -4,13 +4,13 @@ using Serialization;
 
 namespace Network.HandleServerPackets.Commands
 {
-    public readonly struct CharacterHpChangedCommandHandleServerPacket : IHandleServerPacket
+    public readonly struct CharacterHpChangedCommandServerPacketHandler : IServerPacketHandler
     {
         private readonly Queue<byte> _packCame;
         private readonly ModelManagerClient _modelManagerClient;
         private readonly ISerializer _serializer;
 
-        public CharacterHpChangedCommandHandleServerPacket(Queue<byte> packCame, ModelManagerClient modelManagerClient, ISerializer serializer)
+        public CharacterHpChangedCommandServerPacketHandler(Queue<byte> packCame, ModelManagerClient modelManagerClient, ISerializer serializer)
         {
             _packCame = packCame;
             _modelManagerClient = modelManagerClient;

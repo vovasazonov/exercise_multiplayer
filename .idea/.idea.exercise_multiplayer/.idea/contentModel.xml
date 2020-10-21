@@ -47,12 +47,12 @@
               </e>
               <e p="HandleServerPackets" t="Include">
                 <e p="Commands" t="Include">
-                  <e p="CharacterHpChangedCommandHandleServerPacket.cs" t="Include" />
-                  <e p="UpdateHandleServerPacket.cs" t="Include" />
+                  <e p="CharacterHpChangedCommandServerPacketHandler.cs" t="Include" />
+                  <e p="UpdateServerPacketHandler.cs" t="Include" />
                 </e>
-                <e p="ErrorHandleServerPacket.cs" t="Include" />
-                <e p="IHandleServerPacket.cs" t="Include" />
-                <e p="WelcomeHandleServerPacket.cs" t="Include" />
+                <e p="ErrorServerPacketHandler.cs" t="Include" />
+                <e p="IServerPacketHandler.cs" t="Include" />
+                <e p="WelcomeServerPacketHandler.cs" t="Include" />
               </e>
               <e p="NetworkClientState.cs" t="Include" />
               <e p="NetworkManagerClient.cs" t="Include" />

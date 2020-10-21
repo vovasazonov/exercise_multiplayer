@@ -7,13 +7,13 @@ using UnityEngine;
 
 namespace Network.HandleServerPackets
 {
-    public readonly struct WelcomeHandleServerPacket : IHandleServerPacket
+    public readonly struct WelcomeServerPacketHandler : IServerPacketHandler
     {
         private readonly Queue<byte> _packetCame;
         private readonly ClientNetworkInfo _clientNetworkInfo;
         private readonly ISerializer _serializer;
 
-        public WelcomeHandleServerPacket(Queue<byte> packetCame, ClientNetworkInfo clientNetworkInfo, ISerializer serializer)
+        public WelcomeServerPacketHandler(Queue<byte> packetCame, ClientNetworkInfo clientNetworkInfo, ISerializer serializer)
         {
             _packetCame = packetCame;
             _clientNetworkInfo = clientNetworkInfo;

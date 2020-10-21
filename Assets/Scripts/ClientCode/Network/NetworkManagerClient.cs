@@ -49,23 +49,23 @@ namespace Network
         private void HandlePacket(Queue<byte> packet)
         {
             NetworkPacketType networkPacketType = _serializer.Deserialize<NetworkPacketType>(packet);
-            IHandleServerPacket handleServerPacket;
+            IServerPacketHandler serverPacketHandler;
             
             switch (networkPacketType)
             {
                 case NetworkPacketType.Welcome:
-                    handleServerPacket = new WelcomeHandleServerPacket(packet,_clientNetworkInfo,_serializer);
+                    serverPacketHandler = new WelcomeServerPacketHandler(packet,_clientNetworkInfo,_serializer);
                     _networkState = NetworkClientState.Welcomed;
                     break;
                 case NetworkPacketType.Update:
-                    handleServerPacket = new UpdateHandleServerPacket(packet,_modelManagerClient,_serializer);
+                    serverPacketHandler = new UpdateServerPacketHandler(packet,_modelManagerClient,_serializer);
                     break;
                 default:
-                    handleServerPacket = new ErrorHandleServerPacket();
+                    serverPacketHandler = new ErrorServerPacketHandler();
                     break;
             }
             
-            handleServerPacket.HandlePacket();
+            serverPacketHandler.HandlePacket();
         }
 
         private async void StartSendOutgoingPacket()

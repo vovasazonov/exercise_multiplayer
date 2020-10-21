@@ -1,6 +1,6 @@
 ﻿namespace Network.HandleServerPackets
 {
-    public interface IHandleServerPacket
+    public interface IServerPacketHandler
     {
         void HandlePacket();
     }

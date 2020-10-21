@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Network.HandleServerPackets
 {
-    public struct ErrorHandleServerPacket : IHandleServerPacket
+    public struct ErrorServerPacketHandler : IServerPacketHandler
     {
         public void HandlePacket()
         {
