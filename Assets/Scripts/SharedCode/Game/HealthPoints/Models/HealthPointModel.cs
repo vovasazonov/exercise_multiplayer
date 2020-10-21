@@ -6,7 +6,7 @@ namespace Game.HealthPoints.Models
     {
         public event Action PointsChanged;
 
-        private int _points = 0;
+        private int _points;
 
         public HealthPointModel(int points)
         {

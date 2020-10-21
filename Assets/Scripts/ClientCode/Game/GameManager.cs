@@ -1,7 +1,7 @@
-﻿using System.Threading.Tasks;
-using Network;
+﻿using Network;
 using Network.Clients;
 using Serialization;
+using Serialization.BinaryFormatterSerialization;
 using UnityEngine;
 
 namespace Game
@@ -12,13 +12,13 @@ namespace Game
         private NetworkManagerClient _networkManagerClient;
         private ModelManagerClient _modelManager;
         private PresenterManager _presenterManager;
-        private ClientNetworkInfo _clientNetworkInfo = new ClientNetworkInfo();
+        private readonly ClientNetworkInfo _networkInfoClient = new ClientNetworkInfo();
         private readonly ISerializer _serializer = new BinaryFormatterSerializer();
 
         private void Awake()
         {
-            _modelManager = new ModelManagerClient(_clientNetworkInfo, _serializer);
-            _networkManagerClient = new NetworkManagerClient(new CustomHttpClient(), _clientNetworkInfo, _serializer, _modelManager);
+            _modelManager = new ModelManagerClient(_networkInfoClient, _serializer);
+            _networkManagerClient = new NetworkManagerClient(new CustomHttpClient(), _networkInfoClient, _serializer, _modelManager);
             _presenterManager = new PresenterManager(_viewManager, _modelManager);
 
             _presenterManager.Activate();

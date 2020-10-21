@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
 using Serialization;
-#if UNITY_EDITOR
 using UnityEngine;
+#if UNITY_EDITOR
+
 #endif
 
-namespace Network.HandlePackets
+namespace Network.HandleServerPackets
 {
     public readonly struct WelcomeHandleServerPacket : IHandleServerPacket
     {

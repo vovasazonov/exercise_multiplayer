@@ -11,8 +11,9 @@ namespace Game
 
         public PresenterManager(ViewManager viewManager, ModelManagerClient modelManagerClient)
         {
-            _enemyCharacterHealthPointPresenter = new CharacterHealthPointPresenter(viewManager.EnemyHealthText, modelManagerClient.CharacterModelDic.First().Value.HealthPoint);
-            _weaponAttackPresenterManager = new WeaponAttackPresenterManager(viewManager.WeaponButtonList, modelManagerClient.WeaponModelDic.Values, modelManagerClient.CharacterModelDic.First().Value);
+            var enemyModel = modelManagerClient.CharacterModelDic.First().Value;
+            _enemyCharacterHealthPointPresenter = new CharacterHealthPointPresenter(viewManager.EnemyHealthText, enemyModel.HealthPoint);
+            _weaponAttackPresenterManager = new WeaponAttackPresenterManager(viewManager.WeaponButtonList, modelManagerClient.WeaponModelDic.Values, enemyModel);
         }
 
         public void Activate()

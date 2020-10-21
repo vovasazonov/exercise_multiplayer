@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Game;
 using Network.Clients;
-using Network.HandlePackets;
+using Network.HandleServerPackets;
+using Network.HandleServerPackets.Commands;
 using Network.PreparePackets;
 using Serialization;
 

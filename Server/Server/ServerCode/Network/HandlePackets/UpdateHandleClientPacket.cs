@@ -26,8 +26,8 @@ namespace Server.Network.HandlePackets
             if (_clients.ContainsKey(idClient))
             {
                 _packetResponse.Enqueue(_serializer.Serialize(NetworkPacketType.Update));
-                _packetResponse.Enqueue(_clients[idClient].NotSentCommand.ToArray());
-                _clients[idClient].NotSentCommand.Clear();
+                _packetResponse.Enqueue(_clients[idClient].NotSentPacketCommands.ToArray());
+                _clients[idClient].NotSentPacketCommands.Clear();
             }
         }
     }

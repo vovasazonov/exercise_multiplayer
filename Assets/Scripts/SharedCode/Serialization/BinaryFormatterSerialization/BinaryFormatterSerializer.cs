@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
-namespace Serialization
+namespace Serialization.BinaryFormatterSerialization
 {
     public class BinaryFormatterSerializer : ISerializer
     {
@@ -16,11 +15,7 @@ namespace Serialization
                 BinaryFormatter binaryFormatter = new BinaryFormatter();
                 binaryFormatter.Binder = new CustomizedBinder();
                 binaryFormatter.Serialize(memoryStream, obj);
-                if (memoryStream.Length > ushort.MaxValue)
-                {
-                    throw new NotSupportedException("Not supported serialization bigger than ushort.Maxvalue bytes.");
-                }
-                
+
                 bytes.Enqueue(memoryStream.ToArray());
             }
 

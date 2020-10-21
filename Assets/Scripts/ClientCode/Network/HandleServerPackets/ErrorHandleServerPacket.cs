@@ -1,8 +1,9 @@
 ﻿#if UNITY_EDITOR
 using UnityEngine;
+
 #endif
 
-namespace Network.HandlePackets
+namespace Network.HandleServerPackets
 {
     public struct ErrorHandleServerPacket : IHandleServerPacket
     {

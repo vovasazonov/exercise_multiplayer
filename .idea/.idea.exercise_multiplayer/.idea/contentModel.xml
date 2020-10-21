@@ -94,8 +94,10 @@
               <e p="NetworkPacketType.cs" t="Include" />
             </e>
             <e p="Serialization" t="Include">
-              <e p="BinaryFormatterSerializer.cs" t="Include" />
-              <e p="CustomizedBinder.cs" t="Include" />
+              <e p="BinaryFormatterSerialization" t="Include">
+                <e p="BinaryFormatterSerializer.cs" t="Include" />
+                <e p="CustomizedBinder.cs" t="Include" />
+              </e>
               <e p="ISerializer.cs" t="Include" />
             </e>
             <e p="System" t="Include">

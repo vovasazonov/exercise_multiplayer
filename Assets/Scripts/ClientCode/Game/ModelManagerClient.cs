@@ -8,13 +8,14 @@ namespace Game
 {
     public class ModelManagerClient
     {
-        public readonly Dictionary<int, ICharacterModel> CharacterModelDic = new Dictionary<int, ICharacterModel>();
-        public readonly Dictionary<int, IWeaponModel> WeaponModelDic = new Dictionary<int, IWeaponModel>();
+        public readonly Dictionary<int, ICharacterModel> CharacterModelDic;
+        public readonly Dictionary<int, IWeaponModel> WeaponModelDic;
         
         public ModelManagerClient(ClientNetworkInfo clientNetworkInfo, ISerializer serializer)
         {
             var modelManager = new ModelManager();
 
+            CharacterModelDic = new Dictionary<int, ICharacterModel>();
             foreach (var keyValuePair in modelManager.CharacterModelDic)
             {
                 var model = new CharacterModelClient(keyValuePair.Value, keyValuePair.Key, clientNetworkInfo, serializer);

@@ -23,22 +23,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08fac7fd-c778-4934-80c3-7faf153ae413" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Serialization/BinaryFormatterSerialization.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/Server/ServerCode/Network/IClientCommandsProcessor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.exercise_multiplayer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.exercise_multiplayer/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.exercise_multiplayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.exercise_multiplayer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/Characters/Models/CharacterModelClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/Characters/Models/CharacterModelClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/HealthPoints/Presenters/HealthPointPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/HealthPoints/Presenters/CharacterHealthPointPresenter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/HealthPoints/Presenters/HealthPointPresenter.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/HealthPoints/Presenters/CharacterHealthPointPresenter.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/ModelManagerClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/ModelManagerClient.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/PresenterManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/PresenterManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/Commands/CharacterHpChangedCommandHandleServerPacket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/Commands/CharacterHpChangedCommandHandleServerPacket.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Characters/Models/CharacterModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Characters/Models/CharacterModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Characters/Models/ICharacterModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Characters/Models/ICharacterModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/ModelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/ModelManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Weapons/Models/IWeaponModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Weapons/Models/IWeaponModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Weapons/Models/WeaponModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Weapons/Models/WeaponModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/Commands/UpdateHandleServerPacket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/Commands/UpdateHandleServerPacket.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/ErrorHandleServerPacket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/ErrorHandleServerPacket.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/IHandleServerPacket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/IHandleServerPacket.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/WelcomeHandleServerPacket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/WelcomeHandleServerPacket.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/NetworkManagerClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/NetworkManagerClient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/HealthPoints/Models/HealthPointModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/HealthPoints/Models/HealthPointModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Network/GameCommandType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Network/GameCommandType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Serialization/BinaryFormatterSerializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Serialization/BinaryFormatterSerialization/BinaryFormatterSerializer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Serialization/BinaryFormatterSerializer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Serialization/BinaryFormatterSerialization/BinaryFormatterSerializer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Serialization/CustomizedBinder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Serialization/BinaryFormatterSerialization/CustomizedBinder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Serialization/CustomizedBinder.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Serialization/BinaryFormatterSerialization/CustomizedBinder.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/.idea/.idea.Server/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/.idea/.idea.Server/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/.idea/.idea.Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/.idea/.idea.Server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/Server/ServerCode/Network/Commands/HitCharacterHandleCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Server/ServerCode/Network/Commands/HitCharacterHandleCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/Server/ServerCode/Network/ClientProxy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Server/ServerCode/Network/ClientProxy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/Server/ServerCode/Network/Commands/HitCharacterHandleCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Server/ServerCode/Network/HandleCommands/HitCharacterCommandHandlePacket.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/Server/ServerCode/Network/Commands/IHandleCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Server/ServerCode/Network/HandleCommands/IHandleCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/Server/ServerCode/Network/GameProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Server/ServerCode/Network/ClientCommandsProcessor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/Server/ServerCode/Network/HandlePackets/CommandHandleClientPacket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Server/ServerCode/Network/HandlePackets/CommandHandleClientPacket.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/Server/ServerCode/Network/HandlePackets/HelloHandleClientPacket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Server/ServerCode/Network/HandlePackets/HelloHandleClientPacket.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/Server/ServerCode/Network/HandlePackets/UpdateHandleClientPacket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Server/ServerCode/Network/HandlePackets/UpdateHandleClientPacket.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/Server/ServerCode/Network/NetworkManagerServer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Server/ServerCode/Network/NetworkManagerServer.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,10 +71,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/Views/TextUiView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Managers/ViewManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Characters/Models/IEnemyCharacterModel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Characters/Models/EnemyCharacterModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Characters/Models/PlayerCharacterModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Players/IPlayerModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/Characters/Presenters/IHealthPointCharacterPresenter.cs" />
@@ -95,9 +104,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Network/Commands/CommandType.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/Commands/CommandHandleServerPacket.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Network/CommandType.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Network/GameCommandType.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/PreparePackets/UpdatePrepareToServerPacket.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/NetworkManagerClient.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/PreparePackets/CommandPrepareToServerPacket.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Characters/Models/ICharacterModel.cs" />
@@ -107,8 +114,14 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/Characters/Models/CharacterModelClient.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/ModelManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/Commands/CharacterHpChangedCommandHandleServerPacket.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/ModelManagerClient.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/PresenterManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/HealthPoints/Models/HealthPointModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Serialization/BinaryFormatterSerializer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Serialization/BinaryFormatterSerialization/BinaryFormatterSerializer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Network/GameCommandType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Serialization/BinaryFormatterSerialization/CustomizedBinder.cs" />
       </list>
     </option>
   </component>

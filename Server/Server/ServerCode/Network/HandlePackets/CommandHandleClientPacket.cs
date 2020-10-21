@@ -21,7 +21,7 @@ namespace Server.Network.HandlePackets
             int idClient = _serializer.Deserialize<int>(_packetCame);
             if (ClientProxyDic.ContainsKey(idClient))
             {
-                ClientProxyDic[idClient].UnprocessedCommand.Enqueue(_packetCame.ToArray());
+                ClientProxyDic[idClient].UnprocessedCommands.Enqueue(_packetCame.ToArray());
             }
         }
     }

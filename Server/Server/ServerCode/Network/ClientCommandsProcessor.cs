@@ -4,51 +4,58 @@ using System.Threading.Tasks;
 using Game;
 using Network;
 using Serialization;
-using Server.Network.Commands;
+using Server.Network.HandleCommands;
 
 namespace Server.Network
 {
-    public class GameProcessor
+    public class ClientCommandsProcessor : IClientCommandsProcessor
     {
         private readonly ModelManager _modelManager;
         private readonly Dictionary<int, ClientProxy> _clientProxyDic;
         private readonly ISerializer _serializer;
-        private readonly int _millisecondsTick = 500;
+        private readonly int _millisecondsTick;
+        private bool _isRun;
 
-        public GameProcessor(ModelManager modelManager, Dictionary<int, ClientProxy> clientProxyDic, ISerializer serializer)
+        public ClientCommandsProcessor(ModelManager modelManager, Dictionary<int, ClientProxy> clientProxyDic, ISerializer serializer, int millisecondsTick)
         {
             _modelManager = modelManager;
             _clientProxyDic = clientProxyDic;
             _serializer = serializer;
-
-            StartProcessGame();
+            _millisecondsTick = millisecondsTick;
         }
 
-        private async void StartProcessGame()
+        public async void Start()
         {
-            while (true)
+            _isRun = true;
+            
+            while (_isRun)
             {
                 await Task.Delay(_millisecondsTick);
 
                 foreach (var clientProxy in _clientProxyDic.Values)
                 {
-                    while (clientProxy.UnprocessedCommand.Count > 0)
+                    while (clientProxy.UnprocessedCommands.Count > 0)
                     {
-                        HandleCommand(clientProxy.UnprocessedCommand, clientProxy.IdClient);
+                        HandleCommand(clientProxy.UnprocessedCommands);
                     }
                 }
             }
         }
 
-        private void HandleCommand(Queue<byte> packet, int clientId)
+        public void Stop()
         {
-            GameCommandType commandType = _serializer.Deserialize<GameCommandType>(packet);
+            _isRun = false;
+        }
+
+        private void HandleCommand(Queue<byte> unprocessedPacketWithCommands)
+        {
+            GameCommandType commandType = _serializer.Deserialize<GameCommandType>(unprocessedPacketWithCommands);
             IHandleCommand handleCommand;
 
             switch (commandType)
             {
                 case GameCommandType.HitCharacter:
-                    handleCommand = new HitCharacterHandleCommand(packet, _modelManager, _clientProxyDic, clientId, _serializer);
+                    handleCommand = new HitCharacterCommandHandlePacket(unprocessedPacketWithCommands, _modelManager, _clientProxyDic, _serializer);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();

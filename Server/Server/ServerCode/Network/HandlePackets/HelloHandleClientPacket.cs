@@ -54,9 +54,9 @@ namespace Server.Network.HandlePackets
         {
             foreach (var keyValuePair in _modelManager.CharacterModelDic)
             {
-                clientProxy.NotSentCommand.Enqueue(_serializer.Serialize(GameCommandType.CharacterHpChanged));
-                clientProxy.NotSentCommand.Enqueue(_serializer.Serialize(keyValuePair.Key));
-                clientProxy.NotSentCommand.Enqueue(_serializer.Serialize(keyValuePair.Value.HealthPoint.Points));
+                clientProxy.NotSentPacketCommands.Enqueue(_serializer.Serialize(GameCommandType.CharacterHpChanged));
+                clientProxy.NotSentPacketCommands.Enqueue(_serializer.Serialize(keyValuePair.Key));
+                clientProxy.NotSentPacketCommands.Enqueue(_serializer.Serialize(keyValuePair.Value.HealthPoint.Points));
             }
         }
     }

@@ -1,6 +1,6 @@
 ﻿namespace Network
 {
-    public enum GameCommandType
+    public enum GameCommandType : byte
     {
         HitCharacter,
         CharacterHpChanged

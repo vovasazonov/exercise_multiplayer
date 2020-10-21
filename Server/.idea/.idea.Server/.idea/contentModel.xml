@@ -47,10 +47,13 @@
       </e>
       <e p="Network.meta" t="Include" />
       <e p="Serialization" t="Include">
-        <e p="BinaryFormatterSerializer.cs" t="Include" />
-        <e p="BinaryFormatterSerializer.cs.meta" t="Include" />
-        <e p="CustomizedBinder.cs" t="Include" />
-        <e p="CustomizedBinder.cs.meta" t="Include" />
+        <e p="BinaryFormatterSerialization" t="Include">
+          <e p="BinaryFormatterSerializer.cs" t="Include" />
+          <e p="BinaryFormatterSerializer.cs.meta" t="Include" />
+          <e p="CustomizedBinder.cs" t="Include" />
+          <e p="CustomizedBinder.cs.meta" t="Include" />
+        </e>
+        <e p="BinaryFormatterSerialization.meta" t="Include" />
         <e p="ISerializer.cs" t="Include" />
         <e p="ISerializer.cs.meta" t="Include" />
       </e>
@@ -82,12 +85,12 @@
         <e p="Server.csproj.DotSettings" t="Include" />
         <e p="ServerCode" t="Include">
           <e p="Network" t="Include">
+            <e p="ClientCommandsProcessor.cs" t="Include" />
             <e p="ClientProxy.cs" t="Include" />
-            <e p="Commands" t="Include">
-              <e p="HitCharacterHandleCommand.cs" t="Include" />
+            <e p="HandleCommands" t="Include">
+              <e p="HitCharacterCommandHandlePacket.cs" t="Include" />
               <e p="IHandleCommand.cs" t="Include" />
             </e>
-            <e p="GameProcessor.cs" t="Include" />
             <e p="HandlePackets" t="Include">
               <e p="CommandHandleClientPacket.cs" t="Include" />
               <e p="ErrorHandleClientPacket.cs" t="Include" />
@@ -96,6 +99,7 @@
               <e p="UpdateHandleClientPacket.cs" t="Include" />
             </e>
             <e p="HttpServer.cs" t="Include" />
+            <e p="IClientCommandsProcessor.cs" t="Include" />
             <e p="IServer.cs" t="Include" />
             <e p="NetworkManagerServer.cs" t="Include" />
           </e>

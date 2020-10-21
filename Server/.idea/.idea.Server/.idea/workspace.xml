@@ -23,22 +23,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="703e222c-aafd-409f-982b-87c7e7f6ce68" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Serialization/BinaryFormatterSerialization.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/ServerCode/Network/IClientCommandsProcessor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/.idea.exercise_multiplayer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.idea.exercise_multiplayer/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/.idea.exercise_multiplayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.idea.exercise_multiplayer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/Characters/Models/CharacterModelClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/Characters/Models/CharacterModelClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/HealthPoints/Presenters/HealthPointPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/HealthPoints/Presenters/CharacterHealthPointPresenter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/HealthPoints/Presenters/HealthPointPresenter.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/HealthPoints/Presenters/CharacterHealthPointPresenter.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/ModelManagerClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/ModelManagerClient.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/PresenterManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/PresenterManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/HandleServerPackets/Commands/CharacterHpChangedCommandHandleServerPacket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/HandleServerPackets/Commands/CharacterHpChangedCommandHandleServerPacket.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Characters/Models/CharacterModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Characters/Models/CharacterModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Characters/Models/ICharacterModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Characters/Models/ICharacterModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/ModelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/ModelManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Weapons/Models/IWeaponModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Weapons/Models/IWeaponModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Weapons/Models/WeaponModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Weapons/Models/WeaponModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/HandleServerPackets/Commands/UpdateHandleServerPacket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/HandleServerPackets/Commands/UpdateHandleServerPacket.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/HandleServerPackets/ErrorHandleServerPacket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/HandleServerPackets/ErrorHandleServerPacket.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/HandleServerPackets/IHandleServerPacket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/HandleServerPackets/IHandleServerPacket.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/HandleServerPackets/WelcomeHandleServerPacket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/HandleServerPackets/WelcomeHandleServerPacket.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/NetworkManagerClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/NetworkManagerClient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/HealthPoints/Models/HealthPointModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/HealthPoints/Models/HealthPointModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Network/GameCommandType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Network/GameCommandType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Serialization/BinaryFormatterSerializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Serialization/BinaryFormatterSerialization/BinaryFormatterSerializer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Serialization/BinaryFormatterSerializer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Serialization/BinaryFormatterSerialization/BinaryFormatterSerializer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Serialization/CustomizedBinder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Serialization/BinaryFormatterSerialization/CustomizedBinder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Serialization/CustomizedBinder.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Serialization/BinaryFormatterSerialization/CustomizedBinder.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Server/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Server/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/ServerCode/Network/Commands/HitCharacterHandleCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/ServerCode/Network/Commands/HitCharacterHandleCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/ServerCode/Network/ClientProxy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/ServerCode/Network/ClientProxy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/ServerCode/Network/Commands/HitCharacterHandleCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/ServerCode/Network/HandleCommands/HitCharacterCommandHandlePacket.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/ServerCode/Network/Commands/IHandleCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/ServerCode/Network/HandleCommands/IHandleCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/ServerCode/Network/GameProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/ServerCode/Network/ClientCommandsProcessor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/ServerCode/Network/HandlePackets/CommandHandleClientPacket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/ServerCode/Network/HandlePackets/CommandHandleClientPacket.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/ServerCode/Network/HandlePackets/HelloHandleClientPacket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/ServerCode/Network/HandlePackets/HelloHandleClientPacket.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/ServerCode/Network/HandlePackets/UpdateHandleClientPacket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/ServerCode/Network/HandlePackets/UpdateHandleClientPacket.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/ServerCode/Network/NetworkManagerServer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/ServerCode/Network/NetworkManagerServer.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,18 +65,17 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4065B38D-0F9F-44D9-8F53-F4C9102AF396/16B/Task.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Assets/Scripts/SharedCode/Network/GameCommandType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Assets/Scripts/SharedCode/Serialization/ISerializer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../Assets/Scripts/SharedCode/Serialization/CustomizedBinder.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../Assets/Scripts/SharedCode/Serialization/BinaryFormatterSerializer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Assets/Scripts/SharedCode/Serialization/BinaryFormatterSerialization/CustomizedBinder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Assets/Scripts/SharedCode/Serialization/BinaryFormatterSerialization/BinaryFormatterSerializer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4065B38D-0F9F-44D9-8F53-F4C9102AF396/14E/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Assets/Scripts/SharedCode/Network/NetworkPacketType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4065B38D-0F9F-44D9-8F53-F4C9102AF396/1E0/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/ModelManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Assets/Scripts/SharedCode/System/Collections/Generic/QueueExtensions.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Server/Networks/INetworkManagerServer.cs" />
-        <option value="$PROJECT_DIR$/Server/Networks/IServer.cs" />
         <option value="$PROJECT_DIR$/Server/Networks/HttpServer.cs" />
         <option value="$PROJECT_DIR$/Server/Networks/ClientProxy.cs" />
         <option value="$PROJECT_DIR$/../Assets/Scripts/Networks/NetworkPacketType.cs" />
@@ -100,15 +112,21 @@
         <option value="$PROJECT_DIR$/Server/ServerCode/Network/HandlePackets/ErrorHandleClientPacket.cs" />
         <option value="$PROJECT_DIR$/Server/ServerCode/Network/ClientProxy.cs" />
         <option value="$PROJECT_DIR$/Server/ServerCode/Network/HttpServer.cs" />
-        <option value="$PROJECT_DIR$/Server/ServerCode/Program.cs" />
         <option value="$PROJECT_DIR$/Server/ServerCode/Network/Commands/IHandleCommand.cs" />
-        <option value="$PROJECT_DIR$/Server/ServerCode/Network/GameProcessor.cs" />
         <option value="$PROJECT_DIR$/Server/ServerCode/Network/HandlePackets/CommandHandleClientPacket.cs" />
         <option value="$PROJECT_DIR$/Server/ServerCode/Network/HandlePackets/UpdateHandleClientPacket.cs" />
-        <option value="$PROJECT_DIR$/Server/ServerCode/Network/NetworkManagerServer.cs" />
         <option value="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/ModelManager.cs" />
         <option value="$PROJECT_DIR$/Server/ServerCode/Network/HandlePackets/HelloHandleClientPacket.cs" />
         <option value="$PROJECT_DIR$/Server/ServerCode/Network/Commands/HitCharacterHandleCommand.cs" />
+        <option value="$PROJECT_DIR$/Server/ServerCode/Network/HandlePackets/Commands/HitCharacterHandleCommand.cs" />
+        <option value="$PROJECT_DIR$/Server/ServerCode/Network/HandlePackets/Commands/HitCharacterCommandHandlePacket.cs" />
+        <option value="$PROJECT_DIR$/Server/ServerCode/Network/HandleCommands/IHandleCommand.cs" />
+        <option value="$PROJECT_DIR$/Server/ServerCode/Network/HandleCommands/HitCharacterCommandHandlePacket.cs" />
+        <option value="$PROJECT_DIR$/Server/ServerCode/Program.cs" />
+        <option value="$PROJECT_DIR$/Server/ServerCode/Network/GameProcessor.cs" />
+        <option value="$PROJECT_DIR$/Server/ServerCode/Network/IClientCommandsProcessor.cs" />
+        <option value="$PROJECT_DIR$/Server/ServerCode/Network/ClientCommandsProcessor.cs" />
+        <option value="$PROJECT_DIR$/Server/ServerCode/Network/NetworkManagerServer.cs" />
       </list>
     </option>
   </component>
@@ -190,22 +208,22 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="556" height="446" key="DebuggerActiveHint/0.0.1366.738@0.0.1366.738" timestamp="1603212353782" />
-    <state width="1323" height="186" key="GridCell.Tab.0.bottom" timestamp="1603212942443">
+    <state width="1323" height="182" key="GridCell.Tab.0.bottom" timestamp="1603270252635">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="186" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1603212942443" />
-    <state width="1323" height="186" key="GridCell.Tab.0.center" timestamp="1603212942442">
+    <state width="1323" height="182" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1603270252635" />
+    <state width="1323" height="182" key="GridCell.Tab.0.center" timestamp="1603270252634">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="186" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1603212942442" />
-    <state width="1323" height="186" key="GridCell.Tab.0.left" timestamp="1603212942442">
+    <state width="1323" height="182" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1603270252634" />
+    <state width="1323" height="182" key="GridCell.Tab.0.left" timestamp="1603270252634">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="186" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1603212942442" />
-    <state width="1323" height="186" key="GridCell.Tab.0.right" timestamp="1603212942443">
+    <state width="1323" height="182" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1603270252634" />
+    <state width="1323" height="182" key="GridCell.Tab.0.right" timestamp="1603270252635">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="186" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1603212942443" />
+    <state width="1323" height="182" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1603270252635" />
     <state width="1323" height="186" key="GridCell.Tab.1.bottom" timestamp="1603212942444">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -278,6 +296,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="445" y="90" key="RollbackChangesDialog/0.0.1366.738@0.0.1366.738" timestamp="1603210120534" />
+    <state x="92" y="92" width="1182" height="554" key="VCS.FileHistoryDialog" timestamp="1603272379795">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="92" y="92" width="1182" height="554" key="VCS.FileHistoryDialog/0.0.1366.738@0.0.1366.738" timestamp="1603272379795" />
     <state x="328" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1603198503524">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

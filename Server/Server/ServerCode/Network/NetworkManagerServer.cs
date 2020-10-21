@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Game;
 using Network;
 using Serialization;
+using Serialization.BinaryFormatterSerialization;
 using Server.Network.HandlePackets;
 
 namespace Server.Network
@@ -13,16 +14,17 @@ namespace Server.Network
         private readonly ModelManager _modelManager;
         private readonly Dictionary<int, ClientProxy> _clientProxyDic = new Dictionary<int, ClientProxy>();
         private readonly ISerializer _serializer = new BinaryFormatterSerializer();
-        
-        private readonly GameProcessor _gameProcessor;
+        private readonly int _millisecondsTick = 500;
+        private readonly IClientCommandsProcessor _clientCommandsProcessor;
 
         public NetworkManagerServer(IServer server, ModelManager modelManager)
         {
             _server = server;
             _modelManager = modelManager;
-            _gameProcessor = new GameProcessor(modelManager, _clientProxyDic, _serializer);
+            _clientCommandsProcessor = new ClientCommandsProcessor(modelManager, _clientProxyDic, _serializer, _millisecondsTick);
 
             AddServerListener();
+            _clientCommandsProcessor.Start();
         }
 
         private void AddServerListener()
@@ -66,6 +68,7 @@ namespace Server.Network
 
         public void Dispose()
         {
+            _clientCommandsProcessor.Stop();
             RemoveServerListener();
         }
     }

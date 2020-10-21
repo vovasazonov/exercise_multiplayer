@@ -1,4 +1,4 @@
-﻿namespace Server.Network.Commands
+﻿namespace Server.Network.HandleCommands
 {
     public interface IHandleCommand
     {
