@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using Game;
 using Network;
 using Serialization;
@@ -9,18 +8,16 @@ namespace Server.Network.HandlePackets
 {
     public struct HelloHandleClientPacket : IHandleClientPacket
     {
-        private readonly Dictionary<int, ClientProxy> _clients;
+        private readonly IDictionary<int, IClientProxy> _clients;
         private readonly ISerializer _serializer;
         private int _lastSetId;
-        private readonly Queue<byte> _packetCame;
         private readonly Queue<byte> _responsePacket;
         private readonly ModelManager _modelManager;
 
-        public HelloHandleClientPacket(Dictionary<int, ClientProxy> clients, ISerializer serializer, Queue<byte> packetCame, Queue<byte> responsePacket, ModelManager modelManager)
+        public HelloHandleClientPacket(IDictionary<int, IClientProxy> clients, ISerializer serializer, Queue<byte> responsePacket, ModelManager modelManager)
         {
             _clients = clients;
             _serializer = serializer;
-            _packetCame = packetCame;
             _lastSetId = Int32.MaxValue + _clients.Count;
             _responsePacket = responsePacket;
             _modelManager = modelManager;
@@ -52,11 +49,11 @@ namespace Server.Network.HandlePackets
 
         private void MoveServerDataToClient(ClientProxy clientProxy)
         {
-            foreach (var keyValuePair in _modelManager.CharacterModelDic)
+            foreach (var idCharacterPair in _modelManager.CharacterModelDic)
             {
                 clientProxy.NotSentPacketCommands.Enqueue(_serializer.Serialize(GameCommandType.CharacterHpChanged));
-                clientProxy.NotSentPacketCommands.Enqueue(_serializer.Serialize(keyValuePair.Key));
-                clientProxy.NotSentPacketCommands.Enqueue(_serializer.Serialize(keyValuePair.Value.HealthPoint.Points));
+                clientProxy.NotSentPacketCommands.Enqueue(_serializer.Serialize(idCharacterPair.Key));
+                clientProxy.NotSentPacketCommands.Enqueue(_serializer.Serialize(idCharacterPair.Value.HealthPoint.Points));
             }
         }
     }

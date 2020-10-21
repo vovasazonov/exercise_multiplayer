@@ -7,9 +7,9 @@ namespace Server.Network.HandlePackets
     {
         private readonly ISerializer _serializer;
         private readonly Queue<byte> _packetCame;
-        private Dictionary<int, ClientProxy> ClientProxyDic { get; }
+        private IDictionary<int, IClientProxy> ClientProxyDic { get; }
 
-        public CommandHandleClientPacket(Dictionary<int, ClientProxy> clientProxyDic, ISerializer serializer, Queue<byte> packetCame)
+        public CommandHandleClientPacket(IDictionary<int, IClientProxy> clientProxyDic, ISerializer serializer, Queue<byte> packetCame)
         {
             _serializer = serializer;
             _packetCame = packetCame;

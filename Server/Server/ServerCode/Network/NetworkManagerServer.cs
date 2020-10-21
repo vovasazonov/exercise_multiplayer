@@ -12,7 +12,7 @@ namespace Server.Network
     {
         private readonly IServer _server;
         private readonly ModelManager _modelManager;
-        private readonly Dictionary<int, ClientProxy> _clientProxyDic = new Dictionary<int, ClientProxy>();
+        private readonly Dictionary<int, IClientProxy> _clientProxyDic = new Dictionary<int, IClientProxy>();
         private readonly ISerializer _serializer = new BinaryFormatterSerializer();
         private readonly int _millisecondsTick = 500;
         private readonly IClientCommandsProcessor _clientCommandsProcessor;
@@ -50,7 +50,7 @@ namespace Server.Network
             switch (networkPacketType)
             {
                 case NetworkPacketType.Hello:
-                    handleClientPacket = new HelloHandleClientPacket(_clientProxyDic, _serializer, packetCame, packetResponse, _modelManager);
+                    handleClientPacket = new HelloHandleClientPacket(_clientProxyDic, _serializer, packetResponse, _modelManager);
                     break;
                 case NetworkPacketType.Command:
                     handleClientPacket = new CommandHandleClientPacket(_clientProxyDic, _serializer, packetCame);

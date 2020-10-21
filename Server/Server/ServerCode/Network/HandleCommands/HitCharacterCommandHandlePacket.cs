@@ -10,10 +10,10 @@ namespace Server.Network.HandleCommands
     {
         private readonly Queue<byte> _packetWithCommands;
         private readonly ModelManager _modelManager;
-        private readonly Dictionary<int, ClientProxy> _clientProxyDic;
+        private readonly Dictionary<int, IClientProxy> _clientProxyDic;
         private readonly ISerializer _serializer;
 
-        public HitCharacterCommandHandlePacket(Queue<byte> packetWithCommands, ModelManager modelManager, Dictionary<int, ClientProxy> clientProxyDic, ISerializer serializer)
+        public HitCharacterCommandHandlePacket(Queue<byte> packetWithCommands, ModelManager modelManager, Dictionary<int, IClientProxy> clientProxyDic, ISerializer serializer)
         {
             _packetWithCommands = packetWithCommands;
             _modelManager = modelManager;

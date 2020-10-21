@@ -2,11 +2,11 @@
 
 namespace Server.Network
 {
-    public class ClientProxy
+    public class ClientProxy : IClientProxy
     {
         public int IdClient { get; }
-        public readonly Queue<byte> UnprocessedCommands = new Queue<byte>();
-        public readonly Queue<byte> NotSentPacketCommands = new Queue<byte>();
+        public Queue<byte> UnprocessedCommands { get; } = new Queue<byte>();
+        public Queue<byte> NotSentPacketCommands { get; } = new Queue<byte>();
         
         public ClientProxy(int idClient)
         {
