@@ -61,8 +61,7 @@ namespace Network
                     serverPacketHandler = new UpdateServerPacketHandler(packet,_modelManagerClient,_serializer);
                     break;
                 default:
-                    serverPacketHandler = new ErrorServerPacketHandler();
-                    break;
+                    throw new ArgumentException();
             }
             
             serverPacketHandler.HandlePacket();
