@@ -11,7 +11,7 @@ namespace Network
 {
     public class NetworkManagerClient : IDisposable
     {
-        private readonly int _millisecondsBetweenSendPacket = 1000;
+        private readonly int _millisecondsBetweenSendPacket = 500;
         private readonly IClient _client;
         private readonly ISerializer _serializer;
         private readonly ModelManagerClient _modelManagerClient;
@@ -51,9 +51,9 @@ namespace Network
 
             while (_isNetWorkingRun)
             {
-                IPacketToServerPreparer packetToServerPreparer = new MainPacketToServerPreparer(_clientNetworkInfo,_serializer);
+                IServerPacketPreparer serverPacketPreparer = new MainServerPacketPreparer(_clientNetworkInfo,_serializer);
 
-                outgoingPacket.Enqueue(packetToServerPreparer.GetPacket());
+                outgoingPacket.Enqueue(serverPacketPreparer.GetPacket());
                 
                 if (outgoingPacket.Count > 0)
                 {
