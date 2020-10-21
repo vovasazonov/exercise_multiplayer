@@ -5,10 +5,10 @@ namespace Network.ServerPacketPreparers
 {
     public readonly struct MainServerPacketPreparer : IServerPacketPreparer
     {
-        private readonly ClientNetworkInfo _clientNetworkInfo;
+        private readonly IClientNetworkInfo _clientNetworkInfo;
         private readonly ISerializer _serializer;
 
-        public MainServerPacketPreparer(ClientNetworkInfo clientNetworkInfo, ISerializer serializer)
+        public MainServerPacketPreparer(IClientNetworkInfo clientNetworkInfo, ISerializer serializer)
         {
             _clientNetworkInfo = clientNetworkInfo;
             _serializer = serializer;

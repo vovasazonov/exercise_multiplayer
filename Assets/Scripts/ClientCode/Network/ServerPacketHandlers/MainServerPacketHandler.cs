@@ -10,10 +10,10 @@ namespace Network.ServerPacketHandlers
     {
         private readonly Queue<byte> _packet;
         private readonly ISerializer _serializer;
-        private readonly ClientNetworkInfo _clientNetworkInfo;
+        private readonly IClientNetworkInfo _clientNetworkInfo;
         private readonly IModelManager _modelManager;
 
-        public MainServerPacketHandler(Queue<byte> packet, ISerializer serializer, ClientNetworkInfo clientNetworkInfo, ModelManagerClient modelManager)
+        public MainServerPacketHandler(Queue<byte> packet, ISerializer serializer, IClientNetworkInfo clientNetworkInfo, ModelManagerClient modelManager)
         {
             _packet = packet;
             _serializer = serializer;

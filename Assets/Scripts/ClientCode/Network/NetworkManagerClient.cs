@@ -15,10 +15,10 @@ namespace Network
         private readonly IClient _client;
         private readonly ISerializer _serializer;
         private readonly ModelManagerClient _modelManagerClient;
-        private readonly ClientNetworkInfo _clientNetworkInfo;
+        private readonly IClientNetworkInfo _clientNetworkInfo;
         private bool _isNetWorkingRun = true;
 
-        public NetworkManagerClient(IClient client, ClientNetworkInfo clientNetworkInfo, ISerializer serializer, ModelManagerClient modelManagerClient)
+        public NetworkManagerClient(IClient client, IClientNetworkInfo clientNetworkInfo, ISerializer serializer, ModelManagerClient modelManagerClient)
         {
             _client = client;
             _clientNetworkInfo = clientNetworkInfo;

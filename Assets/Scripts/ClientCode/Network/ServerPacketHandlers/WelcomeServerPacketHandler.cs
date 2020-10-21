@@ -1,20 +1,14 @@
 ﻿using System.Collections.Generic;
 using Serialization;
-using UnityEngine;
-
-#if UNITY_EDITOR
-
-#endif
-
 namespace Network.ServerPacketHandlers
 {
     public readonly struct WelcomeServerPacketHandler : IServerPacketHandler
     {
         private readonly Queue<byte> _packetCame;
-        private readonly ClientNetworkInfo _clientNetworkInfo;
+        private readonly IClientNetworkInfo _clientNetworkInfo;
         private readonly ISerializer _serializer;
 
-        public WelcomeServerPacketHandler(Queue<byte> packetCame, ClientNetworkInfo clientNetworkInfo, ISerializer serializer)
+        public WelcomeServerPacketHandler(Queue<byte> packetCame, IClientNetworkInfo clientNetworkInfo, ISerializer serializer)
         {
             _packetCame = packetCame;
             _clientNetworkInfo = clientNetworkInfo;
@@ -24,10 +18,6 @@ namespace Network.ServerPacketHandlers
         public void HandlePacket()
         {
             _clientNetworkInfo.Id = _serializer.Deserialize<int>(_packetCame);
-                
-#if UNITY_EDITOR
-            Debug.Log($"Was welcomed as client id: {_clientNetworkInfo.Id}");
-#endif
         }
     }
 }
