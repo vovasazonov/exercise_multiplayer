@@ -16,7 +16,7 @@ namespace Network
         private readonly ISerializer _serializer;
         private readonly ModelManagerClient _modelManagerClient;
         private readonly ClientNetworkInfo _clientNetworkInfo;
-        private bool _isNetWorkingWork = true;
+        private bool _isNetWorkingRun = true;
 
         public NetworkManagerClient(IClient client, ClientNetworkInfo clientNetworkInfo, ISerializer serializer, ModelManagerClient modelManagerClient)
         {
@@ -49,29 +49,11 @@ namespace Network
         {
             Queue<byte> outgoingPacket = new Queue<byte>();
 
-            while (_isNetWorkingWork)
+            while (_isNetWorkingRun)
             {
-                IServerPacketPreparer serverPacketPreparer;
-                switch (_clientNetworkInfo.NetworkState)
-                {
-                    case NetworkClientState.Welcomed:
-                        if (_clientNetworkInfo.NotSentCommandsToServer.Count > 0)
-                        {
-                            serverPacketPreparer = new CommandServerPacketPreparer(_serializer,_clientNetworkInfo);
-                        }
-                        else
-                        {
-                            serverPacketPreparer = new UpdateServerPacketPreparer(_serializer, _clientNetworkInfo.Id);
-                        }
-                        break;
-                    case NetworkClientState.SayingHello:
-                        serverPacketPreparer = new HelloServerPacketPreparer(_serializer);
-                        break;
-                    default:
-                        throw new ArgumentException();
-                }
+                IPacketToServerPreparer packetToServerPreparer = new MainPacketToServerPreparer(_clientNetworkInfo,_serializer);
 
-                outgoingPacket.Enqueue(serverPacketPreparer.GetPacket());
+                outgoingPacket.Enqueue(packetToServerPreparer.GetPacket());
                 
                 if (outgoingPacket.Count > 0)
                 {
@@ -85,7 +67,7 @@ namespace Network
 
         public void Dispose()
         {
-            _isNetWorkingWork = false;
+            _isNetWorkingRun = false;
             RemoveClientListener();
         }
     }

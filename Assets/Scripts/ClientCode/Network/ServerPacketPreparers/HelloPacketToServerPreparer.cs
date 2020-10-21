@@ -2,11 +2,11 @@
 
 namespace Network.ServerPacketPreparers
 {
-    public readonly struct HelloServerPacketPreparer : IServerPacketPreparer
+    public readonly struct HelloPacketToServerPreparer : IPacketToServerPreparer
     {
         private readonly ISerializer _serializer;
 
-        public HelloServerPacketPreparer(ISerializer serializer)
+        public HelloPacketToServerPreparer(ISerializer serializer)
         {
             _serializer = serializer;
         }

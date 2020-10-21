@@ -45,7 +45,9 @@
                 <e p="CustomHttpClient.cs" t="Include" />
                 <e p="IClient.cs" t="Include" />
               </e>
-              <e p="HandleServerPackets" t="Include">
+              <e p="NetworkClientState.cs" t="Include" />
+              <e p="NetworkManagerClient.cs" t="Include" />
+              <e p="ServerPackerHandlers" t="Include">
                 <e p="Commands" t="Include">
                   <e p="CharacterHpChangedCommandServerPacketHandler.cs" t="Include" />
                   <e p="UpdateServerPacketHandler.cs" t="Include" />
@@ -54,13 +56,12 @@
                 <e p="MainServerPacketHandler.cs" t="Include" />
                 <e p="WelcomeServerPacketHandler.cs" t="Include" />
               </e>
-              <e p="NetworkClientState.cs" t="Include" />
-              <e p="NetworkManagerClient.cs" t="Include" />
-              <e p="PreparePackets" t="Include">
-                <e p="CommandPrepareToServerPacket.cs" t="Include" />
-                <e p="HelloPrepareToServerPacket.cs" t="Include" />
-                <e p="IPrepareToServerPacket.cs" t="Include" />
-                <e p="UpdatePrepareToServerPacket.cs" t="Include" />
+              <e p="ServerPacketPreparers" t="Include">
+                <e p="CommandPacketToServerPreparer.cs" t="Include" />
+                <e p="HelloPacketToServerPreparer.cs" t="Include" />
+                <e p="IPacketToServerPreparer.cs" t="Include" />
+                <e p="MainPacketToServerPreparer.cs" t="Include" />
+                <e p="UpdatePacketToServerPreparer.cs" t="Include" />
               </e>
             </e>
           </e>
