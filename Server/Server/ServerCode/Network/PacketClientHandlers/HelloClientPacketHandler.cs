@@ -12,9 +12,9 @@ namespace Server.Network.PacketClientHandlers
         private readonly ISerializer _serializer;
         private int _lastSetId;
         private readonly Queue<byte> _responsePacket;
-        private readonly ModelManager _modelManager;
+        private readonly IModelManager _modelManager;
 
-        public HelloClientPacketHandler(IDictionary<int, IClientProxy> clients, ISerializer serializer, Queue<byte> responsePacket, ModelManager modelManager)
+        public HelloClientPacketHandler(IDictionary<int, IClientProxy> clients, ISerializer serializer, Queue<byte> responsePacket, IModelManager modelManager)
         {
             _clients = clients;
             _serializer = serializer;

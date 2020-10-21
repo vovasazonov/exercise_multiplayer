@@ -79,6 +79,7 @@
                   <e p="IHealthPointModel.cs" t="Include" />
                 </e>
               </e>
+              <e p="IModelManager.cs" t="Include" />
               <e p="ModelManager.cs" t="Include" />
               <e p="Weapons" t="Include">
                 <e p="Models" t="Include">

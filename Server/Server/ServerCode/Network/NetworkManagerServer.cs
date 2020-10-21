@@ -10,13 +10,13 @@ namespace Server.Network
     public class NetworkManagerServer : IDisposable
     {
         private readonly IServer _server;
-        private readonly ModelManager _modelManager;
+        private readonly IModelManager _modelManager;
         private readonly IDictionary<int, IClientProxy> _clientProxyDic = new Dictionary<int, IClientProxy>();
         private readonly ISerializer _serializer = new BinaryFormatterSerializer();
         private readonly int _millisecondsTick = 500;
         private readonly IClientCommandsProcessor _clientCommandsProcessor;
 
-        public NetworkManagerServer(IServer server, ModelManager modelManager)
+        public NetworkManagerServer(IServer server, IModelManager modelManager)
         {
             _server = server;
             _modelManager = modelManager;

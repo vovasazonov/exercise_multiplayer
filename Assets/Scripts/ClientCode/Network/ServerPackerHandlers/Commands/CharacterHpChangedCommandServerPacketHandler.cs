@@ -7,10 +7,10 @@ namespace Network.ServerPackerHandlers.Commands
     public readonly struct CharacterHpChangedCommandServerPacketHandler : IServerPacketHandler
     {
         private readonly Queue<byte> _packCame;
-        private readonly ModelManagerClient _modelManagerClient;
+        private readonly IModelManager _modelManagerClient;
         private readonly ISerializer _serializer;
 
-        public CharacterHpChangedCommandServerPacketHandler(Queue<byte> packCame, ModelManagerClient modelManagerClient, ISerializer serializer)
+        public CharacterHpChangedCommandServerPacketHandler(Queue<byte> packCame, IModelManager modelManagerClient, ISerializer serializer)
         {
             _packCame = packCame;
             _modelManagerClient = modelManagerClient;

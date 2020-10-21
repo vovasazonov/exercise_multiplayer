@@ -9,11 +9,11 @@ namespace Server.Network.CommandHandlers
     public readonly struct HitCharacterCommandHandler : ICommandHandler
     {
         private readonly Queue<byte> _packetWithCommands;
-        private readonly ModelManager _modelManager;
+        private readonly IModelManager _modelManager;
         private readonly IDictionary<int, IClientProxy> _clientProxyDic;
         private readonly ISerializer _serializer;
 
-        public HitCharacterCommandHandler(Queue<byte> packetWithCommands, ModelManager modelManager, IDictionary<int, IClientProxy> clientProxyDic, ISerializer serializer)
+        public HitCharacterCommandHandler(Queue<byte> packetWithCommands, IModelManager modelManager, IDictionary<int, IClientProxy> clientProxyDic, ISerializer serializer)
         {
             _packetWithCommands = packetWithCommands;
             _modelManager = modelManager;

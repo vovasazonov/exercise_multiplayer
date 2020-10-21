@@ -25,6 +25,8 @@
           <e p="Models.meta" t="Include" />
         </e>
         <e p="HealthPoints.meta" t="Include" />
+        <e p="IModelManager.cs" t="Include" />
+        <e p="IModelManager.cs.meta" t="Include" />
         <e p="ModelManager.cs" t="Include" />
         <e p="ModelManager.cs.meta" t="Include" />
         <e p="Weapons" t="Include">

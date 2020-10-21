@@ -10,13 +10,13 @@ namespace Server.Network
 {
     public class ClientCommandsProcessor : IClientCommandsProcessor
     {
-        private readonly ModelManager _modelManager;
+        private readonly IModelManager _modelManager;
         private readonly IDictionary<int, IClientProxy> _clientProxyDic;
         private readonly ISerializer _serializer;
         private readonly int _millisecondsTick;
         private bool _isRun;
 
-        public ClientCommandsProcessor(ModelManager modelManager, IDictionary<int, IClientProxy> clientProxyDic, ISerializer serializer, int millisecondsTick)
+        public ClientCommandsProcessor(IModelManager modelManager, IDictionary<int, IClientProxy> clientProxyDic, ISerializer serializer, int millisecondsTick)
         {
             _modelManager = modelManager;
             _clientProxyDic = clientProxyDic;

@@ -4,11 +4,11 @@ using Game.Weapons.Models;
 
 namespace Game
 {
-    public class ModelManager
+    public class ModelManager : IModelManager
     {
-        public readonly Dictionary<int, ICharacterModel> CharacterModelDic = new Dictionary<int, ICharacterModel>();
-        public readonly Dictionary<int, IWeaponModel> WeaponModelDic = new Dictionary<int, IWeaponModel>();
-        
+        public IDictionary<int, ICharacterModel> CharacterModelDic { get; } = new Dictionary<int, ICharacterModel>();
+        public IDictionary<int, IWeaponModel> WeaponModelDic { get; } = new Dictionary<int, IWeaponModel>();
+
         public ModelManager()
         {
             CharacterModelDic[0] = new CharacterModel("slime_enemy", 100);

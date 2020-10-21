@@ -9,7 +9,7 @@ namespace Server
         private static void Main(string[] args)
         {
             IServer server = new HttpServer();
-            ModelManager modelManager = new ModelManager();
+            IModelManager modelManager = new ModelManager();
             NetworkManagerServer networkManagerServer = new NetworkManagerServer(server, modelManager);
 
             server.Start();

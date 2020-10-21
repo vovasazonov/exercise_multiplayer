@@ -10,10 +10,10 @@ namespace Server.Network.PacketClientHandlers
         private readonly Queue<byte> _packetCame;
         private readonly Queue<byte> _packetResponse;
         private readonly IDictionary<int, IClientProxy> _clientProxyDic;
-        private readonly ModelManager _modelManager;
+        private readonly IModelManager _modelManager;
         private readonly ISerializer _serializer;
 
-        public MainClientPacketHandler(Queue<byte> packetCame,Queue<byte> packetResponse,IDictionary<int, IClientProxy> clientProxyDic, ModelManager modelManager, ISerializer serializer)
+        public MainClientPacketHandler(Queue<byte> packetCame,Queue<byte> packetResponse,IDictionary<int, IClientProxy> clientProxyDic, IModelManager modelManager, ISerializer serializer)
         {
             _packetCame = packetCame;
             _packetResponse = packetResponse;

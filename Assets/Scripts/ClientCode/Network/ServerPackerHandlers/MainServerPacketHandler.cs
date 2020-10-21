@@ -11,14 +11,14 @@ namespace Network.ServerPackerHandlers
         private readonly Queue<byte> _packet;
         private readonly ISerializer _serializer;
         private readonly ClientNetworkInfo _clientNetworkInfo;
-        private readonly ModelManagerClient _modelManagerClient;
+        private readonly IModelManager _modelManager;
 
-        public MainServerPacketHandler(Queue<byte> packet, ISerializer serializer, ClientNetworkInfo clientNetworkInfo, ModelManagerClient modelManagerClient)
+        public MainServerPacketHandler(Queue<byte> packet, ISerializer serializer, ClientNetworkInfo clientNetworkInfo, ModelManagerClient modelManager)
         {
             _packet = packet;
             _serializer = serializer;
             _clientNetworkInfo = clientNetworkInfo;
-            _modelManagerClient = modelManagerClient;
+            _modelManager = modelManager;
         }
 
         public void HandlePacket()
@@ -33,7 +33,7 @@ namespace Network.ServerPackerHandlers
                     _clientNetworkInfo.NetworkState = NetworkClientState.Welcomed;
                     break;
                 case NetworkPacketType.Update:
-                    serverPacketHandler = new UpdateServerPacketHandler(_packet, _modelManagerClient, _serializer);
+                    serverPacketHandler = new UpdateServerPacketHandler(_packet, _modelManager, _serializer);
                     break;
                 default:
                     throw new ArgumentException();

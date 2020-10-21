@@ -8,13 +8,13 @@ namespace Network.ServerPackerHandlers.Commands
     public readonly struct UpdateServerPacketHandler : IServerPacketHandler
     {
         private readonly Queue<byte> _packetCame;
-        private readonly ModelManagerClient _modelManagerClient;
+        private readonly IModelManager _modelManager;
         private readonly ISerializer _serializer;
 
-        public UpdateServerPacketHandler(Queue<byte> packetCame, ModelManagerClient modelManagerClient, ISerializer serializer)
+        public UpdateServerPacketHandler(Queue<byte> packetCame, IModelManager modelManager, ISerializer serializer)
         {
             _packetCame = packetCame;
-            _modelManagerClient = modelManagerClient;
+            _modelManager = modelManager;
             _serializer = serializer;
         }
 
@@ -28,7 +28,7 @@ namespace Network.ServerPackerHandlers.Commands
                 switch (gameCommandType)
                 {
                     case GameCommandType.CharacterHpChanged:
-                        serverPacketHandler = new CharacterHpChangedCommandServerPacketHandler(_packetCame, _modelManagerClient, _serializer);
+                        serverPacketHandler = new CharacterHpChangedCommandServerPacketHandler(_packetCame, _modelManager, _serializer);
                         break;
                     default:
                         throw new ArgumentOutOfRangeException();

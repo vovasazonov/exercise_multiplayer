@@ -6,11 +6,11 @@ using Serialization;
 
 namespace Game
 {
-    public class ModelManagerClient
+    public class ModelManagerClient : IModelManager
     {
-        public readonly Dictionary<int, ICharacterModel> CharacterModelDic;
-        public readonly Dictionary<int, IWeaponModel> WeaponModelDic;
-        
+        public IDictionary<int, ICharacterModel> CharacterModelDic { get; }
+        public IDictionary<int, IWeaponModel> WeaponModelDic { get; }
+
         public ModelManagerClient(ClientNetworkInfo clientNetworkInfo, ISerializer serializer)
         {
             var modelManager = new ModelManager();
@@ -24,5 +24,6 @@ namespace Game
 
             WeaponModelDic = modelManager.WeaponModelDic;
         }
+
     }
 }
