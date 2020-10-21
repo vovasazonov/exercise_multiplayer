@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Game;
 using Network.Clients;
-using Network.HandleServerPackets;
-using Network.PreparePackets;
+using Network.ServerPackerHandlers;
+using Network.ServerPacketPreparers;
 using Serialization;
 
 namespace Network
@@ -51,27 +51,27 @@ namespace Network
 
             while (_isNetWorkingWork)
             {
-                IPrepareToServerPacket prepareToServerPacket;
+                IServerPacketPreparer serverPacketPreparer;
                 switch (_clientNetworkInfo.NetworkState)
                 {
                     case NetworkClientState.Welcomed:
                         if (_clientNetworkInfo.NotSentCommandsToServer.Count > 0)
                         {
-                            prepareToServerPacket = new CommandPrepareToServerPacket(_serializer,_clientNetworkInfo);
+                            serverPacketPreparer = new CommandServerPacketPreparer(_serializer,_clientNetworkInfo);
                         }
                         else
                         {
-                            prepareToServerPacket = new UpdatePrepareToServerPacket(_serializer, _clientNetworkInfo.Id);
+                            serverPacketPreparer = new UpdateServerPacketPreparer(_serializer, _clientNetworkInfo.Id);
                         }
                         break;
                     case NetworkClientState.SayingHello:
-                        prepareToServerPacket = new HelloPrepareToServerPacket(_serializer);
+                        serverPacketPreparer = new HelloServerPacketPreparer(_serializer);
                         break;
                     default:
                         throw new ArgumentException();
                 }
 
-                outgoingPacket.Enqueue(prepareToServerPacket.GetPacket());
+                outgoingPacket.Enqueue(serverPacketPreparer.GetPacket());
                 
                 if (outgoingPacket.Count > 0)
                 {

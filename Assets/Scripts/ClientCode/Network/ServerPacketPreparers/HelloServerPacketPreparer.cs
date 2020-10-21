@@ -1,12 +1,12 @@
 ﻿using Serialization;
 
-namespace Network.PreparePackets
+namespace Network.ServerPacketPreparers
 {
-    public readonly struct HelloPrepareToServerPacket : IPrepareToServerPacket
+    public readonly struct HelloServerPacketPreparer : IServerPacketPreparer
     {
         private readonly ISerializer _serializer;
 
-        public HelloPrepareToServerPacket(ISerializer serializer)
+        public HelloServerPacketPreparer(ISerializer serializer)
         {
             _serializer = serializer;
         }

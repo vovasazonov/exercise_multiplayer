@@ -1,14 +1,14 @@
 ﻿using System.Collections.Generic;
 using Serialization;
 
-namespace Network.PreparePackets
+namespace Network.ServerPacketPreparers
 {
-    public readonly struct UpdatePrepareToServerPacket : IPrepareToServerPacket
+    public readonly struct UpdateServerPacketPreparer : IServerPacketPreparer
     {
         private readonly ISerializer _serializer;
         private readonly int _clientId;
 
-        public UpdatePrepareToServerPacket(ISerializer serializer, int clientId)
+        public UpdateServerPacketPreparer(ISerializer serializer, int clientId)
         {
             _serializer = serializer;
             _clientId = clientId;

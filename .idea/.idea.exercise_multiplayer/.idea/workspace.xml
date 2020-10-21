@@ -22,12 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08fac7fd-c778-4934-80c3-7faf153ae413" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/MainServerPacketHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/MainServerPacketHandler.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.exercise_multiplayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.exercise_multiplayer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/.idea/.idea.Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/.idea/.idea.Server/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="08fac7fd-c778-4934-80c3-7faf153ae413" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -67,7 +62,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/IHandleCommand.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/CommandHandleServerPacket.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/Commands/CharacterHpChangedHandleCommand.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/ClientNetworkInfo.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/Weapons/Models/WeaponModelClient.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/Commands/CommandType.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/Commands/UpdateHandleServerPacket.cs" />
@@ -94,9 +88,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Network/GameCommandType.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Serialization/BinaryFormatterSerialization/CustomizedBinder.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/Commands/CharacterHpChangedCommandServerPacketHandler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/NetworkManagerClient.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/WelcomeServerPacketHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/ClientNetworkInfo.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/MainServerPacketHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/NetworkManagerClient.cs" />
       </list>
     </option>
   </component>
