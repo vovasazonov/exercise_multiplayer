@@ -2,7 +2,7 @@
 {
     public interface IWeaponModel
     {
-        int Id { get; }
+        string Id { get; }
         int Damage { get; }
     }
 }

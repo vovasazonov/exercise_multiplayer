@@ -5,10 +5,10 @@ namespace Game.Characters.Models
 {
     public class CharacterModel : ICharacterModel
     {
-        public int Id { get; }
+        public string Id { get; }
         public IHealthPointModel HealthPoint { get; }
 
-        public CharacterModel(int id, int healthPoint)
+        public CharacterModel(string id, int healthPoint)
         {
             Id = id;
             HealthPoint = new HealthPointModel(healthPoint);

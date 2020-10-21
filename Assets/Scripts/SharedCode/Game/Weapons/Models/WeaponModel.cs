@@ -2,10 +2,10 @@
 {
     public class WeaponModel : IWeaponModel
     {
-        public int Id { get; }
+        public string Id { get; }
         public int Damage { get; }
 
-        public WeaponModel(int id, int damage)
+        public WeaponModel(string id, int damage)
         {
             Id = id;
             Damage = damage;

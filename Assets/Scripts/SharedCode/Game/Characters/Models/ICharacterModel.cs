@@ -5,7 +5,7 @@ namespace Game.Characters.Models
 {
     public interface ICharacterModel
     {
-        int Id { get; }
+        string Id { get; }
         IHealthPointModel HealthPoint { get; }
         
         void HitMe(IWeaponModel weapon);

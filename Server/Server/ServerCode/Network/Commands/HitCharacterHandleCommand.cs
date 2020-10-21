@@ -26,13 +26,16 @@ namespace Server.Network.Commands
         public void HandleCommand()
         {
             int characterId = _serializer.Deserialize<int>(_packet);
-            int weaponId = _serializer.Deserialize<int>(_packet);
+            string weaponId = _serializer.Deserialize<string>(_packet);
 
-            var weapon = _modelManager.WeaponModels.First(w => w.Id == weaponId);
-            var character = _modelManager.EnemyModel;
+            var character = _modelManager.CharacterModelDic[characterId];
+            var weapon = _modelManager.WeaponModelDic.Values.FirstOrDefault(w=>w.Id == weaponId);
+
+            if (weapon != null)
+            {
+                character.HitMe(weapon);
+            }
             
-            character.HitMe(weapon);
-
             NotifyClients(characterId);
         }
 
@@ -41,8 +44,8 @@ namespace Server.Network.Commands
             foreach (var clientProxy in _clientProxyDic.Values)
             {
                 clientProxy.NotSentCommand.Enqueue(_serializer.Serialize(GameCommandType.CharacterHpChanged));
-                clientProxy.NotSentCommand.Enqueue(_serializer.Serialize(_modelManager.EnemyModel.Id));
-                clientProxy.NotSentCommand.Enqueue(_serializer.Serialize(_modelManager.EnemyModel.HealthPoint.Points));
+                clientProxy.NotSentCommand.Enqueue(_serializer.Serialize(characterId));
+                clientProxy.NotSentCommand.Enqueue(_serializer.Serialize(_modelManager.CharacterModelDic[characterId].HealthPoint.Points));
             }
         }
     }

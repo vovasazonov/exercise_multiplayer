@@ -12,15 +12,17 @@ namespace Game.Characters.Models
         private readonly ISerializer _serializer;
         
         private readonly ICharacterModel _characterModel;
+        private readonly int _objectId;
 
-        public CharacterModelClient(ICharacterModel characterModel, ClientNetworkInfo clientNetworkInfo, ISerializer serializer)
+        public CharacterModelClient(ICharacterModel characterModel, int objectId, ClientNetworkInfo clientNetworkInfo, ISerializer serializer)
         {
             _characterModel = characterModel;
+            _objectId = objectId;
             _clientNetworkInfo = clientNetworkInfo;
             _serializer = serializer;
         }
 
-        public int Id => _characterModel.Id;
+        public string Id => _characterModel.Id;
         public IHealthPointModel HealthPoint => _characterModel.HealthPoint;
         public void HitMe(IWeaponModel weapon)
         {
@@ -33,7 +35,7 @@ namespace Game.Characters.Models
         {
             var packet = _clientNetworkInfo.NotSentCommandsToServer;
             packet.Enqueue(_serializer.Serialize(GameCommandType.HitCharacter));
-            packet.Enqueue(_serializer.Serialize(Id));
+            packet.Enqueue(_serializer.Serialize(_objectId));
             packet.Enqueue(_serializer.Serialize(weapon.Id));
         }
     }

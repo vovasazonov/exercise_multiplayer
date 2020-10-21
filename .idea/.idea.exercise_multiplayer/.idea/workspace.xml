@@ -23,27 +23,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08fac7fd-c778-4934-80c3-7faf153ae413" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/PreparePackets/UpdatePrepareToServerPacket.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/PreparePackets/UpdatePrepareToServerPacket.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/Server/ServerCode/Network/Commands/HitCharacterHandleCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/Server/ServerCode/Network/Commands/IHandleCommand.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.exercise_multiplayer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.exercise_multiplayer/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.exercise_multiplayer/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.exercise_multiplayer/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.exercise_multiplayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.exercise_multiplayer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/Characters/Models/CharacterModelClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/Characters/Models/CharacterModelClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/Commands/CommandHandleServerPacket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/Commands/UpdateHandleServerPacket.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/Commands/CommandHandleServerPacket.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/Commands/UpdateHandleServerPacket.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/NetworkManagerClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/NetworkManagerClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/PreparePackets/CommandPrepareToServerPacket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/PreparePackets/CommandPrepareToServerPacket.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/.idea/.idea.Server/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/.idea/.idea.Server/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/HealthPoints/Presenters/HealthPointPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/HealthPoints/Presenters/CharacterHealthPointPresenter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/HealthPoints/Presenters/HealthPointPresenter.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/HealthPoints/Presenters/CharacterHealthPointPresenter.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/ModelManagerClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/ModelManagerClient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/PresenterManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/PresenterManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/Commands/CharacterHpChangedCommandHandleServerPacket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/Commands/CharacterHpChangedCommandHandleServerPacket.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Characters/Models/CharacterModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Characters/Models/CharacterModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Characters/Models/ICharacterModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Characters/Models/ICharacterModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/ModelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/ModelManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Weapons/Models/IWeaponModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Weapons/Models/IWeaponModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Weapons/Models/WeaponModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Weapons/Models/WeaponModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/.idea/.idea.Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/.idea/.idea.Server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/Server/ServerCode/Network/GameProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Server/ServerCode/Network/GameProcessor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/Server/ServerCode/Network/HandlePackets/CommandHandleClientPacket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Server/ServerCode/Network/HandlePackets/CommandHandleClientPacket.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/Server/ServerCode/Network/Commands/HitCharacterHandleCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Server/ServerCode/Network/Commands/HitCharacterHandleCommand.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/Server/ServerCode/Network/HandlePackets/HelloHandleClientPacket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Server/ServerCode/Network/HandlePackets/HelloHandleClientPacket.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/Server/ServerCode/Network/HandlePackets/UpdateHandleClientPacket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Server/ServerCode/Network/HandlePackets/UpdateHandleClientPacket.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/Server/ServerCode/Network/NetworkManagerServer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Server/ServerCode/Network/NetworkManagerServer.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,12 +53,11 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/437BA245-D840-4784-B9FB-AB9B439AC908/51/58fa12d2/AsyncVoidMethodBuilder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7EBF3529-BA0E-4558-A5FA-1BC982AA8605/1a/4cfdd4b3/HttpClient.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/437BA245-D840-4784-B9FB-AB9B439AC908/6b/d46c6c29/AsyncMethodBuilderCore.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8788DF23-D12C-4548-A89D-2A54A21132B9/29/cfcee517/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/Views/ITextView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/Views/ITextUiView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/Views/TextUiView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Managers/ViewManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Characters/Models/IEnemyCharacterModel.cs" />
@@ -85,34 +79,36 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/Weapons/Views/IWeaponButtonView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/Weapons/Views/WeaponButtonView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/Weapons/Presenters/WeaponPresenter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Characters/Models/ICharacterModel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Characters/Models/CharacterModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/Weapons/Presenters/WeaponAttackPresenter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/Weapons/Presenters/WeaponAttackPresenterManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/ViewManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/ModelManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/CommandType.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/IHandleCommand.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/CommandHandleServerPacket.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/Commands/CharacterHpChangedHandleCommand.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/ClientNetworkInfo.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/Weapons/Models/WeaponModelClient.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/ModelManagerClient.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/PresenterManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/Commands/CommandType.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/Commands/UpdateHandleServerPacket.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/UpdateHandleServerPacket.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/CommandHandle/ICommandHandle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Network/Commands/CommandType.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/Commands/CommandHandleServerPacket.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/Commands/CharacterHpChangedCommandHandleServerPacket.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Network/CommandType.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Network/GameCommandType.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/Characters/Models/CharacterModelClient.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/PreparePackets/UpdatePrepareToServerPacket.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/NetworkManagerClient.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/PreparePackets/CommandPrepareToServerPacket.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Characters/Models/ICharacterModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Characters/Models/CharacterModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Weapons/Models/IWeaponModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Weapons/Models/WeaponModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/Characters/Models/CharacterModelClient.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/ModelManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/Commands/CharacterHpChangedCommandHandleServerPacket.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/ModelManagerClient.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/PresenterManager.cs" />
       </list>
     </option>
   </component>
@@ -143,10 +139,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="21180">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="21180" />
+      <option name="pid" />
       <option name="selectedOptions">
         <set />
       </option>
@@ -292,24 +288,5 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1603097823871" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/Commands/UpdateHandleServerPacket.cs</url>
-          <line>24</line>
-          <properties documentPath="C:\Users\vovas\source\repos\Unity\exercise_multiplayer\Assets\Scripts\ClientCode\Network\HandleServerPackets\Commands\UpdateHandleServerPacket.cs" initialLine="24">
-            <startOffsets>
-              <option value="757" />
-            </startOffsets>
-            <endOffsets>
-              <option value="845" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="48" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

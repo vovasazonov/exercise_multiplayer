@@ -3,12 +3,12 @@ using Game.Views;
 
 namespace Game.HealthPoints.Presenters
 {
-    public class HealthPointPresenter : IPresenter
+    public class CharacterHealthPointPresenter : IPresenter
     {
         private readonly ITextUiView _view;
         private readonly IHealthPointModel _model;
 
-        public HealthPointPresenter(ITextUiView view, IHealthPointModel model)
+        public CharacterHealthPointPresenter(ITextUiView view, IHealthPointModel model)
         {
             _view = view;
             _model = model;

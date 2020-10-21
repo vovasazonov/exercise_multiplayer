@@ -52,9 +52,12 @@ namespace Server.Network.HandlePackets
 
         private void MoveServerDataToClient(ClientProxy clientProxy)
         {
-            clientProxy.NotSentCommand.Enqueue(_serializer.Serialize(GameCommandType.CharacterHpChanged));
-            clientProxy.NotSentCommand.Enqueue(_serializer.Serialize(_modelManager.EnemyModel.Id));
-            clientProxy.NotSentCommand.Enqueue(_serializer.Serialize(_modelManager.EnemyModel.HealthPoint.Points));
+            foreach (var keyValuePair in _modelManager.CharacterModelDic)
+            {
+                clientProxy.NotSentCommand.Enqueue(_serializer.Serialize(GameCommandType.CharacterHpChanged));
+                clientProxy.NotSentCommand.Enqueue(_serializer.Serialize(keyValuePair.Key));
+                clientProxy.NotSentCommand.Enqueue(_serializer.Serialize(keyValuePair.Value.HealthPoint.Points));
+            }
         }
     }
 }

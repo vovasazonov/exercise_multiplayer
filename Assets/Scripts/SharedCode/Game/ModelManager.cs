@@ -6,14 +6,14 @@ namespace Game
 {
     public class ModelManager
     {
-        public readonly ICharacterModel EnemyModel;
-        public readonly List<IWeaponModel> WeaponModels = new List<IWeaponModel>();
+        public readonly Dictionary<int, ICharacterModel> CharacterModelDic = new Dictionary<int, ICharacterModel>();
+        public readonly Dictionary<int, IWeaponModel> WeaponModelDic = new Dictionary<int, IWeaponModel>();
         
         public ModelManager()
         {
-            EnemyModel = new CharacterModel(3, 100);
-            WeaponModels.Add(new WeaponModel(0,3));
-            WeaponModels.Add(new WeaponModel(1,22));
+            CharacterModelDic[0] = new CharacterModel("slime_enemy", 100);
+            WeaponModelDic[0] = new WeaponModel("axe", 3);
+            WeaponModelDic[1] = new WeaponModel("spell", 22);
         }
     }
 }

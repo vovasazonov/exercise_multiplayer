@@ -7,13 +7,13 @@ namespace Network.HandlePackets
     public readonly struct CharacterHpChangedCommandHandleServerPacket : IHandleServerPacket
     {
         private readonly Queue<byte> _packCame;
-        private readonly ModelManagerClient _modelManager;
+        private readonly ModelManagerClient _modelManagerClient;
         private readonly ISerializer _serializer;
 
-        public CharacterHpChangedCommandHandleServerPacket(Queue<byte> packCame, ModelManagerClient modelManager, ISerializer serializer)
+        public CharacterHpChangedCommandHandleServerPacket(Queue<byte> packCame, ModelManagerClient modelManagerClient, ISerializer serializer)
         {
             _packCame = packCame;
-            _modelManager = modelManager;
+            _modelManagerClient = modelManagerClient;
             _serializer = serializer;
         }
 
@@ -22,7 +22,7 @@ namespace Network.HandlePackets
             int characterId = _serializer.Deserialize<int>(_packCame);
             int characterHp = _serializer.Deserialize<int>(_packCame);
 
-            _modelManager.EnemyModel.HealthPoint.Points = characterHp;
+            _modelManagerClient.CharacterModelDic[characterId].HealthPoint.Points = characterHp;
         }
     }
 }

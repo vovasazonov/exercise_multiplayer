@@ -17,7 +17,7 @@
               <e p="GameManager.cs" t="Include" />
               <e p="HealthPoints" t="Include">
                 <e p="Presenters" t="Include">
-                  <e p="HealthPointPresenter.cs" t="Include" />
+                  <e p="CharacterHealthPointPresenter.cs" t="Include" />
                 </e>
               </e>
               <e p="IPresenter.cs" t="Include" />
