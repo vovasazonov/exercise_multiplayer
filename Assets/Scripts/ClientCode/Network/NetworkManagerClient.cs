@@ -4,7 +4,6 @@ using System.Threading.Tasks;
 using Game;
 using Network.Clients;
 using Network.HandleServerPackets;
-using Network.HandleServerPackets.Commands;
 using Network.PreparePackets;
 using Serialization;
 
@@ -16,7 +15,6 @@ namespace Network
         private readonly IClient _client;
         private readonly ISerializer _serializer;
         private readonly ModelManagerClient _modelManagerClient;
-        private NetworkClientState _networkState = NetworkClientState.SayingHello;
         private readonly ClientNetworkInfo _clientNetworkInfo;
         private bool _isNetWorkingWork = true;
 
@@ -43,27 +41,7 @@ namespace Network
 
         private void OnServerPacketCame(Queue<byte> packet)
         {
-            HandlePacket(packet);
-        }
-
-        private void HandlePacket(Queue<byte> packet)
-        {
-            NetworkPacketType networkPacketType = _serializer.Deserialize<NetworkPacketType>(packet);
-            IServerPacketHandler serverPacketHandler;
-            
-            switch (networkPacketType)
-            {
-                case NetworkPacketType.Welcome:
-                    serverPacketHandler = new WelcomeServerPacketHandler(packet,_clientNetworkInfo,_serializer);
-                    _networkState = NetworkClientState.Welcomed;
-                    break;
-                case NetworkPacketType.Update:
-                    serverPacketHandler = new UpdateServerPacketHandler(packet,_modelManagerClient,_serializer);
-                    break;
-                default:
-                    throw new ArgumentException();
-            }
-            
+            IServerPacketHandler serverPacketHandler = new MainServerPacketHandler(packet, _serializer, _clientNetworkInfo, _modelManagerClient);
             serverPacketHandler.HandlePacket();
         }
 
@@ -74,7 +52,7 @@ namespace Network
             while (_isNetWorkingWork)
             {
                 IPrepareToServerPacket prepareToServerPacket;
-                switch (_networkState)
+                switch (_clientNetworkInfo.NetworkState)
                 {
                     case NetworkClientState.Welcomed:
                         if (_clientNetworkInfo.NotSentCommandsToServer.Count > 0)

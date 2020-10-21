@@ -23,9 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="703e222c-aafd-409f-982b-87c7e7f6ce68" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/CommandHandle.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/CommandHandle/ICommandHandle.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/CommandHandle/ICommandHandle.cs.meta" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/HandleServerPackets/MainServerPacketHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/HandleServerPackets/MainServerPacketHandler.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.idea.exercise_multiplayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.idea.exercise_multiplayer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Server/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

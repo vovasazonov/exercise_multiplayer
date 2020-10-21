@@ -23,9 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08fac7fd-c778-4934-80c3-7faf153ae413" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/CommandHandle.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/CommandHandle/ICommandHandle.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/CommandHandle/ICommandHandle.cs.meta" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/MainServerPacketHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/MainServerPacketHandler.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.exercise_multiplayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.exercise_multiplayer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/.idea/.idea.Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/.idea/.idea.Server/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,9 +46,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Characters/Models/PlayerCharacterModel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Players/IPlayerModel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/Characters/Presenters/IHealthPointCharacterPresenter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/Characters/Presenters/HealthPointCharacterPresenter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/IPresenter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/HealthPoints/Presenters/HealthPointPresenter.cs" />
@@ -79,7 +77,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/Commands/CommandHandleServerPacket.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Network/CommandType.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/PreparePackets/UpdatePrepareToServerPacket.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/NetworkManagerClient.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/PreparePackets/CommandPrepareToServerPacket.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Characters/Models/ICharacterModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/Characters/Models/CharacterModel.cs" />
@@ -96,6 +93,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Serialization/BinaryFormatterSerialization/BinaryFormatterSerializer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Network/GameCommandType.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Serialization/BinaryFormatterSerialization/CustomizedBinder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/Commands/CharacterHpChangedCommandServerPacketHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/NetworkManagerClient.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/WelcomeServerPacketHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/MainServerPacketHandler.cs" />
       </list>
     </option>
   </component>

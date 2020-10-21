@@ -51,6 +51,7 @@
                   <e p="UpdateServerPacketHandler.cs" t="Include" />
                 </e>
                 <e p="IServerPacketHandler.cs" t="Include" />
+                <e p="MainServerPacketHandler.cs" t="Include" />
                 <e p="WelcomeServerPacketHandler.cs" t="Include" />
               </e>
               <e p="NetworkClientState.cs" t="Include" />
