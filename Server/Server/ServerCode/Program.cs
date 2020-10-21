@@ -10,7 +10,7 @@ namespace Server
         {
             IServer server = new HttpServer();
             IModelManager modelManager = new ModelManager();
-            NetworkManagerServer networkManagerServer = new NetworkManagerServer(server, modelManager);
+            using NetworkManagerServer networkManagerServer = new NetworkManagerServer(server, modelManager);
 
             server.Start();
 
