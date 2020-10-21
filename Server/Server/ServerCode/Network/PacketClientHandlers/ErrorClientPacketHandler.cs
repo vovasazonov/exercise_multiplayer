@@ -1,6 +1,6 @@
-﻿namespace Server.Network.HandlePackets
+﻿namespace Server.Network.PacketClientHandlers
 {
-    public readonly struct ErrorHandleClientPacket : IHandleClientPacket
+    public readonly struct ErrorClientPacketHandler : IClientPacketHandler
     {
         public void HandlePacket()
         {

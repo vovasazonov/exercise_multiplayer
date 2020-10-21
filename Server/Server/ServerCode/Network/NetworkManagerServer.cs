@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Game;
 using Serialization;
 using Serialization.BinaryFormatterSerialization;
-using Server.Network.HandlePackets;
+using Server.Network.PacketClientHandlers;
 
 namespace Server.Network
 {
@@ -38,8 +38,8 @@ namespace Server.Network
 
         private void OnClientPacketCame(Queue<byte> packetCame, Queue<byte> packetResponse)
         {
-            IHandleClientPacket handleClientPacket = new MainHandleClientPacket(packetCame,packetResponse,_clientProxyDic,_modelManager,_serializer);
-            handleClientPacket.HandlePacket();
+            IClientPacketHandler clientPacketHandler = new MainClientPacketHandler(packetCame,packetResponse,_clientProxyDic,_modelManager,_serializer);
+            clientPacketHandler.HandlePacket();
         }
 
         public void Dispose()

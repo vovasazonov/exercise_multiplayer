@@ -1,15 +1,15 @@
 ﻿using System.Collections.Generic;
 using Serialization;
 
-namespace Server.Network.HandlePackets
+namespace Server.Network.PacketClientHandlers
 {
-    public readonly struct CommandHandleClientPacket : IHandleClientPacket
+    public readonly struct CommandClientPacketHandler : IClientPacketHandler
     {
         private readonly ISerializer _serializer;
         private readonly Queue<byte> _packetCame;
         private IDictionary<int, IClientProxy> ClientProxyDic { get; }
 
-        public CommandHandleClientPacket(IDictionary<int, IClientProxy> clientProxyDic, ISerializer serializer, Queue<byte> packetCame)
+        public CommandClientPacketHandler(IDictionary<int, IClientProxy> clientProxyDic, ISerializer serializer, Queue<byte> packetCame)
         {
             _serializer = serializer;
             _packetCame = packetCame;

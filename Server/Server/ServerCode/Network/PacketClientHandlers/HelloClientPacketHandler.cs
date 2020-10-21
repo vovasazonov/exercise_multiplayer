@@ -4,9 +4,9 @@ using Game;
 using Network;
 using Serialization;
 
-namespace Server.Network.HandlePackets
+namespace Server.Network.PacketClientHandlers
 {
-    public struct HelloHandleClientPacket : IHandleClientPacket
+    public struct HelloClientPacketHandler : IClientPacketHandler
     {
         private readonly IDictionary<int, IClientProxy> _clients;
         private readonly ISerializer _serializer;
@@ -14,7 +14,7 @@ namespace Server.Network.HandlePackets
         private readonly Queue<byte> _responsePacket;
         private readonly ModelManager _modelManager;
 
-        public HelloHandleClientPacket(IDictionary<int, IClientProxy> clients, ISerializer serializer, Queue<byte> responsePacket, ModelManager modelManager)
+        public HelloClientPacketHandler(IDictionary<int, IClientProxy> clients, ISerializer serializer, Queue<byte> responsePacket, ModelManager modelManager)
         {
             _clients = clients;
             _serializer = serializer;

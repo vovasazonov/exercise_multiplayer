@@ -91,18 +91,19 @@
               <e p="HitCharacterCommandHandlePacket.cs" t="Include" />
               <e p="IHandleCommand.cs" t="Include" />
             </e>
-            <e p="HandlePackets" t="Include">
-              <e p="CommandHandleClientPacket.cs" t="Include" />
-              <e p="ErrorHandleClientPacket.cs" t="Include" />
-              <e p="HelloHandleClientPacket.cs" t="Include" />
-              <e p="IHandleClientPacket.cs" t="Include" />
-              <e p="UpdateHandleClientPacket.cs" t="Include" />
-            </e>
             <e p="HttpServer.cs" t="Include" />
             <e p="IClientCommandsProcessor.cs" t="Include" />
             <e p="IClientProxy.cs" t="Include" />
             <e p="IServer.cs" t="Include" />
             <e p="NetworkManagerServer.cs" t="Include" />
+            <e p="PacketClientHandlers" t="Include">
+              <e p="CommandClientPacketHandler.cs" t="Include" />
+              <e p="ErrorClientPacketHandler.cs" t="Include" />
+              <e p="HelloClientPacketHandler.cs" t="Include" />
+              <e p="IClientPacketHandler.cs" t="Include" />
+              <e p="MainClientPacketHandler.cs" t="Include" />
+              <e p="UpdateClientPacketHandler.cs" t="Include" />
+            </e>
           </e>
           <e p="Program.cs" t="Include" />
         </e>
