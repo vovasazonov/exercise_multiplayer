@@ -50,7 +50,6 @@
                   <e p="CharacterHpChangedCommandServerPacketHandler.cs" t="Include" />
                   <e p="UpdateServerPacketHandler.cs" t="Include" />
                 </e>
-                <e p="ErrorServerPacketHandler.cs" t="Include" />
                 <e p="IServerPacketHandler.cs" t="Include" />
                 <e p="WelcomeServerPacketHandler.cs" t="Include" />
               </e>

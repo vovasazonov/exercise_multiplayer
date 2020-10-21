@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
 using Serialization;
-using UnityEngine;
 #if UNITY_EDITOR
-
+using UnityEngine;
 #endif
 
 namespace Network.HandleServerPackets
