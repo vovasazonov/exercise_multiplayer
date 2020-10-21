@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Game;
 using Serialization;
 
-namespace Network.ServerPackerHandlers.Commands
+namespace Network.ServerPacketHandlers.Commands
 {
     public readonly struct UpdateServerPacketHandler : IServerPacketHandler
     {

@@ -23,13 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08fac7fd-c778-4934-80c3-7faf153ae413" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/IModelManager.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.exercise_multiplayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.exercise_multiplayer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/ModelManagerClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/ModelManagerClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/ServerPackerHandlers/Commands/CharacterHpChangedCommandServerPacketHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/ServerPackerHandlers/Commands/CharacterHpChangedCommandServerPacketHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/ServerPackerHandlers/Commands/UpdateServerPacketHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/ServerPackerHandlers/Commands/UpdateServerPacketHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/ServerPackerHandlers/MainServerPacketHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/ServerPackerHandlers/MainServerPacketHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/ModelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/ModelManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/.idea/.idea.Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/.idea/.idea.Server/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using Game;
-using Network.ServerPackerHandlers.Commands;
+using Network.ServerPacketHandlers.Commands;
 using Serialization;
 
-namespace Network.ServerPackerHandlers
+namespace Network.ServerPacketHandlers
 {
     public readonly struct MainServerPacketHandler : IServerPacketHandler
     {

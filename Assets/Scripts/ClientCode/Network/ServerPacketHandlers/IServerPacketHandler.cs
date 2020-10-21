@@ -1,4 +1,4 @@
-﻿namespace Network.ServerPackerHandlers
+﻿namespace Network.ServerPacketHandlers
 {
     public interface IServerPacketHandler
     {
