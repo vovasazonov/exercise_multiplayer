@@ -17,9 +17,9 @@ namespace Network.ServerPacketPreparers
         public byte[] GetPacket()
         {
             IPacketToServerPreparer packetToServerPreparer;
-            switch (_clientNetworkInfo.NetworkState)
+            switch (_clientNetworkInfo.ClientNetworkState)
             {
-                case NetworkClientState.Welcomed:
+                case ClientNetworkState.Welcomed:
                     if (_clientNetworkInfo.NotSentCommandsToServer.Count > 0)
                     {
                         packetToServerPreparer = new CommandPacketToServerPreparer(_serializer,_clientNetworkInfo);
@@ -29,7 +29,7 @@ namespace Network.ServerPacketPreparers
                         packetToServerPreparer = new UpdatePacketToServerPreparer(_serializer, _clientNetworkInfo.Id);
                     }
                     break;
-                case NetworkClientState.SayingHello:
+                case ClientNetworkState.SayingHello:
                     packetToServerPreparer = new HelloPacketToServerPreparer(_serializer);
                     break;
                 default:

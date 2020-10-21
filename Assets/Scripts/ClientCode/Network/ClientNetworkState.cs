@@ -1,6 +1,6 @@
 ﻿namespace Network
 {
-    public enum NetworkClientState : byte
+    public enum ClientNetworkState : byte
     {
         Uninitialized,
         SayingHello,

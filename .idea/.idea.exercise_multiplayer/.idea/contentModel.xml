@@ -41,13 +41,13 @@
             </e>
             <e p="Network" t="Include">
               <e p="ClientNetworkInfo.cs" t="Include" />
+              <e p="ClientNetworkState.cs" t="Include" />
               <e p="Clients" t="Include">
                 <e p="CustomHttpClient.cs" t="Include" />
                 <e p="IClient.cs" t="Include" />
               </e>
-              <e p="NetworkClientState.cs" t="Include" />
               <e p="NetworkManagerClient.cs" t="Include" />
-              <e p="ServerPackerHandlers" t="Include">
+              <e p="ServerPacketHandlers" t="Include">
                 <e p="Commands" t="Include">
                   <e p="CharacterHpChangedCommandServerPacketHandler.cs" t="Include" />
                   <e p="UpdateServerPacketHandler.cs" t="Include" />
