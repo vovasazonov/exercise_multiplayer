@@ -18,6 +18,7 @@
               <e p="HealthPoints" t="Include">
                 <e p="Presenters" t="Include">
                   <e p="CharacterHealthPointPresenter.cs" t="Include" />
+                  <e p="CharacterHealthPointPresenterManager.cs" t="Include" />
                 </e>
               </e>
               <e p="IPresenter.cs" t="Include" />

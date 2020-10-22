@@ -22,7 +22,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08fac7fd-c778-4934-80c3-7faf153ae413" name="Default Changelist" comment="" />
+    <list default="true" id="08fac7fd-c778-4934-80c3-7faf153ae413" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/HealthPoints/Presenters/CharacterHealthPointPresenterManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/HealthPoints/Presenters/CharacterHealthPointPresenterManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.exercise_multiplayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.exercise_multiplayer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/PresenterManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/PresenterManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/Weapons/Presenters/WeaponAttackPresenterManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/Weapons/Presenters/WeaponAttackPresenterManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/.idea/.idea.Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/.idea/.idea.Server/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,14 +49,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/Weapons/Presenters/WeaponDamagePresenter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/Weapons/Views/IWeaponView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/Weapons/Views/IWeaponButtonView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/Weapons/Views/WeaponButtonView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/Weapons/Presenters/WeaponPresenter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/Weapons/Presenters/WeaponAttackPresenter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/Weapons/Presenters/WeaponAttackPresenterManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/ViewManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/CommandType.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/IHandleCommand.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/CommandHandleServerPacket.cs" />
@@ -71,7 +74,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/Characters/Models/CharacterModelClient.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/HandleServerPackets/Commands/CharacterHpChangedCommandHandleServerPacket.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/PresenterManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Game/HealthPoints/Models/HealthPointModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Serialization/BinaryFormatterSerializer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SharedCode/Serialization/BinaryFormatterSerialization/BinaryFormatterSerializer.cs" />
@@ -93,6 +95,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/ServerPacketPreparers/IServerPacketPreparer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/NetworkManagerClient.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/IClientNetworkInfo.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/HealthPoints/Presenters/CharacterHealthPointPresenter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/HealthPoints/Presenters/CharacterHealthPointPresenterManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/ViewManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/PresenterManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/Weapons/Presenters/WeaponAttackPresenterManager.cs" />
       </list>
     </option>
   </component>
@@ -152,7 +159,7 @@
       <workItem from="1603089339401" duration="12059000" />
       <workItem from="1603111964180" duration="3229000" />
       <workItem from="1603167474899" duration="35543000" />
-      <workItem from="1603350270542" duration="1393000" />
+      <workItem from="1603350270542" duration="2484000" />
     </task>
     <servers />
   </component>
@@ -249,10 +256,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="275" y="100" key="Rider.ProjectTemplateDialog.Size/0.0.1366.738@0.0.1366.738" timestamp="1602950831435" />
-    <state x="511" y="42" key="RiderGenerateDialog" timestamp="1603284295940">
+    <state x="511" y="42" key="RiderGenerateDialog" timestamp="1603357231126">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="511" y="42" key="RiderGenerateDialog/0.0.1366.738@0.0.1366.738" timestamp="1603284295940" />
+    <state x="511" y="42" key="RiderGenerateDialog/0.0.1366.738@0.0.1366.738" timestamp="1603357231126" />
     <state x="184" y="13" key="SettingsEditor" timestamp="1602914741732">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

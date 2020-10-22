@@ -10,27 +10,30 @@ namespace Game.Weapons.Presenters
     {
         private readonly IEnumerable<IWeaponButtonView> _views;
         private readonly IEnumerable<IWeaponModel> _models;
-        private readonly ICharacterModel _characterToAttackModel;
+        private readonly IEnumerable<ICharacterModel> _characterModels;
         private readonly List<IPresenter> _presenters = new List<IPresenter>();
 
-        public WeaponAttackPresenterManager(IEnumerable<IWeaponButtonView> views, IEnumerable<IWeaponModel> models, ICharacterModel characterToAttackModel)
+        public WeaponAttackPresenterManager(IEnumerable<IWeaponButtonView> views, IEnumerable<IWeaponModel> models, IEnumerable<ICharacterModel> characterModels)
         {
             _views = views;
             _models = models;
-            _characterToAttackModel = characterToAttackModel;
+            _characterModels = characterModels;
 
             InstantiatePresenters();
         }
-
+        
         private void InstantiatePresenters()
         {
             var viewList = _views.ToList();
             var modelList = _models.ToList();
 
-            for (int i = 0; i < viewList.Count; i++)
+            foreach (var characterModel in _characterModels)
             {
-                var presenter = new WeaponAttackPresenter(viewList[i], modelList[i], _characterToAttackModel);
-                _presenters.Add(presenter);
+                for (int i = 0; i < viewList.Count; i++)
+                {
+                    var presenter = new WeaponAttackPresenter(viewList[i], modelList[i], characterModel);
+                    _presenters.Add(presenter);
+                }
             }
         }
 

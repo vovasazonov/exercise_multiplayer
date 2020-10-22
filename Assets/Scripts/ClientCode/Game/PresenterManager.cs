@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using Game.HealthPoints.Presenters;
 using Game.Weapons.Presenters;
 
@@ -11,9 +10,8 @@ namespace Game
 
         public PresenterManager(ViewManager viewManager, ModelManagerClient modelManagerClient)
         {
-            var enemyModel = modelManagerClient.CharacterModelDic.First().Value;
-            _presenters.Add(new CharacterHealthPointPresenter(viewManager.EnemyHealthText, enemyModel.HealthPoint));
-            _presenters.Add(new WeaponAttackPresenterManager(viewManager.WeaponButtonList, modelManagerClient.WeaponModelDic.Values, enemyModel));
+            _presenters.Add(new CharacterHealthPointPresenterManager(new[] {viewManager.EnemyHealthText}, modelManagerClient.CharacterModelDic.Values));
+            _presenters.Add(new WeaponAttackPresenterManager(viewManager.WeaponButtonList, modelManagerClient.WeaponModelDic.Values, modelManagerClient.CharacterModelDic.Values));
         }
 
         public void Activate()
