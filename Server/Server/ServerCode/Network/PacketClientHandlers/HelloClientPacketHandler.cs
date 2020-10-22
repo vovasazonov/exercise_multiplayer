@@ -51,9 +51,9 @@ namespace Server.Network.PacketClientHandlers
         {
             foreach (var idCharacterPair in _modelManager.CharacterModelDic)
             {
-                clientProxy.NotSentPacketCommands.Enqueue(_serializer.Serialize(GameCommandType.CharacterHpChanged));
-                clientProxy.NotSentPacketCommands.Enqueue(_serializer.Serialize(idCharacterPair.Key));
-                clientProxy.NotSentPacketCommands.Enqueue(_serializer.Serialize(idCharacterPair.Value.HealthPoint.Points));
+                clientProxy.NotSentCommands.Enqueue(_serializer.Serialize(GameCommandType.CharacterHpChanged));
+                clientProxy.NotSentCommands.Enqueue(_serializer.Serialize(idCharacterPair.Key));
+                clientProxy.NotSentCommands.Enqueue(_serializer.Serialize(idCharacterPair.Value.HealthPoint.Points));
             }
         }
     }

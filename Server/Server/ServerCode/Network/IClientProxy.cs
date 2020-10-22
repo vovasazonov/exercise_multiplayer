@@ -7,7 +7,7 @@ namespace Server.Network
     {
         int IdClient { get; }
         Queue<byte> UnprocessedCommands { get; }
-        Queue<byte> NotSentPacketCommands { get; }
+        Queue<byte> NotSentCommands { get; }
         public DateTime LastTimeRequest { get; set; }
     }
 }

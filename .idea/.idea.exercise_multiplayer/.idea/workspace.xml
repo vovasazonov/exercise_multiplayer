@@ -23,16 +23,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08fac7fd-c778-4934-80c3-7faf153ae413" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.exercise_multiplayer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.exercise_multiplayer/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.exercise_multiplayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.exercise_multiplayer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/.idea/.idea.Server/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/.idea/.idea.Server/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/.idea/.idea.Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/.idea/.idea.Server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/Server/ServerCode/Network/ClientCommandsProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Server/ServerCode/Network/ServerGameProcessor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/Server/ServerCode/Network/ClientProxy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Server/ServerCode/Network/ClientProxy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/Server/ServerCode/Network/HttpServer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Server/ServerCode/Network/HttpServer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/Server/ServerCode/Network/IClientCommandsProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Server/ServerCode/Network/IServerGameProcessor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/Server/ServerCode/Network/CommandHandlers/HitCharacterCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Server/ServerCode/Network/CommandHandlers/HitCharacterCommandHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/Server/ServerCode/Network/IClientProxy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Server/ServerCode/Network/IClientProxy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/Server/ServerCode/Network/NetworkManagerServer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Server/ServerCode/Network/NetworkManagerServer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/Server/ServerCode/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Server/ServerCode/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/Server/ServerCode/Network/PacketClientHandlers/HelloClientPacketHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Server/ServerCode/Network/PacketClientHandlers/HelloClientPacketHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/Server/ServerCode/Network/PacketClientHandlers/UpdateClientPacketHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Server/ServerCode/Network/PacketClientHandlers/UpdateClientPacketHandler.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +51,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/Views/IButtonView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/Weapons/Presenters/WeaponDamagePresenter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/Weapons/Views/IWeaponView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Game/Weapons/Views/IWeaponButtonView.cs" />
@@ -104,6 +101,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/ClientNetworkState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/ServerPacketPreparers/IServerPacketPreparer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/NetworkManagerClient.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ClientCode/Network/IClientNetworkInfo.cs" />
       </list>
     </option>
   </component>
@@ -163,6 +161,7 @@
       <workItem from="1603089339401" duration="12059000" />
       <workItem from="1603111964180" duration="3229000" />
       <workItem from="1603167474899" duration="35543000" />
+      <workItem from="1603350270542" duration="1196000" />
     </task>
     <servers />
   </component>

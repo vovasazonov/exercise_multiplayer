@@ -46,6 +46,7 @@
                 <e p="CustomHttpClient.cs" t="Include" />
                 <e p="IClient.cs" t="Include" />
               </e>
+              <e p="IClientNetworkInfo.cs" t="Include" />
               <e p="NetworkManagerClient.cs" t="Include" />
               <e p="ServerPacketHandlers" t="Include">
                 <e p="Commands" t="Include">
