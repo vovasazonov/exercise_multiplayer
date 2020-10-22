@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using Game.HealthPoints.Presenters;
 using Game.Weapons.Presenters;
 
@@ -6,26 +7,23 @@ namespace Game
 {
     public class PresenterManager : IPresenter
     {
-        private readonly CharacterHealthPointPresenter _enemyCharacterHealthPointPresenter;
-        private readonly WeaponAttackPresenterManager _weaponAttackPresenterManager;
+        private readonly List<IPresenter> _presenters = new List<IPresenter>();
 
         public PresenterManager(ViewManager viewManager, ModelManagerClient modelManagerClient)
         {
             var enemyModel = modelManagerClient.CharacterModelDic.First().Value;
-            _enemyCharacterHealthPointPresenter = new CharacterHealthPointPresenter(viewManager.EnemyHealthText, enemyModel.HealthPoint);
-            _weaponAttackPresenterManager = new WeaponAttackPresenterManager(viewManager.WeaponButtonList, modelManagerClient.WeaponModelDic.Values, enemyModel);
+            _presenters.Add(new CharacterHealthPointPresenter(viewManager.EnemyHealthText, enemyModel.HealthPoint));
+            _presenters.Add(new WeaponAttackPresenterManager(viewManager.WeaponButtonList, modelManagerClient.WeaponModelDic.Values, enemyModel));
         }
 
         public void Activate()
         {
-            _enemyCharacterHealthPointPresenter.Activate();
-            _weaponAttackPresenterManager.Activate();
+            _presenters.ForEach(p=>p.Activate());
         }
 
         public void Deactivate()
         {
-            _enemyCharacterHealthPointPresenter.Deactivate();
-            _weaponAttackPresenterManager.Deactivate();
+            _presenters.ForEach(p=>p.Deactivate());
         }
     }
 }

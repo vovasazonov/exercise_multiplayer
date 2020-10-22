@@ -11,7 +11,7 @@ namespace Game.Weapons.Presenters
         private readonly IEnumerable<IWeaponButtonView> _views;
         private readonly IEnumerable<IWeaponModel> _models;
         private readonly ICharacterModel _characterToAttackModel;
-        private readonly List<WeaponAttackPresenter> _presenters = new List<WeaponAttackPresenter>();
+        private readonly List<IPresenter> _presenters = new List<IPresenter>();
 
         public WeaponAttackPresenterManager(IEnumerable<IWeaponButtonView> views, IEnumerable<IWeaponModel> models, ICharacterModel characterToAttackModel)
         {
