@@ -22,12 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08fac7fd-c778-4934-80c3-7faf153ae413" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Server/Server/ServerCode/Network/HttpServer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Server/ServerCode/Network/HttpServer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/Server/ServerCode/Network/IServer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Server/ServerCode/Network/IServer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/Server/ServerCode/Network/NetworkManagerServer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Server/ServerCode/Network/NetworkManagerServer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/Server/ServerCode/Network/ServerGameProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Server/ServerCode/Network/ServerGameProcessor.cs" afterDir="false" />
-    </list>
+    <list default="true" id="08fac7fd-c778-4934-80c3-7faf153ae413" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -157,7 +152,7 @@
       <workItem from="1603089339401" duration="12059000" />
       <workItem from="1603111964180" duration="3229000" />
       <workItem from="1603167474899" duration="35543000" />
-      <workItem from="1603350270542" duration="1196000" />
+      <workItem from="1603350270542" duration="1393000" />
     </task>
     <servers />
   </component>

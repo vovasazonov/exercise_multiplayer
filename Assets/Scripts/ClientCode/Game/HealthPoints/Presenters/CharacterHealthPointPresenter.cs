@@ -12,15 +12,7 @@ namespace Game.HealthPoints.Presenters
         {
             _view = view;
             _model = model;
-
-            RenderView();
         }
-
-        private void RenderView()
-        {
-            _view.TextUi = 0.ToString();
-        }
-
 
         public void Activate()
         {
