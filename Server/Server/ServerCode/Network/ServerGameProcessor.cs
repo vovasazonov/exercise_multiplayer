@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Game;
 using Network;
@@ -40,6 +39,11 @@ namespace Server.Network
             }
         }
 
+        public void Stop()
+        {
+            _isRun = false;
+        }
+        
         private void HandleCommands(IClientProxy clientProxy)
         {
             while (clientProxy.UnprocessedCommands.Count > 0)
@@ -47,12 +51,7 @@ namespace Server.Network
                 HandleCommand(clientProxy.UnprocessedCommands);
             }
         }
-
-        public void Stop()
-        {
-            _isRun = false;
-        }
-
+        
         private void HandleCommand(Queue<byte> unprocessedCommands)
         {
             GameCommandType commandType = _serializer.Deserialize<GameCommandType>(unprocessedCommands);

@@ -9,12 +9,11 @@ namespace Server.Network
     public class HttpServer : IServer
     {
         private readonly IDictionary<int, IClientProxy> _clientProxyDic;
-        public event Action<Queue<byte>, Queue<byte>> ClientPacketCame;
+        public event Action<Queue<byte>, Queue<byte>> PacketCame;
 
         private readonly HttpListener _httpListener = new HttpListener {Prefixes = {"http://localhost:8888/"}};
         private bool _keepGoing = true;
         private Task _mainLoopTask;
-        private Task _checkClientConnectionTask;
         private readonly TimeSpan _timeBetweenClientRequestFail = new TimeSpan(0, 0, 10);
 
         public HttpServer(IDictionary<int, IClientProxy> clientProxyDic)
@@ -29,7 +28,7 @@ namespace Server.Network
             if (isPossibleStartMainLoop)
             {
                 _mainLoopTask = MainLoop();
-                _checkClientConnectionTask = CheckClientConnection();
+                StartCheckClientsConnection();
             }
         }
 
@@ -44,7 +43,7 @@ namespace Server.Network
             _mainLoopTask.Wait();
         }
 
-        private async Task CheckClientConnection()
+        private async void StartCheckClientsConnection()
         {
             List<IClientProxy> clientProxyConnectFailList = new List<IClientProxy>();
 
@@ -69,14 +68,14 @@ namespace Server.Network
             }
         }
 
-        private void RemoveConnectFailedClients(List<IClientProxy> clientProxyForRemoveList)
+        private void RemoveConnectFailedClients(List<IClientProxy> clientProxyForRemove)
         {
-            for (int i = 0; i < clientProxyForRemoveList.Count; i++)
+            for (int i = 0; i < clientProxyForRemove.Count; i++)
             {
-                _clientProxyDic.Remove(clientProxyForRemoveList[i].IdClient);
+                _clientProxyDic.Remove(clientProxyForRemove[i].IdClient);
             }
 
-            clientProxyForRemoveList.Clear();
+            clientProxyForRemove.Clear();
         }
 
         private async Task MainLoop()
@@ -120,7 +119,7 @@ namespace Server.Network
 
         private void OnClientPacketCame(Queue<byte> packetCame, Queue<byte> packetResponse)
         {
-            ClientPacketCame?.Invoke(packetCame, packetResponse);
+            PacketCame?.Invoke(packetCame, packetResponse);
         }
     }
 }

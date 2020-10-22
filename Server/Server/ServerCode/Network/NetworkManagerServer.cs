@@ -29,12 +29,12 @@ namespace Server.Network
 
         private void AddServerListener()
         {
-            _server.ClientPacketCame += OnClientPacketCame;
+            _server.PacketCame += OnClientPacketCame;
         }
 
         private void RemoveServerListener()
         {
-            _server.ClientPacketCame -= OnClientPacketCame;
+            _server.PacketCame -= OnClientPacketCame;
         }
 
         private void OnClientPacketCame(Queue<byte> packetCame, Queue<byte> packetResponse)

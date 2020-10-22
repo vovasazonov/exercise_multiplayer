@@ -23,14 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="703e222c-aafd-409f-982b-87c7e7f6ce68" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/.idea.exercise_multiplayer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.idea.exercise_multiplayer/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/.idea.exercise_multiplayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.idea.exercise_multiplayer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/ServerCode/Network/ClientProxy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/ServerCode/Network/ClientProxy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/ServerCode/Network/CommandHandlers/HitCharacterCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/ServerCode/Network/CommandHandlers/HitCharacterCommandHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/ServerCode/Network/IClientProxy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/ServerCode/Network/IClientProxy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/ServerCode/Network/PacketClientHandlers/HelloClientPacketHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/ServerCode/Network/PacketClientHandlers/HelloClientPacketHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/ServerCode/Network/PacketClientHandlers/UpdateClientPacketHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/ServerCode/Network/PacketClientHandlers/UpdateClientPacketHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/ServerCode/Network/HttpServer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/ServerCode/Network/HttpServer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/ServerCode/Network/IServer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/ServerCode/Network/IServer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/ServerCode/Network/NetworkManagerServer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/ServerCode/Network/NetworkManagerServer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/ServerCode/Network/ServerGameProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/ServerCode/Network/ServerGameProcessor.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,12 +46,13 @@
     <setting file="file://$PROJECT_DIR$/../Assets/Scripts/SharedCode/Network/NetworkPacketType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4065B38D-0F9F-44D9-8F53-F4C9102AF396/1E0/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/ModelManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Assets/Scripts/SharedCode/System/Collections/Generic/QueueExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../Assets/Scripts/СommonClientServerCode/Serialization/ISerializer.cs" />
         <option value="$PROJECT_DIR$/Server/Network/IServer.cs" />
         <option value="$PROJECT_DIR$/Server/Network/HttpServer.cs" />
         <option value="$PROJECT_DIR$/Server/Network/NetworkManagerServer.cs" />
@@ -97,15 +94,16 @@
         <option value="$PROJECT_DIR$/Server/ServerCode/Network/ClientCommandsProcessor.cs" />
         <option value="$PROJECT_DIR$/Server/ServerCode/Network/CommandHandlers/HitCharacterCommandHandler.cs" />
         <option value="$PROJECT_DIR$/Server/ServerCode/Network/PacketClientHandlers/MainClientPacketHandler.cs" />
-        <option value="$PROJECT_DIR$/Server/ServerCode/Network/PacketClientHandlers/HelloClientPacketHandler.cs" />
         <option value="$PROJECT_DIR$/Server/ServerCode/Network/IServer.cs" />
         <option value="$PROJECT_DIR$/Server/ServerCode/Network/IServerGameProcessor.cs" />
         <option value="$PROJECT_DIR$/Server/ServerCode/Network/ClientProxy.cs" />
-        <option value="$PROJECT_DIR$/Server/ServerCode/Network/ServerGameProcessor.cs" />
-        <option value="$PROJECT_DIR$/Server/ServerCode/Network/HttpServer.cs" />
         <option value="$PROJECT_DIR$/Server/ServerCode/Network/NetworkManagerServer.cs" />
         <option value="$PROJECT_DIR$/Server/ServerCode/Program.cs" />
         <option value="$PROJECT_DIR$/Server/ServerCode/Network/IClientProxy.cs" />
+        <option value="$PROJECT_DIR$/Server/ServerCode/Network/HttpServer.cs" />
+        <option value="$PROJECT_DIR$/Server/ServerCode/Network/ServerGameProcessor.cs" />
+        <option value="$PROJECT_DIR$/Server/ServerCode/Network/PacketClientHandlers/HelloClientPacketHandler.cs" />
+        <option value="$PROJECT_DIR$/Server/ServerCode/Network/PacketClientHandlers/ErrorClientPacketHandler.cs" />
       </list>
     </option>
   </component>
@@ -159,7 +157,7 @@
       <workItem from="1603089871139" duration="3088000" />
       <workItem from="1603112140002" duration="8170000" />
       <workItem from="1603167937988" duration="22365000" />
-      <workItem from="1603352375028" duration="1236000" />
+      <workItem from="1603352375028" duration="1966000" />
     </task>
     <servers />
   </component>
@@ -292,17 +290,5 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1603202127662" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Server/ServerCode/Network/PacketClientHandlers/UpdateClientPacketHandler.cs</url>
-          <line>27</line>
-          <properties documentPath="C:\Users\vovas\source\repos\Unity\exercise_multiplayer\Server\Server\ServerCode\Network\HandlePackets\UpdateHandleClientPacket.cs" initialLine="25" />
-          <option name="timeStamp" value="48" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
