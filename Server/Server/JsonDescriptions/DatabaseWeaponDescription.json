@@ -1,0 +1,10 @@
+﻿[
+  {
+    "id": "spell",
+    "damage": 3
+  },
+  {
+    "id": "axe",
+    "damage": 50
+  }
+]

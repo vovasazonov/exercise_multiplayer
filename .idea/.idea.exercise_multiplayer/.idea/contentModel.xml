@@ -8,6 +8,11 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="ClientCode" t="Include">
+            <e p="Descriptions" t="Include">
+              <e p="CharacterDescription.cs" t="Include" />
+              <e p="DescriptionManagerClient.cs" t="Include" />
+              <e p="WeaponDescription.cs" t="Include" />
+            </e>
             <e p="Game" t="Include">
               <e p="Characters" t="Include">
                 <e p="Models" t="Include">
@@ -68,6 +73,11 @@
             </e>
           </e>
           <e p="SharedCode" t="Include">
+            <e p="Descriptions" t="Include">
+              <e p="ICharacterDescription.cs" t="Include" />
+              <e p="IDescriptionManager.cs" t="Include" />
+              <e p="IWeaponDescription.cs" t="Include" />
+            </e>
             <e p="Game" t="Include">
               <e p="Characters" t="Include">
                 <e p="Models" t="Include">

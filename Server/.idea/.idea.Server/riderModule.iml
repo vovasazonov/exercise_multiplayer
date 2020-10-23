@@ -1,7 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="RIDER_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/Descriptions.meta" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/Descriptions/ICharacterDescription.cs" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/Descriptions/ICharacterDescription.cs.meta" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/Descriptions/IDescriptionManager.cs" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/Descriptions/IDescriptionManager.cs.meta" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/Descriptions/IWeaponDescription.cs" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/Descriptions/IWeaponDescription.cs.meta" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/Game.meta" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/Game/Characters.meta" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/Game/Characters/Models.meta" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/Game/Characters/Models/CharacterModel.cs" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/Game/Characters/Models/CharacterModel.cs.meta" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/Game/Characters/Models/ICharacterModel.cs" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/Game/Characters/Models/ICharacterModel.cs.meta" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/Game/HealthPoints.meta" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/Game/HealthPoints/Models.meta" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/Game/HealthPoints/Models/HealthPointModel.cs" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/Game/HealthPoints/Models/HealthPointModel.cs.meta" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/Game/HealthPoints/Models/IHealthPointModel.cs" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/Game/HealthPoints/Models/IHealthPointModel.cs.meta" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/Game/IModelManager.cs" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/Game/IModelManager.cs.meta" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/Game/ModelManager.cs" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/Game/ModelManager.cs.meta" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/Game/Weapons.meta" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/Game/Weapons/Models.meta" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/Game/Weapons/Models/IWeaponModel.cs" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/Game/Weapons/Models/IWeaponModel.cs.meta" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/Game/Weapons/Models/WeaponModel.cs" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/Game/Weapons/Models/WeaponModel.cs.meta" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/Network.meta" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/Network/GameCommandType.cs" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/Network/GameCommandType.cs.meta" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/Network/NetworkPacketType.cs" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/Network/NetworkPacketType.cs.meta" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/Serialization.meta" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/Serialization/BinaryFormatterSerialization.meta" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/Serialization/BinaryFormatterSerialization/BinaryFormatterSerializer.cs" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/Serialization/BinaryFormatterSerialization/BinaryFormatterSerializer.cs.meta" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/Serialization/BinaryFormatterSerialization/CustomizedBinder.cs" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/Serialization/BinaryFormatterSerialization/CustomizedBinder.cs.meta" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/Serialization/ISerializer.cs" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/Serialization/ISerializer.cs.meta" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/System.meta" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/System/Collections.meta" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/System/Collections/Generic.meta" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/System/Collections/Generic/QueueExtensions.cs" />
+    <content url="file://$MODULE_DIR$/../../../Assets/Scripts/SharedCode/System/Collections/Generic/QueueExtensions.cs.meta" />
     <content url="file://$MODULE_DIR$/../.." />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
