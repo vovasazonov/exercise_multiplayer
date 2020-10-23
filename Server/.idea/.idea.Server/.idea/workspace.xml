@@ -23,37 +23,163 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="703e222c-aafd-409f-982b-87c7e7f6ce68" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Assets/Resources/JsonDescriptions.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Resources/JsonDescriptions/DatabaseCharacterDescription.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Resources/JsonDescriptions/DatabaseCharacterDescription.json.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Resources/JsonDescriptions/DatabaseWeaponDescription.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Resources/JsonDescriptions/DatabaseWeaponDescription.json.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Descriptions.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Descriptions/CharacterDescription.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Descriptions/CharacterDescription.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Descriptions/DescriptionManagerClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Descriptions/DescriptionManagerClient.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Descriptions/WeaponDescription.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Descriptions/WeaponDescription.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Descriptions.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Descriptions/ICharacterDescription.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Descriptions/ICharacterDescription.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Descriptions/IDescriptionManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Descriptions/IDescriptionManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Descriptions/IWeaponDescription.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Descriptions/IWeaponDescription.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/JsonDescriptions/DatabaseCharacterDescription.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/JsonDescriptions/DatabaseWeaponDescription.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/ServerCode/Descriptions/CharacterDescription.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/ServerCode/Descriptions/DescriptionManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/ServerCode/Descriptions/WeaponDescription.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/.idea.exercise_multiplayer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.idea.exercise_multiplayer/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/.idea.exercise_multiplayer/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.idea.exercise_multiplayer/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/.idea.exercise_multiplayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.idea.exercise_multiplayer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Descriptions.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Descriptions/CharacterDescription.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Descriptions/CharacterDescription.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Descriptions/DescriptionManagerClient.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Descriptions/DescriptionManagerClient.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Descriptions/WeaponDescription.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Descriptions/WeaponDescription.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/Characters.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/Characters/Models.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/Characters/Models/CharacterModelClient.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/Characters/Models/CharacterModelClient.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/GameManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/GameManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/HealthPoints.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/HealthPoints/Presenters.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/HealthPoints/Presenters/CharacterHealthPointPresenter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/HealthPoints/Presenters/CharacterHealthPointPresenter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/HealthPoints/Presenters/CharacterHealthPointPresenterManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/HealthPoints/Presenters/CharacterHealthPointPresenterManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/IPresenter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/IPresenter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/ModelManagerClient.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/ModelManagerClient.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/PresenterManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/PresenterManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/ViewManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/ViewManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/Views.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/Views/ITextUiView.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/Views/ITextUiView.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/Views/TextUiView.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/Views/TextUiView.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/Weapons.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/Weapons/Presenters.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/Weapons/Presenters/WeaponAttackPresenter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/Weapons/Presenters/WeaponAttackPresenter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/Weapons/Presenters/WeaponAttackPresenterManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/Weapons/Presenters/WeaponAttackPresenterManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/Weapons/Views.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/Weapons/Views/IWeaponButtonView.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/Weapons/Views/IWeaponButtonView.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/Weapons/Views/WeaponButtonView.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Game/Weapons/Views/WeaponButtonView.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/ClientNetworkInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/ClientNetworkInfo.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/ClientNetworkState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/ClientNetworkState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/Clients.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/Clients/CustomHttpClient.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/Clients/CustomHttpClient.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/Clients/IClient.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/Clients/IClient.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/IClientNetworkInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/IClientNetworkInfo.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/NetworkManagerClient.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/NetworkManagerClient.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/ServerPacketHandlers.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/ServerPacketHandlers/Commands.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/ServerPacketHandlers/Commands/CharacterHpChangedCommandServerPacketHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/ServerPacketHandlers/Commands/CharacterHpChangedCommandServerPacketHandler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/ServerPacketHandlers/Commands/UpdateServerPacketHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/ServerPacketHandlers/Commands/UpdateServerPacketHandler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/ServerPacketHandlers/IServerPacketHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/ServerPacketHandlers/IServerPacketHandler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/ServerPacketHandlers/MainServerPacketHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/ServerPacketHandlers/MainServerPacketHandler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/ServerPacketHandlers/WelcomeServerPacketHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/ServerPacketHandlers/WelcomeServerPacketHandler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/ServerPacketPreparers.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/ServerPacketPreparers/CommandServerPacketPreparer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/ServerPacketPreparers/CommandServerPacketPreparer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/ServerPacketPreparers/HelloServerPacketPreparer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/ServerPacketPreparers/HelloServerPacketPreparer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/ServerPacketPreparers/IServerPacketPreparer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/ServerPacketPreparers/IServerPacketPreparer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/ServerPacketPreparers/MainServerPacketPreparer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/ServerPacketPreparers/MainServerPacketPreparer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/ServerPacketPreparers/UpdateServerPacketPreparer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/ClientCode/Network/ServerPacketPreparers/UpdateServerPacketPreparer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Descriptions.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Descriptions/ICharacterDescription.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Descriptions/ICharacterDescription.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Descriptions/IDescriptionManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Descriptions/IDescriptionManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Descriptions/IWeaponDescription.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Descriptions/IWeaponDescription.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Characters.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Characters/Models.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Characters/Models/CharacterModel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Characters/Models/CharacterModel.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Characters/Models/ICharacterModel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Characters/Models/ICharacterModel.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/HealthPoints.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/HealthPoints/Models.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/HealthPoints/Models/HealthPointModel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/HealthPoints/Models/HealthPointModel.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/HealthPoints/Models/IHealthPointModel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/HealthPoints/Models/IHealthPointModel.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/IModelManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/IModelManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/ModelManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/ModelManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Weapons.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Weapons/Models.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Weapons/Models/IWeaponModel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Weapons/Models/IWeaponModel.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Weapons/Models/WeaponModel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/Weapons/Models/WeaponModel.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Network.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Network/GameCommandType.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Network/GameCommandType.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Network/NetworkPacketType.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Network/NetworkPacketType.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Serialization.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Serialization/BinaryFormatterSerialization.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Serialization/BinaryFormatterSerialization/BinaryFormatterSerializer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Serialization/BinaryFormatterSerialization/BinaryFormatterSerializer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Serialization/BinaryFormatterSerialization/CustomizedBinder.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Serialization/BinaryFormatterSerialization/CustomizedBinder.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Serialization/ISerializer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Serialization/ISerializer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/System.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/System/Collections.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/System/Collections/Generic.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/System/Collections/Generic/QueueExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/SharedCode/System/Collections/Generic/QueueExtensions.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Server/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Server/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/ServerCode/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server/ServerCode/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/JsonDescriptions/DatabaseCharacterDescription.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/JsonDescriptions/DatabaseWeaponDescription.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/ServerCode/Descriptions/CharacterDescription.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/ServerCode/Descriptions/DescriptionManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/ServerCode/Descriptions/WeaponDescription.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/ServerCode/Network/ClientProxy.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/ServerCode/Network/CommandHandlers/HitCharacterCommandHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/ServerCode/Network/CommandHandlers/ICommandHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/ServerCode/Network/HttpServer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/ServerCode/Network/IClientProxy.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/ServerCode/Network/IServer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/ServerCode/Network/IServerGameProcessor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/ServerCode/Network/NetworkManagerServer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/ServerCode/Network/PacketClientHandlers/CommandClientPacketHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/ServerCode/Network/PacketClientHandlers/ErrorClientPacketHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/ServerCode/Network/PacketClientHandlers/HelloClientPacketHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/ServerCode/Network/PacketClientHandlers/IClientPacketHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/ServerCode/Network/PacketClientHandlers/MainClientPacketHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/ServerCode/Network/PacketClientHandlers/UpdateClientPacketHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/ServerCode/Network/ServerGameProcessor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/ServerCode/Program.cs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,22 +198,14 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4065B38D-0F9F-44D9-8F53-F4C9102AF396/16B/Task.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../Assets/Scripts/SharedCode/Network/GameCommandType.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../Assets/Scripts/SharedCode/Serialization/ISerializer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../Assets/Scripts/SharedCode/Serialization/BinaryFormatterSerialization/CustomizedBinder.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../Assets/Scripts/SharedCode/Serialization/BinaryFormatterSerialization/BinaryFormatterSerializer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4065B38D-0F9F-44D9-8F53-F4C9102AF396/14E/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../Assets/Scripts/SharedCode/Network/NetworkPacketType.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4065B38D-0F9F-44D9-8F53-F4C9102AF396/1E0/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../Assets/Scripts/SharedCode/Game/ModelManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/D98A8869-191C-4AC8-ADD3-87F83BD1D3BB/A/ThrowHelper.Serialization.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../Assets/Scripts/SharedCode/System/Collections/Generic/QueueExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4065B38D-0F9F-44D9-8F53-F4C9102AF396/329/FileStream.Windows.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4065B38D-0F9F-44D9-8F53-F4C9102AF396/14E/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4065B38D-0F9F-44D9-8F53-F4C9102AF396/1E0/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../Assets/Scripts/CommonClientServerCode/Serialization/CustomizedBinder.cs" />
         <option value="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Serialization/BinaryFormatterSerializer.cs" />
         <option value="$PROJECT_DIR$/Server/ServerCode/Network/IPacket.cs" />
         <option value="$PROJECT_DIR$/Server/ServerCode/Network/IHandlePacket.cs" />
@@ -138,6 +256,7 @@
         <option value="$PROJECT_DIR$/../Assets/Scripts/SharedCode/Descriptions/IDescriptionManager.cs" />
         <option value="$PROJECT_DIR$/Server/ServerCode/Descriptions/DescriptionManager.cs" />
         <option value="$PROJECT_DIR$/Server/ServerCode/Program.cs" />
+        <option value="$PROJECT_DIR$/Server/Program.cs" />
       </list>
     </option>
   </component>
@@ -193,7 +312,7 @@
       <workItem from="1603167937988" duration="22365000" />
       <workItem from="1603352375028" duration="3108000" />
       <workItem from="1603362734638" duration="7498000" />
-      <workItem from="1603436364060" duration="627000" />
+      <workItem from="1603436364060" duration="1344000" />
     </task>
     <servers />
   </component>
