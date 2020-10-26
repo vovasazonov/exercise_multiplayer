@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Models.Characters
+﻿namespace Models.Characters
 {
     public interface ICharacterData
     {

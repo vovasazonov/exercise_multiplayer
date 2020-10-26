@@ -4,11 +4,11 @@ namespace Models.Characters
 {
     public class AttackEventArgs : EventArgs
     {
-        private readonly ICharacterModel _enemyAttacked;
+        public ICharacterModel EnemyAttacked { get; }
 
         public AttackEventArgs(ICharacterModel enemyAttacked)
         {
-            _enemyAttacked = enemyAttacked;
+            EnemyAttacked = enemyAttacked;
         }
     }
 }
