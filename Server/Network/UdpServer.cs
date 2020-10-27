@@ -13,6 +13,7 @@ namespace Server.Network
 
         private readonly ushort _port;
         private readonly int _maxClients;
+        private readonly byte _channelId;
         private readonly uint _peerTimeOutLimit;
         private readonly uint _peerTimeOutMinimum;
         private readonly uint _peerTimeOutMaximum;
@@ -20,10 +21,11 @@ namespace Server.Network
         private readonly Task _serverLoopTask;
         private readonly IDictionary<uint, Peer> _clientConnectedDic = new Dictionary<uint, Peer>();
 
-        public UdpServer(ushort port = 3000, int maxClients = 1000, uint peerTimeOutLimit = 32, uint peerTimeOutMinimum = 1000, uint peerTimeOutMaximum = 3000)
+        public UdpServer(ushort port = 3000, int maxClients = 1000, byte channelId = 0, uint peerTimeOutLimit = 32, uint peerTimeOutMinimum = 1000, uint peerTimeOutMaximum = 3000)
         {
             _port = port;
             _maxClients = maxClients;
+            _channelId = channelId;
             _peerTimeOutLimit = peerTimeOutLimit;
             _peerTimeOutMinimum = peerTimeOutMinimum;
             _peerTimeOutMaximum = peerTimeOutMaximum;
@@ -39,7 +41,7 @@ namespace Server.Network
             Packet packet = default;
             packet.Create(packetBytes);
 
-            _clientConnectedDic[clientId].Send(0, ref packet);
+            _clientConnectedDic[clientId].Send(_channelId, ref packet);
         }
 
         private void StartServerLoop()
