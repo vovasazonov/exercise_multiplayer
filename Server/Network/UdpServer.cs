@@ -31,7 +31,7 @@ namespace Server.Network
             ENet.Library.Initialize();
             _isRunningServerLoop = true;
             _serverLoopTask = new Task(StartServerLoop);
-            _serverLoopTask.RunSynchronously();
+            _serverLoopTask.Start();
         }
 
         public void SendPacket(uint clientId, byte[] packetBytes)
