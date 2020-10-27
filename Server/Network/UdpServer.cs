@@ -7,9 +7,9 @@ namespace Server.Network
 {
     public class UdpServer : IServer
     {
-        public event EventHandler<ClientEventArgs> ClientConnect;
-        public event EventHandler<ClientEventArgs> ClientDisconnect;
-        public event EventHandler<ClientEventArgs> PacketReceived;
+        public event EventHandler<PacketReceivedEventArgs> ClientConnect;
+        public event EventHandler<PacketReceivedEventArgs> ClientDisconnect;
+        public event EventHandler<PacketReceivedEventArgs> PacketReceived;
 
         private readonly ushort _port;
         private readonly int _maxClients;
@@ -97,8 +97,8 @@ namespace Server.Network
 
             byte[] packetBytes = new byte[netEvent.Packet.Length];
             netEvent.Packet.CopyTo(packetBytes);
-            var clientEventArgs = new ClientEventArgs(netEvent.Peer.ID, packetBytes);
-            OnPacketReceived(clientEventArgs);
+            var packetReceivedEventArgs = new PacketReceivedEventArgs(netEvent.Peer.ID, packetBytes);
+            OnPacketReceived(packetReceivedEventArgs);
 
             netEvent.Packet.Dispose();
         }
@@ -120,7 +120,7 @@ namespace Server.Network
         private void HandleClientDisconnect(Event netEvent)
         {
             _clientConnectedDic.Remove(netEvent.Peer.ID);
-            var clientEventArgs = new ClientEventArgs(netEvent.Peer.ID);
+            var clientEventArgs = new PacketReceivedEventArgs(netEvent.Peer.ID);
             OnClientDisconnect(clientEventArgs);
         }
 
@@ -132,19 +132,19 @@ namespace Server.Network
             _clientConnectedDic[netEvent.Peer.ID] = netEvent.Peer;
         }
 
-        private void OnPacketReceived(ClientEventArgs clientEventArgs)
+        private void OnPacketReceived(PacketReceivedEventArgs packetReceivedEventArgs)
         {
-            PacketReceived?.Invoke(this, clientEventArgs);
+            PacketReceived?.Invoke(this, packetReceivedEventArgs);
         }
 
-        private void OnClientDisconnect(ClientEventArgs clientEventArgs)
+        private void OnClientDisconnect(PacketReceivedEventArgs packetReceivedEventArgs)
         {
-            ClientDisconnect?.Invoke(this, clientEventArgs);
+            ClientDisconnect?.Invoke(this, packetReceivedEventArgs);
         }
 
-        private void OnClientConnect(ClientEventArgs clientEventArgs)
+        private void OnClientConnect(PacketReceivedEventArgs packetReceivedEventArgs)
         {
-            ClientConnect?.Invoke(this, clientEventArgs);
+            ClientConnect?.Invoke(this, packetReceivedEventArgs);
         }
 
         public void Dispose()
