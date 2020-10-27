@@ -7,7 +7,7 @@ namespace Server
     {
         static void Main(string[] args)
         {
-            IServer server = new UdpServer();
+            using IServer server = new UdpServer();
             
             Console.WriteLine("Press 'q' to stop server");
             while (Console.ReadKey().Key != ConsoleKey.Q)
