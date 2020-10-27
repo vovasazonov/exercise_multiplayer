@@ -17,11 +17,13 @@ namespace Network
         private readonly Host _client;
         private readonly Peer _peerServer;
         private readonly Task _clientLoopTask;
+        private readonly byte _channelId;
         private bool _isRunning;
 
-        public UdpClient(string serverIp = "127.0.0.1", ushort serverPort = 3000)
+        public UdpClient(string serverIp = "127.0.0.1", ushort serverPort = 3000, byte channelId = 0)
         {
             ENet.Library.Initialize();
+            _channelId = channelId;
             _client = new Host();
             Address address = new Address();
             address.SetHost(serverIp);
@@ -41,7 +43,7 @@ namespace Network
         {
             var packet = default(Packet);
             packet.Create(packetBytes);
-            _peerServer.Send(0, ref packet);
+            _peerServer.Send(_channelId, ref packet);
         }
 
         private void StartClientLoop()
