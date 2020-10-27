@@ -150,10 +150,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d196fee4e2147dab324341fdfb703de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyHealthText: {fileID: 1914070569}
-  WeaponButtonList:
-  - {fileID: 867883159}
-  - {fileID: 772039021}
 --- !u!4 &132731925
 Transform:
   m_ObjectHideFlags: 0
@@ -291,10 +287,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 652823731}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c218aef35c394a1b94c85d37be4e0033, type: 3}
+  m_Script: {fileID: 11500000, guid: 0dfc9296a5104dce92a5468d61f02983, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _viewManager: {fileID: 132731924}
 --- !u!1 &772039016
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,7 +421,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11ed3b0a2bc748c1b66567878693c7a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _textUiView: {fileID: 826704788}
 --- !u!1 &826704784
 GameObject:
   m_ObjectHideFlags: 0
@@ -517,7 +511,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6fa18ef823147d8aaef77bb49b7308d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _textUi: {fileID: 826704786}
 --- !u!1 &867883154
 GameObject:
   m_ObjectHideFlags: 0
@@ -649,7 +642,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11ed3b0a2bc748c1b66567878693c7a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _textUiView: {fileID: 1099614643}
 --- !u!1 &1099614639
 GameObject:
   m_ObjectHideFlags: 0
@@ -740,7 +732,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6fa18ef823147d8aaef77bb49b7308d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _textUi: {fileID: 1099614641}
 --- !u!1 &1301798117
 GameObject:
   m_ObjectHideFlags: 0
@@ -998,4 +989,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6fa18ef823147d8aaef77bb49b7308d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _textUi: {fileID: 1914070567}
