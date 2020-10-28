@@ -3,6 +3,9 @@
     public enum GameCommandType : byte
     {
         PlayerDisconnected,
-        PlayerConnected
+        PlayerConnected,
+        CharacterRemove,
+        CharacterAdd,
+        CharacterHpChanged
     }
 }

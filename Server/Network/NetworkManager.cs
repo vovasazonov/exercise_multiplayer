@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using Models;
+using Network.GameEventHandlers;
 using Network.PacketHandlers;
 using Serialization;
 
@@ -11,18 +13,21 @@ namespace Network
         private readonly ISerializer _serializer;
         private readonly IDictionary<uint, IClientProxy> _clientProxyDic = new Dictionary<uint, IClientProxy>();
         private readonly ServerGameProcessor _gameProcessor;
-        
+        private readonly IGameEventHandler _mainGameEventHandler;
+
         public int MillisecondsTickServer
         {
             set => _gameProcessor.MillisecondsTick = value;
         }
-        
-        public NetworkManager(IServer server, ISerializer serializer)
+
+        public NetworkManager(IServer server, ISerializer serializer, IModelManager modelManager)
         {
             _server = server;
             _serializer = serializer;
             _gameProcessor = new ServerGameProcessor(_clientProxyDic);
-            
+            _mainGameEventHandler = new MainGameEventHandler(_clientProxyDic, modelManager);
+
+            _mainGameEventHandler.Activate();
             AddServerListener();
             AddGameProcessorListener();
         }
@@ -31,7 +36,7 @@ namespace Network
         {
             _gameProcessor.Processed += OnGameProcessorProcessed;
         }
-        
+
         private void RemoveGameProcessorListener()
         {
             _gameProcessor.Processed -= OnGameProcessorProcessed;
@@ -55,7 +60,7 @@ namespace Network
         {
             SendPacketsToClients();
         }
-        
+
         private void OnClientDisconnect(object sender, PacketReceivedEventArgs packetReceivedEventArgs)
         {
             IPacketHandler packetHandler = new DisconnectPacketHandler(packetReceivedEventArgs.ClientId, _clientProxyDic);
@@ -78,16 +83,17 @@ namespace Network
         {
             foreach (var clientProxy in _clientProxyDic.Values)
             {
-                _server.SendPacket(clientProxy.Id,clientProxy.NotSentToClientPacket.Data);
+                _server.SendPacket(clientProxy.Id, clientProxy.NotSentToClientPacket.Data);
                 clientProxy.NotSentToClientPacket.Clear();
             }
         }
-        
+
         public void Dispose()
         {
+            _mainGameEventHandler.Deactivate();
             RemoveServerListener();
             RemoveGameProcessorListener();
-            
+
             _server?.Dispose();
             _gameProcessor?.Dispose();
         }
