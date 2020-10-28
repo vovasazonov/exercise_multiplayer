@@ -28,7 +28,7 @@ namespace Network.GameEventHandlers
         {
             foreach (var clientProxy in _clientProxyDic.Values)
             {
-                clientProxy.NotSentToClientPacket.Fill(GameCommandType.CharacterAdd);
+                clientProxy.NotSentToClientPacket.Fill(GameCommandType.CharacterRemove);
                 clientProxy.NotSentToClientPacket.Fill(characterId);
             }
         }
