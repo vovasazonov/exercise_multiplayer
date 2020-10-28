@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using ENet;
 
-namespace Server.Network
+namespace Network
 {
     public class UdpServer : IServer
     {
@@ -11,24 +11,14 @@ namespace Server.Network
         public event EventHandler<PacketReceivedEventArgs> ClientDisconnect;
         public event EventHandler<PacketReceivedEventArgs> PacketReceived;
 
-        private readonly ushort _port;
-        private readonly int _maxClients;
-        private readonly byte _channelId;
-        private readonly uint _peerTimeOutLimit;
-        private readonly uint _peerTimeOutMinimum;
-        private readonly uint _peerTimeOutMaximum;
+        private readonly UdpServerInfo _udpServerInfo;
         private bool _isRunningServerLoop;
         private readonly Task _serverLoopTask;
         private readonly IDictionary<uint, Peer> _clientConnectedDic = new Dictionary<uint, Peer>();
 
-        public UdpServer(ushort port = 3000, int maxClients = 1000, byte channelId = 0, uint peerTimeOutLimit = 32, uint peerTimeOutMinimum = 1000, uint peerTimeOutMaximum = 3000)
+        public UdpServer(UdpServerInfo udpServerInfo)
         {
-            _port = port;
-            _maxClients = maxClients;
-            _channelId = channelId;
-            _peerTimeOutLimit = peerTimeOutLimit;
-            _peerTimeOutMinimum = peerTimeOutMinimum;
-            _peerTimeOutMaximum = peerTimeOutMaximum;
+            _udpServerInfo = udpServerInfo;
 
             ENet.Library.Initialize();
             _isRunningServerLoop = true;
@@ -41,16 +31,16 @@ namespace Server.Network
             Packet packet = default;
             packet.Create(packetBytes);
 
-            _clientConnectedDic[clientId].Send(_channelId, ref packet);
+            _clientConnectedDic[clientId].Send(_udpServerInfo.ChannelId, ref packet);
         }
 
         private void StartServerLoop()
         {
             using Host server = new Host();
-            Address address = new Address {Port = _port};
-            server.Create(address, _maxClients);
+            Address address = new Address {Port = _udpServerInfo.Port};
+            server.Create(address, _udpServerInfo.MaxClients);
 
-            Console.WriteLine($"Circle ENet Server started on port: {_port}");
+            Console.WriteLine($"Circle ENet Server started on port: {_udpServerInfo.Port}");
 
             while (_isRunningServerLoop)
             {
@@ -130,7 +120,7 @@ namespace Server.Network
         {
             Console.WriteLine("Client connected - ID: " + netEvent.Peer.ID + ", IP: " + netEvent.Peer.IP);
 
-            netEvent.Peer.Timeout(_peerTimeOutLimit, _peerTimeOutMinimum, _peerTimeOutMaximum);
+            netEvent.Peer.Timeout(_udpServerInfo.PeerTimeOutLimit, _udpServerInfo.PeerTimeOutMinimum, _udpServerInfo.PeerTimeOutMaximum);
             _clientConnectedDic[netEvent.Peer.ID] = netEvent.Peer;
         }
 
