@@ -1,18 +1,20 @@
 ﻿using System;
-using Server.Network;
+using Network;
+using Serialization;
+using Serialization.BinaryFormatterSerialization;
 
-namespace Server
+class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            using IServer server = new UdpServer();
+        ISerializer serializer = new BinaryFormatterSerializer();
+        var udpServerInfo = new LocalUdpServerInfoCreator().Create();
+        using IServer server = new UdpServer(udpServerInfo);
+        using NetworkManager networkManager = new NetworkManager(server,serializer) {MillisecondsTickServer = 100};
             
-            Console.WriteLine("Press 'q' to stop server");
-            while (Console.ReadKey().Key != ConsoleKey.Q)
-            {
-            }
+        Console.WriteLine("Press 'q' to stop server");
+        while (Console.ReadKey().Key != ConsoleKey.Q)
+        {
         }
     }
 }
