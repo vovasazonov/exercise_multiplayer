@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    ".NETStandard,Version=v2.1": {}
+    ".NETStandard,Version=v2.1": {
+      "SharedCode/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/SharedCode.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SharedCode.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "SharedCode/1.0.0": {
+      "type": "project",
+      "path": "../SharedCode/SharedCode.csproj",
+      "msbuildProject": "../SharedCode/SharedCode.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETStandard,Version=v2.1": []
+    ".NETStandard,Version=v2.1": [
+      "SharedCode >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\vovas\\.nuget\\packages\\": {},
@@ -36,7 +55,11 @@
       },
       "frameworks": {
         "netstandard2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\vovas\\source\\repos\\Unity\\exercise_multiplayer\\SharedCode\\SharedCode.csproj": {
+              "projectPath": "C:\\Users\\vovas\\source\\repos\\Unity\\exercise_multiplayer\\SharedCode\\SharedCode.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

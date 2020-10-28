@@ -18,7 +18,11 @@
     },
     "frameworks": {
       "netstandard2.1": {
-        "projectReferences": {}
+        "projectReferences": {
+          "C:\\Users\\vovas\\source\\repos\\Unity\\exercise_multiplayer\\SharedCode\\SharedCode.csproj": {
+            "projectPath": "C:\\Users\\vovas\\source\\repos\\Unity\\exercise_multiplayer\\SharedCode\\SharedCode.csproj"
+          }
+        }
       }
     },
     "warningProperties": {
