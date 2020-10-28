@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Models;
 using Network.PacketHandlers;
 using Serialization;
 
@@ -11,19 +10,31 @@ namespace Network
         private readonly IServer _server;
         private readonly ISerializer _serializer;
         private readonly IDictionary<uint, IClientProxy> _clientProxyDic = new Dictionary<uint, IClientProxy>();
-        private readonly ServerGameProcessor _processor;
+        private readonly ServerGameProcessor _gameProcessor;
         
         public int MillisecondsTickServer
         {
-            set => _processor.MillisecondsTick = value;
+            set => _gameProcessor.MillisecondsTick = value;
         }
         
         public NetworkManager(IServer server, ISerializer serializer)
         {
             _server = server;
             _serializer = serializer;
+            _gameProcessor = new ServerGameProcessor(_clientProxyDic);
             
-            _processor = new ServerGameProcessor(_clientProxyDic);
+            AddServerListener();
+            AddGameProcessorListener();
+        }
+
+        private void AddGameProcessorListener()
+        {
+            _gameProcessor.Processed += OnGameProcessorProcessed;
+        }
+        
+        private void RemoveGameProcessorListener()
+        {
+            _gameProcessor.Processed -= OnGameProcessorProcessed;
         }
 
         private void AddServerListener()
@@ -40,6 +51,11 @@ namespace Network
             _server.ClientDisconnect -= OnClientDisconnect;
         }
 
+        private void OnGameProcessorProcessed(object sender, EventArgs eventArgs)
+        {
+            SendPacketsToClients();
+        }
+        
         private void OnClientDisconnect(object sender, PacketReceivedEventArgs packetReceivedEventArgs)
         {
             IPacketHandler packetHandler = new DisconnectPacketHandler(packetReceivedEventArgs.ClientId, _clientProxyDic);
@@ -58,10 +74,22 @@ namespace Network
             packetHandler.HandlePacket();
         }
 
+        private void SendPacketsToClients()
+        {
+            foreach (var clientProxy in _clientProxyDic.Values)
+            {
+                _server.SendPacket(clientProxy.Id,clientProxy.NotSentToClientPacket.Data);
+                clientProxy.NotSentToClientPacket.Clear();
+            }
+        }
+        
         public void Dispose()
         {
+            RemoveServerListener();
+            RemoveGameProcessorListener();
+            
             _server?.Dispose();
-            _processor?.Dispose();
+            _gameProcessor?.Dispose();
         }
     }
 }

@@ -8,6 +8,8 @@ namespace Network
 {
     public class ServerGameProcessor : IDisposable
     {
+        public event EventHandler Processed;
+        
         private readonly IDictionary<uint, IClientProxy> _clientProxyDic;
         private int _millisecondsTick;
         private bool _isGameProcessLoop;
@@ -39,6 +41,8 @@ namespace Network
                 {
                     HandleUnprocessedCommands(clientProxy);
                 }
+                
+                OnProcessed();
             }
         }
 
@@ -51,6 +55,11 @@ namespace Network
             }
         }
 
+        private void OnProcessed()
+        {
+            Processed?.Invoke(this, EventArgs.Empty);
+        }
+        
         public void Dispose()
         {
             _isGameProcessLoop = false;

@@ -28,5 +28,10 @@ namespace Network
 
             return deserializedObj;
         }
+
+        public void Clear()
+        {
+            _data.Clear();
+        }
     }
 }
