@@ -6,6 +6,7 @@
         PlayerConnected,
         CharacterRemove,
         CharacterAdd,
-        CharacterHpChanged
+        CharacterHpChanged,
+        EnemyAttacked
     }
 }
