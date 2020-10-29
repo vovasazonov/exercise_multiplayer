@@ -2,13 +2,13 @@
 {
     public class WeaponModel : IWeaponModel
     {
-        public string Id { get; }
-        public uint Damage { get; }
+        private readonly IWeaponData _data;
+        public string Id => _data.Id;
+        public uint Damage => _data.Damage;
         
-        public WeaponModel(string id, uint damage)
+        public WeaponModel(IWeaponData data)
         {
-            Id = id;
-            Damage = damage;
+            _data = data;
         }
     }
 }
