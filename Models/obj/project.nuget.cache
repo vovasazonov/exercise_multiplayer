@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "1lwihxvrkTtthDyRbVOK9bViHweKW/4cfjfWA6UhGCPbZdhpYvIxeYjWZP1vD/BvPxVUTbqsS5eNpRRZ9O4D2g==",
+  "dgSpecHash": "KqkHUzTVqWPEPJvjZhyi+30WfFbJNFjVFlhGBTiPsndHsSlqOOW6IdXFzzMVxyscU5S2GrXlartw9z3IBc5qxw==",
   "success": true,
   "projectFilePath": "C:\\Users\\vovas\\source\\repos\\Unity\\exercise_multiplayer\\Models\\Models.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

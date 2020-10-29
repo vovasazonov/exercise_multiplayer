@@ -2,8 +2,8 @@
 {
     public interface ICharacterData
     {
-        public string Id { get; set; }
-        public IHealthPointData HealthPointData { get; set; }
-        public string HoldWeaponId { get; set; }
+        string Id { get; set; }
+        IHealthPointData HealthPointData { get; set; }
+        string HoldWeaponId { get; set; }
     }
 }
