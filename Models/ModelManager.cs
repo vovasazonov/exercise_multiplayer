@@ -8,7 +8,7 @@ namespace Models
     {
         public ITrackableDictionary<int, IPlayerModel> PlayerModelDic { get; } = new TrackableDictionary<int, IPlayerModel>();
         public ITrackableDictionary<int, ICharacterModel> CharacterModelDic { get; } = new TrackableDictionary<int, ICharacterModel>();
-        public IList<IWeaponModel> WeaponModelForAllPlayersList = new List<IWeaponModel>();
+        public IList<IWeaponModel> WeaponModelForAllPlayersList { get; } = new List<IWeaponModel>();
 
         public ModelManager()
         {
