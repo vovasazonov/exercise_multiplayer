@@ -7,6 +7,7 @@
         CharacterRemove,
         CharacterAdd,
         CharacterHpChanged,
-        EnemyAttacked
+        CharacterAttackEnemy,
+        SetControllablePlayer
     }
 }
