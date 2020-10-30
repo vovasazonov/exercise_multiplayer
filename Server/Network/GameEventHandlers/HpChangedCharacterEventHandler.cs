@@ -29,6 +29,11 @@ namespace Network.GameEventHandlers
 
         private void OnPointsChanged(object sender, EventArgs e)
         {
+            NotifyClients();
+        }
+
+        private void NotifyClients()
+        {
             foreach (var clientProxy in _clientProxyDic.Values)
             {
                 clientProxy.NotSentToClientPacket.Fill(GameCommandType.CharacterHpChanged);

@@ -16,15 +16,20 @@ namespace Network.GameEventHandlers
 
         public void Activate()
         {
-            _characterModelDic.Adding += OnAdding;
+            _characterModelDic.Removing += OnAdding;
         }
         
         public void Deactivate()
         {
-            _characterModelDic.Adding -= OnAdding;
+            _characterModelDic.Removing -= OnAdding;
         }
         
         private void OnAdding(int characterId, ICharacterModel characterModel)
+        {
+            NotifyClients(characterId);
+        }
+
+        private void NotifyClients(int characterId)
         {
             foreach (var clientProxy in _clientProxyDic.Values)
             {

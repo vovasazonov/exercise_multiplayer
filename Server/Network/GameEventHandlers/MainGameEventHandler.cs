@@ -21,7 +21,8 @@ namespace Network.GameEventHandlers
         {
             _eventHandlers.Add(new CharacterAddingEventHandler(_clientProxyDic,_modelManager.CharacterModelDic));
             _eventHandlers.Add(new CharacterRemovingEventHandler(_clientProxyDic,_modelManager.CharacterModelDic));
-            _eventHandlers.Add(new CharacterEventHandler(_clientProxyDic,_modelManager.CharacterModelDic));
+            _eventHandlers.Add(new MainCharacterEventHandler(_clientProxyDic,_modelManager.CharacterModelDic));
+            _eventHandlers.Add(new PlayerAddingEventHandler(_clientProxyDic,_modelManager));
         }
 
         public void Activate()

@@ -11,6 +11,7 @@ namespace Network
     {
         private readonly IServer _server;
         private readonly ISerializer _serializer;
+        private readonly IModelManager _modelManager;
         private readonly IDictionary<uint, IClientProxy> _clientProxyDic = new Dictionary<uint, IClientProxy>();
         private readonly ServerGameProcessor _gameProcessor;
         private readonly IGameEventHandler _mainGameEventHandler;
@@ -24,8 +25,9 @@ namespace Network
         {
             _server = server;
             _serializer = serializer;
-            _gameProcessor = new ServerGameProcessor(_clientProxyDic);
-            _mainGameEventHandler = new MainGameEventHandler(_clientProxyDic, modelManager);
+            _modelManager = modelManager;
+            _gameProcessor = new ServerGameProcessor(_clientProxyDic, _modelManager);
+            _mainGameEventHandler = new MainGameEventHandler(_clientProxyDic, _modelManager);
 
             _mainGameEventHandler.Activate();
             AddServerListener();
@@ -69,7 +71,7 @@ namespace Network
 
         private void OnClientConnect(object sender, PacketReceivedEventArgs packetReceivedEventArgs)
         {
-            IPacketHandler packetHandler = new ConnectPacketHandler(packetReceivedEventArgs.ClientId, _clientProxyDic, _serializer);
+            IPacketHandler packetHandler = new ConnectPacketHandler(packetReceivedEventArgs.ClientId, _clientProxyDic, _serializer, _modelManager);
             packetHandler.HandlePacket();
         }
 
@@ -83,8 +85,11 @@ namespace Network
         {
             foreach (var clientProxy in _clientProxyDic.Values)
             {
-                _server.SendPacket(clientProxy.Id, clientProxy.NotSentToClientPacket.Data);
-                clientProxy.NotSentToClientPacket.Clear();
+                if (clientProxy.NotSentToClientPacket.Data.Length > 0)
+                {
+                    _server.SendPacket(clientProxy.Id, clientProxy.NotSentToClientPacket.Data);
+                    clientProxy.NotSentToClientPacket.Clear();
+                }
             }
         }
 

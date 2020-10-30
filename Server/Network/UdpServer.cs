@@ -22,8 +22,7 @@ namespace Network
 
             ENet.Library.Initialize();
             _isRunningServerLoop = true;
-            _serverLoopTask = new Task(StartServerLoop);
-            _serverLoopTask.Start();
+            _serverLoopTask = Task.Factory.StartNew(StartServerLoop).ContinueWith(task => Console.WriteLine(task.Exception), TaskContinuationOptions.OnlyOnFaulted);
         }
 
         public void SendPacket(uint clientId, byte[] packetBytes)
@@ -56,31 +55,36 @@ namespace Network
                         polled = true;
                     }
 
-                    switch (netEvent.Type)
-                    {
-                        case EventType.None:
-                            break;
-
-                        case EventType.Connect:
-                            HandleConnectEvent(netEvent);
-                            break;
-
-                        case EventType.Disconnect:
-                            HandleDisconnectEvent(netEvent);
-                            break;
-
-                        case EventType.Timeout:
-                            HandleTimeoutEvent(netEvent);
-                            break;
-
-                        case EventType.Receive:
-                            HandleReceiveEvent(ref netEvent);
-                            break;
-                    }
+                    HandleEvent(ref netEvent);
                 }
             }
 
             server.Flush();
+        }
+
+        private void HandleEvent(ref Event netEvent)
+        {
+            switch (netEvent.Type)
+            {
+                case EventType.None:
+                    break;
+
+                case EventType.Connect:
+                    HandleConnectEvent(netEvent);
+                    break;
+
+                case EventType.Disconnect:
+                    HandleDisconnectEvent(netEvent);
+                    break;
+
+                case EventType.Timeout:
+                    HandleTimeoutEvent(netEvent);
+                    break;
+
+                case EventType.Receive:
+                    HandleReceiveEvent(ref netEvent);
+                    break;
+            }
         }
 
         private void HandleReceiveEvent(ref Event netEvent)
@@ -122,6 +126,9 @@ namespace Network
 
             netEvent.Peer.Timeout(_udpServerInfo.PeerTimeOutLimit, _udpServerInfo.PeerTimeOutMinimum, _udpServerInfo.PeerTimeOutMaximum);
             _clientConnectedDic[netEvent.Peer.ID] = netEvent.Peer;
+
+            var clientEventArgs = new PacketReceivedEventArgs(netEvent.Peer.ID);
+            OnClientConnect(clientEventArgs);
         }
 
         private void OnPacketReceived(PacketReceivedEventArgs packetReceivedEventArgs)

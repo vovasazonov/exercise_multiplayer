@@ -3,13 +3,13 @@ using Models.Characters;
 
 namespace Network.GameEventHandlers
 {
-    public class CharacterEventHandler : IGameEventHandler
+    public class MainCharacterEventHandler : IGameEventHandler
     {
         private readonly IDictionary<uint, IClientProxy> _clientProxyDic;
         private readonly ITrackableDictionary<int, ICharacterModel> _characterModelDic;
         private readonly IDictionary<int, HpChangedCharacterEventHandler> _characterHpChangedEventHandlerDic = new Dictionary<int, HpChangedCharacterEventHandler>();
 
-        public CharacterEventHandler(IDictionary<uint, IClientProxy> clientProxyDic, ITrackableDictionary<int, ICharacterModel> characterModelDic)
+        public MainCharacterEventHandler(IDictionary<uint, IClientProxy> clientProxyDic, ITrackableDictionary<int, ICharacterModel> characterModelDic)
         {
             _clientProxyDic = clientProxyDic;
             _characterModelDic = characterModelDic;

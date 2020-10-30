@@ -24,12 +24,20 @@ namespace Network.GameEventHandlers
             _characterModelDic.Adding -= OnAdding;
         }
         
-        private void OnAdding(int characterId, ICharacterModel characterModel)
+        private void OnAdding(int characterExemplarId, ICharacterModel characterModel)
+        {
+            NotifyClients(characterExemplarId, characterModel);
+        }
+
+        private void NotifyClients(int characterExemplarId, ICharacterModel characterModel)
         {
             foreach (var clientProxy in _clientProxyDic.Values)
             {
                 clientProxy.NotSentToClientPacket.Fill(GameCommandType.CharacterAdd);
-                clientProxy.NotSentToClientPacket.Fill(characterId);
+                clientProxy.NotSentToClientPacket.Fill(characterExemplarId);
+                clientProxy.NotSentToClientPacket.Fill(characterModel.Id);
+                clientProxy.NotSentToClientPacket.Fill(characterModel.HealthPoint.MaxPoints);
+                clientProxy.NotSentToClientPacket.Fill(characterModel.HealthPoint.Points);
             }
         }
     }
