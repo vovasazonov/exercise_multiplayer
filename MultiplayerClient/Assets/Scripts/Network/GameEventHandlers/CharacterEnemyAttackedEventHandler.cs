@@ -32,7 +32,7 @@ namespace Network.GameEventHandlers
         private void OnEnemyAttacked(object sender, AttackEventArgs e)
         {
             var enemyExemplarId = _characterModelDic.First(keyValuePair => keyValuePair.Value == e.EnemyAttacked).Key;
-            _recordPacket.Fill(GameCommandType.EnemyAttacked);
+            _recordPacket.Fill(GameCommandType.CharacterAttackEnemy);
             _recordPacket.Fill(_characterExemplarId);
             _recordPacket.Fill(enemyExemplarId);
         }
