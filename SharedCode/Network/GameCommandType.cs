@@ -8,6 +8,7 @@
         CharacterAdd,
         CharacterHpChanged,
         CharacterAttackEnemy,
-        SetControllablePlayer
+        SetControllablePlayer,
+        HoldWeaponChanged
     }
 }
