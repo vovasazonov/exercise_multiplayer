@@ -4,79 +4,70 @@ using ENet;
 using UnityEngine;
 #endif
 using Event = ENet.Event;
-using Task = System.Threading.Tasks.Task;
 
 namespace Network
 {
     public class UdpClient : IClient
     {
-        public event EventHandler<PacketReceivedEventArgs> ClientConnect;
-        public event EventHandler<PacketReceivedEventArgs> ClientDisconnect;
+        public event EventHandler<PacketReceivedEventArgs> ClientConnected;
+        public event EventHandler<PacketReceivedEventArgs> ClientDisconnected;
         public event EventHandler<PacketReceivedEventArgs> PacketReceived;
 
         private readonly Host _client;
         private readonly Peer _peerServer;
-        private readonly Task _clientLoopTask;
-        private readonly byte _channelId;
-        private bool _isRunning;
+        private readonly UdpClientInfo _udpClientInfo;
 
-        public UdpClient(string serverIp = "127.0.0.1", ushort serverPort = 3000, byte channelId = 0)
+        public UdpClient(UdpClientInfo udpClientInfo)
         {
+            _udpClientInfo = udpClientInfo;
+            
             ENet.Library.Initialize();
-            _channelId = channelId;
             _client = new Host();
             Address address = new Address();
-            address.SetHost(serverIp);
-            address.Port = serverPort;
+            address.SetHost(udpClientInfo.ServerIp);
+            address.Port = udpClientInfo.ServerPort;
             _client.Create();
 #if UNITY_EDITOR
             Debug.Log("Connecting");
 #endif
             _peerServer = _client.Connect(address);
-
-            _isRunning = true;
-            _clientLoopTask = new Task(StartClientLoop);
-            _clientLoopTask.Start();
         }
 
         public void SendPacket(byte[] packetBytes)
         {
             var packet = default(Packet);
             packet.Create(packetBytes);
-            _peerServer.Send(_channelId, ref packet);
+            _peerServer.Send(_udpClientInfo.ChannelId, ref packet);
         }
 
-        private void StartClientLoop()
+        public void Update()
         {
-            while (_isRunning)
+            bool hasEventInQueue = _client.CheckEvents(out var netEvent) <= 0;
+            bool isGetEvent = hasEventInQueue && _client.Service(0, out netEvent) > 0;
+
+            if (isGetEvent)
             {
-                bool hasEventInQueue = _client.CheckEvents(out var netEvent) <= 0;
-                bool isGetEvent = hasEventInQueue && _client.Service(15, out netEvent) > 0;
-
-                if (isGetEvent)
+                switch (netEvent.Type)
                 {
-                    switch (netEvent.Type)
-                    {
-                        case ENet.EventType.None:
-                            break;
+                    case ENet.EventType.None:
+                        break;
 
-                        case ENet.EventType.Connect:
-                            HandleConnectEvent(netEvent);
-                            break;
+                    case ENet.EventType.Connect:
+                        HandleConnectEvent(netEvent);
+                        break;
 
-                        case ENet.EventType.Disconnect:
-                            HandleDisconnectEvent(netEvent);
-                            break;
+                    case ENet.EventType.Disconnect:
+                        HandleDisconnectEvent(netEvent);
+                        break;
 
-                        case ENet.EventType.Timeout:
-                            HandleTimeoutEvent(netEvent);
-                            break;
+                    case ENet.EventType.Timeout:
+                        HandleTimeoutEvent(netEvent);
+                        break;
 
-                        case ENet.EventType.Receive:
-                            HandleReceiveEvent(ref netEvent);
-                            netEvent.Packet.Dispose();
-                            break;
-                    }
+                    case ENet.EventType.Receive:
+                        HandleReceiveEvent(ref netEvent);
+                        netEvent.Packet.Dispose();
+                        break;
                 }
             }
         }
@@ -132,21 +123,19 @@ namespace Network
 
         private void OnClientConnect(PacketReceivedEventArgs e)
         {
-            ClientConnect?.Invoke(this, e);
+            ClientConnected?.Invoke(this, e);
         }
 
         private void OnClientDisconnect(PacketReceivedEventArgs e)
         {
-            ClientDisconnect?.Invoke(this, e);
+            ClientDisconnected?.Invoke(this, e);
         }
 
         public void Dispose()
         {
-            _isRunning = false;
-            _clientLoopTask.Wait();
+            _client.Dispose();
 
             ENet.Library.Deinitialize();
-            _client.Dispose();
         }
     }
 }

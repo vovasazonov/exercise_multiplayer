@@ -130,9 +130,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 132731925}
+  - component: {fileID: 132731926}
   - component: {fileID: 132731924}
   m_Layer: 0
-  m_Name: ViewContainer
+  m_Name: ViewManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -147,9 +148,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 132731923}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d196fee4e2147dab324341fdfb703de, type: 3}
+  m_Script: {fileID: 11500000, guid: 4d20f192bb1644fbb26c3e5b086d9064, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _characterViewPrefab: {fileID: 5493663917122086498, guid: 718aecf9e7b73da42bc52ae125817140,
+    type: 3}
+  _parent: {fileID: 1301798121}
 --- !u!4 &132731925
 Transform:
   m_ObjectHideFlags: 0
@@ -164,6 +168,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &132731926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132731923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2817f4dfebaf4d1eaa03785dbfe89576, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CharacterViewPooler: {fileID: 132731924}
+  playerWeaponViewList:
+  - {fileID: 867883159}
+  - {fileID: 772039021}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,9 +307,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 652823731}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0dfc9296a5104dce92a5468d61f02983, type: 3}
+  m_Script: {fileID: 11500000, guid: b23ebda9b5174e1abc109a237e2bf064, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _viewManager: {fileID: 132731926}
 --- !u!1 &772039016
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,7 +325,7 @@ GameObject:
   - component: {fileID: 772039018}
   - component: {fileID: 772039021}
   m_Layer: 5
-  m_Name: AttackButton
+  m_Name: WeaponButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -421,6 +442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11ed3b0a2bc748c1b66567878693c7a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _textUiView: {fileID: 826704788}
 --- !u!1 &826704784
 GameObject:
   m_ObjectHideFlags: 0
@@ -511,6 +533,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6fa18ef823147d8aaef77bb49b7308d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _textUi: {fileID: 826704786}
 --- !u!1 &867883154
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,7 +548,7 @@ GameObject:
   - component: {fileID: 867883156}
   - component: {fileID: 867883159}
   m_Layer: 5
-  m_Name: AttackButton
+  m_Name: WeaponButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -642,6 +665,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11ed3b0a2bc748c1b66567878693c7a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _textUiView: {fileID: 1099614643}
 --- !u!1 &1099614639
 GameObject:
   m_ObjectHideFlags: 0
@@ -732,6 +756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6fa18ef823147d8aaef77bb49b7308d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _textUi: {fileID: 1099614641}
 --- !u!1 &1301798117
 GameObject:
   m_ObjectHideFlags: 0
@@ -824,7 +849,6 @@ RectTransform:
   m_Children:
   - {fileID: 867883155}
   - {fileID: 772039017}
-  - {fileID: 1914070566}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -899,93 +923,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1914070565
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1914070566}
-  - component: {fileID: 1914070568}
-  - component: {fileID: 1914070567}
-  - component: {fileID: 1914070569}
-  m_Layer: 5
-  m_Name: HpText
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1914070566
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1914070565}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1301798121}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 145.7, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1914070567
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1914070565}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 27
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 126
-    m_Alignment: 1
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 5
---- !u!222 &1914070568
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1914070565}
-  m_CullTransparentMesh: 0
---- !u!114 &1914070569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1914070565}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6fa18ef823147d8aaef77bb49b7308d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
