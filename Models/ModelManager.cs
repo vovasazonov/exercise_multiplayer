@@ -8,7 +8,7 @@ namespace Models
     {
         public ITrackableDictionary<int, IPlayerModel> PlayerModelDic { get; } = new TrackableDictionary<int, IPlayerModel>();
         public ITrackableDictionary<int, ICharacterModel> CharacterModelDic { get; } = new TrackableDictionary<int, ICharacterModel>();
-        public IList<IWeaponModel> WeaponModelForAllPlayersList { get; } = new List<IWeaponModel>();
+        public IDictionary<string, IWeaponModel> GameWeaponModelDic { get; } = new Dictionary<string, IWeaponModel>();
 
         public ModelManager()
         {
@@ -22,14 +22,14 @@ namespace Models
                 Id = "axe",
                 Damage = 2
             };
-            
+
             var knifeWeaponData = new WeaponData
             {
                 Id = "knife",
                 Damage = 6
             };
-            WeaponModelForAllPlayersList.Add(new WeaponModel(axeWeaponData));
-            WeaponModelForAllPlayersList.Add(new WeaponModel(knifeWeaponData));
+            GameWeaponModelDic.Add(axeWeaponData.Id, new WeaponModel(axeWeaponData));
+            GameWeaponModelDic.Add(knifeWeaponData.Id, new WeaponModel(knifeWeaponData));
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using Models;
+﻿using Models;
 
 namespace Network.CommandHandlers
 {
@@ -18,9 +17,12 @@ namespace Network.CommandHandlers
         {
             var characterExemplarId = _unprocessedReceivedPacket.Pull<int>();
             var weaponTypeId = _unprocessedReceivedPacket.Pull<string>();
-            
-            var weaponModel = _modelManager.WeaponModelForAllPlayersList.First(w => w.Id == weaponTypeId);
-            _modelManager.CharacterModelDic[characterExemplarId].ChangeHoldWeapon(weaponModel);
+
+            if (_modelManager.GameWeaponModelDic.ContainsKey(weaponTypeId))
+            {
+                var weaponModel = _modelManager.GameWeaponModelDic[weaponTypeId];
+                _modelManager.CharacterModelDic[characterExemplarId].ChangeHoldWeapon(weaponModel);
+            }
         }
     }
 }

@@ -21,11 +21,10 @@ namespace Game
         {
             _modelManagerClient.ControllablePlayerSet += OnControllablePlayerSet;
         }
-        
+
         private void RemoveModelManagerClientListener()
         {
             _modelManagerClient.ControllablePlayerSet -= OnControllablePlayerSet;
-
         }
 
         private void OnControllablePlayerSet(object sender, EventArgs e)
@@ -37,10 +36,10 @@ namespace Game
         {
             var controllablePlayerModel = _modelManagerClient.ModelManager.PlayerModelDic[_modelManagerClient.ControllablePlayerExemplarId];
             var controllableCharacterModel = _modelManagerClient.ModelManager.CharacterModelDic[controllablePlayerModel.ControllableCharacterExemplarId];
-            
+
             _presenters.Add(new EnemyCharacterPresenterManager(_viewManager.CharacterViewPooler, controllablePlayerModel, _modelManagerClient.ModelManager.CharacterModelDic));
-            _presenters.Add(new PlayerWeaponPresenterManager(_viewManager.playerWeaponViewList, _modelManagerClient.ModelManager.WeaponModelForAllPlayersList,controllableCharacterModel));
-            
+            _presenters.Add(new PlayerWeaponPresenterManager(_viewManager.playerWeaponViewList, _modelManagerClient.ModelManager.GameWeaponModelDic.Values, controllableCharacterModel));
+
             _presenters.ForEach(p => p.Activate());
         }
 

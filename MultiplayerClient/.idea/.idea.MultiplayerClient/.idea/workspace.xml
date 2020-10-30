@@ -20,18 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09d9d4c8-d346-4524-9eb7-28dc055df806" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Models/IModelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Models/IModelManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Models/ModelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Models/ModelManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MultiplayerClient/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MultiplayerClient/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MultiplayerClient/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MultiplayerClient/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MultiplayerClient/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MultiplayerClient/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Libs/Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Libs/Models.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Libs/SharedCode.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Libs/SharedCode.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/GameEventHandlers/CharacterEnemyAttackedEventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/GameEventHandlers/CharacterEnemyAttackedEventHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/GameEventHandlers/CharacterEventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/GameEventHandlers/CharacterEventHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/IClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/IClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/UdpClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/UdpClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NetworkManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NetworkManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/PresenterManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/PresenterManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/Network/CommandHandlers/CharacterAddEnemyCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Network/CommandHandlers/CharacterAddEnemyCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/Network/CommandHandlers/CharacterAttackEnemyCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Network/CommandHandlers/CharacterAttackEnemyCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/Network/CommandHandlers/CharacterRemoveEnemyCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Network/CommandHandlers/CharacterRemoveEnemyCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/Network/CommandHandlers/HoldWeaponChangedCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Network/CommandHandlers/HoldWeaponChangedCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/Network/GameEventHandlers/CharacterAddingEventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Network/GameEventHandlers/CharacterAddingEventHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/Network/GameEventHandlers/CharacterRemovingEventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Network/GameEventHandlers/CharacterRemovingEventHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/Network/GameEventHandlers/MainCharacterEventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Network/GameEventHandlers/MainCharacterEventHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/Network/GameEventHandlers/PlayerAddingEventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Network/GameEventHandlers/PlayerAddingEventHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/Network/PacketHandlers/ConnectPacketHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Network/PacketHandlers/ConnectPacketHandler.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +80,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ViewManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/IModelManagerClient.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ModelManagerClient.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Weapons/Presenters/PlayerWeaponPresenterManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Characters/Presenters/EnemyCharacterPresenter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/CommandHandlers/PlayerDisconnectedCommandHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/CommandHandlers/ChararcterAddCommandHandler.cs" />
@@ -95,7 +97,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Characters/CharacterViewPooler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Weapons/Presenters/PlayerWeaponPresenter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Characters/Presenters/EnemyCharacterPresenterManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/PresenterManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Characters/Views/CharacterView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/NetworkManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/GameEventHandlers/CharacterHoldWeaponChangedEventHandler.cs" />
@@ -104,6 +105,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/UdpClient.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/LocalUdpClientInfoCreator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/PacketHandlers/ClientDisconnectedPacketHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Weapons/Presenters/PlayerWeaponPresenterManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/PresenterManager.cs" />
       </list>
     </option>
   </component>
@@ -153,7 +156,7 @@
       <workItem from="1603776303380" duration="11891000" />
       <workItem from="1603865144347" duration="17128000" />
       <workItem from="1603951220740" duration="33677000" />
-      <workItem from="1604030101497" duration="12653000" />
+      <workItem from="1604030101497" duration="15364000" />
     </task>
     <servers />
   </component>

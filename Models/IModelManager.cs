@@ -8,6 +8,6 @@ namespace Models
     {
         ITrackableDictionary<int,IPlayerModel> PlayerModelDic { get; }
         ITrackableDictionary<int,ICharacterModel> CharacterModelDic { get; }
-        IList<IWeaponModel> WeaponModelForAllPlayersList { get; }
+        IDictionary<string,IWeaponModel> GameWeaponModelDic { get; }
     }
 }
