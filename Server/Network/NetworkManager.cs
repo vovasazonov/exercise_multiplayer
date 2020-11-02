@@ -20,7 +20,7 @@ namespace Network
         {
             set => _gameProcessor.MillisecondsTick = value;
         }
-
+        
         public NetworkManager(IServer server, ISerializer serializer, IModelManager modelManager)
         {
             _server = server;

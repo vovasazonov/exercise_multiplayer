@@ -18,8 +18,9 @@ namespace Network.CommandHandlers
             var characterExemplarId = _unprocessedReceivedPacket.Pull<int>();
             var enemyExemplarId = _unprocessedReceivedPacket.Pull<int>();
 
-            var isCharacterExist = _modelManager.CharacterModelDic.ContainsKey(characterExemplarId) && _modelManager.CharacterModelDic.ContainsKey(enemyExemplarId);
-            if (isCharacterExist)
+            var isCharactersExist = _modelManager.CharacterModelDic.ContainsKey(characterExemplarId) && _modelManager.CharacterModelDic.ContainsKey(enemyExemplarId);
+            var isCharacterHoldWeapon = _modelManager.CharacterModelDic[characterExemplarId].HealthPoint != null;
+            if (isCharactersExist && isCharacterHoldWeapon)
             {
                 _modelManager.CharacterModelDic[characterExemplarId].Attack(_modelManager.CharacterModelDic[enemyExemplarId]);
             }

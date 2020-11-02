@@ -17,21 +17,11 @@ namespace Network.CommandHandlers
         public void HandleCommand()
         {
             var characterExemplarId = _packet.Pull<int>();
-            var characterTypeId = _packet.Pull<string>();
-            var maxPoints = _packet.Pull<uint>();
-            var points = _packet.Pull<uint>();
-            var characterModel = new CharacterModel(new CharacterData()
-            {
-                Id = characterTypeId,
-                HealthPointData = new HealthPointData()
-                {
-                    MaxPoints = maxPoints,
-                    Points = points
-                }
-            });
+            var characterData = _packet.Pull<SerializableCharacterData>();
 
             if (!_modelManager.CharacterModelDic.ContainsKey(characterExemplarId))
             {
+                var characterModel = new CharacterModel(characterData);
                 _modelManager.CharacterModelDic.Add(characterExemplarId,characterModel);
             }
         }

@@ -29,12 +29,12 @@ namespace Network.GameEventHandlers
             NotifyClients(characterId);
         }
 
-        private void NotifyClients(int characterId)
+        private void NotifyClients(int characterExemplarId)
         {
             foreach (var clientProxy in _clientProxyDic.Values)
             {
                 clientProxy.NotSentToClientPacket.Fill(GameCommandType.CharacterRemove);
-                clientProxy.NotSentToClientPacket.Fill(characterId);
+                clientProxy.NotSentToClientPacket.Fill(characterExemplarId);
             }
         }
     }

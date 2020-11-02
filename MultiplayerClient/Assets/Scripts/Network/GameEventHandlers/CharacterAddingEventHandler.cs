@@ -24,10 +24,14 @@ namespace Network.GameEventHandlers
             _characterModelDic.Adding -= OnAdding;
         }
         
-        private void OnAdding(int characterId, ICharacterModel characterModel)
+        private void OnAdding(int characterExemplarId, ICharacterModel characterModel)
         {
+            var characterData = new SerializableCharacterData();
+            characterData.Set(characterModel);
+            
             _recordPacket.Fill(GameCommandType.CharacterAdd);
-            _recordPacket.Fill(characterId);
+            _recordPacket.Fill(characterExemplarId);
+            _recordPacket.Fill(characterData);
         }
     }
 }

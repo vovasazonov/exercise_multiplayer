@@ -65,7 +65,7 @@ namespace Network.GameEventHandlers
         {
             foreach (var keyValuePair in _characterModelDic)
             {
-                _characterHpChangedEventHandlerDic[keyValuePair.Key] = new HpChangedCharacterEventHandler(_clientProxyDic, keyValuePair.Key, keyValuePair.Value);
+                InstantiateCharacterHpChangedEventHandler(keyValuePair.Key, keyValuePair.Value);
             }
         }
         

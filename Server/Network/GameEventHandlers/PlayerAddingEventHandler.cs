@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Models;
 using Models.Characters;
 
@@ -28,21 +27,46 @@ namespace Network.GameEventHandlers
 
         private void OnAdding(int playerId, IPlayerModel playerModel)
         {
-            var random = new Random();
-            var newCharacterExemplarId = random.NextExclude(_modelManager.CharacterModelDic.Keys);
-            CreateCharacter(newCharacterExemplarId);
-            playerModel.ControllableCharacterExemplarId = newCharacterExemplarId;
+            NotifyClients(playerId, playerModel);
         }
 
-        private void CreateCharacter(int newCharacterExemplarId)
+        private void NotifyClients(int playerId, IPlayerModel playerModel)
         {
-            var characterData = new CharacterData
+            foreach (var clientProxy in _clientProxyDic.Values)
             {
-                Id = "",
-                HealthPointData = new HealthPointData {MaxPoints = 100, Points = 100}
-            };
-            var characterModel = new CharacterModel(characterData);
-            _modelManager.CharacterModelDic.Add(newCharacterExemplarId, characterModel);
+                clientProxy.NotSentToClientPacket.Fill(GameCommandType.PlayerConnected);
+                clientProxy.NotSentToClientPacket.Fill(playerId);
+                clientProxy.NotSentToClientPacket.Fill(playerModel.ControllableCharacterExemplarId);
+
+                if (clientProxy.Id == playerId)
+                {
+                    TransferWorldToNewPlayer(clientProxy);
+                }
+            }
+        }
+        private void TransferWorldToNewPlayer(IClientProxy newClientProxy)
+        {
+            var packet = newClientProxy.NotSentToClientPacket;
+            
+            foreach (var characterExemplarId in _modelManager.CharacterModelDic.Keys)
+            {
+                var characterData = new SerializableCharacterData();
+                characterData.Set(_modelManager.CharacterModelDic[characterExemplarId]);
+                
+                packet.Fill(GameCommandType.CharacterAdd);
+                packet.Fill(characterExemplarId);
+                packet.Fill(characterData);
+            }
+        
+            foreach (var playerExemplarId in _modelManager.PlayerModelDic.Keys)
+            {
+                packet.Fill(GameCommandType.PlayerConnected);
+                packet.Fill(playerExemplarId);
+                packet.Fill(_modelManager.PlayerModelDic[playerExemplarId].ControllableCharacterExemplarId);
+            }
+            
+            _clientProxyDic[newClientProxy.Id].NotSentToClientPacket.Fill(GameCommandType.SetControllablePlayer);
+            _clientProxyDic[newClientProxy.Id].NotSentToClientPacket.Fill((int)newClientProxy.Id);
         }
     }
 }

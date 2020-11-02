@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Models;
+using Models.Characters;
 using Serialization;
 
 namespace Network.PacketHandlers
@@ -23,32 +25,26 @@ namespace Network.PacketHandlers
         {
             var newClientProxy = new ClientProxy(_clientId, _serializer);
             _clientProxyDic.Add(_clientId, newClientProxy);
+            
             var playerModel = new PlayerModel(_modelManager.CharacterModelDic);
+            
+            var random = new Random();
+            var newCharacterExemplarId = random.NextExclude(_modelManager.CharacterModelDic.Keys);
+            CreatePlayerCharacter(newCharacterExemplarId);
+            playerModel.ControllableCharacterExemplarId = newCharacterExemplarId;
             _modelManager.PlayerModelDic.Add((int) _clientId, playerModel);
-            TransferWorldToNewPlayer(newClientProxy);
-            _clientProxyDic[_clientId].NotSentToClientPacket.Fill(GameCommandType.SetControllablePlayer);
-            _clientProxyDic[_clientId].NotSentToClientPacket.Fill((int)_clientId);
         }
         
-        private void TransferWorldToNewPlayer(IClientProxy newClientProxy)
+        private void CreatePlayerCharacter(int newCharacterExemplarId)
         {
-            var packet = newClientProxy.NotSentToClientPacket;
-
-            foreach (var characterExemplarId in _modelManager.CharacterModelDic.Keys)
+            var characterData = new CharacterData
             {
-                packet.Fill(GameCommandType.CharacterAdd);
-                packet.Fill(characterExemplarId);
-                packet.Fill(_modelManager.CharacterModelDic[characterExemplarId].Id);
-                packet.Fill(_modelManager.CharacterModelDic[characterExemplarId].HealthPoint.MaxPoints);
-                packet.Fill(_modelManager.CharacterModelDic[characterExemplarId].HealthPoint.Points);
-            }
-
-            foreach (var playerExemplarId in _modelManager.PlayerModelDic.Keys)
-            {
-                packet.Fill(GameCommandType.PlayerConnected);
-                packet.Fill(playerExemplarId);
-                packet.Fill(_modelManager.PlayerModelDic[playerExemplarId].ControllableCharacterExemplarId);
-            }
+                Id = "player_character",
+                HealthPointData = new HealthPointData {MaxPoints = 100, Points = 100}
+            };
+            var characterModel = new CharacterModel(characterData);
+            
+            _modelManager.CharacterModelDic.Add(newCharacterExemplarId, characterModel);
         }
     }
 }

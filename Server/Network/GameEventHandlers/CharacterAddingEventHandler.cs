@@ -31,13 +31,14 @@ namespace Network.GameEventHandlers
 
         private void NotifyClients(int characterExemplarId, ICharacterModel characterModel)
         {
+            var serializableCharacterData = new SerializableCharacterData();
+            serializableCharacterData.Set(characterModel);
+            
             foreach (var clientProxy in _clientProxyDic.Values)
             {
                 clientProxy.NotSentToClientPacket.Fill(GameCommandType.CharacterAdd);
                 clientProxy.NotSentToClientPacket.Fill(characterExemplarId);
-                clientProxy.NotSentToClientPacket.Fill(characterModel.Id);
-                clientProxy.NotSentToClientPacket.Fill(characterModel.HealthPoint.MaxPoints);
-                clientProxy.NotSentToClientPacket.Fill(characterModel.HealthPoint.Points);
+                clientProxy.NotSentToClientPacket.Fill(serializableCharacterData);
             }
         }
     }

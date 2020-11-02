@@ -1,4 +1,5 @@
 ﻿using Models;
+using Models.Characters;
 
 namespace Network.CommandHandlers
 {
@@ -16,6 +17,13 @@ namespace Network.CommandHandlers
         public void HandleCommand()
         {
             var characterExemplarId = _unprocessedReceivedPacket.Pull<int>();
+            var characterData = _unprocessedReceivedPacket.Pull<SerializableCharacterData>();
+            
+            if (!_modelManager.CharacterModelDic.ContainsKey(characterExemplarId))
+            {
+                var characterModel = new CharacterModel(characterData);
+                _modelManager.CharacterModelDic.Add(characterExemplarId, characterModel);
+            }
         }
     }
 }

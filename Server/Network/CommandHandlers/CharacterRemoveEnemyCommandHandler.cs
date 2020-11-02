@@ -16,6 +16,8 @@ namespace Network.CommandHandlers
         public void HandleCommand()
         {
             var characterExemplarId = _unprocessedReceivedPacket.Pull<int>();
+
+            _modelManager.CharacterModelDic.Remove(characterExemplarId);
         }
     }
 }
