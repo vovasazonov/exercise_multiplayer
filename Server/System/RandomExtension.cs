@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 
 namespace System
 {
@@ -9,6 +8,7 @@ namespace System
         {
             var excludeHash = new HashSet<int>(exclude);
             var randomNumber = random.Next();
+
             while (excludeHash.Contains(randomNumber))
             {
                 randomNumber = random.Next();

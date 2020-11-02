@@ -1,7 +1,7 @@
 ﻿using Game;
 using Network;
 using Serialization;
-using Serialization.BinaryFormatterSerialization;
+using Serialization.JsonNetSerialization;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        ISerializer serializer = new BinaryFormatterSerializer();
+        ISerializer serializer = new JsonNetSerializer();
         UdpClientInfo udpClientInfo = new LocalUdpClientInfoCreator().Create();
         IModelManagerClient modelManagerClient = new ModelManagerClient();
         _client = new UdpClient(udpClientInfo);
