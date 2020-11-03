@@ -37,13 +37,9 @@ namespace Game
             var controllablePlayerModel = _modelManagerClient.ModelManager.PlayerModelDic[_modelManagerClient.ControllablePlayerExemplarId];
             var controllableCharacterModel = _modelManagerClient.ModelManager.CharacterModelDic[controllablePlayerModel.ControllableCharacterExemplarId];
 
-            var enemyCharacterPresenter = new EnemyCharacterPresenterManager(_viewManager.CharacterViewPooler, controllablePlayerModel, _modelManagerClient.ModelManager.CharacterModelDic);
-            enemyCharacterPresenter.Activate();
-            _presenters.Add(enemyCharacterPresenter);
-
-            var playerWeaponPresenter = new PlayerWeaponPresenterManager(_viewManager.playerWeaponViewList, _modelManagerClient.ModelManager.GameWeaponModelDic.Values, controllableCharacterModel); 
-            playerWeaponPresenter.Activate();
-            _presenters.Add(playerWeaponPresenter);
+            _presenters.Add(new EnemyCharacterPresenterManager(_viewManager.CharacterViewPooler, controllablePlayerModel, _modelManagerClient.ModelManager.CharacterModelDic));
+            _presenters.Add(new PlayerWeaponPresenterManager(_viewManager.playerWeaponViewList, _modelManagerClient.ModelManager.GameWeaponModelDic.Values, controllableCharacterModel));
+            _presenters.ForEach(p => p.Activate());
         }
 
         public void Activate()
