@@ -4,10 +4,10 @@ namespace Network.CommandHandlers
 {
     public readonly struct PlayerConnectedCommandHandler : ICommandHandler
     {
-        private readonly ICustomPacket _packet;
+        private readonly IMutablePacket _packet;
         private readonly IModelManager _modelManager;
 
-        public PlayerConnectedCommandHandler(ICustomPacket packet, IModelManager modelManager)
+        public PlayerConnectedCommandHandler(IMutablePacket packet, IModelManager modelManager)
         {
             _packet = packet;
             _modelManager = modelManager;

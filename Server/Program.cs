@@ -2,7 +2,6 @@
 using Models;
 using Network;
 using Serialization;
-using Serialization.BinaryFormatterSerialization;
 using Serialization.JsonNetSerialization;
 
 class Program
@@ -13,11 +12,13 @@ class Program
         ISerializer serializer = new JsonNetSerializer();
         var udpServerInfo = new LocalUdpServerInfoCreator().Create();
         using IServer server = new UdpServer(udpServerInfo);
-        using NetworkManager networkManager = new NetworkManager(server, serializer, modelManager) {MillisecondsTickServer = 100};
+        NetworkManager networkManager = new NetworkManager(server, serializer, modelManager) {MillisecondsTick = 100};
 
+        networkManager.Start();
         Console.WriteLine("Press 'q' to stop server");
         while (Console.ReadKey().Key != ConsoleKey.Q)
         {
         }
+        networkManager.Stop();
     }
 }

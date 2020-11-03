@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         _client.Update();
+        _networkManager.Update();
     }
 
     private void OnDestroy()

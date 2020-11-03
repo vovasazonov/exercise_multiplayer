@@ -1,6 +1,6 @@
 ﻿namespace Network
 {
-    public interface ICustomPacket
+    public interface IMutablePacket
     {
         byte[] Data { get; }
         

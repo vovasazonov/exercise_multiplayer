@@ -5,10 +5,10 @@ namespace Network.CommandHandlers
 {
     public readonly struct MainCommandHandler : ICommandHandler
     {
-        private readonly ICustomPacket _unprocessedReceivedPacket;
+        private readonly IMutablePacket _unprocessedReceivedPacket;
         private readonly IModelManager _modelManager;
 
-        public MainCommandHandler(ICustomPacket unprocessedReceivedPacket, IModelManager modelManager)
+        public MainCommandHandler(IMutablePacket unprocessedReceivedPacket, IModelManager modelManager)
         {
             _unprocessedReceivedPacket = unprocessedReceivedPacket;
             _modelManager = modelManager;

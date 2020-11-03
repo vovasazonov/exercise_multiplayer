@@ -1,47 +1,68 @@
 ﻿using System;
 using System.Collections.Generic;
 using Models;
+using Network.CommandHandlers;
 using Network.GameEventHandlers;
 using Network.PacketHandlers;
 using Serialization;
 
 namespace Network
 {
-    public class NetworkManager : IDisposable
+    public class NetworkManager
     {
         private readonly IServer _server;
         private readonly ISerializer _serializer;
         private readonly IModelManager _modelManager;
         private readonly IDictionary<uint, IClientProxy> _clientProxyDic = new Dictionary<uint, IClientProxy>();
-        private readonly ServerGameProcessor _gameProcessor;
         private readonly IGameEventHandler _mainGameEventHandler;
+        private readonly TickSystem _tickSystem;
+        private readonly Queue<ClientMessage> _messageQueue = new Queue<ClientMessage>();
 
-        public int MillisecondsTickServer
+        public int MillisecondsTick
         {
-            set => _gameProcessor.MillisecondsTick = value;
+            set => _tickSystem.MillisecondsTick = value;
         }
-        
+
         public NetworkManager(IServer server, ISerializer serializer, IModelManager modelManager)
         {
             _server = server;
             _serializer = serializer;
             _modelManager = modelManager;
-            _gameProcessor = new ServerGameProcessor(_clientProxyDic, _modelManager);
             _mainGameEventHandler = new MainGameEventHandler(_clientProxyDic, _modelManager);
+            _tickSystem = new TickSystem();
+        }
 
+        public void Start()
+        {
             _mainGameEventHandler.Activate();
             AddServerListener();
-            AddGameProcessorListener();
+            AddTickSystemListener();
+            _tickSystem.Start();
         }
 
-        private void AddGameProcessorListener()
+        public void Stop()
         {
-            _gameProcessor.Processed += OnGameProcessorProcessed;
+            _mainGameEventHandler.Deactivate();
+            RemoveServerListener();
+            RemoveTickSystemListener();
+            _tickSystem.Stop();
         }
 
-        private void RemoveGameProcessorListener()
+        private void HandleUnprocessedClients()
         {
-            _gameProcessor.Processed -= OnGameProcessorProcessed;
+            foreach (var clientProxy in _clientProxyDic.Values)
+            {
+                HandleUnprocessedCommands(clientProxy);
+            }
+        }
+
+        private void HandleUnprocessedCommands(IClientProxy clientProxy)
+        {
+            while (clientProxy.UnprocessedReceivedPacket.Data.Length > 0)
+            {
+                ICommandHandler commandHandler = new MainCommandHandler(clientProxy.UnprocessedReceivedPacket, _modelManager);
+                commandHandler.HandleCommand();
+            }
         }
 
         private void AddServerListener()
@@ -58,27 +79,63 @@ namespace Network
             _server.ClientDisconnect -= OnClientDisconnect;
         }
 
-        private void OnGameProcessorProcessed(object sender, EventArgs eventArgs)
+        private void AddTickSystemListener()
         {
+            _tickSystem.TickStart += OnTickStart;
+        }
+
+        private void RemoveTickSystemListener()
+        {
+            _tickSystem.TickStart -= OnTickStart;
+        }
+
+        private void OnTickStart(object sender, EventArgs e)
+        {
+            FreeMessageQueue();
+            HandleUnprocessedClients();
             SendPacketsToClients();
+        }
+
+        private void FreeMessageQueue()
+        {
+            while (_messageQueue.Count > 0)
+            {
+                var message = _messageQueue.Dequeue();
+                IPacketHandler packetHandler = null;
+
+                switch (message.MessageType)
+                {
+                    case MessageType.Connect:
+                        packetHandler = new ConnectPacketHandler(message.ClientId, _clientProxyDic, _serializer, _modelManager);
+                        break;
+                    case MessageType.Disconnect:
+                        packetHandler = new DisconnectPacketHandler(message.ClientId, _clientProxyDic);
+                        break;
+                    case MessageType.Command:
+                        packetHandler = new CommandPacketHandler(message.ClientId, message.Packet, _clientProxyDic);
+                        break;
+                }
+
+                packetHandler?.HandlePacket();
+            }
         }
 
         private void OnClientDisconnect(object sender, PacketReceivedEventArgs packetReceivedEventArgs)
         {
-            IPacketHandler packetHandler = new DisconnectPacketHandler(packetReceivedEventArgs.ClientId, _clientProxyDic);
-            packetHandler.HandlePacket();
+            var packet = new ClientMessage(packetReceivedEventArgs.ClientId,MessageType.Disconnect, packetReceivedEventArgs.Packet);
+            _messageQueue.Enqueue(packet);
         }
 
         private void OnClientConnect(object sender, PacketReceivedEventArgs packetReceivedEventArgs)
         {
-            IPacketHandler packetHandler = new ConnectPacketHandler(packetReceivedEventArgs.ClientId, _clientProxyDic, _serializer, _modelManager);
-            packetHandler.HandlePacket();
+            var packet = new ClientMessage(packetReceivedEventArgs.ClientId, MessageType.Connect, packetReceivedEventArgs.Packet);
+            _messageQueue.Enqueue(packet);
         }
 
         private void OnPacketReceived(object sender, PacketReceivedEventArgs packetReceivedEventArgs)
         {
-            IPacketHandler packetHandler = new CommandPacketHandler(packetReceivedEventArgs.ClientId, packetReceivedEventArgs.Packet, _clientProxyDic);
-            packetHandler.HandlePacket();
+            var packet = new ClientMessage(packetReceivedEventArgs.ClientId, MessageType.Command, packetReceivedEventArgs.Packet);
+            _messageQueue.Enqueue(packet);
         }
 
         private void SendPacketsToClients()
@@ -91,16 +148,6 @@ namespace Network
                     clientProxy.NotSentToClientPacket.Clear();
                 }
             }
-        }
-
-        public void Dispose()
-        {
-            _mainGameEventHandler.Deactivate();
-            RemoveServerListener();
-            RemoveGameProcessorListener();
-
-            _server?.Dispose();
-            _gameProcessor?.Dispose();
         }
     }
 }

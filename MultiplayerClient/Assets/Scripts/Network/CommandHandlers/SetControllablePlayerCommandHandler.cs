@@ -2,10 +2,10 @@
 {
     public readonly struct SetControllablePlayerCommandHandler : ICommandHandler
     {
-        private readonly ICustomPacket _packet;
+        private readonly IMutablePacket _packet;
         private readonly IModelManagerClient _modelManagerClient;
 
-        public SetControllablePlayerCommandHandler(ICustomPacket packet, IModelManagerClient modelManagerClient)
+        public SetControllablePlayerCommandHandler(IMutablePacket packet, IModelManagerClient modelManagerClient)
         {
             _packet = packet;
             _modelManagerClient = modelManagerClient;

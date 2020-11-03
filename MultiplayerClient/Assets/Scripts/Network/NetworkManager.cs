@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Threading.Tasks;
 using Network.GameEventHandlers;
 using Network.PacketHandlers;
 using Serialization;
@@ -11,9 +10,7 @@ namespace Network
         private readonly IClient _client;
         private readonly ISerializer _serializer;
         private readonly IModelManagerClient _modelManagerClient;
-        private bool _isNetworkManagerRun;
-        private readonly Task _sendPacketLoopTask;
-        private readonly ICustomPacket _everyTickToServerPacket;
+        private readonly IMutablePacket _everyTickToServerPacket;
         private int _millisecondsBetweenSend;
         private readonly IGameEventHandler _mainGameEventHandler;
 
@@ -27,13 +24,10 @@ namespace Network
             _client = client;
             _serializer = serializer;
             _modelManagerClient = modelManagerClient;
-            _everyTickToServerPacket = new CustomPacket(_serializer);
+            _everyTickToServerPacket = new MutablePacket(_serializer);
             _mainGameEventHandler = new MainGameEventHandler(_everyTickToServerPacket, _modelManagerClient.ModelManager);
             _mainGameEventHandler.Activate();
             
-            _sendPacketLoopTask = new Task(StartSendPacketLoop);
-            _sendPacketLoopTask.Start();
-
             AddClientListeners();
         }
 
@@ -51,25 +45,23 @@ namespace Network
             _client.PacketReceived -= OnPacketReceived;
         }
 
-        private void StartSendPacketLoop()
+        public void Update()
         {
-            _isNetworkManagerRun = true;
-
-            while (_isNetworkManagerRun)
+            SendPacket();
+        }
+        
+        private void SendPacket()
+        {
+            if (_everyTickToServerPacket.Data.Length > 0)
             {
-                Task.Delay(_millisecondsBetweenSend).Wait();
-
-                if (_everyTickToServerPacket.Data.Length > 0)
-                {
-                    _client.SendPacket(_everyTickToServerPacket.Data);
-                    _everyTickToServerPacket.Clear();
-                }
+                _client.SendPacket(_everyTickToServerPacket.Data);
+                _everyTickToServerPacket.Clear();
             }
         }
 
         private void OnPacketReceived(object sender, PacketReceivedEventArgs packetReceivedEventArgs)
         {
-            var packet = new CustomPacket(_serializer);
+            var packet = new MutablePacket(_serializer);
             packet.Fill(packetReceivedEventArgs.Packet);
             IPacketHandler packetHandler = new CommandPacketHandler(packet, _modelManagerClient);
             packetHandler.HandlePacket();
@@ -91,9 +83,6 @@ namespace Network
         {
             _mainGameEventHandler.Deactivate();
             RemoveClientListeners();
-            _isNetworkManagerRun = false;
-            _sendPacketLoopTask.Wait();
-            _client?.Dispose();
         }
     }
 }

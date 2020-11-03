@@ -4,10 +4,10 @@ namespace Network.CommandHandlers
 {
     public readonly struct CharacterRemoveCommandHandler : ICommandHandler
     {
-        private readonly ICustomPacket _packet;
+        private readonly IMutablePacket _packet;
         private readonly IModelManager _modelManager;
 
-        public CharacterRemoveCommandHandler(ICustomPacket packet, IModelManager modelManager)
+        public CharacterRemoveCommandHandler(IMutablePacket packet, IModelManager modelManager)
         {
             _packet = packet;
             _modelManager = modelManager;

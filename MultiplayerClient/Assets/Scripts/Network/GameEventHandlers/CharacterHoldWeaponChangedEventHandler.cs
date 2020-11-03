@@ -6,10 +6,10 @@ namespace Network.GameEventHandlers
     public struct CharacterHoldWeaponChangedEventHandler : IGameEventHandler
     {
         private readonly ICharacterModel _characterModel;
-        private readonly ICustomPacket _recordPacket;
+        private readonly IMutablePacket _recordPacket;
         private readonly int _characterExemplarId;
 
-        public CharacterHoldWeaponChangedEventHandler(ICustomPacket recordPacket, int characterExemplarId, ICharacterModel characterModel)
+        public CharacterHoldWeaponChangedEventHandler(IMutablePacket recordPacket, int characterExemplarId, ICharacterModel characterModel)
         {
             _recordPacket = recordPacket;
             _characterExemplarId = characterExemplarId;

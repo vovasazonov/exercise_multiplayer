@@ -3,14 +3,14 @@ using Serialization;
 
 namespace Network
 {
-    public class CustomPacket : ICustomPacket
+    public class MutablePacket : IMutablePacket
     {
         private readonly Queue<byte> _data = new Queue<byte>();
         private readonly ISerializer _serializer;
 
         public byte[] Data => _data.ToArray();
 
-        public CustomPacket(ISerializer serializer)
+        public MutablePacket(ISerializer serializer)
         {
             _serializer = serializer;
         }

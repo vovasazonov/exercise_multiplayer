@@ -4,10 +4,10 @@ namespace Network.CommandHandlers
 {
     public readonly struct CharacterHpChangedCommandHandler : ICommandHandler
     {
-        private readonly ICustomPacket _packet;
+        private readonly IMutablePacket _packet;
         private readonly IModelManager _modelManager;
 
-        public CharacterHpChangedCommandHandler(ICustomPacket packet, IModelManager modelManager)
+        public CharacterHpChangedCommandHandler(IMutablePacket packet, IModelManager modelManager)
         {
             _packet = packet;
             _modelManager = modelManager;

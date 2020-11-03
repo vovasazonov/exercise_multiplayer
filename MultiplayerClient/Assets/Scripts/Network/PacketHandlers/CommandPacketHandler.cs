@@ -5,10 +5,10 @@ namespace Network.PacketHandlers
 {
     public readonly struct CommandPacketHandler : IPacketHandler
     {
-        private readonly ICustomPacket _packet;
+        private readonly IMutablePacket _packet;
         private readonly IModelManagerClient _modelManagerClient;
 
-        public CommandPacketHandler(ICustomPacket packet, IModelManagerClient modelManagerClient)
+        public CommandPacketHandler(IMutablePacket packet, IModelManagerClient modelManagerClient)
         {
             _packet = packet;
             _modelManagerClient = modelManagerClient;

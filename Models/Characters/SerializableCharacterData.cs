@@ -5,7 +5,7 @@ namespace Models.Characters
 {
     [Serializable]
     [DataContract]
-    public struct SerializableCharacterData : ICharacterData
+    public class SerializableCharacterData : ICharacterData
     {
         [DataMember] private SerializableHealthPointData _serializableHealthPointDataHelper;
 
@@ -17,6 +17,8 @@ namespace Models.Characters
             get => _serializableHealthPointDataHelper;
             set => _serializableHealthPointDataHelper = new SerializableHealthPointData(value);
         }
+        
+        public SerializableCharacterData(){}
 
         public SerializableCharacterData(ICharacterData data)
         {

@@ -5,10 +5,12 @@ namespace Models.Characters
 {
     [Serializable]
     [DataContract]
-    public struct SerializableHealthPointData : IHealthPointData
+    public class SerializableHealthPointData : IHealthPointData
     {
         [DataMember] public uint MaxPoints { get; set; }
         [DataMember] public uint Points { get; set; }
+        
+        public SerializableHealthPointData(){}
         
         public SerializableHealthPointData(IHealthPointData data)
         {

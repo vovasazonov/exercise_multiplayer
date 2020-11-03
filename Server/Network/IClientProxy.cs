@@ -3,7 +3,7 @@
     public interface IClientProxy
     {
         uint Id { get; }
-        ICustomPacket UnprocessedReceivedPacket { get; }
-        ICustomPacket NotSentToClientPacket { get; }
+        IMutablePacket NotSentToClientPacket { get; }
+        IMutablePacket UnprocessedReceivedPacket { get; }
     }
 }

@@ -4,10 +4,10 @@ namespace Network.CommandHandlers
 {
     public readonly struct CharacterAttackEnemyCommandHandler : ICommandHandler
     {
-        private readonly ICustomPacket _unprocessedReceivedPacket;
+        private readonly IMutablePacket _unprocessedReceivedPacket;
         private readonly IModelManager _modelManager;
 
-        public CharacterAttackEnemyCommandHandler(ICustomPacket unprocessedReceivedPacket, IModelManager modelManager)
+        public CharacterAttackEnemyCommandHandler(IMutablePacket unprocessedReceivedPacket, IModelManager modelManager)
         {
             _unprocessedReceivedPacket = unprocessedReceivedPacket;
             _modelManager = modelManager;

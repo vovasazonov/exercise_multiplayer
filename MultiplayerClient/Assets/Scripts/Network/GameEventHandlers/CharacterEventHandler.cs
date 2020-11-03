@@ -5,12 +5,12 @@ namespace Network.GameEventHandlers
 {
     public class CharacterEventHandler : IGameEventHandler
     {
-        private readonly ICustomPacket _recordPacket;
+        private readonly IMutablePacket _recordPacket;
         private readonly ITrackableDictionary<int, ICharacterModel> _characterModelDic;
         private readonly IDictionary<int, CharacterEnemyAttackedEventHandler> _enemyAttackedEventHandlerDic = new Dictionary<int, CharacterEnemyAttackedEventHandler>();
         private readonly IDictionary<int, CharacterHoldWeaponChangedEventHandler> _characterHoldWeaponEventHandlerDic = new Dictionary<int, CharacterHoldWeaponChangedEventHandler>();
 
-        public CharacterEventHandler(ICustomPacket recordPacket, ITrackableDictionary<int, ICharacterModel> characterModelDic)
+        public CharacterEventHandler(IMutablePacket recordPacket, ITrackableDictionary<int, ICharacterModel> characterModelDic)
         {
             _recordPacket = recordPacket;
             _characterModelDic = characterModelDic;

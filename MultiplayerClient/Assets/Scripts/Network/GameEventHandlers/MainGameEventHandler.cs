@@ -5,11 +5,11 @@ namespace Network.GameEventHandlers
 {
     public class MainGameEventHandler : IGameEventHandler
     {
-        private readonly ICustomPacket _recordPacket;
+        private readonly IMutablePacket _recordPacket;
         private readonly IModelManager _modelManager;
         private readonly List<IGameEventHandler> _eventHandlers = new List<IGameEventHandler>();
 
-        public MainGameEventHandler(ICustomPacket recordPacket, IModelManager modelManager)
+        public MainGameEventHandler(IMutablePacket recordPacket, IModelManager modelManager)
         {
             _recordPacket = recordPacket;
             _modelManager = modelManager;
