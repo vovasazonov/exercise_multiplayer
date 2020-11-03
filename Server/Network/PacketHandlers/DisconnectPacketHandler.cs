@@ -7,13 +7,11 @@ namespace Network.PacketHandlers
     {
         private readonly uint _clientId;
         private readonly IDictionary<uint, IClientProxy> _clientProxyDic;
-        private readonly IModelManager _modelManager;
 
-        public DisconnectPacketHandler(in uint clientId, IDictionary<uint, IClientProxy> clientProxyDic, IModelManager modelManager)
+        public DisconnectPacketHandler(in uint clientId, IDictionary<uint, IClientProxy> clientProxyDic)
         {
             _clientId = clientId;
             _clientProxyDic = clientProxyDic;
-            _modelManager = modelManager;
         }
 
         public void HandlePacket()

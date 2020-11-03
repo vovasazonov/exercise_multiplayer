@@ -20,51 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09d9d4c8-d346-4524-9eb7-28dc055df806" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../ModelsTests/NewsoftTester.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Server/Network/ClientMessage.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Server/Network/IClientMessage.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Server/Network/ITickSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Server/Network/MessageType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Server/Network/TickSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Models/Characters/SerializableCharacterData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Models/Characters/SerializableCharacterData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Models/Characters/SerializableHealthPointData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Models/Characters/SerializableHealthPointData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MultiplayerClient/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MultiplayerClient/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MultiplayerClient/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MultiplayerClient/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Libs/Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Libs/Models.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Libs/Models.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Libs/SharedCode.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Libs/SharedCode.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Libs/SharedCode.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/PresenterManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/PresenterManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/CommandHandlers/CharacterAddCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/CommandHandlers/CharacterAddCommandHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/CommandHandlers/CharacterHpChangedCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/CommandHandlers/CharacterHpChangedCommandHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/CommandHandlers/CharacterRemoveCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/CommandHandlers/CharacterRemoveCommandHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/CommandHandlers/PlayerConnectedCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/CommandHandlers/PlayerConnectedCommandHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/CommandHandlers/PlayerDisconnectedCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/CommandHandlers/PlayerDisconnectedCommandHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/CommandHandlers/SetControllablePlayerCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/CommandHandlers/SetControllablePlayerCommandHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/GameEventHandlers/CharacterAddingEventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/GameEventHandlers/CharacterAddingEventHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/GameEventHandlers/CharacterEnemyAttackedEventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/GameEventHandlers/CharacterEnemyAttackedEventHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/GameEventHandlers/CharacterEventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/GameEventHandlers/CharacterEventHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/GameEventHandlers/CharacterHoldWeaponChangedEventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/GameEventHandlers/CharacterHoldWeaponChangedEventHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/GameEventHandlers/CharacterRemovingEventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/GameEventHandlers/CharacterRemovingEventHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/GameEventHandlers/MainGameEventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/GameEventHandlers/MainGameEventHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/NetworkManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/NetworkManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/PacketHandlers/CommandPacketHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/PacketHandlers/CommandPacketHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Network/ClientProxy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Network/ClientProxy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Network/CommandHandlers/CharacterAddEnemyCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Network/CommandHandlers/CharacterAddEnemyCommandHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Network/CommandHandlers/CharacterAttackEnemyCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Network/CommandHandlers/CharacterAttackEnemyCommandHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Network/CommandHandlers/CharacterRemoveEnemyCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Network/CommandHandlers/CharacterRemoveEnemyCommandHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Network/CommandHandlers/HoldWeaponChangedCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Network/CommandHandlers/HoldWeaponChangedCommandHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Network/CommandHandlers/MainCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Network/CommandHandlers/MainCommandHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Network/GameEventHandlers/CharacterRemovingEventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Network/GameEventHandlers/CharacterRemovingEventHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Network/IClientProxy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Network/IClientProxy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Network/NetworkManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Network/NetworkManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Network/ServerGameProcessor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SharedCode/Network/CustomPacket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SharedCode/Network/MutablePacket.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SharedCode/Network/ICustomPacket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SharedCode/Network/IMutablePacket.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SharedCode/Serialization/JsonNetSerialization/JsonNetSerializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SharedCode/Serialization/JsonNetSerialization/JsonNetSerializer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SharedCode/System/Collections/Generic/QueueExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SharedCode/System/Collections/Generic/QueueExtensions.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,7 +152,7 @@
       <workItem from="1603951220740" duration="33677000" />
       <workItem from="1604030101497" duration="22418000" />
       <workItem from="1604294883544" duration="13496000" />
-      <workItem from="1604379619398" duration="7581000" />
+      <workItem from="1604379619398" duration="8232000" />
     </task>
     <servers />
   </component>
@@ -229,70 +185,70 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="564" height="436" key="DebuggerActiveHint/0.0.1366.738@0.0.1366.738" timestamp="1604386653306" />
-    <state width="1323" height="142" key="GridCell.Tab.0.bottom" timestamp="1604387332249">
+    <state width="1323" height="142" key="GridCell.Tab.0.bottom" timestamp="1604388012503">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="142" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1604387332249" />
-    <state width="1323" height="142" key="GridCell.Tab.0.center" timestamp="1604387332249">
+    <state width="1323" height="142" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1604388012503" />
+    <state width="1323" height="142" key="GridCell.Tab.0.center" timestamp="1604388012502">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="142" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1604387332249" />
-    <state width="1323" height="142" key="GridCell.Tab.0.left" timestamp="1604387332249">
+    <state width="1323" height="142" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1604388012502" />
+    <state width="1323" height="142" key="GridCell.Tab.0.left" timestamp="1604388012501">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="142" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1604387332249" />
-    <state width="1323" height="142" key="GridCell.Tab.0.right" timestamp="1604387332249">
+    <state width="1323" height="142" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1604388012501" />
+    <state width="1323" height="142" key="GridCell.Tab.0.right" timestamp="1604388012502">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="142" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1604387332249" />
-    <state width="1323" height="142" key="GridCell.Tab.1.bottom" timestamp="1604387389312">
+    <state width="1323" height="142" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1604388012502" />
+    <state width="1323" height="142" key="GridCell.Tab.1.bottom" timestamp="1604388012504">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="142" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1604387389312" />
-    <state width="1323" height="142" key="GridCell.Tab.1.center" timestamp="1604387389312">
+    <state width="1323" height="142" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1604388012504" />
+    <state width="1323" height="142" key="GridCell.Tab.1.center" timestamp="1604388012503">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="142" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1604387389312" />
-    <state width="1323" height="142" key="GridCell.Tab.1.left" timestamp="1604387389311">
+    <state width="1323" height="142" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1604388012503" />
+    <state width="1323" height="142" key="GridCell.Tab.1.left" timestamp="1604388012503">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="142" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1604387389311" />
-    <state width="1323" height="142" key="GridCell.Tab.1.right" timestamp="1604387389312">
+    <state width="1323" height="142" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1604388012503" />
+    <state width="1323" height="142" key="GridCell.Tab.1.right" timestamp="1604388012504">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="142" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1604387389312" />
-    <state width="1323" height="142" key="GridCell.Tab.2.bottom" timestamp="1604387331893">
+    <state width="1323" height="142" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1604388012504" />
+    <state width="1323" height="142" key="GridCell.Tab.2.bottom" timestamp="1604388012505">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="142" key="GridCell.Tab.2.bottom/0.0.1366.738@0.0.1366.738" timestamp="1604387331893" />
-    <state width="1323" height="142" key="GridCell.Tab.2.center" timestamp="1604387331892">
+    <state width="1323" height="142" key="GridCell.Tab.2.bottom/0.0.1366.738@0.0.1366.738" timestamp="1604388012505" />
+    <state width="1323" height="142" key="GridCell.Tab.2.center" timestamp="1604388012505">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="142" key="GridCell.Tab.2.center/0.0.1366.738@0.0.1366.738" timestamp="1604387331892" />
-    <state width="1323" height="142" key="GridCell.Tab.2.left" timestamp="1604387331892">
+    <state width="1323" height="142" key="GridCell.Tab.2.center/0.0.1366.738@0.0.1366.738" timestamp="1604388012505" />
+    <state width="1323" height="142" key="GridCell.Tab.2.left" timestamp="1604388012504">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="142" key="GridCell.Tab.2.left/0.0.1366.738@0.0.1366.738" timestamp="1604387331892" />
-    <state width="1323" height="142" key="GridCell.Tab.2.right" timestamp="1604387331892">
+    <state width="1323" height="142" key="GridCell.Tab.2.left/0.0.1366.738@0.0.1366.738" timestamp="1604388012504" />
+    <state width="1323" height="142" key="GridCell.Tab.2.right" timestamp="1604388012505">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="142" key="GridCell.Tab.2.right/0.0.1366.738@0.0.1366.738" timestamp="1604387331892" />
-    <state width="1323" height="142" key="GridCell.Tab.3.bottom" timestamp="1604387331893">
+    <state width="1323" height="142" key="GridCell.Tab.2.right/0.0.1366.738@0.0.1366.738" timestamp="1604388012505" />
+    <state width="1323" height="142" key="GridCell.Tab.3.bottom" timestamp="1604388012506">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="142" key="GridCell.Tab.3.bottom/0.0.1366.738@0.0.1366.738" timestamp="1604387331893" />
-    <state width="1323" height="142" key="GridCell.Tab.3.center" timestamp="1604387331893">
+    <state width="1323" height="142" key="GridCell.Tab.3.bottom/0.0.1366.738@0.0.1366.738" timestamp="1604388012506" />
+    <state width="1323" height="142" key="GridCell.Tab.3.center" timestamp="1604388012505">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="142" key="GridCell.Tab.3.center/0.0.1366.738@0.0.1366.738" timestamp="1604387331893" />
-    <state width="1323" height="142" key="GridCell.Tab.3.left" timestamp="1604387331893">
+    <state width="1323" height="142" key="GridCell.Tab.3.center/0.0.1366.738@0.0.1366.738" timestamp="1604388012505" />
+    <state width="1323" height="142" key="GridCell.Tab.3.left" timestamp="1604388012505">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="142" key="GridCell.Tab.3.left/0.0.1366.738@0.0.1366.738" timestamp="1604387331893" />
-    <state width="1323" height="142" key="GridCell.Tab.3.right" timestamp="1604387331893">
+    <state width="1323" height="142" key="GridCell.Tab.3.left/0.0.1366.738@0.0.1366.738" timestamp="1604388012505" />
+    <state width="1323" height="142" key="GridCell.Tab.3.right" timestamp="1604388012506">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="142" key="GridCell.Tab.3.right/0.0.1366.738@0.0.1366.738" timestamp="1604387331893" />
+    <state width="1323" height="142" key="GridCell.Tab.3.right/0.0.1366.738@0.0.1366.738" timestamp="1604388012506" />
     <state x="517" y="70" key="RiderGenerateDialog" timestamp="1604038881419">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
