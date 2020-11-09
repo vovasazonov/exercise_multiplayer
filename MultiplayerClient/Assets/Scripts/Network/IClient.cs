@@ -9,6 +9,5 @@ namespace Network
         event EventHandler<PacketReceivedEventArgs> PacketReceived;
     
         void SendPacket(byte[] packetBytes);
-        void Update();
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Network.GameEventHandlers;
 using Network.PacketHandlers;
 using Serialization;
@@ -11,8 +12,10 @@ namespace Network
         private readonly ISerializer _serializer;
         private readonly IModelManagerClient _modelManagerClient;
         private readonly IMutablePacket _everyTickToServerPacket;
-        private int _millisecondsBetweenSend;
         private readonly IGameEventHandler _mainGameEventHandler;
+        private readonly Queue<IMutablePacket> _receivedPackets = new Queue<IMutablePacket>();
+        private int _millisecondsBetweenSend;
+        private DateTime _lastTimeSend;
 
         public int MillisecondsBetweenSendPacket
         {
@@ -25,9 +28,10 @@ namespace Network
             _serializer = serializer;
             _modelManagerClient = modelManagerClient;
             _everyTickToServerPacket = new MutablePacket(_serializer);
-            _mainGameEventHandler = new MainGameEventHandler(_everyTickToServerPacket, _modelManagerClient.ModelManager);
+            _mainGameEventHandler =
+                new MainGameEventHandler(_everyTickToServerPacket, _modelManagerClient.ModelManager);
             _mainGameEventHandler.Activate();
-            
+
             AddClientListeners();
         }
 
@@ -48,23 +52,49 @@ namespace Network
         public void Update()
         {
             SendPacket();
+            ProcessReceivedPackets();
         }
-        
+
+        private void ProcessReceivedPackets()
+        {
+            while (_receivedPackets.Count > 0)
+            {
+                var packet = _receivedPackets.Dequeue();
+                IPacketHandler packetHandler = new CommandPacketHandler(packet, _modelManagerClient);
+                packetHandler.HandlePacket();
+            }
+        }
+
         private void SendPacket()
         {
-            if (_everyTickToServerPacket.Data.Length > 0)
+            if (CheckPermissionSend())
             {
-                _client.SendPacket(_everyTickToServerPacket.Data);
-                _everyTickToServerPacket.Clear();
+                if (_everyTickToServerPacket.Data.Length > 0)
+                {
+                    _client.SendPacket(_everyTickToServerPacket.Data);
+                    _everyTickToServerPacket.Clear();
+                }
             }
+        }
+
+        private bool CheckPermissionSend()
+        {
+            var differenceTimeBetweenSend = DateTime.Now - _lastTimeSend;
+            var havePermission = differenceTimeBetweenSend.TotalMilliseconds > _millisecondsBetweenSend;
+
+            if (havePermission)
+            {
+                _lastTimeSend = DateTime.Now;
+            }
+            
+            return havePermission;
         }
 
         private void OnPacketReceived(object sender, PacketReceivedEventArgs packetReceivedEventArgs)
         {
             var packet = new MutablePacket(_serializer);
             packet.Fill(packetReceivedEventArgs.Packet);
-            IPacketHandler packetHandler = new CommandPacketHandler(packet, _modelManagerClient);
-            packetHandler.HandlePacket();
+            _receivedPackets.Enqueue(packet);
         }
 
         private void OnClientDisconnected(object sender, PacketReceivedEventArgs packetReceivedEventArgs)

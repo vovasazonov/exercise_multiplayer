@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using ENet;
 #if UNITY_EDITOR
 using UnityEngine;
@@ -16,11 +17,13 @@ namespace Network
         private readonly Host _client;
         private readonly Peer _peerServer;
         private readonly UdpClientInfo _udpClientInfo;
+        private bool _isLoopTask;
+        private readonly Task _loopTask;
 
         public UdpClient(UdpClientInfo udpClientInfo)
         {
             _udpClientInfo = udpClientInfo;
-            
+
             ENet.Library.Initialize();
             _client = new Host();
             Address address = new Address();
@@ -31,6 +34,8 @@ namespace Network
             Debug.Log("Connecting");
 #endif
             _peerServer = _client.Connect(address);
+            _isLoopTask = true;
+            _loopTask = Task.Factory.StartNew(Loop).ContinueWith(task => Debug.Log(task.Exception), TaskContinuationOptions.OnlyOnFaulted);
         }
 
         public void SendPacket(byte[] packetBytes)
@@ -40,34 +45,37 @@ namespace Network
             _peerServer.Send(_udpClientInfo.ChannelId, ref packet);
         }
 
-        public void Update()
+        private void Loop()
         {
-            bool hasEventInQueue = _client.CheckEvents(out var netEvent) <= 0;
-            bool isGetEvent = hasEventInQueue && _client.Service(0, out netEvent) > 0;
-
-            if (isGetEvent)
+            while (_isLoopTask)
             {
-                switch (netEvent.Type)
+                bool hasEventInQueue = _client.CheckEvents(out var netEvent) <= 0;
+                bool isGetEvent = hasEventInQueue && _client.Service(15, out netEvent) > 0;
+
+                if (isGetEvent)
                 {
-                    case ENet.EventType.None:
-                        break;
+                    switch (netEvent.Type)
+                    {
+                        case ENet.EventType.None:
+                            break;
 
-                    case ENet.EventType.Connect:
-                        HandleConnectEvent(netEvent);
-                        break;
+                        case ENet.EventType.Connect:
+                            HandleConnectEvent(netEvent);
+                            break;
 
-                    case ENet.EventType.Disconnect:
-                        HandleDisconnectEvent(netEvent);
-                        break;
+                        case ENet.EventType.Disconnect:
+                            HandleDisconnectEvent(netEvent);
+                            break;
 
-                    case ENet.EventType.Timeout:
-                        HandleTimeoutEvent(netEvent);
-                        break;
+                        case ENet.EventType.Timeout:
+                            HandleTimeoutEvent(netEvent);
+                            break;
 
-                    case ENet.EventType.Receive:
-                        HandleReceiveEvent(ref netEvent);
-                        netEvent.Packet.Dispose();
-                        break;
+                        case ENet.EventType.Receive:
+                            HandleReceiveEvent(ref netEvent);
+                            netEvent.Packet.Dispose();
+                            break;
+                    }
                 }
             }
         }
@@ -75,7 +83,8 @@ namespace Network
         private void HandleReceiveEvent(ref Event netEvent)
         {
 #if UNITY_EDITOR
-            Debug.Log("Packet received from server - Channel ID: " + netEvent.ChannelID + ", Data length: " + netEvent.Packet.Length);
+            Debug.Log("Packet received from server - Channel ID: " + netEvent.ChannelID + ", Data length: " +
+                      netEvent.Packet.Length);
 #endif
             byte[] packetBytes = new byte[netEvent.Packet.Length];
             netEvent.Packet.CopyTo(packetBytes);
@@ -134,7 +143,8 @@ namespace Network
         public void Dispose()
         {
             _client.Dispose();
-
+            _isLoopTask = false;
+            _loopTask.Wait();
             ENet.Library.Deinitialize();
         }
     }
