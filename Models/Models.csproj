@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{42293BDF-2827-4B9F-86D7-BB55912632BC}</ProjectGuid>
+        <OutputType>Library</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <RootNamespace>Models</RootNamespace>
+        <AssemblyName>Models</AssemblyName>
+        <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="System" />
+        <Reference Include="System.Core" />
+        <Reference Include="System.Data" />
+        <Reference Include="System.Runtime.Serialization" />
+        <Reference Include="System.Xml" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Characters\AttackEventArgs.cs" />
+        <Compile Include="Characters\CharacterData.cs" />
+        <Compile Include="Characters\CharacterDataExtension.cs" />
+        <Compile Include="Characters\CharacterModel.cs" />
+        <Compile Include="Characters\HealthPointData.cs" />
+        <Compile Include="Characters\HealthPointDataExtension.cs" />
+        <Compile Include="Characters\HealthPointModel.cs" />
+        <Compile Include="Characters\ICharacterData.cs" />
+        <Compile Include="Characters\ICharacterModel.cs" />
+        <Compile Include="Characters\IHealthPointData.cs" />
+        <Compile Include="Characters\IHealthPointModel.cs" />
+        <Compile Include="Characters\SerializableCharacterData.cs" />
+        <Compile Include="Characters\SerializableHealthPointData.cs" />
+        <Compile Include="IModelManager.cs" />
+        <Compile Include="IPlayerModel.cs" />
+        <Compile Include="ModelManager.cs" />
+        <Compile Include="PlayerModel.cs" />
+        <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="Weapons\IWeaponData.cs" />
+        <Compile Include="Weapons\IWeaponModel.cs" />
+        <Compile Include="Weapons\SerializableWeaponData.cs" />
+        <Compile Include="Weapons\WeaponData.cs" />
+        <Compile Include="Weapons\WeaponModel.cs" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\SharedCode\SharedCode.csproj">
+        <Project>{f7ae2fd2-5e64-4858-8224-64f136a34b5b}</Project>
+        <Name>SharedCode</Name>
+      </ProjectReference>
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+    <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+
+</Project>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\vovas\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\vovas\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_exercise_multiplayer.-210725264.00" t="ExcludeRecursive" />
+    <e p="D:\Users\vovas\Documents\Repos\exercise_multiplayer" t="IncludeFlat">
+      <e p="exercise_multiplayer.sln" t="IncludeFlat" />
+      <e p="Models" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Characters" t="Include">
+          <e p="AttackEventArgs.cs" t="Include" />
+          <e p="CharacterData.cs" t="Include" />
+          <e p="CharacterDataExtension.cs" t="Include" />
+          <e p="CharacterModel.cs" t="Include" />
+          <e p="HealthPointData.cs" t="Include" />
+          <e p="HealthPointDataExtension.cs" t="Include" />
+          <e p="HealthPointModel.cs" t="Include" />
+          <e p="ICharacterData.cs" t="Include" />
+          <e p="ICharacterModel.cs" t="Include" />
+          <e p="IHealthPointData.cs" t="Include" />
+          <e p="IHealthPointModel.cs" t="Include" />
+          <e p="SerializableCharacterData.cs" t="Include" />
+          <e p="SerializableHealthPointData.cs" t="Include" />
+        </e>
+        <e p="IModelManager.cs" t="Include" />
+        <e p="IPlayerModel.cs" t="Include" />
+        <e p="ModelManager.cs" t="Include" />
+        <e p="Models.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="PlayerModel.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Weapons" t="Include">
+          <e p="IWeaponData.cs" t="Include" />
+          <e p="IWeaponModel.cs" t="Include" />
+          <e p="SerializableWeaponData.cs" t="Include" />
+          <e p="WeaponData.cs" t="Include" />
+          <e p="WeaponModel.cs" t="Include" />
+        </e>
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Server" t="IncludeRecursive">
+        <e p=".gitignore" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="enet.dll" t="Include" />
+        <e p="Libs" t="Include">
+          <e p="ENet-CSharp.dll" t="Include" />
+        </e>
+        <e p="Network" t="Include">
+          <e p="ClientMessage.cs" t="Include" />
+          <e p="ClientProxy.cs" t="Include" />
+          <e p="CommandHandlers" t="Include">
+            <e p="CharacterAddEnemyCommandHandler.cs" t="Include" />
+            <e p="CharacterAttackEnemyCommandHandler.cs" t="Include" />
+            <e p="CharacterRemoveEnemyCommandHandler.cs" t="Include" />
+            <e p="HoldWeaponChangedCommandHandler.cs" t="Include" />
+            <e p="ICommandHandler.cs" t="Include" />
+            <e p="MainCommandHandler.cs" t="Include" />
+          </e>
+          <e p="GameEventHandlers" t="Include">
+            <e p="CharacterAddingEventHandler.cs" t="Include" />
+            <e p="CharacterRemovingEventHandler.cs" t="Include" />
+            <e p="HpChangedCharacterEventHandler.cs" t="Include" />
+            <e p="IGameEventHandler.cs" t="Include" />
+            <e p="MainCharacterEventHandler.cs" t="Include" />
+            <e p="MainGameEventHandler.cs" t="Include" />
+            <e p="PlayerAddingEventHandler.cs" t="Include" />
+          </e>
+          <e p="IClientMessage.cs" t="Include" />
+          <e p="IClientProxy.cs" t="Include" />
+          <e p="IServer.cs" t="Include" />
+          <e p="ITickSystem.cs" t="Include" />
+          <e p="IUdpServerInfoCreator.cs" t="Include" />
+          <e p="LocalUdpServerInfoCreator.cs" t="Include" />
+          <e p="MessageType.cs" t="Include" />
+          <e p="NetworkManager.cs" t="Include" />
+          <e p="PacketHandlers" t="Include">
+            <e p="CommandPacketHandler.cs" t="Include" />
+            <e p="ConnectPacketHandler.cs" t="Include" />
+            <e p="DisconnectPacketHandler.cs" t="Include" />
+            <e p="IPacketHandler.cs" t="Include" />
+          </e>
+          <e p="PacketReceivedEventArgs.cs" t="Include" />
+          <e p="TickSystem.cs" t="Include" />
+          <e p="UdpServer.cs" t="Include" />
+          <e p="UdpServerInfo.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="Server.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Server.csproj" t="IncludeRecursive" />
+        <e p="Server.csproj.DotSettings" t="Include" />
+        <e p="System" t="Include">
+          <e p="RandomExtension.cs" t="Include" />
+        </e>
+      </e>
+      <e p="SharedCode" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Network" t="Include">
+          <e p="GameCommandType.cs" t="Include" />
+          <e p="IMutablePacket.cs" t="Include" />
+          <e p="MutablePacket.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Serialization" t="Include">
+          <e p="BinaryFormatterSerialization" t="Include">
+            <e p="BinaryFormatterSerializer.cs" t="Include" />
+            <e p="CustomizedBinder.cs" t="Include" />
+          </e>
+          <e p="ISerializer.cs" t="Include" />
+          <e p="JsonNetSerialization" t="Include">
+            <e p="JsonNetSerializer.cs" t="Include" />
+          </e>
+        </e>
+        <e p="SharedCode.csproj" t="IncludeRecursive" />
+        <e p="System" t="Include">
+          <e p="Collections" t="Include">
+            <e p="Generic" t="Include">
+              <e p="ITrackableDictionary.cs" t="Include" />
+              <e p="QueueExtensions.cs" t="Include" />
+              <e p="TrackableDictionary.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+    </e>
+  </component>
+</project>
