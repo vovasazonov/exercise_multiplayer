@@ -73,8 +73,6 @@
               <e p="MainGameEventHandler.cs" t="Include" />
             </e>
             <e p="IClient.cs" t="Include" />
-            <e p="IUdpClientInfoCreator.cs" t="Include" />
-            <e p="LocalUdpClientInfoCreator.cs" t="Include" />
             <e p="NetworkManager.cs" t="Include" />
             <e p="PacketHandlers" t="Include">
               <e p="ClientConnectedPacketHandler.cs" t="Include" />

@@ -14,7 +14,12 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         ISerializer serializer = new JsonNetSerializer();
-        UdpClientInfo udpClientInfo = new LocalUdpClientInfoCreator().Create();
+        UdpClientInfo udpClientInfo = new UdpClientInfo
+        {
+            ServerIp = "127.0.0.1",
+            ServerPort = 3000,
+            ChannelId = 0
+        };
         IModelManagerClient modelManagerClient = new ModelManagerClient();
         _client = new UdpClient(udpClientInfo);
         _networkManager = new NetworkManager(_client, serializer, modelManagerClient) {MillisecondsBetweenSendPacket = 100};
