@@ -35,7 +35,7 @@ namespace Network
 #endif
             _peerServer = _client.Connect(address);
             _isLoopTask = true;
-            _loopTask = Task.Factory.StartNew(Loop).ContinueWith(task => Debug.Log(task.Exception), TaskContinuationOptions.OnlyOnFaulted);
+            _loopTask = Task.Factory.StartNew(Loop);//.ContinueWith(task => Debug.Log(task.Exception), TaskContinuationOptions.OnlyOnFaulted);
         }
 
         public void SendPacket(byte[] packetBytes)
@@ -47,36 +47,44 @@ namespace Network
 
         private void Loop()
         {
-            while (_isLoopTask)
+            try
             {
-                bool hasEventInQueue = _client.CheckEvents(out var netEvent) <= 0;
-                bool isGetEvent = hasEventInQueue && _client.Service(15, out netEvent) > 0;
-
-                if (isGetEvent)
+                while (_isLoopTask)
                 {
-                    switch (netEvent.Type)
+                    bool hasEventInQueue = _client.CheckEvents(out var netEvent) <= 0;
+                    bool isGetEvent = hasEventInQueue && _client.Service(15, out netEvent) > 0;
+
+                    if (isGetEvent)
                     {
-                        case ENet.EventType.None:
-                            break;
+                        switch (netEvent.Type)
+                        {
+                            case ENet.EventType.None:
+                                break;
 
-                        case ENet.EventType.Connect:
-                            HandleConnectEvent(netEvent);
-                            break;
+                            case ENet.EventType.Connect:
+                                HandleConnectEvent(netEvent);
+                                break;
 
-                        case ENet.EventType.Disconnect:
-                            HandleDisconnectEvent(netEvent);
-                            break;
+                            case ENet.EventType.Disconnect:
+                                HandleDisconnectEvent(netEvent);
+                                break;
 
-                        case ENet.EventType.Timeout:
-                            HandleTimeoutEvent(netEvent);
-                            break;
+                            case ENet.EventType.Timeout:
+                                HandleTimeoutEvent(netEvent);
+                                break;
 
-                        case ENet.EventType.Receive:
-                            HandleReceiveEvent(ref netEvent);
-                            netEvent.Packet.Dispose();
-                            break;
+                            case ENet.EventType.Receive:
+                                HandleReceiveEvent(ref netEvent);
+                                netEvent.Packet.Dispose();
+                                break;
+                        }
                     }
                 }
+
+            }
+            catch (Exception e)
+            {
+                Debug.LogError(e);
             }
         }
 

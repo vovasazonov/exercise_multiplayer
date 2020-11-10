@@ -109,7 +109,7 @@ namespace Network
                         packetHandler = new ConnectPacketHandler(message.ClientId, _clientProxyDic, _serializer, _modelManager);
                         break;
                     case MessageType.Disconnect:
-                        packetHandler = new DisconnectPacketHandler(message.ClientId, _clientProxyDic);
+                        packetHandler = new DisconnectPacketHandler(message.ClientId, _clientProxyDic, _modelManager);
                         break;
                     case MessageType.Command:
                         packetHandler = new CommandPacketHandler(message.ClientId, message.Packet, _clientProxyDic);

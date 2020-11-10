@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
         };
         IModelManagerClient modelManagerClient = new ModelManagerClient();
         _client = new UdpClient(udpClientInfo);
-        _networkManager = new NetworkManager(_client, serializer, modelManagerClient) {MillisecondsBetweenSendPacket = 100};
+        _networkManager = new NetworkManager(_client, serializer, modelManagerClient) {MillisecondsBetweenSendPacket = 1000};
         _presenterManager = new PresenterManager(_viewManager,modelManagerClient);
 
         _presenterManager.Activate();

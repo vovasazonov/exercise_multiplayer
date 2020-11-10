@@ -16,4 +16,14 @@
       </Reference>
     </ItemGroup>
 
+    <ItemGroup>
+      <None Update="enet.dll">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="System.Security.Permissions" Version="5.0.0" />
+    </ItemGroup>
+
 </Project>
