@@ -5,14 +5,14 @@ using Models.Characters;
 
 namespace Game.Characters.Presenters
 {
-    public class EnemyCharacterPresenterManager : IPresenter
+    public class EnemyCharacterPresenters : IPresenter
     {
         private readonly IViewPooler<ICharacterView> _enemyCharacterViewPooler;
         private readonly IPlayerModel _controllablePlayerModel;
         private readonly ITrackableDictionary<int, ICharacterModel> _characterModelDic;
         private readonly Dictionary<ICharacterModel, (ICharacterView, IPresenter)> _modelViewPresenterDic = new Dictionary<ICharacterModel, (ICharacterView, IPresenter)>();
 
-        public EnemyCharacterPresenterManager(IViewPooler<ICharacterView> enemyCharacterViewPooler, IPlayerModel controllablePlayerModel,
+        public EnemyCharacterPresenters(IViewPooler<ICharacterView> enemyCharacterViewPooler, IPlayerModel controllablePlayerModel,
             ITrackableDictionary<int, ICharacterModel> characterModelDic)
         {
             _enemyCharacterViewPooler = enemyCharacterViewPooler;
@@ -52,7 +52,7 @@ namespace Game.Characters.Presenters
                 InstantiatePresenter(characterModel);
             }
         }
-        
+
         private void InstantiatePresenter(ICharacterModel model)
         {
             var view = _enemyCharacterViewPooler.GetView();

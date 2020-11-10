@@ -23,7 +23,7 @@ namespace Game.Weapons.Presenters
         {
             _view.DamageTextView.TextUi = _weaponModel.Damage.ToString();
         }
-        
+
         public void Activate()
         {
             _view.Clicked += OnClicked;

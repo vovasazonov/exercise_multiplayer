@@ -12,13 +12,13 @@ namespace Game.Characters.Presenters
         private readonly ICharacterModel _playerCharacter;
         private readonly HealthPointPresenter _healthPointPresenter;
 
-        public EnemyCharacterPresenter(ICharacterView view,ICharacterModel enemyCharacter, ICharacterModel playerCharacter)
+        public EnemyCharacterPresenter(ICharacterView view, ICharacterModel enemyCharacter, ICharacterModel playerCharacter)
         {
             _view = view;
             _enemyCharacter = enemyCharacter;
             _playerCharacter = playerCharacter;
-            
-            _healthPointPresenter = new HealthPointPresenter(view.HealthPointTextView,_enemyCharacter.HealthPoint);
+
+            _healthPointPresenter = new HealthPointPresenter(view.HealthPointTextView, _enemyCharacter.HealthPoint);
         }
 
         public void Activate()

@@ -18,13 +18,13 @@ namespace Game.Characters
 
             if (view == null)
             {
-                view = Instantiate(_characterViewPrefab,_parent);
+                view = Instantiate(_characterViewPrefab, _parent);
             }
             else
             {
                 _characterFreeList.Remove(view);
             }
-            
+
             _characterBusyList.Add(view);
             view.gameObject.SetActive(true);
 

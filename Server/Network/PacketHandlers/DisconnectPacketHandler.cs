@@ -35,8 +35,7 @@ namespace Network.PacketHandlers
         {
             _clientProxyDic.Remove(_clientId);
             int playerId = (int) _clientId;
-            _modelManager.CharacterModelDic.Remove(_modelManager.PlayerModelDic[playerId]
-                .ControllableCharacterExemplarId);
+            _modelManager.CharacterModelDic.Remove(_modelManager.PlayerModelDic[playerId].ControllableCharacterExemplarId);
             _modelManager.PlayerModelDic.Remove(playerId);
         }
     }

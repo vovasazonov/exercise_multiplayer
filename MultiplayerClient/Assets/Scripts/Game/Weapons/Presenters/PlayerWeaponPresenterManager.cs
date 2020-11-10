@@ -13,7 +13,7 @@ namespace Game.Weapons.Presenters
         private readonly ICharacterModel _playerCharacterModel;
         private readonly List<IPresenter> _presenters = new List<IPresenter>();
 
-        public PlayerWeaponPresenterManager(IEnumerable<IPlayerWeaponView> views, IEnumerable<IWeaponModel>models, ICharacterModel playerCharacterModel)
+        public PlayerWeaponPresenterManager(IEnumerable<IPlayerWeaponView> views, IEnumerable<IWeaponModel> models, ICharacterModel playerCharacterModel)
         {
             _views = views;
             _models = models;
@@ -29,18 +29,18 @@ namespace Game.Weapons.Presenters
 
             for (int i = 0; i < viewList.Count; i++)
             {
-                _presenters.Add(new PlayerWeaponPresenter(viewList[i],modelList[i], _playerCharacterModel));
+                _presenters.Add(new PlayerWeaponPresenter(viewList[i], modelList[i], _playerCharacterModel));
             }
         }
 
         public void Activate()
         {
-            _presenters.ForEach(p=> p.Activate());
+            _presenters.ForEach(p => p.Activate());
         }
 
         public void Deactivate()
         {
-            _presenters.ForEach(p=> p.Deactivate());
+            _presenters.ForEach(p => p.Deactivate());
         }
     }
 }
