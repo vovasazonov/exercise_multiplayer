@@ -22,8 +22,9 @@
         <option value="$PROJECT_DIR$/Models/Models/Class1.cs" />
         <option value="$PROJECT_DIR$/SharedCode/SharedCode/Class1.cs" />
         <option value="$PROJECT_DIR$/Server/Server/Program.cs" />
-        <option value="$PROJECT_DIR$/Server/Network/NetworkManager.cs" />
         <option value="$PROJECT_DIR$/Server/Network/PacketHandlers/DisconnectPacketHandler.cs" />
+        <option value="$PROJECT_DIR$/Server/Network/NetworkManager.cs" />
+        <option value="$PROJECT_DIR$/Server/Program.cs" />
       </list>
     </option>
   </component>
@@ -91,7 +92,7 @@
       <option name="presentableId" value="Default" />
       <updated>1604905798347</updated>
       <workItem from="1604905808180" duration="7073000" />
-      <workItem from="1604988574495" duration="4150000" />
+      <workItem from="1604988574495" duration="8108000" />
     </task>
     <servers />
   </component>

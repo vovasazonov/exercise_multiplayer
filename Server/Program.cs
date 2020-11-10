@@ -12,7 +12,7 @@ class Program
         ISerializer serializer = new JsonNetSerializer();
         var udpServerInfo = new LocalUdpServerInfoCreator().Create();
         using IServer server = new UdpServer(udpServerInfo);
-        NetworkManager networkManager = new NetworkManager(server, serializer, modelManager) {MillisecondsTick = 100};
+        NetworkManager networkManager = new NetworkManager(server, serializer, modelManager, 100);
 
         networkManager.Start();
         Console.WriteLine("Press 'q' to stop server");

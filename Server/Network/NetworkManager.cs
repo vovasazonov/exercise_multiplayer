@@ -18,18 +18,13 @@ namespace Network
         private readonly TickSystem _tickSystem;
         private readonly Queue<ClientMessage> _messageQueue = new Queue<ClientMessage>();
 
-        public int MillisecondsTick
-        {
-            set => _tickSystem.MillisecondsTick = value;
-        }
-
-        public NetworkManager(IServer server, ISerializer serializer, IModelManager modelManager)
+        public NetworkManager(IServer server, ISerializer serializer, IModelManager modelManager, int millisecondsTick)
         {
             _server = server;
             _serializer = serializer;
             _modelManager = modelManager;
             _mainGameEventHandler = new MainGameEventHandler(_clientProxyDic, _modelManager);
-            _tickSystem = new TickSystem();
+            _tickSystem = new TickSystem {MillisecondsTick = millisecondsTick};
         }
 
         public void Start()
