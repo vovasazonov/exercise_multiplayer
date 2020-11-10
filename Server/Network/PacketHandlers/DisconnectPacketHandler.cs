@@ -18,15 +18,26 @@ namespace Network.PacketHandlers
 
         public void HandlePacket()
         {
-            _clientProxyDic.Remove(_clientId);
-            _modelManager.PlayerModelDic.Remove((int)_clientId);
-            
-            
+            RemovePlayerData();
+            NotifyOtherPlayers();
+        }
+
+        private void NotifyOtherPlayers()
+        {
             foreach (var clientProxy in _clientProxyDic.Values)
             {
                 clientProxy.NotSentToClientPacket.Fill(GameCommandType.PlayerDisconnected);
                 clientProxy.NotSentToClientPacket.Fill(_clientId);
             }
+        }
+
+        private void RemovePlayerData()
+        {
+            _clientProxyDic.Remove(_clientId);
+            int playerId = (int) _clientId;
+            _modelManager.CharacterModelDic.Remove(_modelManager.PlayerModelDic[playerId]
+                .ControllableCharacterExemplarId);
+            _modelManager.PlayerModelDic.Remove(playerId);
         }
     }
 }
