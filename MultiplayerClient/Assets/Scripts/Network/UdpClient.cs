@@ -35,7 +35,7 @@ namespace Network
 #endif
             _peerServer = _client.Connect(address);
             _isLoopTask = true;
-            _loopTask = Task.Factory.StartNew(Loop);//.ContinueWith(task => Debug.Log(task.Exception), TaskContinuationOptions.OnlyOnFaulted);
+            _loopTask = Task.Factory.StartNew(Loop);
         }
 
         public void SendPacket(byte[] packetBytes)
