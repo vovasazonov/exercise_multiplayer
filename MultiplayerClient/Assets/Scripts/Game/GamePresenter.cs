@@ -5,13 +5,13 @@ using Game.Weapons.Presenters;
 
 namespace Game
 {
-    public class GameManagerPresenter : IPresenter
+    public class GamePresenter : IPresenter
     {
         private readonly ViewManager _viewManager;
         private readonly IModelManagerClient _modelManagerClient;
         private readonly List<IPresenter> _presenters = new List<IPresenter>();
 
-        public GameManagerPresenter(ViewManager viewManager, IModelManagerClient modelManagerClient)
+        public GamePresenter(ViewManager viewManager, IModelManagerClient modelManagerClient)
         {
             _viewManager = viewManager;
             _modelManagerClient = modelManagerClient;
