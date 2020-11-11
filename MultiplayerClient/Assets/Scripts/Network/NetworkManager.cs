@@ -28,8 +28,7 @@ namespace Network
             _serializer = serializer;
             _modelManagerClient = modelManagerClient;
             _everyTickToServerPacket = new MutablePacket(_serializer);
-            _mainGameEventHandler =
-                new MainGameEventHandler(_everyTickToServerPacket, _modelManagerClient.ModelManager);
+            _mainGameEventHandler = new MainGameEventHandler(_everyTickToServerPacket, _modelManagerClient.ModelManager);
             _mainGameEventHandler.Activate();
 
             AddClientListeners();
@@ -86,7 +85,7 @@ namespace Network
             {
                 _lastTimeSend = DateTime.Now;
             }
-            
+
             return havePermission;
         }
 
