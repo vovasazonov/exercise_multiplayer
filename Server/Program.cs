@@ -8,11 +8,20 @@ class Program
 {
     static void Main(string[] args)
     {
-        IModelManager modelManager = new ModelManager();
+        WorldData worldData = new WorldData();
+        IModelManager modelManager = new ModelManager(worldData);
         ISerializer serializer = new JsonNetSerializer();
-        var udpServerInfo = new LocalUdpServerInfoCreator().Create();
+        UdpServerInfo udpServerInfo = new UdpServerInfo
+        {
+            Port = 3000,
+            ChannelId = 0, 
+            MaxClients = 100, 
+            PeerTimeOutLimit = 32, 
+            PeerTimeOutMinimum = 1000, 
+            PeerTimeOutMaximum = 4000
+        };
         using IServer server = new UdpServer(udpServerInfo);
-        NetworkManager networkManager = new NetworkManager(server, serializer, modelManager, 100);
+        NetworkManager networkManager = new NetworkManager(server, serializer, modelManager, worldData, 100);
 
         networkManager.Start();
         Console.WriteLine("Press 'q' to stop server");

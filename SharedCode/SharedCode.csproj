@@ -42,7 +42,12 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="Network\ClientProxy.cs" />
+        <Compile Include="Network\DataMutablePacket.cs" />
+        <Compile Include="Network\DataType.cs" />
         <Compile Include="Network\GameCommandType.cs" />
+        <Compile Include="Network\IClientProxy.cs" />
+        <Compile Include="Network\IDataMutablePacket.cs" />
         <Compile Include="Network\IMutablePacket.cs" />
         <Compile Include="Network\MutablePacket.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
@@ -50,9 +55,11 @@
         <Compile Include="Serialization\BinaryFormatterSerialization\CustomizedBinder.cs" />
         <Compile Include="Serialization\ISerializer.cs" />
         <Compile Include="Serialization\JsonNetSerialization\JsonNetSerializer.cs" />
+        <Compile Include="System\Collections\Generic\ArrayExtensions.cs" />
         <Compile Include="System\Collections\Generic\ITrackableDictionary.cs" />
         <Compile Include="System\Collections\Generic\QueueExtensions.cs" />
         <Compile Include="System\Collections\Generic\TrackableDictionary.cs" />
+        <Compile Include="System\Collections\Generic\TrackableDictionaryExtensions.cs" />
     </ItemGroup>
     <ItemGroup>
       <None Include="packages.config" />

@@ -15,7 +15,7 @@ namespace Network
         private bool _isRunningServerLoop;
         private readonly Task _serverLoopTask;
         private readonly IDictionary<uint, Peer> _clientConnectedDic = new Dictionary<uint, Peer>();
-
+        
         public UdpServer(UdpServerInfo udpServerInfo)
         {
             _udpServerInfo = udpServerInfo;
@@ -25,10 +25,16 @@ namespace Network
             _serverLoopTask = Task.Factory.StartNew(StartServerLoop).ContinueWith(task => Console.WriteLine(task.Exception), TaskContinuationOptions.OnlyOnFaulted);
         }
 
-        public void SendPacket(uint clientId, byte[] packetBytes)
+        public uint GetMtu(uint clientId)
+        {
+            return _clientConnectedDic[clientId].MTU;
+        }
+        
+        public void SendPacket(uint clientId, byte[] packetBytes, bool isReliable)
         {
             Packet packet = default;
-            packet.Create(packetBytes);
+            var packetFlag = isReliable ? PacketFlags.Reliable : PacketFlags.None;
+            packet.Create(packetBytes, packetFlag);
 
             _clientConnectedDic[clientId].Send(_udpServerInfo.ChannelId, ref packet);
         }

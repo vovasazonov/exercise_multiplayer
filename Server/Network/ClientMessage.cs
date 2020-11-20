@@ -6,7 +6,7 @@
         public MessageType MessageType { get; }
         public byte[] Packet { get; }
 
-        public ClientMessage(uint clientId, MessageType messageType, byte[] packet)
+        public ClientMessage(uint clientId, MessageType messageType, byte[] packet = null)
         {
             MessageType = messageType;
             ClientId = clientId;

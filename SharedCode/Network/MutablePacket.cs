@@ -15,10 +15,14 @@ namespace Network
             _serializer = serializer;
         }
 
+        public MutablePacket(ISerializer serializer, byte[] data) : this(serializer)
+        {
+            _data = new Queue<byte>(data);
+        }
+
         public void Fill<T>(T obj)
         {
-            var bytes = obj as byte[];
-            _data.Enqueue(bytes ?? _serializer.Serialize(obj));
+            _data.Enqueue(_serializer.Serialize(obj));
         }
 
         public T Pull<T>()

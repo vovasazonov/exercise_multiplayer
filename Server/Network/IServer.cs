@@ -8,6 +8,7 @@ namespace Network
         event EventHandler<PacketReceivedEventArgs> ClientDisconnect; 
         event EventHandler<PacketReceivedEventArgs> PacketReceived;
 
-        void SendPacket(uint clientId, byte[] packetBytes);
+        uint GetMtu(uint clientId);
+        void SendPacket(uint clientId, byte[] packetBytes, bool isReliable);
     }
 }

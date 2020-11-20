@@ -10,7 +10,7 @@ namespace Network
         public PacketReceivedEventArgs(uint clientId, byte[] packet = null)
         {
             ClientId = clientId;
-            Packet = packet ?? new byte[0];
+            Packet = packet;
         }
     }
 }
