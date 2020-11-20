@@ -19,8 +19,10 @@ namespace Models.Characters
             _data = data;
             
             HealthPoint = new HealthPointModel(_data.HealthPointData);
+
+            _data.HoldWeaponUpdated += OnHoldWeaponChanged;
         }
-        
+
         public void Attack(ICharacterModel enemy)
         {
             enemy.HealthPoint.TakePoints(HoldWeapon.Damage);
@@ -33,8 +35,6 @@ namespace Models.Characters
         {
             HoldWeapon = weapon;
             _data.HoldWeaponId = weapon.Id;
-
-            OnHoldWeaponChanged();
         }
 
         private void OnEnemyAttacked(AttackEventArgs e)
@@ -45,6 +45,11 @@ namespace Models.Characters
         private void OnHoldWeaponChanged()
         {
             HoldWeaponChanged?.Invoke(this, EventArgs.Empty);
+        }
+        
+        private void OnHoldWeaponChanged(object sender, EventArgs e)
+        {
+            OnHoldWeaponChanged();
         }
     }
 }

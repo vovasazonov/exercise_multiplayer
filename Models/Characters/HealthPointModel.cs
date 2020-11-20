@@ -4,20 +4,33 @@ namespace Models.Characters
 {
     public class HealthPointModel : IHealthPointModel
     {
+        public event EventHandler MaxPointsUpdated;
+        public event EventHandler PointsUpdated;
+        
         private readonly IHealthPointData _data;
-        public event EventHandler PointsChanged;
 
         public HealthPointModel(IHealthPointData data)
         {
             _data = data;
+            _data.PointsUpdated += OnPointsUpdated;
+            _data.MaxPointsUpdated += OnMaxPointsUpdated;
         }
-
-        public uint MaxPoints => _data.MaxPoints;
+        
+        public uint MaxPoints
+        {
+            get => _data.MaxPoints;
+            private set => _data.MaxPoints = value;
+        }
 
         public uint Points
         {
             get => _data.Points;
             private set => _data.Points = value;
+        }
+
+        public void SetMaxPoints(uint value)
+        {
+            MaxPoints = value;
         }
 
         public void TakePoints(uint amount)
@@ -27,14 +40,11 @@ namespace Models.Characters
                 if (Points >= amount)
                 {
                     Points -= amount;
-                    OnPointsChanged();
                 }
                 else
                 {
                     Points = 0;
                 }
-
-                OnPointsChanged();
             }
         }
 
@@ -53,14 +63,27 @@ namespace Models.Characters
                 {
                     Points += amount;
                 }
-
-                OnPointsChanged();
             }
         }
-
-        private void OnPointsChanged()
+        
+        private void OnMaxPointsUpdated(object sender, EventArgs e)
         {
-            PointsChanged?.Invoke(this, EventArgs.Empty);
+            OnMaxPointsUpdated();
+        }
+
+        private void OnPointsUpdated(object sender, EventArgs e)
+        {
+            OnPointsUpdated();
+        }
+        
+        private void OnMaxPointsUpdated()
+        {
+            MaxPointsUpdated?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void OnPointsUpdated()
+        {
+            PointsUpdated?.Invoke(this, EventArgs.Empty);
         }
     }
 }
