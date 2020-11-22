@@ -6,26 +6,25 @@ namespace Network
     public class DataMutablePacket : IDataMutablePacket
     {
         private readonly ISerializer _serializer;
-        private readonly Dictionary<DataType,IMutablePacket> _mutablePacketDic = new Dictionary<DataType, IMutablePacket>();
+        private readonly Dictionary<DataType, IMutablePacket> _mutablePacketDic = new Dictionary<DataType, IMutablePacket>();
         public IReadOnlyDictionary<DataType, IMutablePacket> MutablePacketDic => _mutablePacketDic;
-        
+
         public DataMutablePacket(ISerializer serializer)
         {
             _serializer = serializer;
+            _mutablePacketDic.Add(DataType.Command, new MutablePacket(_serializer));
+            _mutablePacketDic.Add(DataType.State, new MutablePacket(_serializer));
         }
 
         public void FillCombinedData(byte[] data)
         {
-            var mutablePacketTemp = new MutablePacket(_serializer,data);
+            var inPacketTemp = new MutablePacket(_serializer, data);
 
-            while (mutablePacketTemp.Data.Length > 0)
+            while (inPacketTemp.Data.Length > 0)
             {
-                var dataType = mutablePacketTemp.Pull<DataType>();
-                var oldArrayData = _mutablePacketDic[dataType].Data;
-                var newArrayData = mutablePacketTemp.Pull<byte[]>();
-
-                var commonArray = oldArrayData.Combine(newArrayData);
-                _mutablePacketDic[dataType] = new MutablePacket(_serializer,commonArray);
+                var dataType = inPacketTemp.Pull<DataType>();
+                var dataPacket = new MutablePacket(_serializer,inPacketTemp.Pull<byte[]>());
+                _mutablePacketDic[dataType].Combine(dataPacket);
             }
         }
 
@@ -36,7 +35,7 @@ namespace Network
             {
                 mutablePacketTemp.Fill(dataType);
                 mutablePacketTemp.Fill(_mutablePacketDic[dataType].Data);
-                
+
                 _mutablePacketDic[dataType].Clear();
             }
 

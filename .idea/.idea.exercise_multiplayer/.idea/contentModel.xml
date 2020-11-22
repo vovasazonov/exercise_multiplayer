@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
+    <e p="C:\Users\vovas\.nuget\packages\microsoft.net.test.sdk\16.5.0\build\netcoreapp2.1" t="Include">
+      <e p="Microsoft.NET.Test.Sdk.Program.cs" t="Include" />
+    </e>
+    <e p="C:\Users\vovas\.nuget\packages\microsoft.testplatform.testhost\16.5.0\build\netcoreapp2.1\x64\testhost.dll" t="Include" />
+    <e p="C:\Users\vovas\.nuget\packages\microsoft.testplatform.testhost\16.5.0\build\netcoreapp2.1\x64\testhost.exe" t="Include" />
+    <e p="C:\Users\vovas\.nuget\packages\nunit3testadapter\3.16.1\build\netcoreapp2.1\nunit.engine.api.dll" t="Include" />
+    <e p="C:\Users\vovas\.nuget\packages\nunit3testadapter\3.16.1\build\netcoreapp2.1\nunit.engine.dll" t="Include" />
+    <e p="C:\Users\vovas\.nuget\packages\nunit3testadapter\3.16.1\build\netcoreapp2.1\NUnit3.TestAdapter.dll" t="Include" />
+    <e p="C:\Users\vovas\.nuget\packages\nunit3testadapter\3.16.1\build\netcoreapp2.1\NUnit3.TestAdapter.pdb" t="Include" />
     <e p="C:\Users\vovas\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
     <e p="C:\Users\vovas\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_exercise_multiplayer.-210725264.00" t="ExcludeRecursive" />
     <e p="D:\Users\vovas\Documents\Repos\exercise_multiplayer" t="IncludeFlat">
@@ -18,6 +27,7 @@
           <e p="ICharacterModel.cs" t="Include" />
           <e p="IHealthPointData.cs" t="Include" />
           <e p="IHealthPointModel.cs" t="Include" />
+          <e p="WeaponChangedEventArgs.cs" t="Include" />
         </e>
         <e p="Exemplars" t="Include">
           <e p="ExemplarsData.cs" t="Include" />
@@ -72,12 +82,12 @@
             <e p="DataHandler.cs" t="Include" />
             <e p="IDataHandler.cs" t="Include" />
           </e>
-          <e p="GameManagerServer.cs" t="Include" />
           <e p="IClientMessage.cs" t="Include" />
-          <e p="IGameManagerServer.cs" t="Include" />
+          <e p="IModelManagerServer.cs" t="Include" />
           <e p="IServer.cs" t="Include" />
           <e p="ITickSystem.cs" t="Include" />
           <e p="MessageType.cs" t="Include" />
+          <e p="ModelManagerServer.cs" t="Include" />
           <e p="NetworkManager.cs" t="Include" />
           <e p="PacketHandlers" t="Include">
             <e p="ConnectPacketHandler.cs" t="Include" />
@@ -124,7 +134,10 @@
             <e p="BinaryFormatterSerializer.cs" t="Include" />
             <e p="CustomizedBinder.cs" t="Include" />
           </e>
+          <e p="ClassicCastObject.cs" t="Include" />
+          <e p="ICustomCastObject.cs" t="Include" />
           <e p="ISerializer.cs" t="Include" />
+          <e p="JsonCastObject.cs" t="Include" />
           <e p="JsonNetSerialization" t="Include">
             <e p="JsonNetSerializer.cs" t="Include" />
           </e>
@@ -141,6 +154,18 @@
             </e>
           </e>
         </e>
+      </e>
+      <e p="TestProject1" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="TestProject1.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="TestProject1.csproj" t="IncludeRecursive" />
+        <e p="UnitTest1.cs" t="Include" />
       </e>
     </e>
   </component>

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Models
 {
-    public class PlayerData : Replication, IPlayerData
+    public sealed class PlayerData : Replication, IPlayerData
     {
         public event EventHandler ScoreUpdated;
         public event EventHandler ControllableCharacterExemplarIdUpdated;
@@ -33,19 +33,20 @@ namespace Models
             }
         }
 
-        public override void Read(Dictionary<string, object> data)
+        public override void Read(object data)
         {
-            foreach (var dataId in data.Keys)
+            var dataDic = _customCastObject.To<Dictionary<string, object>>(data);
+            foreach (var dataId in dataDic.Keys)
             {
-                var value = data[dataId];
+                var value = dataDic[dataId];
 
                 switch (dataId)
                 {
                     case nameof(Score):
-                        Score = (uint) value;
+                        Score = _customCastObject.To<uint>(value);
                         break;
                     case nameof(ControllableCharacterExemplarId):
-                        ControllableCharacterExemplarId = (int) value;
+                        ControllableCharacterExemplarId = _customCastObject.To<int>(value);
                         break;
                     default:
                         throw new ArgumentOutOfRangeException();
@@ -53,7 +54,7 @@ namespace Models
             }
         }
 
-        protected override Dictionary<string, object> GetWhole()
+        protected override object GetWhole()
         {
             return new Dictionary<string, object>
             {
@@ -62,12 +63,12 @@ namespace Models
             };
         }
 
-        protected virtual void OnScoreUpdated()
+        private void OnScoreUpdated()
         {
             ScoreUpdated?.Invoke(this, EventArgs.Empty);
         }
 
-        protected virtual void OnControllableCharacterExemplarIdUpdated()
+        private void OnControllableCharacterExemplarIdUpdated()
         {
             ControllableCharacterExemplarIdUpdated?.Invoke(this, EventArgs.Empty);
         }

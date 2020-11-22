@@ -7,13 +7,15 @@ namespace Game.Weapons.Presenters
     public class PlayerWeaponPresenter : IPresenter
     {
         private readonly IPlayerWeaponView _view;
-        private readonly IWeaponModel _weaponModel;
+        private readonly int _weaponExemplarId;
+        private readonly IWeaponModel _weaponExemplarModel;
         private readonly ICharacterModel _playerCharacterModel;
 
-        public PlayerWeaponPresenter(IPlayerWeaponView view, IWeaponModel weaponModel, ICharacterModel playerCharacterModel)
+        public PlayerWeaponPresenter(IPlayerWeaponView view, int weaponExemplarId ,IWeaponModel weaponExemplarModel, ICharacterModel playerCharacterModel)
         {
             _view = view;
-            _weaponModel = weaponModel;
+            _weaponExemplarId = weaponExemplarId;
+            _weaponExemplarModel = weaponExemplarModel;
             _playerCharacterModel = playerCharacterModel;
 
             RenderView();
@@ -21,7 +23,7 @@ namespace Game.Weapons.Presenters
 
         private void RenderView()
         {
-            _view.DamageTextView.TextUi = _weaponModel.Damage.ToString();
+            _view.DamageTextView.TextUi = _weaponExemplarModel.Damage.ToString();
         }
 
         public void Activate()
@@ -41,7 +43,7 @@ namespace Game.Weapons.Presenters
 
         private void ChangeHoldWeapon()
         {
-            _playerCharacterModel.ChangeHoldWeapon(_weaponModel);
+            _playerCharacterModel.ChangeHoldWeapon(_weaponExemplarId);
         }
     }
 }

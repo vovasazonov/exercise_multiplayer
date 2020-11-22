@@ -15,42 +15,43 @@ namespace Game
         {
             _viewManager = viewManager;
             _modelManagerClient = modelManagerClient;
+
+            AddModelManagerClientListener();
         }
 
         private void AddModelManagerClientListener()
         {
-            _modelManagerClient.ControllablePlayerSet += OnControllablePlayerSet;
+            _modelManagerClient.Loaded += OnModelLoaded;
         }
 
         private void RemoveModelManagerClientListener()
         {
-            _modelManagerClient.ControllablePlayerSet -= OnControllablePlayerSet;
+            _modelManagerClient.Loaded -= OnModelLoaded;
         }
 
-        private void OnControllablePlayerSet(object sender, EventArgs e)
+        private void OnModelLoaded(object sender, EventArgs e)
         {
+            RemoveModelManagerClientListener();
             InstantiatePresenters();
         }
 
         private void InstantiatePresenters()
         {
-            var controllablePlayerModel = _modelManagerClient.ModelManager.PlayerModelDic[_modelManagerClient.ControllablePlayerExemplarId];
-            var controllableCharacterModel = _modelManagerClient.ModelManager.CharacterModelDic[controllablePlayerModel.ControllableCharacterExemplarId];
+            var controllablePlayerModel = _modelManagerClient.ModelManager.PlayersModel.ExemplarModelDic[_modelManagerClient.ControllablePlayerExemplarId];
+            var controllableCharacterModel = _modelManagerClient.ModelManager.CharactersModel.ExemplarModelDic[controllablePlayerModel.ControllableCharacterExemplarId];
 
-            _presenters.Add(new EnemyCharacterPresenters(_viewManager.CharacterViewPooler, controllablePlayerModel, _modelManagerClient.ModelManager.CharacterModelDic));
-            _presenters.Add(new PlayerWeaponPresenterManager(_viewManager.playerWeaponViewList, _modelManagerClient.ModelManager.GameWeaponModelDic.Values, controllableCharacterModel));
+            _presenters.Add(new EnemyCharacterPresenters(_viewManager.CharacterViewPooler, controllablePlayerModel, _modelManagerClient.ModelManager.CharactersModel.ExemplarModelDic));
+            _presenters.Add(new PlayerWeaponPresenters(_viewManager.playerWeaponViewList, _modelManagerClient.ModelManager.WeaponsModel, controllableCharacterModel));
             _presenters.ForEach(p => p.Activate());
         }
 
         public void Activate()
         {
             _presenters.ForEach(p => p.Activate());
-            AddModelManagerClientListener();
         }
 
         public void Deactivate()
         {
-            RemoveModelManagerClientListener();
             _presenters.ForEach(p => p.Deactivate());
         }
     }

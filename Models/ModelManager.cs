@@ -11,9 +11,9 @@ namespace Models
         
         public ModelManager(IWorldData worldData)
         {
-            CharactersModel = new CharactersModel(worldData.CharacterData);
-            PlayersModel = new PlayersModel(worldData.PlayersData,CharactersModel);            
             WeaponsModel = new WeaponsModel(worldData.WeaponsData);
+            CharactersModel = new CharactersModel(worldData.CharacterData, WeaponsModel);
+            PlayersModel = new PlayersModel(worldData.PlayersData,CharactersModel);            
         }
     }
 }

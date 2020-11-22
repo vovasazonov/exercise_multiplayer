@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Models.Characters
 {
-    public class HealthPointData : Replication, IHealthPointData
+    public sealed class HealthPointData : Replication, IHealthPointData
     {
         public event EventHandler MaxPointsUpdated;
         public event EventHandler PointsUpdated;
@@ -33,19 +33,20 @@ namespace Models.Characters
             }
         }
 
-        public override void Read(Dictionary<string, object> data)
+        public override void Read(object data)
         {
-            foreach (var dataId in data.Keys)
+            var dataDic = _customCastObject.To<Dictionary<string, object>>(data);
+            foreach (var dataId in dataDic.Keys)
             {
-                var value = data[dataId];
+                var value = dataDic[dataId];
 
                 switch (dataId)
                 {
                     case nameof(MaxPoints):
-                        MaxPoints = (uint) value;
+                        MaxPoints = _customCastObject.To<uint>(value);
                         break;
                     case nameof(Points):
-                        Points = (uint) value;
+                        Points = _customCastObject.To<uint>(value);
                         break;
                     default:
                         throw new ArgumentOutOfRangeException();
@@ -53,7 +54,7 @@ namespace Models.Characters
             }
         }
 
-        protected override Dictionary<string, object> GetWhole()
+        protected override object GetWhole()
         {
             return new Dictionary<string, object>
             {

@@ -6,21 +6,23 @@ namespace Models.Characters
     public class CharacterModel : ICharacterModel
     {
         public event EventHandler<AttackEventArgs> EnemyAttacked;
-        public event EventHandler HoldWeaponChanged; 
+        public event EventHandler<WeaponChangedEventArgs> HoldWeaponChanged; 
         
         private readonly ICharacterData _data;
+        private readonly IExemplarsModel<IWeaponModel> _weaponModels;
 
         public string Id => _data.Id;
         public IHealthPointModel HealthPoint { get; }
         public IWeaponModel HoldWeapon { get; private set; }
 
-        public CharacterModel(ICharacterData data)
+        public CharacterModel(ICharacterData data, IExemplarsModel<IWeaponModel> weaponModels)
         {
             _data = data;
-            
+            _weaponModels = weaponModels;
+
             HealthPoint = new HealthPointModel(_data.HealthPointData);
 
-            _data.HoldWeaponUpdated += OnHoldWeaponChanged;
+            _data.HoldWeaponUpdated += OnDataHoldWeaponChanged;
         }
 
         public void Attack(ICharacterModel enemy)
@@ -31,10 +33,17 @@ namespace Models.Characters
             OnEnemyAttacked(eventArgs);
         }
 
-        public void ChangeHoldWeapon(IWeaponModel weapon)
+        public void ChangeHoldWeapon(int weaponExemplarId)
         {
-            HoldWeapon = weapon;
-            _data.HoldWeaponId = weapon.Id;
+            var weaponExemplar = _weaponModels.ExemplarModelDic[weaponExemplarId];
+            if (HoldWeapon != weaponExemplar)
+            {
+                HoldWeapon = weaponExemplar;
+                _data.HoldWeaponExemplarId = weaponExemplarId;
+                
+                var weaponChangedEventArgs = new WeaponChangedEventArgs(weaponExemplarId);
+                OnHoldWeaponChanged(weaponChangedEventArgs);
+            }
         }
 
         private void OnEnemyAttacked(AttackEventArgs e)
@@ -42,14 +51,14 @@ namespace Models.Characters
             EnemyAttacked?.Invoke(this, e);
         }
 
-        private void OnHoldWeaponChanged()
+        private void OnDataHoldWeaponChanged(object sender, EventArgs e)
         {
-            HoldWeaponChanged?.Invoke(this, EventArgs.Empty);
+            ChangeHoldWeapon(_data.HoldWeaponExemplarId);
         }
-        
-        private void OnHoldWeaponChanged(object sender, EventArgs e)
+
+        protected virtual void OnHoldWeaponChanged(WeaponChangedEventArgs e)
         {
-            OnHoldWeaponChanged();
+            HoldWeaponChanged?.Invoke(this, e);
         }
     }
 }

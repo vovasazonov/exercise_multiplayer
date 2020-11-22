@@ -12,8 +12,8 @@ namespace Models
         {
             _exemplarsData = exemplarsData;
 
-            _exemplarsData.ExemplarDic.Adding += OnAdding;
-            _exemplarsData.ExemplarDic.Removing += OnRemoving;
+            _exemplarsData.ExemplarDic.Added += OnAdded;
+            _exemplarsData.ExemplarDic.Removed += OnRemoved;
 
             Instantiate();
         }
@@ -26,12 +26,12 @@ namespace Models
             }
         }
 
-        private void OnAdding(int id, TData data)
+        private void OnAdded(int id, TData data)
         {
             AddModel(id, data);
         }
         
-        private void OnRemoving(int id, TData data)
+        private void OnRemoved(int id, TData data)
         {
             RemoveModel(id);
         }

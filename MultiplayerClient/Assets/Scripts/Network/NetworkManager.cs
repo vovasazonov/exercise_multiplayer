@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Models;
 using Network.GameEventHandlers;
 using Network.PacketHandlers;
 using Serialization;
@@ -9,11 +10,11 @@ namespace Network
     public class NetworkManager : IDisposable
     {
         private readonly IClient _client;
-        private readonly ISerializer _serializer;
         private readonly IModelManagerClient _modelManagerClient;
-        private readonly IMutablePacket _everyTickToServerPacket;
+        private readonly IReplication _worldDataReplication;
+        private readonly IDataMutablePacket _everyTickToServerPacket;
         private readonly IGameEventHandler _mainGameEventHandler;
-        private readonly Queue<IMutablePacket> _receivedPackets = new Queue<IMutablePacket>();
+        private readonly IDataMutablePacket _receivedPackets;
         private int _millisecondsBetweenSend;
         private DateTime _lastTimeSend;
 
@@ -22,12 +23,13 @@ namespace Network
             set => _millisecondsBetweenSend = value;
         }
 
-        public NetworkManager(IClient client, ISerializer serializer, IModelManagerClient modelManagerClient)
+        public NetworkManager(IClient client, ISerializer serializer, IModelManagerClient modelManagerClient, IReplication worldDataReplication)
         {
             _client = client;
-            _serializer = serializer;
+            _receivedPackets = new DataMutablePacket(serializer);
             _modelManagerClient = modelManagerClient;
-            _everyTickToServerPacket = new MutablePacket(_serializer);
+            _worldDataReplication = worldDataReplication;
+            _everyTickToServerPacket = new DataMutablePacket(serializer);
             _mainGameEventHandler = new MainGameEventHandler(_everyTickToServerPacket, _modelManagerClient.ModelManager);
             _mainGameEventHandler.Activate();
 
@@ -56,10 +58,23 @@ namespace Network
 
         private void ProcessReceivedPackets()
         {
-            while (_receivedPackets.Count > 0)
+            var dataTypes = new List<DataType>(_receivedPackets.MutablePacketDic.Keys);
+            foreach (var dataType in dataTypes)
             {
-                var packet = _receivedPackets.Dequeue();
-                IPacketHandler packetHandler = new CommandPacketHandler(packet, _modelManagerClient);
+                IPacketHandler packetHandler;
+                var mutablePacket = _receivedPackets.MutablePacketDic[dataType];
+                switch (dataType)
+                {
+                    case DataType.Command:
+                        packetHandler = new CommandDataPacketHandler(mutablePacket, _modelManagerClient);
+                        break;
+                    case DataType.State:
+                        packetHandler = new StateDataPacketHandler(mutablePacket, _worldDataReplication);
+                        break;
+                    default:
+                        throw new ArgumentOutOfRangeException();
+                }
+
                 packetHandler.HandlePacket();
             }
         }
@@ -68,11 +83,7 @@ namespace Network
         {
             if (CheckPermissionSend())
             {
-                if (_everyTickToServerPacket.Data.Length > 0)
-                {
-                    _client.SendPacket(_everyTickToServerPacket.Data);
-                    _everyTickToServerPacket.Clear();
-                }
+                _client.SendPacket(_everyTickToServerPacket.PullCombinedData());
             }
         }
 
@@ -91,9 +102,7 @@ namespace Network
 
         private void OnPacketReceived(object sender, PacketReceivedEventArgs packetReceivedEventArgs)
         {
-            var packet = new MutablePacket(_serializer);
-            packet.Fill(packetReceivedEventArgs.Packet);
-            _receivedPackets.Enqueue(packet);
+            _receivedPackets.FillCombinedData(packetReceivedEventArgs.Packet);
         }
 
         private void OnClientDisconnected(object sender, PacketReceivedEventArgs packetReceivedEventArgs)

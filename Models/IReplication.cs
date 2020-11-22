@@ -1,11 +1,10 @@
-﻿using System.Collections.Generic;
-
-namespace Models
+﻿namespace Models
 {
     public interface IReplication
     {
-        void Read(Dictionary<string, object> data);
-        Dictionary<string, object> Write(ReplicationType replicationType);
+        void SetCustomCast(ICustomCastObject customCastObject);
+        void Read(object data);
+        object Write(ReplicationType replicationType);
     }
 
     public enum ReplicationType : byte

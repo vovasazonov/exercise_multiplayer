@@ -2,8 +2,8 @@
 {
     public class TrackableDictionary<TKey, TValue> : Dictionary<TKey, TValue>, ITrackableDictionary<TKey, TValue>
     {
-        public event Action<TKey, TValue> Adding;
-        public event Action<TKey, TValue> Removing;
+        public event Action<TKey, TValue> Added;
+        public event Action<TKey, TValue> Removed;
 
         public TrackableDictionary()
         {
@@ -17,26 +17,27 @@
         {
             foreach (var key in Keys)
             {
-                OnRemoving(key,base[key]);
+                Remove(key);
             }
-            
-            base.Clear();
         }
 
         public new void Add(TKey key, TValue value)
         {
-            OnAdding(key, value);
             base.Add(key,value);
+            OnAdded(key, value);
         }
 
         public new bool Remove(TKey key)
         {
+            bool isRemoved = false;
+            
             if (TryGetValue(key, out var value))
             {
-                OnRemoving(key,value);
+                isRemoved = base.Remove(key);
+                OnRemoved(key,value);
             }
 
-            return base.Remove(key);
+            return isRemoved;
         }
 
         public new TValue this[TKey key]
@@ -49,19 +50,19 @@
                     Remove(key);
                 }
                 
-                OnAdding(key,value);
                 base[key] = value;
+                OnAdded(key,value);
             }
         }
 
-        protected virtual void OnAdding(TKey key, TValue value)
+        protected virtual void OnAdded(TKey key, TValue value)
         {
-            Adding?.Invoke(key, value);
+            Added?.Invoke(key, value);
         }
 
-        protected virtual void OnRemoving(TKey key, TValue value)
+        protected virtual void OnRemoved(TKey key, TValue value)
         {
-            Removing?.Invoke(key, value);
+            Removed?.Invoke(key, value);
         }
     }
 }

@@ -5,12 +5,12 @@ namespace Network.DataHandlers.CommandDataHandlers
     public readonly struct CommandDataHandler : IDataHandler
     {
         private readonly IMutablePacket _unprocessedReceivedPacket;
-        private readonly IGameManagerServer _gameManagerServer;
+        private readonly IModelManagerServer _modelManagerServer;
 
-        public CommandDataHandler(IMutablePacket unprocessedReceivedPacket, IGameManagerServer gameManagerServer)
+        public CommandDataHandler(IMutablePacket unprocessedReceivedPacket, IModelManagerServer modelManagerServer)
         {
             _unprocessedReceivedPacket = unprocessedReceivedPacket;
-            _gameManagerServer = gameManagerServer;
+            _modelManagerServer = modelManagerServer;
         }
         
         public void HandleData()
@@ -23,10 +23,10 @@ namespace Network.DataHandlers.CommandDataHandlers
                 switch (commandType)
                 {
                     case GameCommandType.CharacterAttackEnemy:
-                        dataHandler = new CharacterAttackEnemyDataHandler(_unprocessedReceivedPacket, _gameManagerServer);
+                        dataHandler = new CharacterAttackEnemyDataHandler(_unprocessedReceivedPacket, _modelManagerServer);
                         break;
                     case GameCommandType.HoldWeaponChanged:
-                        dataHandler = new HoldWeaponChangedDataHandler(_unprocessedReceivedPacket, _gameManagerServer);
+                        dataHandler = new HoldWeaponChangedDataHandler(_unprocessedReceivedPacket, _modelManagerServer);
                         break;
                     default:
                         throw new ArgumentOutOfRangeException();

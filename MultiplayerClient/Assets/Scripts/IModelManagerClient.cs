@@ -3,7 +3,7 @@ using Models;
 
 public interface IModelManagerClient
 {
-    event EventHandler ControllablePlayerSet;
+    event EventHandler Loaded;
     int ControllablePlayerExemplarId { get; }
     IModelManager ModelManager { get; }
 

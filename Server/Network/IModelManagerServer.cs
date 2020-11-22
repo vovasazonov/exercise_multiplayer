@@ -1,6 +1,6 @@
 ﻿using Models;
 
-public interface IGameManagerServer
+public interface IModelManagerServer
 {
     IModelManager ModelManager { get; }
 }

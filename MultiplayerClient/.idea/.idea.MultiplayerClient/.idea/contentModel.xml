@@ -42,7 +42,7 @@
             <e p="Weapons" t="Include">
               <e p="Presenters" t="Include">
                 <e p="PlayerWeaponPresenter.cs" t="Include" />
-                <e p="PlayerWeaponPresenterManager.cs" t="Include" />
+                <e p="PlayerWeaponPresenters.cs" t="Include" />
               </e>
               <e p="Views" t="Include">
                 <e p="IPlayerWeaponView.cs" t="Include" />
@@ -55,20 +55,13 @@
           <e p="ModelManagerClient.cs" t="Include" />
           <e p="Network" t="Include">
             <e p="CommandHandlers" t="Include">
-              <e p="CharacterAddCommandHandler.cs" t="Include" />
-              <e p="CharacterHpChangedCommandHandler.cs" t="Include" />
-              <e p="CharacterRemoveCommandHandler.cs" t="Include" />
               <e p="ICommandHandler.cs" t="Include" />
-              <e p="PlayerConnectedCommandHandler.cs" t="Include" />
-              <e p="PlayerDisconnectedCommandHandler.cs" t="Include" />
               <e p="SetControllablePlayerCommandHandler.cs" t="Include" />
             </e>
             <e p="GameEventHandlers" t="Include">
-              <e p="CharacterAddingEventHandler.cs" t="Include" />
               <e p="CharacterEnemyAttackedEventHandler.cs" t="Include" />
               <e p="CharacterEventHandler.cs" t="Include" />
               <e p="CharacterHoldWeaponChangedEventHandler.cs" t="Include" />
-              <e p="CharacterRemovingEventHandler.cs" t="Include" />
               <e p="IGameEventHandler.cs" t="Include" />
               <e p="MainGameEventHandler.cs" t="Include" />
             </e>
@@ -77,8 +70,9 @@
             <e p="PacketHandlers" t="Include">
               <e p="ClientConnectedPacketHandler.cs" t="Include" />
               <e p="ClientDisconnectedPacketHandler.cs" t="Include" />
-              <e p="CommandPacketHandler.cs" t="Include" />
+              <e p="CommandDataPacketHandler.cs" t="Include" />
               <e p="IPacketHandler.cs" t="Include" />
+              <e p="StateDataPacketHandler.cs" t="Include" />
             </e>
             <e p="PacketReceivedEventArgs.cs" t="Include" />
             <e p="UdpClient.cs" t="Include" />

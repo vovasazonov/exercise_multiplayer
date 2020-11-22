@@ -32,15 +32,21 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A6D1DC38-5859-4BEE-B882-7820CA79BC3B/ec/e8857835/ICharacterModel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../SharedCode/Network/MutablePacket.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../SharedCode/Serialization/JsonCastObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../SharedCode/System/Collections/Generic/TrackableDictionary.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4B390C11-E8E3-430A-81AB-BA6FD91FFE0C/b0/76c68065/ModelManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C5E63B84-EF8B-4AAB-8579-B58AEF208063/d5/a71d7733/IWorldData.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/512CF201-398D-4C6F-9C04-737461A7762F/e8/81d9d3e0/IDataMutablePacket.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Models/Worlds/WorldData.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7A45B3B3-5FC9-4E94-836D-C6E097435FB7/35/01e6cc7a/IMutablePacket.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Models/Exemplars/ExemplarsData.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/17A0FA8B-D932-4E7C-836E-9CD3DB76F4E3/a5/dc5aee8e/IReplication.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Weapons/Presenters/PlayerCharacterAttackPresenter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/CharacterPooler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/CharacterPool.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Views/IButtonView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Views/CharacterView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Views/ICharacterView.cs" />
@@ -50,9 +56,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/EnemyCharacterViewPooler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Characters/IViewPooler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Characters/EnemyCharacterViewPooler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/HealthPoints/Presenters/HealthPointPresenter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ViewManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/IModelManagerClient.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/CommandHandlers/ChararcterAddCommandHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/CommandHandlers/ChararcterRemoveCommandHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/CommandHandlers/ChararcterHpChangedCommandHandler.cs" />
@@ -67,28 +71,33 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/CommandHandlers/PlayerDisconnectedCommandHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/CommandHandlers/SetControllablePlayerCommandHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/GameEventHandlers/CharacterAddingEventHandler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Network/GameEventHandlers/CharacterEventHandler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Network/GameEventHandlers/CharacterEnemyAttackedEventHandler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Network/GameEventHandlers/CharacterHoldWeaponChangedEventHandler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Network/GameEventHandlers/MainGameEventHandler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Network/PacketHandlers/CommandPacketHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/JsonNetSerializer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/MyJsonNetSerializer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/CommandHandlers/CharacterAddCommandHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/PresenterManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/GameEventHandlers/CharacterRemovingEventHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/IClient.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Network/NetworkManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/UdpClient.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ModelManagerClient.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Characters/Presenters/EnemyCharacterPresenter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Characters/Presenters/EnemyCharacterPresenterManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Characters/Presenters/EnemyCharacterPresenters.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Characters/CharacterViewPooler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Weapons/Presenters/PlayerWeaponPresenter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Weapons/Presenters/PlayerWeaponPresenterManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/GameManagerPresenter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Network/PacketHandlers/CommandPacketHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/HealthPoints/Presenters/HealthPointPresenter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Network/GameEventHandlers/MainGameEventHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Network/GameEventHandlers/CharacterEnemyAttackedEventHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/IModelManagerClient.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Weapons/Presenters/PlayerWeaponPresenter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Weapons/Presenters/PlayerWeaponPresenters.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Network/GameEventHandlers/CharacterHoldWeaponChangedEventHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Network/NetworkManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Network/PacketHandlers/StateDataPacketHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/GamePresenter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Network/GameEventHandlers/CharacterEventHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Characters/Presenters/EnemyCharacterPresenters.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ModelManagerClient.cs" />
       </list>
     </option>
   </component>
@@ -118,10 +127,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="13500">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="13500" />
       <option name="selectedOptions">
         <set />
       </option>
@@ -148,6 +157,12 @@
       <workItem from="1605007128892" duration="501000" />
       <workItem from="1605076344860" duration="1252000" />
       <workItem from="1605514737964" duration="1246000" />
+      <workItem from="1605854788001" duration="3308000" />
+      <workItem from="1605858838962" duration="7230000" />
+      <workItem from="1605877084344" duration="3427000" />
+      <workItem from="1605941570514" duration="6005000" />
+      <workItem from="1605949729093" duration="2032000" />
+      <workItem from="1606038918686" duration="17328000" />
     </task>
     <servers />
   </component>
@@ -176,107 +191,108 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="429" y="213" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1/0.0.1366.738@0.0.1366.738" timestamp="1603960294379" />
-    <state width="635" height="487" key="DebuggerActiveHint" timestamp="1604991897456">
+    <state width="635" height="487" key="DebuggerActiveHint" timestamp="1606057503936">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="564" height="436" key="DebuggerActiveHint/0.0.1366.738@0.0.1366.738" timestamp="1604386653306" />
     <state width="635" height="487" key="DebuggerActiveHint/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1604991897456" />
-    <state width="1493" height="288" key="GridCell.Tab.0.bottom" timestamp="1605004285437">
+    <state width="635" height="487" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1606057503936" />
+    <state width="1493" height="288" key="GridCell.Tab.0.bottom" timestamp="1606059579296">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1323" height="142" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1604388012503" />
     <state width="1493" height="288" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1604993755181" />
-    <state width="1493" height="288" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605004285437" />
-    <state width="1493" height="288" key="GridCell.Tab.0.center" timestamp="1605004285437">
+    <state width="1493" height="288" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606059579296" />
+    <state width="1493" height="288" key="GridCell.Tab.0.center" timestamp="1606059579296">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1323" height="142" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1604388012502" />
     <state width="1493" height="288" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1604993755180" />
-    <state width="1493" height="288" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1605004285437" />
-    <state width="1493" height="288" key="GridCell.Tab.0.left" timestamp="1605004285436">
+    <state width="1493" height="288" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1606059579296" />
+    <state width="1493" height="288" key="GridCell.Tab.0.left" timestamp="1606059579296">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1323" height="142" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1604388012501" />
     <state width="1493" height="288" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1604993755180" />
-    <state width="1493" height="288" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1605004285436" />
-    <state width="1493" height="288" key="GridCell.Tab.0.right" timestamp="1605004285437">
+    <state width="1493" height="288" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1606059579296" />
+    <state width="1493" height="288" key="GridCell.Tab.0.right" timestamp="1606059579296">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1323" height="142" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1604388012502" />
     <state width="1493" height="288" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1604993755180" />
-    <state width="1493" height="288" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605004285437" />
-    <state width="1493" height="288" key="GridCell.Tab.1.bottom" timestamp="1605004285437">
+    <state width="1493" height="288" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1606059579296" />
+    <state width="1493" height="288" key="GridCell.Tab.1.bottom" timestamp="1606059579297">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1323" height="142" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1604388012504" />
     <state width="1493" height="288" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1604993755181" />
-    <state width="1493" height="288" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605004285437" />
-    <state width="1493" height="288" key="GridCell.Tab.1.center" timestamp="1605004285437">
+    <state width="1493" height="288" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606059579297" />
+    <state width="1493" height="288" key="GridCell.Tab.1.center" timestamp="1606059579297">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1323" height="142" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1604388012503" />
     <state width="1493" height="288" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1604993755181" />
-    <state width="1493" height="288" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1605004285437" />
-    <state width="1493" height="288" key="GridCell.Tab.1.left" timestamp="1605004285437">
+    <state width="1493" height="288" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1606059579297" />
+    <state width="1493" height="288" key="GridCell.Tab.1.left" timestamp="1606059579296">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1323" height="142" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1604388012503" />
     <state width="1493" height="288" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1604993755181" />
-    <state width="1493" height="288" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1605004285437" />
-    <state width="1493" height="288" key="GridCell.Tab.1.right" timestamp="1605004285437">
+    <state width="1493" height="288" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1606059579296" />
+    <state width="1493" height="288" key="GridCell.Tab.1.right" timestamp="1606059579297">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1323" height="142" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1604388012504" />
     <state width="1493" height="288" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1604993755181" />
-    <state width="1493" height="288" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1605004285437" />
-    <state width="1493" height="288" key="GridCell.Tab.2.bottom" timestamp="1605004285438">
+    <state width="1493" height="288" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1606059579297" />
+    <state width="1493" height="288" key="GridCell.Tab.2.bottom" timestamp="1606059579297">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1323" height="142" key="GridCell.Tab.2.bottom/0.0.1366.738@0.0.1366.738" timestamp="1604388012505" />
     <state width="1493" height="288" key="GridCell.Tab.2.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1604993755181" />
-    <state width="1493" height="288" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605004285438" />
-    <state width="1493" height="288" key="GridCell.Tab.2.center" timestamp="1605004285438">
+    <state width="1493" height="288" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606059579297" />
+    <state width="1493" height="288" key="GridCell.Tab.2.center" timestamp="1606059579297">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1323" height="142" key="GridCell.Tab.2.center/0.0.1366.738@0.0.1366.738" timestamp="1604388012505" />
     <state width="1493" height="288" key="GridCell.Tab.2.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1604993755181" />
-    <state width="1493" height="288" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1605004285438" />
-    <state width="1493" height="288" key="GridCell.Tab.2.left" timestamp="1605004285438">
+    <state width="1493" height="288" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1606059579297" />
+    <state width="1493" height="288" key="GridCell.Tab.2.left" timestamp="1606059579297">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1323" height="142" key="GridCell.Tab.2.left/0.0.1366.738@0.0.1366.738" timestamp="1604388012504" />
     <state width="1493" height="288" key="GridCell.Tab.2.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1604993755181" />
-    <state width="1493" height="288" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1605004285438" />
-    <state width="1493" height="288" key="GridCell.Tab.2.right" timestamp="1605004285438">
+    <state width="1493" height="288" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1606059579297" />
+    <state width="1493" height="288" key="GridCell.Tab.2.right" timestamp="1606059579297">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1323" height="142" key="GridCell.Tab.2.right/0.0.1366.738@0.0.1366.738" timestamp="1604388012505" />
     <state width="1493" height="288" key="GridCell.Tab.2.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1604993755181" />
-    <state width="1493" height="288" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1605004285438" />
-    <state width="1493" height="288" key="GridCell.Tab.3.bottom" timestamp="1605004285438">
+    <state width="1493" height="288" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1606059579297" />
+    <state width="1493" height="288" key="GridCell.Tab.3.bottom" timestamp="1606059579297">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1323" height="142" key="GridCell.Tab.3.bottom/0.0.1366.738@0.0.1366.738" timestamp="1604388012506" />
     <state width="1493" height="288" key="GridCell.Tab.3.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1604993755181" />
-    <state width="1493" height="288" key="GridCell.Tab.3.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605004285438" />
-    <state width="1493" height="288" key="GridCell.Tab.3.center" timestamp="1605004285438">
+    <state width="1493" height="288" key="GridCell.Tab.3.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606059579297" />
+    <state width="1493" height="288" key="GridCell.Tab.3.center" timestamp="1606059579297">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1323" height="142" key="GridCell.Tab.3.center/0.0.1366.738@0.0.1366.738" timestamp="1604388012505" />
     <state width="1493" height="288" key="GridCell.Tab.3.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1604993755181" />
-    <state width="1493" height="288" key="GridCell.Tab.3.center/0.0.1536.824@0.0.1536.824" timestamp="1605004285438" />
-    <state width="1493" height="288" key="GridCell.Tab.3.left" timestamp="1605004285438">
+    <state width="1493" height="288" key="GridCell.Tab.3.center/0.0.1536.824@0.0.1536.824" timestamp="1606059579297" />
+    <state width="1493" height="288" key="GridCell.Tab.3.left" timestamp="1606059579297">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1323" height="142" key="GridCell.Tab.3.left/0.0.1366.738@0.0.1366.738" timestamp="1604388012505" />
     <state width="1493" height="288" key="GridCell.Tab.3.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1604993755181" />
-    <state width="1493" height="288" key="GridCell.Tab.3.left/0.0.1536.824@0.0.1536.824" timestamp="1605004285438" />
-    <state width="1493" height="288" key="GridCell.Tab.3.right" timestamp="1605004285438">
+    <state width="1493" height="288" key="GridCell.Tab.3.left/0.0.1536.824@0.0.1536.824" timestamp="1606059579297" />
+    <state width="1493" height="288" key="GridCell.Tab.3.right" timestamp="1606059579297">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1323" height="142" key="GridCell.Tab.3.right/0.0.1366.738@0.0.1366.738" timestamp="1604388012506" />
     <state width="1493" height="288" key="GridCell.Tab.3.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1604993755181" />
-    <state width="1493" height="288" key="GridCell.Tab.3.right/0.0.1536.824@0.0.1536.824" timestamp="1605004285438" />
+    <state width="1493" height="288" key="GridCell.Tab.3.right/0.0.1536.824@0.0.1536.824" timestamp="1606059579297" />
     <state x="361" y="144" key="Rider.ProjectTemplateDialog.Size" timestamp="1604905798689">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -293,10 +309,11 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="92" y="92" width="1182" height="554" key="VCS.FileHistoryDialog/0.0.1366.738@0.0.1366.738" timestamp="1604385675405" />
-    <state x="328" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1603968432012">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state x="369" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1606058221988">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="328" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.738@0.0.1366.738" timestamp="1603968432012" />
+    <state x="369" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1606058221988" />
     <state x="339" y="165" key="run.anything.popup" timestamp="1604032949920">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -306,17 +323,5 @@
     </state>
     <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1603993581387" />
     <state x="389" y="66" width="756" height="758" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1604908885583" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Network/CommandHandlers/CharacterRemoveCommandHandler.cs</url>
-          <line>17</line>
-          <properties documentPath="C:\Users\vovas\source\repos\Unity\exercise_multiplayer\MultiplayerClient\Assets\Scripts\Network\CommandHandlers\CharacterRemoveCommandHandler.cs" initialLine="17" />
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

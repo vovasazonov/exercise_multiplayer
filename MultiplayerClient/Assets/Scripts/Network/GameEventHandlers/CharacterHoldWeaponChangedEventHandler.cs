@@ -1,15 +1,14 @@
-﻿using System;
-using Models.Characters;
+﻿using Models.Characters;
 
 namespace Network.GameEventHandlers
 {
     public struct CharacterHoldWeaponChangedEventHandler : IGameEventHandler
     {
         private readonly ICharacterModel _characterModel;
-        private readonly IMutablePacket _recordPacket;
+        private readonly IDataMutablePacket _recordPacket;
         private readonly int _characterExemplarId;
 
-        public CharacterHoldWeaponChangedEventHandler(IMutablePacket recordPacket, int characterExemplarId, ICharacterModel characterModel)
+        public CharacterHoldWeaponChangedEventHandler(IDataMutablePacket recordPacket, int characterExemplarId, ICharacterModel characterModel)
         {
             _recordPacket = recordPacket;
             _characterExemplarId = characterExemplarId;
@@ -26,11 +25,11 @@ namespace Network.GameEventHandlers
             _characterModel.HoldWeaponChanged -= OnHoldWeaponChanged;
         }
 
-        private void OnHoldWeaponChanged(object sender, EventArgs e)
+        private void OnHoldWeaponChanged(object sender, WeaponChangedEventArgs e)
         {
-            _recordPacket.Fill(GameCommandType.HoldWeaponChanged);
-            _recordPacket.Fill(_characterExemplarId);
-            _recordPacket.Fill(_characterModel.HoldWeapon.Id);
+            _recordPacket.MutablePacketDic[DataType.Command].Fill(GameCommandType.HoldWeaponChanged);
+            _recordPacket.MutablePacketDic[DataType.Command].Fill(_characterExemplarId);
+            _recordPacket.MutablePacketDic[DataType.Command].Fill(e.WeaponExemplarId);
         }
     }
 }

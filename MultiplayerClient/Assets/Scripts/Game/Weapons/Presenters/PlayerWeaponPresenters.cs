@@ -1,22 +1,23 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Game.Weapons.Views;
+using Models;
 using Models.Characters;
 using Models.Weapons;
 
 namespace Game.Weapons.Presenters
 {
-    public class PlayerWeaponPresenterManager : IPresenter
+    public class PlayerWeaponPresenters : IPresenter
     {
         private readonly IEnumerable<IPlayerWeaponView> _views;
-        private readonly IEnumerable<IWeaponModel> _models;
+        private readonly IExemplarsModel<IWeaponModel> _weaponModels;
         private readonly ICharacterModel _playerCharacterModel;
         private readonly List<IPresenter> _presenters = new List<IPresenter>();
 
-        public PlayerWeaponPresenterManager(IEnumerable<IPlayerWeaponView> views, IEnumerable<IWeaponModel> models, ICharacterModel playerCharacterModel)
+        public PlayerWeaponPresenters(IEnumerable<IPlayerWeaponView> views, IExemplarsModel<IWeaponModel> weaponModels, ICharacterModel playerCharacterModel)
         {
             _views = views;
-            _models = models;
+            _weaponModels = weaponModels;
             _playerCharacterModel = playerCharacterModel;
 
             InstantiatePresenters();
@@ -25,11 +26,11 @@ namespace Game.Weapons.Presenters
         private void InstantiatePresenters()
         {
             var viewList = _views.ToList();
-            var modelList = _models.ToList();
+            var modelIdsList = _weaponModels.ExemplarModelDic.Keys.ToList();
 
             for (int i = 0; i < viewList.Count; i++)
             {
-                _presenters.Add(new PlayerWeaponPresenter(viewList[i], modelList[i], _playerCharacterModel));
+                _presenters.Add(new PlayerWeaponPresenter(viewList[i], modelIdsList[i], _weaponModels.ExemplarModelDic[modelIdsList[i]], _playerCharacterModel));
             }
         }
 

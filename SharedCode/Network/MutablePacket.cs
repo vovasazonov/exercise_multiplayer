@@ -33,6 +33,14 @@ namespace Network
             return deserializedObj;
         }
 
+        public void Combine(IMutablePacket other)
+        {
+            foreach (var @byte in other.Data)
+            {
+                _data.Enqueue(@byte);
+            }
+        }
+
         public void Clear()
         {
             _data.Clear();

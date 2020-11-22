@@ -4,16 +4,25 @@ using System.Linq;
 
 namespace Models
 {
-    public class ExemplarsData<TInterfaceData, TRealizationData> : Replication, IExemplarsData<TInterfaceData> where TRealizationData : Replication, TInterfaceData, new()
+    public sealed class ExemplarsData<TInterfaceData, TRealizationData> : Replication, IExemplarsData<TInterfaceData> where TRealizationData : Replication, TInterfaceData, new()
     {
+        public event EventHandler Updated;
+        
         public ITrackableDictionary<int, TInterfaceData> ExemplarDic { get; } = new TrackableDictionary<int, TInterfaceData>();
 
         public ExemplarsData()
         {
-            ExemplarDic.Removing += OnRemoving;
+            ExemplarDic.Removed += OnRemoved;
+            ExemplarDic.Added += OnAdded;
         }
-        
-        private void OnRemoving(int exemplarId, TInterfaceData exemplar)
+
+        private void OnAdded(int exemplarId, TInterfaceData exemplar)
+        {
+            SetCustomCastToExemplar(exemplar);
+            OnUpdated();
+        }
+
+        private void OnRemoved(int exemplarId, TInterfaceData exemplar)
         {
             if (!_diff.ContainsKey("remove"))
             {
@@ -22,20 +31,38 @@ namespace Models
             
             var exemplarsIds = _diff["remove"] as List<int>;
             exemplarsIds.Add(exemplarId);
+            
+            OnUpdated();
         }
-        
-        public override void Read(Dictionary<string, object> data)
+
+        public override void SetCustomCast(ICustomCastObject customCastObject)
         {
-            foreach (var dataId in data.Keys)
+            base.SetCustomCast(customCastObject);
+
+            foreach (var interfaceData in ExemplarDic.Values)
             {
-                var value = data[dataId];
+                SetCustomCastToExemplar(interfaceData);
+            }
+        }
+
+        private void SetCustomCastToExemplar(TInterfaceData exemplar)
+        {
+            ((TRealizationData)exemplar).SetCustomCast(_customCastObject);
+        }
+
+        public override void Read(object data)
+        {
+            var dataDic = _customCastObject.To<Dictionary<string, object>>(data);
+            foreach (var dataId in dataDic.Keys)
+            {
+                var value = dataDic[dataId];
                 switch (dataId)
                 {
                     case "update":
-                        UpdateData((Dictionary<int, object>) value);
+                        UpdateData(value);
                         break;
                     case "remove":
-                        RemoveData((List<int>) value);
+                        RemoveData(value);
                         break;
                     default:
                         throw new ArgumentOutOfRangeException();
@@ -43,8 +70,10 @@ namespace Models
             }
         }
 
-        private void UpdateData(Dictionary<int, object> dataDic)
+        private void UpdateData(object data)
         {
+            var dataDic = _customCastObject.To<Dictionary<int, object>>(data);
+            
             foreach (var id in dataDic.Keys)
             {
                 if (!ExemplarDic.TryGetValue(id, out var exemplar))
@@ -53,34 +82,40 @@ namespace Models
                     ExemplarDic.Add(id, exemplar);
                 }
 
-                ((TRealizationData)exemplar).Read((Dictionary<string, object>) dataDic[id]);
+                ((TRealizationData)exemplar).Read(dataDic[id]);
             }
         }
 
-        private void RemoveData(List<int> dataIds)
+        private void RemoveData(object data)
         {
+            var dataIds = _customCastObject.To<List<int>>(data);
             foreach (var id in dataIds)
             {
                 ExemplarDic.Remove(id);
             }
         }
 
-        protected override Dictionary<string, object> GetWhole()
+        protected override object GetWhole()
         {
-            var dic = new Dictionary<int, object>(ExemplarDic.ToDictionary(k=>k.Key,v=>(object)((TRealizationData)v.Value).Write(ReplicationType.Whole)));
+            var dic = new Dictionary<int, object>(ExemplarDic.ToDictionary(k=>k.Key,v=>((TRealizationData)v.Value).Write(ReplicationType.Whole)));
             return new Dictionary<string, object>
             {
                 {"update", dic}
             };
         }
 
-        protected override Dictionary<string, object> GetDiff()
+        protected override object GetDiff()
         {
-            var dic = new Dictionary<int, object>(ExemplarDic.ToDictionary(k=>k.Key,v=>(object)((TRealizationData)v.Value).Write(ReplicationType.Diff)));
+            var dic = new Dictionary<int, object>(ExemplarDic.ToDictionary(k=>k.Key,v=>((TRealizationData)v.Value).Write(ReplicationType.Diff)));
 
             _diff["update"] = dic;
 
             return base.GetDiff();
+        }
+
+        private void OnUpdated()
+        {
+            Updated?.Invoke(this, EventArgs.Empty);
         }
     }
 }

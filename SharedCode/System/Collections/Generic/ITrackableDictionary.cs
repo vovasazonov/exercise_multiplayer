@@ -2,7 +2,7 @@
 {
     public interface ITrackableDictionary<TKey,TValue> : IDictionary<TKey,TValue>
     {
-        event Action<TKey, TValue> Adding;
-        event Action<TKey, TValue> Removing;
+        event Action<TKey, TValue> Added;
+        event Action<TKey, TValue> Removed;
     }
 }

@@ -5,14 +5,14 @@ using Models.Characters;
 
 namespace Network
 {
-    public class GameManagerServer : IGameManagerServer, IDisposable
+    public class ModelManagerServer : IModelManagerServer, IDisposable
     {
         private readonly ITrackableDictionary<uint, IClientProxy> _clientProxyDic;
         private readonly IWorldData _worldData;
 
         public IModelManager ModelManager { get; }
 
-        public GameManagerServer(ITrackableDictionary<uint, IClientProxy> clientProxyDic, IModelManager modelManager, IWorldData worldData)
+        public ModelManagerServer(ITrackableDictionary<uint, IClientProxy> clientProxyDic, IModelManager modelManager, IWorldData worldData)
         {
             _clientProxyDic = clientProxyDic;
             _worldData = worldData;
@@ -23,20 +23,23 @@ namespace Network
 
         private void AddClientProxyDicListeners()
         {
-            _clientProxyDic.Adding += OnClientAdding;
-            _clientProxyDic.Removing += OnClientRemoving;
+            _clientProxyDic.Added += OnClientAdded;
+            _clientProxyDic.Removed += OnClientRemoved;
         }
 
         private void RemoveClientProxyDicListeners()
         {
-            _clientProxyDic.Adding -= OnClientAdding;
-            _clientProxyDic.Removing -= OnClientRemoving;
+            _clientProxyDic.Added -= OnClientAdded;
+            _clientProxyDic.Removed -= OnClientRemoved;
         }
 
-        private void OnClientAdding(uint id, IClientProxy client)
+        private void OnClientAdded(uint id, IClientProxy client)
         {
             int playerId = (int) id;
-            int characterExemplarId = _worldData.CharacterData.ExemplarDic.Add(new CharacterData());
+            var characterData = new CharacterData();
+            characterData.HealthPointData.MaxPoints = 100;
+            characterData.HealthPointData.Points = 100;
+            int characterExemplarId = _worldData.CharacterData.ExemplarDic.Add(characterData);
             var playerData = new PlayerData
             {
                 ControllableCharacterExemplarId = characterExemplarId
@@ -47,7 +50,7 @@ namespace Network
             client.NotSentToClientPacket.MutablePacketDic[DataType.Command].Fill(playerId);
         }
 
-        private void OnClientRemoving(uint id, IClientProxy client)
+        private void OnClientRemoved(uint id, IClientProxy client)
         {
             int playerId = (int) id;
             _worldData.PlayersData.ExemplarDic.Remove(playerId);

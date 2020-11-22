@@ -8,6 +8,6 @@ namespace Models.Characters
         
         string Id { get; set; }
         IHealthPointData HealthPointData { get; }
-        string HoldWeaponId { get; set; }
+        int HoldWeaponExemplarId { get; set; }
     }
 }

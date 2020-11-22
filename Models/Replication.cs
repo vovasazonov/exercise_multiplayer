@@ -6,12 +6,18 @@ namespace Models
     public abstract class Replication : IReplication
     {
         protected readonly Dictionary<string, object> _diff = new Dictionary<string, object>();
+        protected ICustomCastObject _customCastObject;
 
-        public abstract void Read(Dictionary<string, object> data);
-
-        public virtual Dictionary<string, object> Write(ReplicationType replicationType)
+        public virtual void SetCustomCast(ICustomCastObject customCastObject)
         {
-            Dictionary<string, object> data;
+            _customCastObject = customCastObject;
+        }
+
+        public abstract void Read(object data);
+
+        public virtual object Write(ReplicationType replicationType)
+        {
+            object data;
 
             switch (replicationType)
             {
@@ -28,14 +34,14 @@ namespace Models
             return data;
         }
 
-        protected abstract Dictionary<string, object> GetWhole();
+        protected abstract object GetWhole();
         
-        protected virtual Dictionary<string, object> GetDiff()
+        protected virtual object GetDiff()
         {
             var dataDic = new Dictionary<string, object>(_diff);
             _diff.Clear();
 
-            return dataDic.Count > 0 ? dataDic : null;
+            return dataDic;
         }
     }
 }

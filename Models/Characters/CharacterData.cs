@@ -3,12 +3,12 @@ using System.Collections.Generic;
 
 namespace Models.Characters
 {
-    public class CharacterData : Replication, ICharacterData
+    public sealed class CharacterData : Replication, ICharacterData
     {
         public event EventHandler HoldWeaponUpdated;
 
         private string _id;
-        private string _holdWeaponId;
+        private int _holdWeaponExemplarId;
         private readonly HealthPointData _healthPointData = new HealthPointData();
 
         public string Id
@@ -21,35 +21,42 @@ namespace Models.Characters
             }
         }
 
-        public string HoldWeaponId
+        public int HoldWeaponExemplarId
         {
-            get => _holdWeaponId;
+            get => _holdWeaponExemplarId;
             set
             {
-                _holdWeaponId = value;
-                _diff[nameof(HoldWeaponId)] = value;
+                _holdWeaponExemplarId = value;
+                _diff[nameof(HoldWeaponExemplarId)] = value;
                 OnHoldWeaponUpdated();
             }
         }
 
         public IHealthPointData HealthPointData => _healthPointData;
 
-        public override void Read(Dictionary<string, object> data)
+        public override void SetCustomCast(ICustomCastObject customCastObject)
         {
-            foreach (var dataId in data.Keys)
+            base.SetCustomCast(customCastObject);
+            _healthPointData.SetCustomCast(customCastObject);
+        }
+
+        public override void Read(object data)
+        {
+            var dataDic = _customCastObject.To<Dictionary<string, object>>(data);
+            foreach (var dataId in dataDic.Keys)
             {
-                var value = data[dataId];
+                var value = dataDic[dataId];
 
                 switch (dataId)
                 {
                     case nameof(Id):
-                        Id = (string) value;
+                        Id = _customCastObject.To<string>(value);
                         break;
-                    case nameof(HoldWeaponId):
-                        HoldWeaponId = (string) value;
+                    case nameof(HoldWeaponExemplarId):
+                        HoldWeaponExemplarId = _customCastObject.To<int>(value);
                         break;
                     case nameof(HealthPointData):
-                        _healthPointData.Read((Dictionary<string, object>) value);
+                        _healthPointData.Read(_customCastObject.To<Dictionary<string, object>>(value));
                         break;
                     default:
                         throw new ArgumentOutOfRangeException();
@@ -57,21 +64,21 @@ namespace Models.Characters
             }
         }
 
-        protected override Dictionary<string, object> GetWhole()
+        protected override object GetWhole()
         {
             return new Dictionary<string, object>
             {
                 {nameof(Id), Id},
-                {nameof(HoldWeaponId), HoldWeaponId},
+                {nameof(HoldWeaponExemplarId), _holdWeaponExemplarId},
                 {nameof(HealthPointData), _healthPointData.Write(ReplicationType.Whole)}
             };
         }
 
-        protected override Dictionary<string, object> GetDiff()
+        protected override object GetDiff()
         {
-            var dataDic = base.GetDiff();
-            dataDic.Add(nameof(HealthPointData), _healthPointData.Write(ReplicationType.Diff));
-            return dataDic;
+            _diff.Add(nameof(HealthPointData), _healthPointData.Write(ReplicationType.Diff));
+            
+            return base.GetDiff();
         }
         
         private void OnHoldWeaponUpdated()

@@ -12,18 +12,18 @@ namespace Network
         private readonly IServer _server;
         private readonly ISerializer _serializer;
         private readonly WorldData _worldData;
-        private readonly GameManagerServer _gameManagerServer;
+        private readonly ModelManagerServer _modelManagerServer;
         private readonly ITrackableDictionary<uint, IClientProxy> _clientProxyDic = new TrackableDictionary<uint, IClientProxy>();
         private readonly ITickSystem _tickSystem;
         private readonly Queue<IClientMessage> _messageQueue = new Queue<IClientMessage>();
 
-        public NetworkManager(IServer server, ISerializer serializer, IModelManager modelManager, WorldData worldData,int millisecondsTick)
+        public NetworkManager(IServer server, ISerializer serializer, IModelManager modelManager, WorldData worldData, int millisecondsTick)
         {
             _server = server;
             _serializer = serializer;
             _worldData = worldData;
 
-            _gameManagerServer = new GameManagerServer(_clientProxyDic, modelManager, worldData);
+            _modelManagerServer = new ModelManagerServer(_clientProxyDic, modelManager, worldData);
             _tickSystem = new TickSystem {MillisecondsTick = millisecondsTick};
         }
 
@@ -51,14 +51,8 @@ namespace Network
 
         private void HandleUnprocessedClientData(IClientProxy clientProxy)
         {
-            foreach (var dataType in clientProxy.UnprocessedReceivedPacket.MutablePacketDic.Keys)
-            {
-                var mutablePacket = clientProxy.UnprocessedReceivedPacket.MutablePacketDic[dataType];
-                IDataHandler dataHandler = new DataHandler(mutablePacket, _gameManagerServer);
-
-                dataHandler.HandleData();
-                mutablePacket.Clear();
-            }
+            IDataHandler dataHandler = new DataHandler(clientProxy.UnprocessedReceivedPacket, _modelManagerServer);
+            dataHandler.HandleData();
         }
 
         private void AddServerListener()
@@ -95,8 +89,8 @@ namespace Network
 
         private void CreateSnapshotToClients()
         {
-            byte[] whole = null;
-            byte[] diff = null;
+            object whole = null;
+            object diff = null;
 
             foreach (var clientProxy in _clientProxyDic.Values)
             {
@@ -104,23 +98,19 @@ namespace Network
                 {
                     whole ??= GetSnapshot(ReplicationType.Whole);
                     clientProxy.IsFirstWhole = false;
-                    clientProxy.NotSentToClientPacket.FillCombinedData(whole);
+                    clientProxy.NotSentToClientPacket.MutablePacketDic[DataType.State].Fill(whole);
                 }
                 else
                 {
                     diff ??= GetSnapshot(ReplicationType.Diff);
-                    clientProxy.NotSentToClientPacket.FillCombinedData(diff);
+                    clientProxy.NotSentToClientPacket.MutablePacketDic[DataType.State].Fill(diff);
                 }
             }
         }
 
-        private byte[] GetSnapshot(ReplicationType replicationType)
+        private object GetSnapshot(ReplicationType replicationType)
         {
-            var mutablePacket = new MutablePacket(_serializer);
-            mutablePacket.Fill(DataType.State);
-            mutablePacket.Fill(_worldData.Write(replicationType));
-
-            return mutablePacket.Data;
+            return _worldData.Write(replicationType);
         }
 
         private void FreeMessageQueue()

@@ -6,6 +6,7 @@
         
         void Fill<T>(T obj);
         T Pull<T>();
+        void Combine(IMutablePacket other);
         void Clear();
     }
 }

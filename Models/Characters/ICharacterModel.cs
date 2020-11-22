@@ -6,7 +6,7 @@ namespace Models.Characters
     public interface ICharacterModel
     {
         event EventHandler<AttackEventArgs> EnemyAttacked; 
-        event EventHandler HoldWeaponChanged; 
+        event EventHandler<WeaponChangedEventArgs> HoldWeaponChanged; 
 
         string Id { get; }
         IHealthPointModel HealthPoint { get; }
@@ -14,6 +14,6 @@ namespace Models.Characters
         
         void Attack(ICharacterModel enemy);
 
-        void ChangeHoldWeapon(IWeaponModel weapon);
+        void ChangeHoldWeapon(int weaponExemplarId);
     }
 }

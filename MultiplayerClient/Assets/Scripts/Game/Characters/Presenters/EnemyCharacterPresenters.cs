@@ -24,22 +24,22 @@ namespace Game.Characters.Presenters
 
         private void AddEnemyCharacterModelDicListeners()
         {
-            _characterModelDic.Adding += OnCharacterModelAdding;
-            _characterModelDic.Removing += OnCharacterModelRemoving;
+            _characterModelDic.Added += OnCharacterModelAdded;
+            _characterModelDic.Removed += OnCharacterModelRemoved;
         }
 
         private void RemoveEnemyCharacterModelDicListeners()
         {
-            _characterModelDic.Adding -= OnCharacterModelAdding;
-            _characterModelDic.Removing -= OnCharacterModelRemoving;
+            _characterModelDic.Added -= OnCharacterModelAdded;
+            _characterModelDic.Removed -= OnCharacterModelRemoved;
         }
 
-        private void OnCharacterModelRemoving(int idExemplar, ICharacterModel model)
+        private void OnCharacterModelRemoved(int idExemplar, ICharacterModel model)
         {
             RemovePresenter(model);
         }
 
-        private void OnCharacterModelAdding(int idExemplar, ICharacterModel model)
+        private void OnCharacterModelAdded(int idExemplar, ICharacterModel model)
         {
             InstantiatePresenter(model);
             _modelViewPresenterDic[model].Item2.Activate();

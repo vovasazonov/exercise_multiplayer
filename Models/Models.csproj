@@ -33,6 +33,7 @@
         <WarningLevel>4</WarningLevel>
     </PropertyGroup>
     <ItemGroup>
+        <Reference Include="Microsoft.CSharp" />
         <Reference Include="System" />
         <Reference Include="System.Core" />
         <Reference Include="System.Data" />
@@ -50,6 +51,7 @@
         <Compile Include="Characters\ICharacterModel.cs" />
         <Compile Include="Characters\IHealthPointData.cs" />
         <Compile Include="Characters\IHealthPointModel.cs" />
+        <Compile Include="Characters\WeaponChangedEventArgs.cs" />
         <Compile Include="Exemplars\ExemplarsData.cs" />
         <Compile Include="Exemplars\ExemplarsModel.cs" />
         <Compile Include="Exemplars\IExemplarsData.cs" />

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Models.Weapons
 {
-    public class WeaponData : Replication, IWeaponData
+    public sealed class WeaponData : Replication, IWeaponData
     {
         public event EventHandler DamageUpdated;
         
@@ -31,19 +31,21 @@ namespace Models.Weapons
             }
         }
 
-        public override void Read(Dictionary<string, object> data)
+        public override void Read(object data)
         {
-            foreach (var dataId in data.Keys)
+            var dataDic = _customCastObject.To<Dictionary<string, object>>(data);
+            
+            foreach (var dataId in dataDic.Keys)
             {
-                var value = data[dataId];
+                var value = dataDic[dataId];
 
                 switch (dataId)
                 {
                     case nameof(Id):
-                        Id = (string) value;
+                        Id = _customCastObject.To<string>(value);;
                         break;
                     case nameof(Damage):
-                        Damage = (uint) value;
+                        Damage = _customCastObject.To<uint>(value);
                         break;
                     default:
                         throw new ArgumentOutOfRangeException();
@@ -51,7 +53,7 @@ namespace Models.Weapons
             }
         }
 
-        protected override Dictionary<string, object> GetWhole()
+        protected override object GetWhole()
         {
             return new Dictionary<string, object>
             {

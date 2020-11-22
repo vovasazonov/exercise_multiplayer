@@ -17,16 +17,16 @@ namespace Game.HealthPoints.Presenters
 
         public void Activate()
         {
-            _model.PointsChanged += OnPointsChanged;
+            _model.PointsUpdated += OnPointsUpdated;
             Update();
         }
 
         public void Deactivate()
         {
-            _model.PointsChanged -= OnPointsChanged;
+            _model.PointsUpdated -= OnPointsUpdated;
         }
 
-        private void OnPointsChanged(object sender, EventArgs e)
+        private void OnPointsUpdated(object sender, EventArgs e)
         {
             _view.TextUi = _model.Points.ToString();
         }
