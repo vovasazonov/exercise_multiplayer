@@ -43,7 +43,6 @@
         <option value="$PROJECT_DIR$/Server/Network/IServerWorldData.cs" />
         <option value="$PROJECT_DIR$/Server/Network/ServerWorldData.cs" />
         <option value="$PROJECT_DIR$/SharedCode/Network/IDataMutablePacket.cs" />
-        <option value="$PROJECT_DIR$/Server/Network/DataHandlers/DataHandler.cs" />
         <option value="$PROJECT_DIR$/Models/Exemplars/IExemplarsData.cs" />
         <option value="$PROJECT_DIR$/Models/DictionaryExtensions.cs" />
         <option value="$PROJECT_DIR$/Models/AnonymousExtensions.cs" />
@@ -86,6 +85,7 @@
         <option value="$PROJECT_DIR$/SharedCode/System/Collections/Generic/ITrackableDictionary.cs" />
         <option value="$PROJECT_DIR$/SharedCode/System/Collections/Generic/TrackableDictionary.cs" />
         <option value="$PROJECT_DIR$/Server/Network/ModelManagerServer.cs" />
+        <option value="$PROJECT_DIR$/Server/Network/DataHandlers/DataHandler.cs" />
       </list>
     </option>
   </component>
@@ -167,7 +167,7 @@
       <workItem from="1605877109774" duration="18778000" />
       <workItem from="1605942191501" duration="7314000" />
       <workItem from="1606040177053" duration="15121000" />
-      <workItem from="1606107802573" duration="444000" />
+      <workItem from="1606107802573" duration="2062000" />
     </task>
     <servers />
   </component>
@@ -321,19 +321,6 @@
           <line>16</line>
           <properties documentPath="D:\Users\vovas\Documents\Repos\exercise_multiplayer\ModelsTest\UnitTest1.cs" initialLine="16" />
           <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Server/Network/DataHandlers/CommandDataHandlers/CommandDataHandler.cs</url>
-          <line>17</line>
-          <properties documentPath="D:\Users\vovas\Documents\Repos\exercise_multiplayer\Server\Network\DataHandlers\CommandDataHandlers\CommandDataHandler.cs" initialLine="17">
-            <startOffsets>
-              <option value="592" />
-            </startOffsets>
-            <endOffsets>
-              <option value="642" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

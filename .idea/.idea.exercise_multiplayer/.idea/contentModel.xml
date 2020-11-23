@@ -64,6 +64,7 @@
         </e>
         <e p="Network" t="Include">
           <e p="ClientMessage.cs" t="Include" />
+          <e p="ClientProxy.cs" t="Include" />
           <e p="DataHandlers" t="Include">
             <e p="CommandDataHandlers" t="Include">
               <e p="CharacterAttackEnemyDataHandler.cs" t="Include" />
@@ -74,6 +75,7 @@
             <e p="IDataHandler.cs" t="Include" />
           </e>
           <e p="IClientMessage.cs" t="Include" />
+          <e p="IClientProxy.cs" t="Include" />
           <e p="IModelManagerServer.cs" t="Include" />
           <e p="IServer.cs" t="Include" />
           <e p="ITickSystem.cs" t="Include" />
@@ -106,11 +108,9 @@
       <e p="SharedCode" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="Network" t="Include">
-          <e p="ClientProxy.cs" t="Include" />
           <e p="DataMutablePacket.cs" t="Include" />
           <e p="DataType.cs" t="Include" />
           <e p="GameCommandType.cs" t="Include" />
-          <e p="IClientProxy.cs" t="Include" />
           <e p="IDataMutablePacket.cs" t="Include" />
           <e p="IMutablePacket.cs" t="Include" />
           <e p="MutablePacket.cs" t="Include" />
@@ -123,13 +123,13 @@
         <e p="Serialization" t="Include">
           <e p="BinaryFormatterSerialization" t="Include">
             <e p="BinaryFormatterSerializer.cs" t="Include" />
+            <e p="ClassicCastObject.cs" t="Include" />
             <e p="CustomizedBinder.cs" t="Include" />
           </e>
-          <e p="ClassicCastObject.cs" t="Include" />
           <e p="ICustomCastObject.cs" t="Include" />
           <e p="ISerializer.cs" t="Include" />
-          <e p="JsonCastObject.cs" t="Include" />
           <e p="JsonNetSerialization" t="Include">
+            <e p="JsonCastObject.cs" t="Include" />
             <e p="JsonNetSerializer.cs" t="Include" />
           </e>
         </e>
