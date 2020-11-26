@@ -1,6 +1,7 @@
 ﻿using Game;
 using Models;
 using Network;
+using Replications;
 using Serialization;
 using Serialization.JsonNetSerialization;
 using UnityEngine;
@@ -21,12 +22,11 @@ public class GameManager : MonoBehaviour
             ServerPort = 3000,
             ChannelId = 0
         };
-        ICustomCastObject customCastObject = new JsonCastObject();
         WorldData worldData = new WorldData();
-        worldData.SetCustomCast(customCastObject);
         IModelManagerClient modelManagerClient = new ModelManagerClient(worldData);
+        IReplication worldReplication = new WorldReplication(worldData,serializer.GetCaster());
         _client = new UdpClient(udpClientInfo);
-        _networkManager = new NetworkManager(_client, serializer, modelManagerClient, worldData) {MillisecondsBetweenSendPacket = 1000};
+        _networkManager = new NetworkManager(_client, serializer, modelManagerClient, worldReplication) {MillisecondsBetweenSendPacket = 1000};
         _presenterManager = new GamePresenter(_viewManager,modelManagerClient);
 
         _presenterManager.Activate();

@@ -1,4 +1,4 @@
-﻿namespace Models
+﻿namespace Serialization
 {
     public interface ICustomCastObject
     {

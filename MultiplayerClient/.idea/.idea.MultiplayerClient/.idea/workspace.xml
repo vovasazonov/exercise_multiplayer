@@ -34,14 +34,12 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A6D1DC38-5859-4BEE-B882-7820CA79BC3B/ec/e8857835/ICharacterModel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../SharedCode/Network/MutablePacket.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../SharedCode/Serialization/JsonCastObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../SharedCode/System/Collections/Generic/TrackableDictionary.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4B390C11-E8E3-430A-81AB-BA6FD91FFE0C/b0/76c68065/ModelManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C5E63B84-EF8B-4AAB-8579-B58AEF208063/d5/a71d7733/IWorldData.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/512CF201-398D-4C6F-9C04-737461A7762F/e8/81d9d3e0/IDataMutablePacket.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Models/Worlds/WorldData.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7A45B3B3-5FC9-4E94-836D-C6E097435FB7/35/01e6cc7a/IMutablePacket.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../Models/Exemplars/ExemplarsData.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/17A0FA8B-D932-4E7C-836E-9CD3DB76F4E3/a5/dc5aee8e/IReplication.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -91,13 +89,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Weapons/Presenters/PlayerWeaponPresenter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Weapons/Presenters/PlayerWeaponPresenters.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/GameEventHandlers/CharacterHoldWeaponChangedEventHandler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Network/NetworkManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Network/PacketHandlers/StateDataPacketHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/GamePresenter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/GameEventHandlers/CharacterEventHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Characters/Presenters/EnemyCharacterPresenters.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ModelManagerClient.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Network/NetworkManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Network/PacketHandlers/StateDataPacketHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       </list>
     </option>
   </component>
@@ -164,6 +162,7 @@
       <workItem from="1605949729093" duration="2032000" />
       <workItem from="1606038918686" duration="17923000" />
       <workItem from="1606108495432" duration="1975000" />
+      <workItem from="1606392306259" duration="1980000" />
     </task>
     <servers />
   </component>

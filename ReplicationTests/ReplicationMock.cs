@@ -1,10 +1,10 @@
 ﻿using System;
-using Replications;
 using ReplicationTests;
+using Serialization;
 
 namespace ReplicationTest
 {
-    public sealed class ReplicationMock : Replication
+    public sealed class ReplicationMock : Replications.Replication
     {
         private readonly IDataMock _dataMock;
 

@@ -1,4 +1,5 @@
-﻿using Models.Characters;
+﻿using System.Collections.Generic;
+using Models.Characters;
 
 namespace Models
 {
@@ -6,7 +7,7 @@ namespace Models
     {
         private readonly IExemplarsModel<ICharacterModel> _charactersModel;
 
-        public PlayersModel(IExemplarsData<IPlayerData> exemplarsData, IExemplarsModel<ICharacterModel> charactersModel) : base(exemplarsData)
+        public PlayersModel(ITrackableDictionary<int, IPlayerData> exemplarsData, IExemplarsModel<ICharacterModel> charactersModel) : base(exemplarsData)
         {
             _charactersModel = charactersModel;
         }

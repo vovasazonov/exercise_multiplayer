@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Models;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
 namespace Serialization.JsonNetSerialization
 {
     public class JsonNetSerializer : ISerializer
     {
+        public ICustomCastObject GetCaster() => new JsonCastObject();
+
         public byte[] Serialize<T>(T obj)
         {
             Queue<byte> queueBytes = new Queue<byte>();

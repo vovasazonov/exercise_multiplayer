@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Models
 {
-    public sealed class PlayerData : Replication, IPlayerData
+    public sealed class PlayerData : IPlayerData
     {
         public event EventHandler ScoreUpdated;
         public event EventHandler ControllableCharacterExemplarIdUpdated;
@@ -17,7 +17,6 @@ namespace Models
             set
             {
                 _score = value;
-                _diff[nameof(Score)] = value;
                 OnScoreUpdated();
             }
         }
@@ -28,39 +27,8 @@ namespace Models
             set
             {
                 _controllableCharacterExemplarId = value;
-                _diff[nameof(ControllableCharacterExemplarId)] = value;
                 OnControllableCharacterExemplarIdUpdated();
             }
-        }
-
-        public override void Read(object data)
-        {
-            var dataDic = _customCastObject.To<Dictionary<string, object>>(data);
-            foreach (var dataId in dataDic.Keys)
-            {
-                var value = dataDic[dataId];
-
-                switch (dataId)
-                {
-                    case nameof(Score):
-                        Score = _customCastObject.To<uint>(value);
-                        break;
-                    case nameof(ControllableCharacterExemplarId):
-                        ControllableCharacterExemplarId = _customCastObject.To<int>(value);
-                        break;
-                    default:
-                        throw new ArgumentOutOfRangeException();
-                }
-            }
-        }
-
-        protected override object GetWhole()
-        {
-            return new Dictionary<string, object>
-            {
-                {nameof(Score), Score},
-                {nameof(ControllableCharacterExemplarId), ControllableCharacterExemplarId}
-            };
         }
 
         private void OnScoreUpdated()

@@ -1,7 +1,11 @@
 ﻿using System.Collections.Generic;
+using Models;
+using Newtonsoft.Json;
 using NUnit.Framework;
 using Replications;
 using ReplicationTests;
+using Serialization;
+using Serialization.JsonNetSerialization;
 
 namespace ReplicationTest
 {
@@ -52,6 +56,19 @@ namespace ReplicationTest
             _replicationMock.Read(dataRead);
 
             Assert.IsTrue(_dataMock.IntValue == 5);
+        }
+        
+        [Test]
+        public void ModelManagerTestReplication()
+        {
+            IWorldData worldData = new WorldData();
+            ISerializer serializer = new JsonNetSerializer();
+            var replication = new WorldReplication(worldData,new JsonCastObject());
+
+            var replicationWrote = replication.WriteWhole();
+            var serialized = serializer.Serialize(replicationWrote);
+            serializer.Deserialize(serialized, out object deserialized);
+            replication.Read(deserialized);
         }
     }
 }

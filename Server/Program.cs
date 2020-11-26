@@ -1,18 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
 using Models;
 using Models.Weapons;
 using Network;
 using Serialization;
 using Serialization.JsonNetSerialization;
-using System.Collections.Generic;
 
 class Program
 {
     static void Main(string[] args)
     {
-        ICustomCastObject customCastObject = new JsonCastObject();
         WorldData worldData = new WorldData();
-        worldData.SetCustomCast(customCastObject);
         InstantiateWeapons(worldData);
         IModelManager modelManager = new ModelManager(worldData);
         ISerializer serializer = new JsonNetSerializer();
@@ -49,7 +47,7 @@ class Program
             Id = "spell",
             Damage = 1
         };
-        worldData.WeaponsData.ExemplarDic.Add(axeWeaponData);
-        worldData.WeaponsData.ExemplarDic.Add(spellWeaponData);
+        worldData.WeaponsData.Add(axeWeaponData);
+        worldData.WeaponsData.Add(spellWeaponData);
     }
 }

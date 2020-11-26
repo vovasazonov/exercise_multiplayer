@@ -1,4 +1,5 @@
-﻿using Models.Weapons;
+﻿using System.Collections.Generic;
+using Models.Weapons;
 
 namespace Models.Characters
 {
@@ -6,14 +7,14 @@ namespace Models.Characters
     {
         private readonly IExemplarsModel<IWeaponModel> _weaponModels;
 
-        public CharactersModel(IExemplarsData<ICharacterData> exemplarsData, IExemplarsModel<IWeaponModel> weaponModels) : base(exemplarsData)
+        public CharactersModel(ITrackableDictionary<int, ICharacterData> exemplarsData, IExemplarsModel<IWeaponModel> weaponModels) : base(exemplarsData)
         {
             _weaponModels = weaponModels;
         }
 
         protected override void AddModel(int id, ICharacterData data)
         {
-            ExemplarModelDic.Add(id, new CharacterModel(data, _weaponModels));
+            ExemplarModelDic.Add(id, new CharacterModel(data, _weaponModels.ExemplarModelDic));
         }
     }
 }

@@ -11,18 +11,18 @@ namespace Network
     {
         private readonly IServer _server;
         private readonly ISerializer _serializer;
-        private readonly WorldData _worldData;
         private readonly ModelManagerServer _modelManagerServer;
         private readonly ITrackableDictionary<uint, IClientProxy> _clientProxyDic = new TrackableDictionary<uint, IClientProxy>();
         private readonly ITickSystem _tickSystem;
         private readonly Queue<IClientMessage> _messageQueue = new Queue<IClientMessage>();
+        private readonly WorldReplication _worldReplication;
 
         public NetworkManager(IServer server, ISerializer serializer, IModelManager modelManager, WorldData worldData, int millisecondsTick)
         {
             _server = server;
             _serializer = serializer;
-            _worldData = worldData;
 
+            _worldReplication = new WorldReplication(worldData, serializer.GetCaster());
             _modelManagerServer = new ModelManagerServer(_clientProxyDic, modelManager, worldData);
             _tickSystem = new TickSystem {MillisecondsTick = millisecondsTick};
         }
@@ -96,21 +96,16 @@ namespace Network
             {
                 if (clientProxy.IsFirstWhole)
                 {
-                    whole ??= GetSnapshot(ReplicationType.Whole);
+                    whole ??= _worldReplication.WriteWhole();
                     clientProxy.IsFirstWhole = false;
                     clientProxy.NotSentToClientPacket.MutablePacketDic[DataType.State].Fill(whole);
                 }
                 else
                 {
-                    diff ??= GetSnapshot(ReplicationType.Diff);
+                    diff ??= _worldReplication.WriteDiff();
                     clientProxy.NotSentToClientPacket.MutablePacketDic[DataType.State].Fill(diff);
                 }
             }
-        }
-
-        private object GetSnapshot(ReplicationType replicationType)
-        {
-            return _worldData.Write(replicationType);
         }
 
         private void FreeMessageQueue()

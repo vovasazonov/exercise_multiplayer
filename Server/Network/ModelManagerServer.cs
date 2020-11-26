@@ -39,12 +39,12 @@ namespace Network
             var characterData = new CharacterData();
             characterData.HealthPointData.MaxPoints = 100;
             characterData.HealthPointData.Points = 100;
-            int characterExemplarId = _worldData.CharacterData.ExemplarDic.Add(characterData);
+            int characterExemplarId = _worldData.CharacterData.Add(characterData);
             var playerData = new PlayerData
             {
                 ControllableCharacterExemplarId = characterExemplarId
             };
-            _worldData.PlayersData.ExemplarDic.Add(playerId, playerData);
+            _worldData.PlayersData.Add(playerId, playerData);
             
             client.NotSentToClientPacket.MutablePacketDic[DataType.Command].Fill(GameCommandType.SetControllablePlayer);
             client.NotSentToClientPacket.MutablePacketDic[DataType.Command].Fill(playerId);
@@ -53,7 +53,7 @@ namespace Network
         private void OnClientRemoved(uint id, IClientProxy client)
         {
             int playerId = (int) id;
-            _worldData.PlayersData.ExemplarDic.Remove(playerId);
+            _worldData.PlayersData.Remove(playerId);
         }
 
         public void Dispose()

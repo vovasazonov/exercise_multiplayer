@@ -1,14 +1,16 @@
-﻿namespace Models.Weapons
+﻿using System.Collections.Generic;
+
+namespace Models.Weapons
 {
-    public class WeaponsModel : ExemplarsModel<IWeaponModel,IWeaponData>
+    public class WeaponsModel : ExemplarsModel<IWeaponModel, IWeaponData>
     {
-        public WeaponsModel(IExemplarsData<IWeaponData> exemplarsData) : base(exemplarsData)
+        public WeaponsModel(ITrackableDictionary<int,IWeaponData> exemplarsData) : base(exemplarsData)
         {
         }
 
         protected override void AddModel(int id, IWeaponData data)
         {
-            ExemplarModelDic.Add(id,new WeaponModel(data));
+            ExemplarModelDic.Add(id, new WeaponModel(data));
         }
     }
 }

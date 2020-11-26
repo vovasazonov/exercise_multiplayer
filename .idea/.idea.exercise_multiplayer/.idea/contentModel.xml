@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
+    <e p="C:\Users\vovas\.nuget\packages\microsoft.net.test.sdk\16.5.0\build\netcoreapp2.1" t="Include">
+      <e p="Microsoft.NET.Test.Sdk.Program.cs" t="Include" />
+    </e>
+    <e p="C:\Users\vovas\.nuget\packages\microsoft.testplatform.testhost\16.5.0\build\netcoreapp2.1\x64\testhost.dll" t="Include" />
+    <e p="C:\Users\vovas\.nuget\packages\microsoft.testplatform.testhost\16.5.0\build\netcoreapp2.1\x64\testhost.exe" t="Include" />
+    <e p="C:\Users\vovas\.nuget\packages\nunit3testadapter\3.16.1\build\netcoreapp2.1\nunit.engine.api.dll" t="Include" />
+    <e p="C:\Users\vovas\.nuget\packages\nunit3testadapter\3.16.1\build\netcoreapp2.1\nunit.engine.dll" t="Include" />
+    <e p="C:\Users\vovas\.nuget\packages\nunit3testadapter\3.16.1\build\netcoreapp2.1\NUnit3.TestAdapter.dll" t="Include" />
+    <e p="C:\Users\vovas\.nuget\packages\nunit3testadapter\3.16.1\build\netcoreapp2.1\NUnit3.TestAdapter.pdb" t="Include" />
     <e p="C:\Users\vovas\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
     <e p="C:\Users\vovas\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_exercise_multiplayer.-210725264.00" t="ExcludeRecursive" />
     <e p="D:\Users\vovas\Documents\Repos\exercise_multiplayer" t="IncludeFlat">
@@ -11,9 +20,12 @@
           <e p="AttackEventArgs.cs" t="Include" />
           <e p="CharacterData.cs" t="Include" />
           <e p="CharacterModel.cs" t="Include" />
+          <e p="CharacterReplication.cs" t="Include" />
           <e p="CharactersModel.cs" t="Include" />
+          <e p="CharactersReplication.cs" t="Include" />
           <e p="HealthPointData.cs" t="Include" />
           <e p="HealthPointModel.cs" t="Include" />
+          <e p="HealthPointReplication.cs" t="Include" />
           <e p="ICharacterData.cs" t="Include" />
           <e p="ICharacterModel.cs" t="Include" />
           <e p="IHealthPointData.cs" t="Include" />
@@ -21,13 +33,11 @@
           <e p="WeaponChangedEventArgs.cs" t="Include" />
         </e>
         <e p="Exemplars" t="Include">
-          <e p="ExemplarsData.cs" t="Include" />
           <e p="ExemplarsModel.cs" t="Include" />
-          <e p="IExemplarsData.cs" t="Include" />
+          <e p="ExemplarsReplication.cs" t="Include" />
           <e p="IExemplarsModel.cs" t="Include" />
         </e>
         <e p="IModelManager.cs" t="Include" />
-        <e p="IReplication.cs" t="Include" />
         <e p="ModelManager.cs" t="Include" />
         <e p="Models.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive" />
@@ -36,25 +46,55 @@
           <e p="IPlayerModel.cs" t="Include" />
           <e p="PlayerData.cs" t="Include" />
           <e p="PlayerModel.cs" t="Include" />
+          <e p="PlayerReplication.cs" t="Include" />
           <e p="PlayersModel.cs" t="Include" />
+          <e p="PlayersReplication.cs" t="Include" />
         </e>
         <e p="Properties" t="Include">
           <e p="AssemblyInfo.cs" t="Include" />
         </e>
-        <e p="Replication.cs" t="Include" />
         <e p="Weapons" t="Include">
           <e p="IWeaponData.cs" t="Include" />
           <e p="IWeaponModel.cs" t="Include" />
           <e p="WeaponData.cs" t="Include" />
           <e p="WeaponModel.cs" t="Include" />
+          <e p="WeaponReplication.cs" t="Include" />
           <e p="WeaponsModel.cs" t="Include" />
+          <e p="WeaponsReplication.cs" t="Include" />
         </e>
         <e p="Worlds" t="Include">
           <e p="IWorldData.cs" t="Include" />
           <e p="WorldData.cs" t="Include" />
+          <e p="WorldReplication.cs" t="Include" />
         </e>
       </e>
       <e p="packages" t="ExcludeRecursive" />
+      <e p="Replications" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="IReplication.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Replication.cs" t="Include" />
+        <e p="Replications.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="ReplicationTests" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="CustomCastObjectMock.cs" t="Include" />
+        <e p="DataMock.cs" t="Include" />
+        <e p="IDataMock.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="ReplicationTests.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="ReplicationMock.cs" t="Include" />
+        <e p="ReplicationTest.cs" t="Include" />
+        <e p="ReplicationTests.csproj" t="IncludeRecursive" />
+      </e>
       <e p="Server" t="IncludeRecursive">
         <e p=".gitignore" t="Include" />
         <e p="bin" t="ExcludeRecursive" />

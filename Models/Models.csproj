@@ -44,37 +44,46 @@
         <Compile Include="Characters\AttackEventArgs.cs" />
         <Compile Include="Characters\CharacterData.cs" />
         <Compile Include="Characters\CharacterModel.cs" />
+        <Compile Include="Characters\CharacterReplication.cs" />
         <Compile Include="Characters\CharactersModel.cs" />
+        <Compile Include="Characters\CharactersReplication.cs" />
         <Compile Include="Characters\HealthPointData.cs" />
         <Compile Include="Characters\HealthPointModel.cs" />
+        <Compile Include="Characters\HealthPointReplication.cs" />
         <Compile Include="Characters\ICharacterData.cs" />
         <Compile Include="Characters\ICharacterModel.cs" />
         <Compile Include="Characters\IHealthPointData.cs" />
         <Compile Include="Characters\IHealthPointModel.cs" />
         <Compile Include="Characters\WeaponChangedEventArgs.cs" />
-        <Compile Include="Exemplars\ExemplarsData.cs" />
         <Compile Include="Exemplars\ExemplarsModel.cs" />
-        <Compile Include="Exemplars\IExemplarsData.cs" />
+        <Compile Include="Exemplars\ExemplarsReplication.cs" />
         <Compile Include="Exemplars\IExemplarsModel.cs" />
         <Compile Include="IModelManager.cs" />
-        <Compile Include="IReplication.cs" />
         <Compile Include="ModelManager.cs" />
         <Compile Include="Players\IPlayerData.cs" />
         <Compile Include="Players\IPlayerModel.cs" />
         <Compile Include="Players\PlayerData.cs" />
         <Compile Include="Players\PlayerModel.cs" />
+        <Compile Include="Players\PlayerReplication.cs" />
         <Compile Include="Players\PlayersModel.cs" />
+        <Compile Include="Players\PlayersReplication.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
-        <Compile Include="Replication.cs" />
         <Compile Include="Weapons\IWeaponData.cs" />
         <Compile Include="Weapons\IWeaponModel.cs" />
         <Compile Include="Weapons\WeaponData.cs" />
         <Compile Include="Weapons\WeaponModel.cs" />
+        <Compile Include="Weapons\WeaponReplication.cs" />
         <Compile Include="Weapons\WeaponsModel.cs" />
+        <Compile Include="Weapons\WeaponsReplication.cs" />
         <Compile Include="Worlds\IWorldData.cs" />
         <Compile Include="Worlds\WorldData.cs" />
+        <Compile Include="Worlds\WorldReplication.cs" />
     </ItemGroup>
     <ItemGroup>
+      <ProjectReference Include="..\Replications\Replications.csproj">
+        <Project>{baf8876f-bdbd-4a23-90e4-32f2b2fc2eba}</Project>
+        <Name>Replications</Name>
+      </ProjectReference>
       <ProjectReference Include="..\SharedCode\SharedCode.csproj">
         <Project>{f7ae2fd2-5e64-4858-8224-64f136a34b5b}</Project>
         <Name>SharedCode</Name>

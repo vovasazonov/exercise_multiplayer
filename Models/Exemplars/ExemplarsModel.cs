@@ -4,25 +4,25 @@ namespace Models
 {
     public abstract class ExemplarsModel<TModel, TData> : IExemplarsModel<TModel>
     {
-        private readonly IExemplarsData<TData> _exemplarsData;
-        
+        private readonly ITrackableDictionary<int, TData> _exemplarsData;
+
         public ITrackableDictionary<int, TModel> ExemplarModelDic { get; } = new TrackableDictionary<int, TModel>();
 
-        public ExemplarsModel(IExemplarsData<TData> exemplarsData)
+        public ExemplarsModel(ITrackableDictionary<int, TData> exemplarsData)
         {
             _exemplarsData = exemplarsData;
 
-            _exemplarsData.ExemplarDic.Added += OnAdded;
-            _exemplarsData.ExemplarDic.Removed += OnRemoved;
+            _exemplarsData.Added += OnAdded;
+            _exemplarsData.Removed += OnRemoved;
 
             Instantiate();
         }
 
         private void Instantiate()
         {
-            foreach (var id in _exemplarsData.ExemplarDic.Keys)
+            foreach (var id in _exemplarsData.Keys)
             {
-                AddModel(id, _exemplarsData.ExemplarDic[id]);
+                AddModel(id, _exemplarsData[id]);
             }
         }
 
@@ -30,7 +30,7 @@ namespace Models
         {
             AddModel(id, data);
         }
-        
+
         private void OnRemoved(int id, TData data)
         {
             RemoveModel(id);

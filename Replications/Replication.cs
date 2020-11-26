@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Serialization;
 
 namespace Replications
 {
@@ -27,7 +28,7 @@ namespace Replications
             return dic;
         }
 
-        public object WriteDiff()
+        public virtual object WriteDiff()
         {
             var replicatedData = new Dictionary<string, object>(_diffDic);
             _diffDic.Clear();
@@ -36,7 +37,7 @@ namespace Replications
         
         public void Read(object obj)
         {
-            Dictionary<string, object> dataDic = (Dictionary<string, object>) obj;
+            Dictionary<string, object> dataDic = _castObject.To<Dictionary<string, object>>(obj);
 
             foreach (var key in dataDic.Keys)
             {

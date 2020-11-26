@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using Models;
 using Network.GameEventHandlers;
 using Network.PacketHandlers;
+using Replications;
 using Serialization;
 
 namespace Network

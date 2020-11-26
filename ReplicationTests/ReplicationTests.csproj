@@ -14,7 +14,9 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Replication\Replication.csproj" />
+      <ProjectReference Include="..\Models\Models.csproj" />
+      <ProjectReference Include="..\Replications\Replications.csproj" />
+      <ProjectReference Include="..\SharedCode\SharedCode.csproj" />
     </ItemGroup>
 
 </Project>
