@@ -57,18 +57,5 @@ namespace ReplicationTest
 
             Assert.IsTrue(_dataMock.IntValue == 5);
         }
-        
-        [Test]
-        public void ModelManagerTestReplication()
-        {
-            IWorldData worldData = new WorldData();
-            ISerializer serializer = new JsonNetSerializer();
-            var replication = new WorldReplication(worldData,new JsonCastObject());
-
-            var replicationWrote = replication.WriteWhole();
-            var serialized = serializer.Serialize(replicationWrote);
-            serializer.Deserialize(serialized, out object deserialized);
-            replication.Read(deserialized);
-        }
     }
 }
