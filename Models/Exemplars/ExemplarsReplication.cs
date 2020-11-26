@@ -44,12 +44,12 @@ namespace Models
 
         private void OnDataRemoved(int exemplarId, TInterfaceData exemplar)
         {
-            if (!_diffDic.ContainsKey("destroy"))
+            if (!_diffDic.ContainsKey(_destroy))
             {
-                _diffDic.Add("destroy", new List<int>());
+                _diffDic.Add(_destroy, new List<int>());
             }
 
-            var exemplarsIds = _diffDic["destroy"] as List<int>;
+            var exemplarsIds = _diffDic[_destroy] as List<int>;
             exemplarsIds?.Add(exemplarId);
 
             _exemplarsReplication.Remove(exemplarId);
@@ -82,7 +82,7 @@ namespace Models
         public override object WriteDiff()
         {
             var dic = new Dictionary<int, object>(_exemplarsReplication.ToDictionary(k => k.Key, v => v.Value.WriteDiff()));
-            _diffDic["update"] = dic;
+            _diffDic[_update] = dic;
 
             return base.WriteDiff();
         }
