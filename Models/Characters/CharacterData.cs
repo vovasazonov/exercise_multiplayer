@@ -17,13 +17,13 @@ namespace Models.Characters
             set
             {
                 _holdWeaponExemplarId = value;
-                OnHoldWeaponUpdated();
+                CallHoldWeaponUpdated();
             }
         }
 
         public IHealthPointData HealthPointData => _healthPointData;
 
-        private void OnHoldWeaponUpdated()
+        private void CallHoldWeaponUpdated()
         {
             HoldWeaponUpdated?.Invoke(this, EventArgs.Empty);
         }

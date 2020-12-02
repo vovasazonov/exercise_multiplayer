@@ -17,7 +17,7 @@ namespace Models
             set
             {
                 _score = value;
-                OnScoreUpdated();
+                CallScoreUpdated();
             }
         }
 
@@ -27,16 +27,16 @@ namespace Models
             set
             {
                 _controllableCharacterExemplarId = value;
-                OnControllableCharacterExemplarIdUpdated();
+                CallControllableCharacterExemplarIdUpdated();
             }
         }
 
-        private void OnScoreUpdated()
+        private void CallScoreUpdated()
         {
             ScoreUpdated?.Invoke(this, EventArgs.Empty);
         }
 
-        private void OnControllableCharacterExemplarIdUpdated()
+        private void CallControllableCharacterExemplarIdUpdated()
         {
             ControllableCharacterExemplarIdUpdated?.Invoke(this, EventArgs.Empty);
         }

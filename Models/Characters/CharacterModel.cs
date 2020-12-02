@@ -31,7 +31,7 @@ namespace Models.Characters
             enemy.HealthPoint.TakePoints(HoldWeapon.Damage);
 
             var eventArgs = new AttackEventArgs(enemy);
-            OnEnemyAttacked(eventArgs);
+            CallEnemyAttacked(eventArgs);
         }
 
         public void ChangeHoldWeapon(int weaponExemplarId)
@@ -43,11 +43,11 @@ namespace Models.Characters
                 _data.HoldWeaponExemplarId = weaponExemplarId;
 
                 var weaponChangedEventArgs = new WeaponChangedEventArgs(weaponExemplarId);
-                OnHoldWeaponChanged(weaponChangedEventArgs);
+                CallHoldWeaponChanged(weaponChangedEventArgs);
             }
         }
 
-        private void OnEnemyAttacked(AttackEventArgs e)
+        private void CallEnemyAttacked(AttackEventArgs e)
         {
             EnemyAttacked?.Invoke(this, e);
         }
@@ -57,7 +57,7 @@ namespace Models.Characters
             ChangeHoldWeapon(_data.HoldWeaponExemplarId);
         }
 
-        private void OnHoldWeaponChanged(WeaponChangedEventArgs e)
+        private void CallHoldWeaponChanged(WeaponChangedEventArgs e)
         {
             HoldWeaponChanged?.Invoke(this, e);
         }

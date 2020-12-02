@@ -17,11 +17,11 @@ namespace Models.Weapons
             set
             {
                 _damage = value;
-                OnDamageUpdated();
+                CallDamageUpdated();
             }
         }
 
-        private void OnDamageUpdated()
+        private void CallDamageUpdated()
         {
             DamageUpdated?.Invoke(this, EventArgs.Empty);
         }

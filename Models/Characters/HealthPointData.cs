@@ -16,7 +16,7 @@ namespace Models.Characters
             set
             {
                 _maxPoints = value;
-                OnMaxPointsUpdated();
+                CallMaxPointsUpdated();
             }
         }
 
@@ -26,16 +26,16 @@ namespace Models.Characters
             set
             {
                 _points = value;
-                OnPointsUpdated();
+                CallPointsUpdated();
             }
         }
 
-        private void OnMaxPointsUpdated()
+        private void CallMaxPointsUpdated()
         {
             MaxPointsUpdated?.Invoke(this, EventArgs.Empty);
         }
 
-        private void OnPointsUpdated()
+        private void CallPointsUpdated()
         {
             PointsUpdated?.Invoke(this, EventArgs.Empty);
         }

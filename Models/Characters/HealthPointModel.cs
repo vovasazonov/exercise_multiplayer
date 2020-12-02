@@ -68,20 +68,20 @@ namespace Models.Characters
         
         private void OnMaxPointsUpdated(object sender, EventArgs e)
         {
-            OnMaxPointsUpdated();
+            CallMaxPointsUpdated();
         }
 
         private void OnPointsUpdated(object sender, EventArgs e)
         {
-            OnPointsUpdated();
+            CallPointsUpdated();
         }
         
-        private void OnMaxPointsUpdated()
+        private void CallMaxPointsUpdated()
         {
             MaxPointsUpdated?.Invoke(this, EventArgs.Empty);
         }
 
-        private void OnPointsUpdated()
+        private void CallPointsUpdated()
         {
             PointsUpdated?.Invoke(this, EventArgs.Empty);
         }

@@ -42,10 +42,10 @@ namespace Models
 
         private void OnScoreChanged(object sender, EventArgs e)
         {
-            OnScoreChanged();
+            CallScoreChanged();
         }
 
-        private void OnScoreChanged()
+        private void CallScoreChanged()
         {
             ScoreChanged?.Invoke(this, EventArgs.Empty);
         }
@@ -60,10 +60,10 @@ namespace Models
             _oldControllableCharacterExemplarId = ControllableCharacterExemplarId;
             AddCharacterListeners(ControllableCharacterExemplarId);
             
-            OnControllableCharacterExemplarIdChanged();
+            CallCharacterExemplarIdChanged();
         }
 
-        private void OnControllableCharacterExemplarIdChanged()
+        private void CallCharacterExemplarIdChanged()
         {
             ControllableCharacterExemplarIdChanged?.Invoke(this, EventArgs.Empty);
         }
