@@ -65,7 +65,6 @@
         <option value="$PROJECT_DIR$/ReplicationTest/ReplicationMock.cs" />
         <option value="$PROJECT_DIR$/ReplicationTest/Tests.cs" />
         <option value="$PROJECT_DIR$/ReplicationTests/Tests.cs" />
-        <option value="$PROJECT_DIR$/ReplicationTests/DataMock.cs" />
         <option value="$PROJECT_DIR$/ReplicationTests/IntCustomCastObjectMock.cs" />
         <option value="$PROJECT_DIR$/ReplicationTests/ClassicCustomCastObjectMock.cs" />
         <option value="$PROJECT_DIR$/Models/Worlds/IWorldData.cs" />
@@ -94,18 +93,10 @@
         <option value="$PROJECT_DIR$/SharedCode/Serialization/BinaryFormatterSerialization/BinaryFormatterSerializer.cs" />
         <option value="$PROJECT_DIR$/Replications/Test.cs" />
         <option value="$PROJECT_DIR$/Replications/IProperty.cs" />
-        <option value="$PROJECT_DIR$/Replications/Property.cs" />
         <option value="$PROJECT_DIR$/Replications/Replication.cs" />
         <option value="$PROJECT_DIR$/Replications/IReplication.cs" />
-        <option value="$PROJECT_DIR$/Models/Exemplars/ExemplarsReplication.cs" />
-        <option value="$PROJECT_DIR$/Models/Players/PlayerReplication.cs" />
-        <option value="$PROJECT_DIR$/Models/Characters/HealthPointReplication.cs" />
-        <option value="$PROJECT_DIR$/Models/Characters/CharacterReplication.cs" />
-        <option value="$PROJECT_DIR$/Models/Weapons/WeaponReplication.cs" />
-        <option value="$PROJECT_DIR$/Models/Worlds/WorldReplication.cs" />
         <option value="$PROJECT_DIR$/ReplicationTests/ReplicationTest.cs" />
         <option value="$PROJECT_DIR$/ReplicationTests/IDataMock.cs" />
-        <option value="$PROJECT_DIR$/ReplicationTests/ReplicationMock.cs" />
         <option value="$PROJECT_DIR$/Models/Characters/CharacterModel.cs" />
         <option value="$PROJECT_DIR$/Models/Characters/CharacterData.cs" />
         <option value="$PROJECT_DIR$/Models/Characters/HealthPointData.cs" />
@@ -113,6 +104,15 @@
         <option value="$PROJECT_DIR$/Models/Players/PlayerData.cs" />
         <option value="$PROJECT_DIR$/Models/Players/PlayerModel.cs" />
         <option value="$PROJECT_DIR$/Models/Weapons/WeaponData.cs" />
+        <option value="$PROJECT_DIR$/ReplicationTests/DataMock.cs" />
+        <option value="$PROJECT_DIR$/Replications/Property.cs" />
+        <option value="$PROJECT_DIR$/Models/Characters/HealthPointReplication.cs" />
+        <option value="$PROJECT_DIR$/Models/Characters/CharacterReplication.cs" />
+        <option value="$PROJECT_DIR$/Models/Players/PlayerReplication.cs" />
+        <option value="$PROJECT_DIR$/ReplicationTests/ReplicationMock.cs" />
+        <option value="$PROJECT_DIR$/Models/Weapons/WeaponReplication.cs" />
+        <option value="$PROJECT_DIR$/Models/Worlds/WorldReplication.cs" />
+        <option value="$PROJECT_DIR$/Models/Exemplars/ExemplarsReplication.cs" />
       </list>
     </option>
   </component>
@@ -203,7 +203,7 @@
       <workItem from="1606391221354" duration="7566000" />
       <workItem from="1606467775064" duration="12721000" />
       <workItem from="1606824632333" duration="1331000" />
-      <workItem from="1606891238813" duration="12619000" />
+      <workItem from="1606891238813" duration="16619000" />
     </task>
     <servers />
   </component>

@@ -13,7 +13,12 @@ namespace Models.Characters
             _characterData = characterData;
             _healthPointReplication = new HealthPointReplication(_characterData.HealthPointData, castObject);
 
-            InstantiateProperty("health", new Property(GetHealth, SetHealth, IsHealthChanged, ResetDiffHealth));
+            InstantiateProperty("health", new Property(GetHealth, GetDiffHealth, SetHealth, IsHealthChanged, ResetDiffHealth));
+        }
+
+        private object GetDiffHealth()
+        {
+            return _healthPointReplication.WriteDiff();
         }
 
         private object GetHealth()

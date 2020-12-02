@@ -4,17 +4,19 @@ namespace Replications
 {
     public class Property : IReplication
     {
-        private readonly Func<object> _getDelegate;
+        private readonly Func<object> _getWholeDelegate;
+        private readonly Func<object> _getDiffDelegate;
         private readonly Func<bool> _checkDifferDelegate;
         private readonly Action _resetDifferDelegate;
         private readonly Action<object> _setDelegate;
             
-        public Property(Func<object> getDelegate, Action<object> setDelegate, Func<bool> checkDifferDelegate, Action resetDifferDelegate)
+        public Property(Func<object> getWholeDelegate,Func<object> getDiffDelegate, Action<object> setDelegate, Func<bool> checkDifferDelegate, Action resetDifferDelegate)
         {
-            _getDelegate = getDelegate;
+            _getWholeDelegate = getWholeDelegate;
+            _getDiffDelegate = getDiffDelegate;
+            _setDelegate = setDelegate;
             _checkDifferDelegate = checkDifferDelegate;
             _resetDifferDelegate = resetDifferDelegate;
-            _setDelegate = setDelegate;
         }
 
         public bool ContainsDiff()
@@ -29,12 +31,12 @@ namespace Replications
 
         public object WriteWhole()
         {
-            return _getDelegate.Invoke();
+            return _getWholeDelegate.Invoke();
         }
 
         public object WriteDiff()
         {
-            return WriteWhole();
+            return _getDiffDelegate.Invoke();
         }
 
         public void Read(object obj)

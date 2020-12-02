@@ -13,8 +13,8 @@ namespace Models.Weapons
         {
             _weaponData = weaponData;
 
-            InstantiateProperty("id",new Property(GetId,SetId,ContainsDiffId,ResetDiffId));
-            InstantiateProperty("damage",new Property(GetDamage,SetDamage,ContainsDiffDamage,ResetDiffDamage));
+            InstantiateProperty("id", new Property(GetId, GetId, SetId, ContainsDiffId, ResetDiffId));
+            InstantiateProperty("damage", new Property(GetDamage, GetDamage, SetDamage, ContainsDiffDamage, ResetDiffDamage));
         }
 
         private object GetId()

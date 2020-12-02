@@ -17,10 +17,15 @@ namespace Models
 
             AddListener();
 
-            InstantiateProperty("data", new Property(GetData, SetData, IsDataDiff, ResetDataDiff));
-            InstantiateProperty("removeData", new Property(GetRemoveData, SetRemoveData, IsRemoveDataDiff, ResetRemoveDataDiff));
+            InstantiateProperty("data", new Property(GetData, GetDiffData, SetData, IsDataDiff, ResetDataDiff));
+            InstantiateProperty("removeData", new Property(GetRemoveData, GetRemoveData, SetRemoveData, IsRemoveDataDiff, ResetRemoveDataDiff));
 
             InstantiateReplications();
+        }
+
+        private object GetDiffData()
+        {
+            return new Dictionary<int, object>(_exemplarsReplication.ToDictionary(k => k.Key, v => v.Value.WriteDiff()));
         }
 
         private object GetData()
@@ -31,14 +36,14 @@ namespace Models
         private void SetData(object obj)
         {
             var dataDic = _castObject.To<Dictionary<int, object>>(obj);
-            
+
             foreach (var id in dataDic.Keys)
             {
                 if (!_exemplarsData.ContainsKey(id))
                 {
                     InstantiateData(id);
                 }
-            
+
                 _exemplarsReplication[id].Read(dataDic[id]);
             }
         }
@@ -101,7 +106,7 @@ namespace Models
             _removedDataList.Add(exemplarId);
             _exemplarsReplication.Remove(exemplarId);
         }
-        
+
         private void AddListener()
         {
             _exemplarsData.Added += OnDataAdded;

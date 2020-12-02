@@ -17,9 +17,14 @@ namespace Models
             _charactersReplication = new CharactersReplication(worldData.CharacterData, castObject);
             _playersReplication = new PlayersReplication(worldData.PlayersData, castObject);
 
-            InstantiateProperty("weapons", new Property(GetWeapons, SetWeapons, ContainsDiffWeapons, ResetDiffWeapons));
-            InstantiateProperty("characters", new Property(GetCharacters, SetCharacters, ContainsDiffCharacters, ResetDiffCharacters));
-            InstantiateProperty("players", new Property(GetPlayers, SetPlayers, ContainsDiffPlayers, ResetDiffPlayers));
+            InstantiateProperty("weapons", new Property(GetWeapons, GetDiffWeapons, SetWeapons, ContainsDiffWeapons, ResetDiffWeapons));
+            InstantiateProperty("characters", new Property(GetCharacters, GetDiffCharacters, SetCharacters, ContainsDiffCharacters, ResetDiffCharacters));
+            InstantiateProperty("players", new Property(GetPlayers, GetDiffPlayers, SetPlayers, ContainsDiffPlayers, ResetDiffPlayers));
+        }
+
+        private object GetDiffWeapons()
+        {
+            return _weaponsReplication.WriteDiff();
         }
 
         private object GetWeapons()
@@ -42,6 +47,11 @@ namespace Models
             _weaponsReplication.ResetDiff();
         }
 
+        private object GetDiffCharacters()
+        {
+           return _charactersReplication.WriteDiff();
+        }
+        
         private object GetCharacters()
         {
             return _charactersReplication.WriteWhole();
@@ -63,6 +73,11 @@ namespace Models
             _charactersReplication.ResetDiff();
         }
 
+        private object GetDiffPlayers()
+        {
+            return _playersReplication.WriteDiff();
+        }
+        
         private object GetPlayers()
         {
             return _playersReplication.WriteWhole();

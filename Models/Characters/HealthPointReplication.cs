@@ -13,8 +13,8 @@ namespace Models.Characters
         {
             _healthPointData = healthPointData;
 
-            InstantiateProperty("points", new Property(GetPoints, SetPoints, IsPointsChanged, ResetDiffPoints));
-            InstantiateProperty("max_points", new Property(GetMaxPoints, SetMaxPoints, IsMaxPointsChanged, ResetDiffMaxPoints));
+            InstantiateProperty("points", new Property(GetPoints, GetPoints, SetPoints, IsPointsChanged, ResetDiffPoints));
+            InstantiateProperty("max_points", new Property(GetMaxPoints, GetPoints, SetMaxPoints, IsMaxPointsChanged, ResetDiffMaxPoints));
         }
 
         private object GetPoints()

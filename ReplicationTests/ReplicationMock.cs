@@ -14,7 +14,7 @@ namespace ReplicationTest
         {
             _dataMock = dataMock;
             
-            InstantiateProperty("int_value", new Property(GetValue,SetValue,ContainsDiffValue,ResetDiffValue));
+            InstantiateProperty("int_value", new Property(GetValue, GetValue, SetValue,ContainsDiffValue,ResetDiffValue));
         }
 
         private object GetValue()

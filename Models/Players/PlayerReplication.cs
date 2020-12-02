@@ -13,8 +13,8 @@ namespace Models
         {
             _playerData = playerData;
 
-            InstantiateProperty("score", new Property(GetScore, SetScore, ContainsDiffScore, ResetDiffScore));
-            InstantiateProperty("control_character_id", new Property(GetCharacterId, SetCharacterId, ContainsDiffCharacterId, ResetDiffCharacterId));
+            InstantiateProperty("score", new Property(GetScore, GetScore, SetScore, ContainsDiffScore, ResetDiffScore));
+            InstantiateProperty("control_character_id", new Property(GetCharacterId, GetScore, SetCharacterId, ContainsDiffCharacterId, ResetDiffCharacterId));
         }
 
         private object GetScore()
