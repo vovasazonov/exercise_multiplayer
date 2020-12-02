@@ -1,5 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Linq;
 using Serialization;
 
 namespace Replications
@@ -7,41 +7,48 @@ namespace Replications
     public abstract class Replication : IReplication
     {
         protected readonly ICustomCastObject _castObject;
-        protected readonly Dictionary<string, object> _diffDic = new Dictionary<string, object>();
-        protected readonly Dictionary<string, Func<object>> _getterDic = new Dictionary<string, Func<object>>();
-        protected readonly Dictionary<string, Action<object>> _setterDic = new Dictionary<string, Action<object>>();
+        private readonly Dictionary<string, IReplication> _properties = new Dictionary<string, IReplication>();
 
         protected Replication(ICustomCastObject castObject)
         {
             _castObject = castObject;
         }
 
+        protected void InstantiateProperty(string id, IReplication property)
+        {
+            _properties[id] = property;
+        }
+
+        public bool ContainsDiff()
+        {
+            return _properties.Any(p => p.Value.ContainsDiff());
+        }
+
+        public void ResetDiff()
+        {
+            foreach (var property in _properties.Values)
+            {
+                property.ResetDiff();
+            }
+        }
+
         public object WriteWhole()
         {
-            var dic = new Dictionary<string, object>(_getterDic.Count);
-
-            foreach (var key in _getterDic.Keys)
-            {
-                dic.Add(key, _getterDic[key].Invoke());
-            }
-
-            return dic;
+            return _properties.ToDictionary(k => k.Key, v => v.Value.WriteWhole());
         }
 
-        public virtual object WriteDiff()
+        public object WriteDiff()
         {
-            var replicatedData = new Dictionary<string, object>(_diffDic);
-            _diffDic.Clear();
-            return replicatedData;
+            return _properties.ToDictionary(k => k.Key, v => v.Value.WriteDiff());
         }
-        
+
         public void Read(object obj)
         {
             Dictionary<string, object> dataDic = _castObject.To<Dictionary<string, object>>(obj);
 
             foreach (var key in dataDic.Keys)
             {
-                _setterDic[key].Invoke(dataDic[key]);
+                _properties[key].Read(dataDic[key]);
             }
         }
     }

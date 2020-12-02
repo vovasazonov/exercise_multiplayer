@@ -2,8 +2,10 @@
 {
     public interface IReplication
     {
-        object WriteWhole();
+        bool ContainsDiff();
+        void ResetDiff();
         object WriteDiff();
+        object WriteWhole();
         void Read(object obj);
     }
 }

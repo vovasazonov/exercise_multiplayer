@@ -1,5 +1,4 @@
-﻿using System;
-using Replications;
+﻿using Replications;
 using Serialization;
 
 namespace Models
@@ -7,21 +6,55 @@ namespace Models
     public class PlayerReplication : Replication
     {
         private readonly IPlayerData _playerData;
+        private uint _oldScore;
+        private int _oldControllableCharacterExemplarId;
 
         public PlayerReplication(IPlayerData playerData, ICustomCastObject castObject) : base(castObject)
         {
             _playerData = playerData;
 
-            _playerData.ScoreUpdated += OnScoreUpdated;
-            _playerData.ControllableCharacterExemplarIdUpdated += OnControllableCharacterIdUpdated;
-
-            _getterDic.Add(nameof(_playerData.Score), () => _playerData.Score);
-            _setterDic.Add(nameof(_playerData.Score), obj => _playerData.Score = castObject.To<uint>(obj));
-            _getterDic.Add(nameof(_playerData.ControllableCharacterExemplarId), () => _playerData.ControllableCharacterExemplarId);
-            _setterDic.Add(nameof(_playerData.ControllableCharacterExemplarId), obj => _playerData.ControllableCharacterExemplarId = castObject.To<int>(obj));
+            InstantiateProperty("score", new Property(GetScore, SetScore, ContainsDiffScore, ResetDiffScore));
+            InstantiateProperty("control_character_id", new Property(GetCharacterId, SetCharacterId, ContainsDiffCharacterId, ResetDiffCharacterId));
         }
 
-        private void OnScoreUpdated(object sender, EventArgs e) => _diffDic[nameof(_playerData.Score)] = _playerData.Score;
-        private void OnControllableCharacterIdUpdated(object sender, EventArgs e) => _diffDic[nameof(_playerData.ControllableCharacterExemplarId)] = _playerData.ControllableCharacterExemplarId;
+        private object GetScore()
+        {
+            return _playerData.Score;
+        }
+
+        private void SetScore(object obj)
+        {
+            _playerData.Score = _castObject.To<uint>(obj);
+        }
+
+        private bool ContainsDiffScore()
+        {
+            return _oldScore != _playerData.Score;
+        }
+
+        private void ResetDiffScore()
+        {
+            _oldScore = _playerData.Score;
+        }
+
+        private object GetCharacterId()
+        {
+            return _playerData.ControllableCharacterExemplarId;
+        }
+
+        private void SetCharacterId(object obj)
+        {
+            _playerData.ControllableCharacterExemplarId = _castObject.To<int>(obj);
+        }
+
+        private bool ContainsDiffCharacterId()
+        {
+            return _oldControllableCharacterExemplarId != _playerData.ControllableCharacterExemplarId;
+        }
+
+        private void ResetDiffCharacterId()
+        {
+            _oldControllableCharacterExemplarId = _playerData.ControllableCharacterExemplarId;
+        }
     }
 }

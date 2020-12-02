@@ -1,5 +1,4 @@
-﻿using System;
-using Replications;
+﻿using Replications;
 using Serialization;
 
 namespace Models.Weapons
@@ -7,19 +6,55 @@ namespace Models.Weapons
     public class WeaponReplication : Replication
     {
         private readonly IWeaponData _weaponData;
+        private string _oldId;
+        private uint _oldDamage;
 
         public WeaponReplication(IWeaponData weaponData, ICustomCastObject castObject) : base(castObject)
         {
             _weaponData = weaponData;
 
-            weaponData.DamageUpdated += OnDamageUpdated;
-
-            _getterDic.Add(nameof(_weaponData.Id), () => _weaponData.Id);
-            _setterDic.Add(nameof(_weaponData.Id), obj => _weaponData.Id = _castObject.To<string>(obj));
-            _getterDic.Add(nameof(_weaponData.Damage), () => _weaponData.Damage);
-            _setterDic.Add(nameof(_weaponData.Damage), obj => _weaponData.Damage = _castObject.To<uint>(obj));
+            InstantiateProperty("id",new Property(GetId,SetId,ContainsDiffId,ResetDiffId));
+            InstantiateProperty("damage",new Property(GetDamage,SetDamage,ContainsDiffDamage,ResetDiffDamage));
         }
 
-        private void OnDamageUpdated(object sender, EventArgs e) => _diffDic[nameof(_weaponData.Damage)] = _weaponData.Damage;
+        private object GetId()
+        {
+            return _weaponData.Id;
+        }
+
+        private void SetId(object obj)
+        {
+            _weaponData.Id = _castObject.To<string>(obj);
+        }
+
+        private bool ContainsDiffId()
+        {
+            return _weaponData.Id != _oldId;
+        }
+
+        private void ResetDiffId()
+        {
+            _oldId = _weaponData.Id;
+        }
+
+        private object GetDamage()
+        {
+            return _weaponData.Damage;
+        }
+
+        private void SetDamage(object obj)
+        {
+            _weaponData.Damage = _castObject.To<uint>(obj);
+        }
+
+        private bool ContainsDiffDamage()
+        {
+            return _weaponData.Damage != _oldDamage;
+        }
+
+        private void ResetDiffDamage()
+        {
+            _oldDamage = _weaponData.Damage;
+        }
     }
 }

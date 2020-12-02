@@ -7,23 +7,77 @@ namespace Models
 {
     public abstract class ExemplarsReplication<TInterfaceData> : Replication
     {
-        private const string _update = "update";
-        private const string _destroy = "destroy";
         protected readonly ITrackableDictionary<int, TInterfaceData> _exemplarsData;
         protected readonly Dictionary<int, Replication> _exemplarsReplication = new Dictionary<int, Replication>();
+        private readonly List<int> _removedDataList = new List<int>();
 
         protected ExemplarsReplication(ITrackableDictionary<int, TInterfaceData> exemplarsData, ICustomCastObject castObject) : base(castObject)
         {
             _exemplarsData = exemplarsData;
 
-            _exemplarsData.Added += OnDataAdded;
-            _exemplarsData.Removed += OnDataRemoved;
+            AddListener();
 
-            _getterDic.Add(_update, () => _exemplarsReplication.ToDictionary(key => key.Key, value => value.Value.WriteWhole()));
-            _setterDic.Add(_update, UpdateData);
-            _setterDic.Add(_destroy, DestroyData);
+            InstantiateProperty("data", new Property(GetData, SetData, IsDataDiff, ResetDataDiff));
+            InstantiateProperty("removeData", new Property(GetRemoveData, SetRemoveData, IsRemoveDataDiff, ResetRemoveDataDiff));
 
             InstantiateReplications();
+        }
+
+        private object GetData()
+        {
+            return new Dictionary<int, object>(_exemplarsReplication.ToDictionary(k => k.Key, v => v.Value.WriteWhole()));
+        }
+
+        private void SetData(object obj)
+        {
+            var dataDic = _castObject.To<Dictionary<int, object>>(obj);
+            
+            foreach (var id in dataDic.Keys)
+            {
+                if (!_exemplarsData.ContainsKey(id))
+                {
+                    InstantiateData(id);
+                }
+            
+                _exemplarsReplication[id].Read(dataDic[id]);
+            }
+        }
+
+        private bool IsDataDiff()
+        {
+            return _exemplarsReplication.Values.Any(r => r.ContainsDiff());
+        }
+
+        private void ResetDataDiff()
+        {
+            foreach (var replicationValue in _exemplarsReplication.Values)
+            {
+                replicationValue.ResetDiff();
+            }
+        }
+
+        private object GetRemoveData()
+        {
+            return new List<int>(_removedDataList);
+        }
+
+        private void SetRemoveData(object obj)
+        {
+            var dataIds = _castObject.To<List<int>>(obj);
+            foreach (var id in dataIds)
+            {
+                _exemplarsData.Remove(id);
+            }
+        }
+
+        private bool IsRemoveDataDiff()
+        {
+            return _removedDataList.Count > 0;
+        }
+
+        private void ResetRemoveDataDiff()
+        {
+            _removedDataList.Clear();
         }
 
         private void InstantiateReplications()
@@ -36,7 +90,7 @@ namespace Models
 
         protected abstract void InstantiateReplication(int exemplarId, TInterfaceData data);
         protected abstract void InstantiateData(int exemplarId);
-        
+
         private void OnDataAdded(int exemplarId, TInterfaceData data)
         {
             InstantiateReplication(exemplarId, data);
@@ -44,47 +98,20 @@ namespace Models
 
         private void OnDataRemoved(int exemplarId, TInterfaceData exemplar)
         {
-            if (!_diffDic.ContainsKey(_destroy))
-            {
-                _diffDic.Add(_destroy, new List<int>());
-            }
-
-            var exemplarsIds = _diffDic[_destroy] as List<int>;
-            exemplarsIds?.Add(exemplarId);
-
+            _removedDataList.Add(exemplarId);
             _exemplarsReplication.Remove(exemplarId);
         }
-
-        private void UpdateData(object obj)
+        
+        private void AddListener()
         {
-            var dataDic = _castObject.To<Dictionary<int, object>>(obj);
-
-            foreach (var id in dataDic.Keys)
-            {
-                if (!_exemplarsData.TryGetValue(id, out var exemplar))
-                {
-                    InstantiateData(id);
-                }
-
-                _exemplarsReplication[id].Read(dataDic[id]);
-            }
+            _exemplarsData.Added += OnDataAdded;
+            _exemplarsData.Removed += OnDataRemoved;
         }
 
-        private void DestroyData(object obj)
+        private void RemoveListener()
         {
-            var dataIds = _castObject.To<List<int>>(obj);
-            foreach (var id in dataIds)
-            {
-                _exemplarsData.Remove(id);
-            }
-        }
-
-        public override object WriteDiff()
-        {
-            var dic = new Dictionary<int, object>(_exemplarsReplication.ToDictionary(k => k.Key, v => v.Value.WriteDiff()));
-            _diffDic[_update] = dic;
-
-            return base.WriteDiff();
+            _exemplarsData.Added -= OnDataAdded;
+            _exemplarsData.Removed -= OnDataRemoved;
         }
     }
 }

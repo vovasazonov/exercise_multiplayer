@@ -1,5 +1,4 @@
-﻿using System;
-using Replications;
+﻿using Replications;
 using Serialization;
 
 namespace Models.Characters
@@ -7,21 +6,55 @@ namespace Models.Characters
     public class HealthPointReplication : Replication
     {
         private readonly IHealthPointData _healthPointData;
+        private uint _oldPoints;
+        private uint _oldMaxPoints;
 
         public HealthPointReplication(IHealthPointData healthPointData, ICustomCastObject castObject) : base(castObject)
         {
             _healthPointData = healthPointData;
-            
-            _healthPointData.PointsUpdated += OnPointsUpdated;
-            _healthPointData.MaxPointsUpdated += OnMaxPointsUpdated;
 
-            _getterDic.Add(nameof(_healthPointData.Points), () => _healthPointData.Points);
-            _setterDic.Add(nameof(_healthPointData.Points), obj => _healthPointData.Points = _castObject.To<uint>(obj));
-            _getterDic.Add(nameof(_healthPointData.MaxPoints), () => _healthPointData.MaxPoints);
-            _setterDic.Add(nameof(_healthPointData.MaxPoints), obj => _healthPointData.MaxPoints = _castObject.To<uint>(obj));
+            InstantiateProperty("points", new Property(GetPoints, SetPoints, IsPointsChanged, ResetDiffPoints));
+            InstantiateProperty("max_points", new Property(GetMaxPoints, SetMaxPoints, IsMaxPointsChanged, ResetDiffMaxPoints));
         }
 
-        private void OnPointsUpdated(object sender, EventArgs e) => _diffDic[nameof(_healthPointData.Points)] = _healthPointData.Points;
-        private void OnMaxPointsUpdated(object sender, EventArgs e) => _diffDic[nameof(_healthPointData.MaxPoints)] = _healthPointData.MaxPoints;
+        private object GetPoints()
+        {
+            return _healthPointData.Points;
+        }
+
+        private void SetPoints(object obj)
+        {
+            _healthPointData.Points = _castObject.To<uint>(obj);
+        }
+
+        private bool IsPointsChanged()
+        {
+            return _oldPoints != _healthPointData.Points;
+        }
+
+        private void ResetDiffPoints()
+        {
+            _oldPoints = _healthPointData.Points;
+        }
+
+        private object GetMaxPoints()
+        {
+            return _healthPointData.MaxPoints;
+        }
+
+        private void SetMaxPoints(object obj)
+        {
+            _healthPointData.MaxPoints = _castObject.To<uint>(obj);
+        }
+
+        private bool IsMaxPointsChanged()
+        {
+            return _oldMaxPoints != _healthPointData.MaxPoints;
+        }
+
+        private void ResetDiffMaxPoints()
+        {
+            _oldMaxPoints = _healthPointData.MaxPoints;
+        }
     }
 }

@@ -1,11 +1,8 @@
 ﻿using System.Collections.Generic;
-using Models;
-using Newtonsoft.Json;
 using NUnit.Framework;
 using Replications;
 using ReplicationTests;
 using Serialization;
-using Serialization.JsonNetSerialization;
 
 namespace ReplicationTest
 {
