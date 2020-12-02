@@ -14,10 +14,10 @@ namespace ReplicationTests
             set
             {
                 _intValue = value;
-                OnIntValueUpdated();
+                CallIntValueUpdated();
             }
         }
 
-        private void OnIntValueUpdated() => IntValueUpdated?.Invoke(this, EventArgs.Empty);
+        private void CallIntValueUpdated() => IntValueUpdated?.Invoke(this, EventArgs.Empty);
     }
 }

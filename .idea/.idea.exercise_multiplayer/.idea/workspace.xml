@@ -62,17 +62,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Replication/Replication.cs" />
         <option value="$PROJECT_DIR$/ReplicationTest/ReplicationMock.cs" />
         <option value="$PROJECT_DIR$/ReplicationTest/Tests.cs" />
         <option value="$PROJECT_DIR$/ReplicationTests/Tests.cs" />
         <option value="$PROJECT_DIR$/ReplicationTests/DataMock.cs" />
         <option value="$PROJECT_DIR$/ReplicationTests/IntCustomCastObjectMock.cs" />
         <option value="$PROJECT_DIR$/ReplicationTests/ClassicCustomCastObjectMock.cs" />
-        <option value="$PROJECT_DIR$/Models/Players/PlayerData.cs" />
         <option value="$PROJECT_DIR$/Models/Worlds/IWorldData.cs" />
         <option value="$PROJECT_DIR$/Models/Worlds/WorldData.cs" />
-        <option value="$PROJECT_DIR$/Models/Weapons/WeaponData.cs" />
         <option value="$PROJECT_DIR$/Models/IModelManager.cs" />
         <option value="$PROJECT_DIR$/Models/Exemplars/ExemplarsData.cs" />
         <option value="$PROJECT_DIR$/Models/Exemplars/ExemplarsModel.cs" />
@@ -113,6 +110,9 @@
         <option value="$PROJECT_DIR$/Models/Characters/CharacterData.cs" />
         <option value="$PROJECT_DIR$/Models/Characters/HealthPointData.cs" />
         <option value="$PROJECT_DIR$/Models/Characters/HealthPointModel.cs" />
+        <option value="$PROJECT_DIR$/Models/Players/PlayerData.cs" />
+        <option value="$PROJECT_DIR$/Models/Players/PlayerModel.cs" />
+        <option value="$PROJECT_DIR$/Models/Weapons/WeaponData.cs" />
       </list>
     </option>
   </component>
@@ -203,7 +203,7 @@
       <workItem from="1606391221354" duration="7566000" />
       <workItem from="1606467775064" duration="12721000" />
       <workItem from="1606824632333" duration="1331000" />
-      <workItem from="1606891238813" duration="11579000" />
+      <workItem from="1606891238813" duration="12619000" />
     </task>
     <servers />
   </component>
