@@ -39,6 +39,7 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="IReplication.cs" />
+        <Compile Include="PrimitiveProperty.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
         <Compile Include="Property.cs" />
         <Compile Include="Replication.cs" />

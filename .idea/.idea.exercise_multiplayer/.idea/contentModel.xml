@@ -71,6 +71,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="IReplication.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
+        <e p="PrimitiveProperty.cs" t="Include" />
         <e p="Properties" t="Include">
           <e p="AssemblyInfo.cs" t="Include" />
         </e>
@@ -90,6 +91,7 @@
             </e>
           </e>
         </e>
+        <e p="PrimitivePropertyTests.cs" t="Include" />
         <e p="ReplicationMock.cs" t="Include" />
         <e p="ReplicationTest.cs" t="Include" />
         <e p="ReplicationTests.csproj" t="IncludeRecursive" />
