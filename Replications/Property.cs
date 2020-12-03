@@ -9,8 +9,8 @@ namespace Replications
         private readonly Func<bool> _checkDifferDelegate;
         private readonly Action _resetDifferDelegate;
         private readonly Action<object> _setDelegate;
-            
-        public Property(Func<object> getWholeDelegate,Func<object> getDiffDelegate, Action<object> setDelegate, Func<bool> checkDifferDelegate, Action resetDifferDelegate)
+
+        public Property(Func<object> getWholeDelegate, Func<object> getDiffDelegate, Action<object> setDelegate, Func<bool> checkDifferDelegate, Action resetDifferDelegate)
         {
             _getWholeDelegate = getWholeDelegate;
             _getDiffDelegate = getDiffDelegate;
