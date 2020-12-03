@@ -104,6 +104,7 @@ namespace Network
                 {
                     diff ??= _worldReplication.WriteDiff();
                     clientProxy.NotSentToClientPacket.MutablePacketDic[DataType.State].Fill(diff);
+                    _worldReplication.ResetDiff();
                 }
             }
         }
