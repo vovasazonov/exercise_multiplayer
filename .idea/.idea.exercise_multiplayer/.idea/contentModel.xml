@@ -17,7 +17,6 @@
       <e p="Models" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="Characters" t="Include">
-          <e p="AttackEventArgs.cs" t="Include" />
           <e p="CharacterData.cs" t="Include" />
           <e p="CharacterModel.cs" t="Include" />
           <e p="CharacterReplication.cs" t="Include" />
@@ -30,7 +29,6 @@
           <e p="ICharacterModel.cs" t="Include" />
           <e p="IHealthPointData.cs" t="Include" />
           <e p="IHealthPointModel.cs" t="Include" />
-          <e p="WeaponChangedEventArgs.cs" t="Include" />
         </e>
         <e p="Exemplars" t="Include">
           <e p="ExemplarsModel.cs" t="Include" />

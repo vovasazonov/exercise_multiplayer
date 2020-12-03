@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Models.Weapons;
 
 namespace Models.Characters
 {
     public class CharacterModel : ICharacterModel
     {
-        public event EventHandler<AttackEventArgs> EnemyAttacked;
-        public event EventHandler<WeaponChangedEventArgs> HoldWeaponChanged;
+        public event EnemyAttackedHandler EnemyAttacked;
+        public event HoldWeaponChangedHandler HoldWeaponChanged;
 
         private readonly ICharacterData _data;
         readonly ITrackableDictionary<int, IWeaponModel> _weaponModels;
@@ -23,15 +22,14 @@ namespace Models.Characters
 
             HealthPoint = new HealthPointModel(_data.HealthPointData);
 
-            _data.HoldWeaponUpdated += OnDataHoldWeaponChanged;
+            _data.HoldWeaponUpdated += OnHoldWeaponChanged;
         }
 
         public void Attack(ICharacterModel enemy)
         {
             enemy.HealthPoint.TakePoints(HoldWeapon.Damage);
 
-            var eventArgs = new AttackEventArgs(enemy);
-            CallEnemyAttacked(eventArgs);
+            CallEnemyAttacked(enemy);
         }
 
         public void ChangeHoldWeapon(int weaponExemplarId)
@@ -42,24 +40,23 @@ namespace Models.Characters
                 HoldWeapon = weaponExemplar;
                 _data.HoldWeaponExemplarId = weaponExemplarId;
 
-                var weaponChangedEventArgs = new WeaponChangedEventArgs(weaponExemplarId);
-                CallHoldWeaponChanged(weaponChangedEventArgs);
+                CallHoldWeaponChanged(weaponExemplarId);
             }
         }
 
-        private void CallEnemyAttacked(AttackEventArgs e)
+        private void CallEnemyAttacked(ICharacterModel enemy)
         {
-            EnemyAttacked?.Invoke(this, e);
+            EnemyAttacked?.Invoke(enemy);
         }
 
-        private void OnDataHoldWeaponChanged(object sender, EventArgs e)
+        private void OnHoldWeaponChanged()
         {
             ChangeHoldWeapon(_data.HoldWeaponExemplarId);
         }
 
-        private void CallHoldWeaponChanged(WeaponChangedEventArgs e)
+        private void CallHoldWeaponChanged(int weaponExemplarId)
         {
-            HoldWeaponChanged?.Invoke(this, e);
+            HoldWeaponChanged?.Invoke(weaponExemplarId);
         }
     }
 }

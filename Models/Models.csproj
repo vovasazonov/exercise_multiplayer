@@ -41,7 +41,6 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="Characters\AttackEventArgs.cs" />
         <Compile Include="Characters\CharacterData.cs" />
         <Compile Include="Characters\CharacterModel.cs" />
         <Compile Include="Characters\CharacterReplication.cs" />
@@ -54,7 +53,6 @@
         <Compile Include="Characters\ICharacterModel.cs" />
         <Compile Include="Characters\IHealthPointData.cs" />
         <Compile Include="Characters\IHealthPointModel.cs" />
-        <Compile Include="Characters\WeaponChangedEventArgs.cs" />
         <Compile Include="Exemplars\ExemplarsModel.cs" />
         <Compile Include="Exemplars\ExemplarsReplication.cs" />
         <Compile Include="Exemplars\IExemplarsModel.cs" />

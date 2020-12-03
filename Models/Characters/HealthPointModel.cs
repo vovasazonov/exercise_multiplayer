@@ -4,8 +4,8 @@ namespace Models.Characters
 {
     public class HealthPointModel : IHealthPointModel
     {
-        public event EventHandler MaxPointsUpdated;
-        public event EventHandler PointsUpdated;
+        public event Action MaxPointsUpdated;
+        public event Action PointsUpdated;
         
         private readonly IHealthPointData _data;
 
@@ -66,24 +66,24 @@ namespace Models.Characters
             }
         }
         
-        private void OnMaxPointsUpdated(object sender, EventArgs e)
+        private void OnMaxPointsUpdated()
         {
             CallMaxPointsUpdated();
         }
 
-        private void OnPointsUpdated(object sender, EventArgs e)
+        private void OnPointsUpdated()
         {
             CallPointsUpdated();
         }
         
         private void CallMaxPointsUpdated()
         {
-            MaxPointsUpdated?.Invoke(this, EventArgs.Empty);
+            MaxPointsUpdated?.Invoke();
         }
 
         private void CallPointsUpdated()
         {
-            PointsUpdated?.Invoke(this, EventArgs.Empty);
+            PointsUpdated?.Invoke();
         }
     }
 }

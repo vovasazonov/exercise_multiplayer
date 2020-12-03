@@ -4,8 +4,8 @@ namespace Models
 {
     public interface IPlayerModel
     {
-        event EventHandler ScoreChanged;
-        event EventHandler ControllableCharacterExemplarIdChanged;
+        event Action ScoreChanged;
+        event Action ControllableCharacterExemplarIdChanged;
         
         uint Score { get; }
         int ControllableCharacterExemplarId { get; }

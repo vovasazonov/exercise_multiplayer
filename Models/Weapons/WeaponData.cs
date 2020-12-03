@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace Models.Weapons
 {
     public sealed class WeaponData : IWeaponData
     {
-        public event EventHandler DamageUpdated;
+        public event Action DamageUpdated;
 
         private uint _damage;
 
@@ -23,7 +22,7 @@ namespace Models.Weapons
 
         private void CallDamageUpdated()
         {
-            DamageUpdated?.Invoke(this, EventArgs.Empty);
+            DamageUpdated?.Invoke();
         }
     }
 }

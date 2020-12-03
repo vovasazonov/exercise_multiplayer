@@ -4,8 +4,8 @@ namespace Models.Characters
 {
     public interface IHealthPointModel
     {
-        event EventHandler MaxPointsUpdated;
-        event EventHandler PointsUpdated;
+        event Action MaxPointsUpdated;
+        event Action PointsUpdated;
         
         uint MaxPoints { get; }
         uint Points { get; }

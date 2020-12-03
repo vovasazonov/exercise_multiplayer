@@ -5,8 +5,8 @@ namespace Models
 {
     public sealed class PlayerData : IPlayerData
     {
-        public event EventHandler ScoreUpdated;
-        public event EventHandler ControllableCharacterExemplarIdUpdated;
+        public event Action ScoreUpdated;
+        public event Action ControllableCharacterExemplarIdUpdated;
 
         private uint _score;
         private int _controllableCharacterExemplarId;
@@ -33,12 +33,12 @@ namespace Models
 
         private void CallScoreUpdated()
         {
-            ScoreUpdated?.Invoke(this, EventArgs.Empty);
+            ScoreUpdated?.Invoke();
         }
 
         private void CallControllableCharacterExemplarIdUpdated()
         {
-            ControllableCharacterExemplarIdUpdated?.Invoke(this, EventArgs.Empty);
+            ControllableCharacterExemplarIdUpdated?.Invoke();
         }
     }
 }

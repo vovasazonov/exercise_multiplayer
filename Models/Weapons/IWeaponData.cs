@@ -4,7 +4,7 @@ namespace Models.Weapons
 {
     public interface IWeaponData
     {
-        event EventHandler DamageUpdated;
+        event Action DamageUpdated;
         string Id { get; set; }
         uint Damage { get; set; }
     }

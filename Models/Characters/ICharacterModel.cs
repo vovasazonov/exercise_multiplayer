@@ -1,12 +1,15 @@
-﻿using System;
-using Models.Weapons;
+﻿using Models.Weapons;
 
 namespace Models.Characters
 {
+    public delegate void EnemyAttackedHandler(ICharacterModel enemyAttacked);
+
+    public delegate void HoldWeaponChangedHandler(int weaponExemplarId);
+
     public interface ICharacterModel
     {
-        event EventHandler<AttackEventArgs> EnemyAttacked; 
-        event EventHandler<WeaponChangedEventArgs> HoldWeaponChanged; 
+        event EnemyAttackedHandler EnemyAttacked; 
+        event HoldWeaponChangedHandler HoldWeaponChanged; 
 
         string Id { get; }
         IHealthPointModel HealthPoint { get; }

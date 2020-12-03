@@ -6,8 +6,8 @@ namespace Models
 {
     public class PlayerModel : IPlayerModel
     {
-        public event EventHandler ScoreChanged;
-        public event EventHandler ControllableCharacterExemplarIdChanged;
+        public event Action ScoreChanged;
+        public event Action ControllableCharacterExemplarIdChanged;
 
         private readonly IPlayerData _data;
         private readonly ITrackableDictionary<int, ICharacterModel> _characterModelDic;
@@ -35,22 +35,22 @@ namespace Models
             _characterModelDic[id].EnemyAttacked -= OnEnemyAttacked;
         }
 
-        private void OnEnemyAttacked(object sender, AttackEventArgs e)
+        private void OnEnemyAttacked(ICharacterModel enemyAttacked)
         {
             Score += _characterModelDic[ControllableCharacterExemplarId].HoldWeapon.Damage;
         }
 
-        private void OnScoreChanged(object sender, EventArgs e)
+        private void OnScoreChanged()
         {
             CallScoreChanged();
         }
 
         private void CallScoreChanged()
         {
-            ScoreChanged?.Invoke(this, EventArgs.Empty);
+            ScoreChanged?.Invoke();
         }
 
-        private void OnControllableCharacterExemplarIdUpdated(object sender, EventArgs e)
+        private void OnControllableCharacterExemplarIdUpdated()
         {
             if (_oldControllableCharacterExemplarId != null)
             {
@@ -65,7 +65,7 @@ namespace Models
 
         private void CallCharacterExemplarIdChanged()
         {
-            ControllableCharacterExemplarIdChanged?.Invoke(this, EventArgs.Empty);
+            ControllableCharacterExemplarIdChanged?.Invoke();
         }
     }
 }

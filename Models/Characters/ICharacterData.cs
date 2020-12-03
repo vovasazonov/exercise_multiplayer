@@ -4,7 +4,7 @@ namespace Models.Characters
 {
     public interface ICharacterData
     {
-        event EventHandler HoldWeaponUpdated;
+        event Action HoldWeaponUpdated;
         
         string Id { get; set; }
         IHealthPointData HealthPointData { get; }

@@ -4,7 +4,7 @@ namespace Models.Characters
 {
     public sealed class CharacterData : ICharacterData
     {
-        public event EventHandler HoldWeaponUpdated;
+        public event Action HoldWeaponUpdated;
 
         private int _holdWeaponExemplarId;
         private readonly HealthPointData _healthPointData = new HealthPointData();
@@ -25,7 +25,7 @@ namespace Models.Characters
 
         private void CallHoldWeaponUpdated()
         {
-            HoldWeaponUpdated?.Invoke(this, EventArgs.Empty);
+            HoldWeaponUpdated?.Invoke();
         }
     }
 }
