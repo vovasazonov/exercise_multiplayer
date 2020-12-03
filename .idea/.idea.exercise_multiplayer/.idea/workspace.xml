@@ -86,12 +86,7 @@
         <option value="$PROJECT_DIR$/ReplicationTests/ReplicationTest.cs" />
         <option value="$PROJECT_DIR$/ReplicationTests/IDataMock.cs" />
         <option value="$PROJECT_DIR$/ReplicationTests/DataMock.cs" />
-        <option value="$PROJECT_DIR$/Models/Characters/HealthPointReplication.cs" />
-        <option value="$PROJECT_DIR$/Models/Characters/CharacterReplication.cs" />
-        <option value="$PROJECT_DIR$/Models/Players/PlayerReplication.cs" />
         <option value="$PROJECT_DIR$/ReplicationTests/ReplicationMock.cs" />
-        <option value="$PROJECT_DIR$/Models/Weapons/WeaponReplication.cs" />
-        <option value="$PROJECT_DIR$/Models/Worlds/WorldReplication.cs" />
         <option value="$PROJECT_DIR$/Models/Exemplars/ExemplarsReplication.cs" />
         <option value="$PROJECT_DIR$/Models/Characters/AttackEventArgs.cs" />
         <option value="$PROJECT_DIR$/Models/Characters/ICharacterModel.cs" />
@@ -113,6 +108,11 @@
         <option value="$PROJECT_DIR$/Replications/PrimitiveProperty.cs" />
         <option value="$PROJECT_DIR$/ReplicationTests/PrimitivePropertyTests.cs" />
         <option value="$PROJECT_DIR$/Replications/ReplicationProperty.cs" />
+        <option value="$PROJECT_DIR$/Models/Characters/CharacterReplication.cs" />
+        <option value="$PROJECT_DIR$/Models/Characters/HealthPointReplication.cs" />
+        <option value="$PROJECT_DIR$/Models/Worlds/WorldReplication.cs" />
+        <option value="$PROJECT_DIR$/Models/Weapons/WeaponReplication.cs" />
+        <option value="$PROJECT_DIR$/Models/Players/PlayerReplication.cs" />
       </list>
     </option>
   </component>
@@ -204,7 +204,7 @@
       <workItem from="1606467775064" duration="12721000" />
       <workItem from="1606824632333" duration="1331000" />
       <workItem from="1606891238813" duration="18207000" />
-      <workItem from="1606977858015" duration="13173000" />
+      <workItem from="1606977858015" duration="15925000" />
     </task>
     <servers />
   </component>
